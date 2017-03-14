@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/incremental/mergeCeluvansconductorDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 66,
+                    "endOffset": 117
+                },
+                "from": {
+                    "file": "/Users/developer_celuvans/.android/build-cache/210d8f1290d8acc7fd1a6c40635b872d6b0c4fd4/output/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 66,
+                        "endOffset": 117
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/210d8f1290d8acc7fd1a6c40635b872d6b0c4fd4/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/210d8f1290d8acc7fd1a6c40635b872d6b0c4fd4/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/633fda648e6c4d395cb10bf9bd9a57907c589f55/output/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/color/switch_thumb_material_dark.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/210d8f1290d8acc7fd1a6c40635b872d6b0c4fd4/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/color/abc_search_url_text.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/210d8f1290d8acc7fd1a6c40635b872d6b0c4fd4/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/633fda648e6c4d395cb10bf9bd9a57907c589f55/output/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/210d8f1290d8acc7fd1a6c40635b872d6b0c4fd4/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/210d8f1290d8acc7fd1a6c40635b872d6b0c4fd4/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/210d8f1290d8acc7fd1a6c40635b872d6b0c4fd4/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/210d8f1290d8acc7fd1a6c40635b872d6b0c4fd4/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/210d8f1290d8acc7fd1a6c40635b872d6b0c4fd4/output/res/color/abc_primary_text_material_dark.xml"
+    }
+]

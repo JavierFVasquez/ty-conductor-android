@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/libs/gcm.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f0e7f01db9f6cbc6e5bf47c10c7d74fd7a7052d0">
+        <dex dex="/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/2/gcm_84ee59ab45159c42f95bb2f3376d4e56a9cd6509/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/incremental-runtime-classes/taxisya/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/10000/instant-run_f1eb8701af2dc376a569caa51dad84feca546d30/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/incremental-classes/taxisya/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5e5b5dd52960c8eaa13463a86a6a3fa04f1c29e1">
+        <dex dex="/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/10000/instant-run-bootstrap_1bf5703c9567dc0c3626be74b93fd290a6e1dfb5/classes.dex" />
+    </item>
+
+</items>

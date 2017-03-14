@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/raw/audio2.wav",
+        "source": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/src/taxisya/res/raw/audio2.wav"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/res/merged/taxisya/debug/raw/gtm_analytics",
+        "source": "/Users/developer_celuvans/.android/build-cache/3fbab5d6eefc0d7d8d3168ce44b32d989e723a90/output/res/raw/gtm_analytics"
+    }
+]
