@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="paymentezsdk-1.0.4">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/e0d6ec5053bec00901a303998191bb618044d736/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/e0d6ec5053bec00901a303998191bb618044d736/output/jars/libs/devicecollector-sdk-2.5.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/e0d6ec5053bec00901a303998191bb618044d736/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.paymentez.paymentezsdk/paymentezsdk/1.0.4/2bb061c7487788293695b1f8d2dad23bbf9f87d2/paymentezsdk-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
