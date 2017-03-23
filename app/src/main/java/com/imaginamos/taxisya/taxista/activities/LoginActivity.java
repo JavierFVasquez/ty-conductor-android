@@ -16,6 +16,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -61,7 +62,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private EditText pass;
     private Button reset_pass;
     private Button btnLogin;
-    private ImageView btn_volver;
+   // private ImageView btn_volver;
     private String id_user;
     private String uuid;
     private ProgressDialog pDialog;
@@ -106,8 +107,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         btnLogin = (Button) findViewById(R.id.btnLogin);
 
-        btn_volver = (ImageView) findViewById(R.id.btn_volver);
-        btn_volver.setOnClickListener(this);
+        //btn_volver = (ImageView) findViewById(R.id.btn_volver);
+        //btn_volver.setOnClickListener(this);
 
         CheckTerms = (CheckBox) findViewById(R.id.CheckTerms);
 
@@ -144,7 +145,27 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             }
 
         } else {
-            new Dialogos(LoginActivity.this, R.string.error_net);
+            //new Dialogos(LoginActivity.this, R.string.error_net);
+
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+            alertDialog.setTitle("No tiene una conexión a internet");
+            alertDialog.setMessage(getString(R.string.enable_internet));
+            alertDialog.setPositiveButton("Habilitar",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(Settings.ACTION_SETTINGS);
+                            startActivity(intent);
+                        }
+                    });
+
+            alertDialog.setNegativeButton("Cancelar",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), InicialActivityLogin.class);
+                            startActivity(intent);
+                        }
+                    });
+            alertDialog.show();
         }
 
         IntentFilter intentfilter = new IntentFilter();
@@ -276,9 +297,9 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         switch (v.getId()) {
 
-            case R.id.btn_volver:
+            /*case R.id.btn_volver:
                 finish();
-                break;
+                break;*/
             case R.id.Terminos:
                 direccion = "http://www.taxisya.co/Terms/TerminosTaxisya.htm";
                 iraWeb(direccion);
@@ -504,7 +525,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             @Override
             public void onFinish() {
                 pDialog.dismiss();
-                btnLogin.setEnabled(true);
+                btnLogin.setEnabled(true);      
 
             //    btnRegister.setEnabled(true);
             }

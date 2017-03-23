@@ -18,8 +18,6 @@ import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
-import android.support.annotation.IntegerRes;
-import android.support.v4.app.FragmentActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -31,7 +29,6 @@ import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
-//import android.widget.CompoundButton;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -45,7 +42,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
@@ -93,10 +89,11 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
     private Button btnLlegada;
     private Button btnCancelar;
     private Button btnFinalizar;
-    private Button btnPay;
+    public static Button btn_pay;
     private Button btnConfirmCode;
 
     private EditText mUnits;
+    private String sUnits;
     private CheckBox mCheck1;
     private CheckBox mCheck2;
     private CheckBox mCheck3;
@@ -169,16 +166,12 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
         setContentView(R.layout.activity_map);
 
-
         //Desarrollo true
         //Producción false
         paymentezsdk = new PaymentezSDKClient(this, ApiConstants.api_env, ApiConstants.app_code, ApiConstants.app_secret_key);
 
-
         try {
-
             overridePendingTransition(R.anim.pull_in_from_right, R.anim.hold);
-
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         } catch (Exception e) {
@@ -196,10 +189,11 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         btnLlegada = (Button) findViewById(R.id.btnLlegada);
         btnCancelar = (Button) findViewById(R.id.btnCancelar);
         btnFinalizar = (Button) findViewById(R.id.btnFinalizar);
-        btnPay = (Button) findViewById(R.id.btnPay);
+        btn_pay = (Button) findViewById(R.id.btn_pay);
         btnConfirmCode = (Button) findViewById(R.id.btnConfirmCode);
 
         mUnits = (EditText) findViewById(R.id.totUnits);
+       // mnits = (EditText) findViewById(R.id.totUnits);
         mCode = (EditText) findViewById(R.id.etCodeAuthorization);
 
         mCheck1 = (CheckBox) findViewById(R.id.chkRecargo1);
@@ -208,42 +202,17 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
         mTotValue = (TextView) findViewById(R.id.totViaje);
 
-
-      /* mCheck1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                calcValor();
-            }
-        });
-
-        mCheck2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                calcValor();
-            }
-        });
-
-        mCheck3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                calcValor();
-            }
-        });   */
-
-
         mNoConnectivityPanel = (RelativeLayout) findViewById(R.id.layout_no_connectivity);
         mConnectivityLoaderImage = (ImageView) findViewById(R.id.loader_icon);
 
         btnLlegada.setOnClickListener(this);
         btnCancelar.setOnClickListener(this);
         btnFinalizar.setOnClickListener(this);
-        btnPay.setOnClickListener(this);
+        btn_pay.setOnClickListener(this);
         btnConfirmCode.setOnClickListener(this);
-
 
         mLinear1 = (LinearLayout) findViewById(R.id.layout_pay);
         mLinear2 = (LinearLayout) findViewById(R.id.layout_code_authorization);
-
 
         icon_radio_ope = (ImageView) findViewById(R.id.icon_radio_ope);
 
@@ -321,35 +290,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         //map = fm.getMap();
         fm.getMapAsync(this);
 
-//        map.setMyLocationEnabled(true);
-//
-//        mCliente = new LatLng(latitud, longitud);
-//
-//        markerPoints.add(cliente);
-//
-//        MarkerOptions options = new MarkerOptions();
-//        Log.v("MapActivity", "driver_id = " + String.valueOf(driver_id) + " cliente =" + cliente.toString());
-//        Log.v("MapActivity", "option.position(cliente) = " + String.valueOf(latitud) + " , " + String.valueOf(longitud));
-//        Log.v("MapActivity", "MyService = " + String.valueOf(MyService.latitud) + " , " + String.valueOf(MyService.longitud));
-//
-//        options.position(cliente);
-//
-//        options.icon(BitmapDescriptorFactory.fromResource(R.drawable.us_uno));
-//
-//        map.addMarker(options);
-//
-//        map.moveCamera(CameraUpdateFactory.newLatLngZoom(cliente, 19.0f));
-//
-//
-//        //Criteria crit = new Criteria();
-//        //Location loc = locMan.getLastKnownLocation(locMan.getBestProvider(crit, false));
-//        CameraPosition camPos = new CameraPosition.Builder().target(new LatLng(
-//                MyService.latitud,
-//                MyService.longitud)).zoom(19.0f).build();
-//        CameraUpdate camUpdate = CameraUpdateFactory.newCameraPosition(camPos);
-//        map.moveCamera(camUpdate);
-
-
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         Criteria criteria = new Criteria(); // object to retrieve provider
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
@@ -405,9 +345,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         };
 
         registerReceiver(mReceiver, intentfilter);
-
-        //validateService();
-
+        validateService();
 
         TextWatcher textWatcher = new TextWatcher() {
             @Override
@@ -960,26 +898,29 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                 if ((mPayType == 1) || (mPayType == 2) || (mPayType == 3) || (type_agend == 1) || (type_agend == 2) || (type_agend == 3) || (type_agend == 4)) {
                     mLinear1.setVisibility(View.VISIBLE);
                     btnFinalizar.setVisibility(View.GONE);
-                    btnPay.setVisibility(View.VISIBLE);
-                } else {
+                    btn_pay.setVisibility(View.VISIBLE);
+                }
+                else {
                     finishService();
                     //toFinish();
                 }
                 break;
 
 
-            case R.id.btnPay:
-                if (mUnits != null) {
+            case R.id.btn_pay:
 
-                    if (Integer.valueOf(mUnits.getText().toString()) >= 28) {
-                        prepareReceipt(String.valueOf(mTotalTrip));
-                    } else {
-                        Toast.makeText(getApplicationContext(), "El campo de unidades no puede estar vacio ni ser menor a 28", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    Toast.makeText(getApplicationContext(), "El campo de unidades no puede estar vacio ni ser menor a 28", Toast.LENGTH_SHORT).show();
+                String sUnits = mUnits.getText().toString();
+                String noUnits = "";
+
+                int vUnits[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27};
+                if(sUnits.equals(vUnits)){
+                    Toast.makeText(getApplicationContext(), "Ingresa unidades iguales o superiores 28", Toast.LENGTH_LONG).show();
                 }
-                break;
+                else if (sUnits.equals(noUnits)){
+                    Toast.makeText(getApplicationContext(), "Las unidades no pueden estar vacias", Toast.LENGTH_LONG).show();
+                } else {
+                    prepareReceipt(String.valueOf(mTotalTrip));
+                }
         }
 
     }

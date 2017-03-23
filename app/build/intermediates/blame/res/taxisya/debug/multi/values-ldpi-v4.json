@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merged.dir/values-ldpi-v4/values-ldpi-v4.xml",
+        "outputFile": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merged.dir/values-ldpi-v4/values-ldpi-v4.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 97
                 },
                 "from": {
-                    "file": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/src/taxisya/res/values-ldpi/dimen.xml",
+                    "file": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/values-ldpi/dimen.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 139
                 },
                 "from": {
-                    "file": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/src/taxisya/res/values-ldpi/dimen.xml",
+                    "file": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/values-ldpi/dimen.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

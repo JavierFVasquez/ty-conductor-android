@@ -15,7 +15,8 @@
     <string name="error_arrived">There was an error in the confirmation of arrival, try again!</string>
     <string name="error_cancel_service">There was an error cancelling the service, try again</string>
     <string name="error_disable">There was an error disabling, try again</string>
-    <string name="welcome">Welcome to taxisya   %1$s</string>
+    <string name="welcome">Welcome to taxisya %1$s</string>
+    <string name="enable_internet">There is not an internet connection</string>
     <string name="ready_enable">%1$s you are enabled.</string>
     <string name="email">Identify</string>
     <string name="cancel">Cancel</string>
@@ -125,6 +126,7 @@
     <string name="logint_titulo_1">Enter</string>
     <string name="message_app_version">A new version of Taxisya available; this version is no longer supported. To continue you must update the application</string>
     <string name="no_gps">There are problems with the GPS!</string>
+    <string name="enable_gps">Please enable your GPS</string>
     <string name="oper_cancel">The operator has canceled the service!</string>
     <string name="saliendo_aplicacion">Leaving the application...</string>
     <string name="servicio_finalizado">The service was successfully completed.</string>

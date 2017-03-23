@@ -211,7 +211,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                 Log.v("DRIVER_CLOSE_SESSION", "in MainActivity - antes de verificar");
                 if (intent.getAction().equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
                     Log.v("DRIVER_CLOSE_SESSION", "in MainActivity");
-                    Toast.makeText(getApplicationContext(), "Se deshabilitó , pues se inicio una sesión en otro dispositivo", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Se deshabilitó, se inicio una sesión en otro dispositivo", Toast.LENGTH_LONG).show();
                     Intent i = new Intent(getApplicationContext(), LoginActivity.class);
 
                     conf.setPass(null);

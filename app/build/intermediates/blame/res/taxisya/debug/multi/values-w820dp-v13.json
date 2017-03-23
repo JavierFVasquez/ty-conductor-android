@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+        "outputFile": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/src/taxisya/res/values-w820dp/dimens.xml",
+                    "file": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/values-w820dp/dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

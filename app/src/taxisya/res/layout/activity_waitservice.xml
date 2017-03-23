@@ -23,13 +23,13 @@
                     android:layout_width="fill_parent"
                     android:layout_height="48dp">
 
-                    <ImageView
+                    <!--ImageView
                         android:id="@+id/btn_volver"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
-                        android:src="@drawable/btn_back" />
+                        android:src="@drawable/btn_back" /-->
 
                     <ImageView
                         android:id="@+id/banner_arriba"

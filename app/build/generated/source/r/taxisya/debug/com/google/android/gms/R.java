@@ -110,7 +110,7 @@ public final class R {
         public static final int adjust_height = 0x7f0d0029;
         public static final int adjust_width = 0x7f0d002a;
         public static final int auto = 0x7f0d0040;
-        public static final int button = 0x7f0d00d8;
+        public static final int button = 0x7f0d00d7;
         public static final int contact = 0x7f0d0023;
         public static final int dark = 0x7f0d0041;
         public static final int demote_common_words = 0x7f0d0037;
@@ -140,7 +140,7 @@ public final class R {
         public static final int satellite = 0x7f0d002c;
         public static final int standard = 0x7f0d003e;
         public static final int terrain = 0x7f0d002d;
-        public static final int text = 0x7f0d00e2;
+        public static final int text = 0x7f0d00e1;
         public static final int text1 = 0x7f0d0020;
         public static final int text2 = 0x7f0d0021;
         public static final int thing_proto = 0x7f0d0022;

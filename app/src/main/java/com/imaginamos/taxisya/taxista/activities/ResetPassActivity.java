@@ -36,7 +36,7 @@ public class ResetPassActivity extends Activity implements View.OnClickListener 
     private ImageButton send;
     private Button btnSend;
     private TextView msg;
-    private ImageView bt_back;
+    //private ImageView bt_back;
     private ProgressDialog dialog;
 
 
@@ -79,8 +79,8 @@ public class ResetPassActivity extends Activity implements View.OnClickListener 
 
         email = (EditText) findViewById(R.id.email);
         pass = (EditText) findViewById(R.id.pass);
-        bt_back = (ImageView) findViewById(R.id.btn_volver);
-        bt_back.setOnClickListener(this);
+        //bt_back = (ImageView) findViewById(R.id.btn_volver);
+        //bt_back.setOnClickListener(this);
         msg = (TextView) findViewById(R.id.msg_show);
 
         dialog = new ProgressDialog(ResetPassActivity.this);

@@ -17,12 +17,13 @@
     <string name="error_disable">Hubo un error deshabilitando, intentelo de nuevo</string>
     <string name="error_dos">Este usuario ya esta logueado en otro dispositivo..</string>
     <string name="network_connectivity_message">Verificando...</string>
-    <string name="error_net">¡No esta conectado internet!</string>
-    <string name="error_tres">Su afiliación se encuentra vencida , comuniquese con la central para activarla de nuevo.</string>
+    <string name="error_net">No está conectado internet</string>
+    <string name="error_tres">Su afiliación se encuentra vencida, comuniquese con la central para activarla de nuevo.</string>
     <string name="error_uno">Usuario o contraseña incorrectos.</string>
     <string name="gcmintentservice_mensaje_otro_dispositivo">Sesíón cerrada por otro dispositivo</string>
     <string name="hello_world">kr 72 j bis # 40 c 50 sur apt 402 in 10 Barrio Timiza Nombre Esteban Quintero</string>
     <string name="historial_subtitulo">en el último mes</string>
+    <string name="enable_internet">Habilita una conexión a internet para continuar</string>
     <string name="historial_titulo_1">Historial</string>
     <string name="historial_titulo_2">de Servicios</string>
     <string name="historico_aviso_sin_historial">No tienes servicios recientes</string>
@@ -40,7 +41,7 @@
     <string name="login_aceptar">Aceptar</string>
     <string name="login_aviso_error_login">¡Ocurrio un problema al ingresar! inténtalo de nuevo</string>
     <string name="login_aviso_ingreso_datos">Ingrese sus datos de acceso</string>
-    <string name="login_deshabilito_login_otro_dispositivo">Se deshabilitó , pues se inicio una sesión en otro dispositivo</string>
+    <string name="login_deshabilito_login_otro_dispositivo">Se deshabilitó, se inicio una sesión en otro dispositivo</string>
     <string name="login_titulo_autenticando">Autenticando...</string>
     <string name="login_titulo_dialogo">Información importante</string>
     <string name="login_titulo_dialogo_mensaje">Información importante</string>
@@ -63,6 +64,7 @@
     <string name="message_app_version">Hay una nueva versión de Taxisya disponible; esta versión ya no es compatible. Para continuar debes actualizar la aplicación</string>
     <string name="my_cars_button_confirmar">Confirmar</string>
     <string name="no_gps">¡Hay problemas con el gps!</string>
+    <string name="enable_gps">Por favor habilita tu GPS</string>
     <string name="oper_cancel">¡La operadora ha cancelado el servicio!</string>
     <string name="ready_enable">%1$s te encuentras habilitado.</string>
     <string name="saliendo_aplicacion">Saliendo de la aplicación...</string>
@@ -89,7 +91,7 @@
     <string name="waitservice_numeros_septima">septima</string>
     <string name="waitservice_numeros_sexta">sexta</string>
     <string name="waitservice_numeros_tercera">tercera</string>
-    <string name="waitservice_se_deshabilito_otro_dispositivo">Se deshabilitó , pues se inicio una sesión en otro dispositivo</string>
+    <string name="waitservice_se_deshabilito_otro_dispositivo">Se deshabilitó, se inicio una sesión en otro dispositivo</string>
     <string name="waitservice_texto_barrio">"\nBarrio: "</string>
     <string name="waitservice_texto_barrio2">" Barrio: "</string>
     <string name="waitservice_texto_hablado_numero">"  numero  "</string>

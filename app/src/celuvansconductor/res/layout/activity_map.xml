@@ -117,33 +117,28 @@
                         android:id="@+id/totUnits"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Total unidades"
-                        android:inputType="number"
-                        />
+                        android:inputType="number"/>
 
                     <CheckBox
                         android:id="@+id/chkRecargo1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/black"
-                        android:text="Aeropuerto = COP 4100"
-                        />
+                        android:text="Aeropuerto = COP 4100"/>
 
                     <CheckBox
                         android:id="@+id/chkRecargo2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/black"
-                        android:text="Nocturno, Dominical y Festivo = COP 2000"
-                        />
+                        android:text="Nocturno, Dominical y Festivo = COP 2000"/>
 
                     <CheckBox
                         android:id="@+id/chkRecargo3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/black"
-                        android:text="Mensajeria  "
-                        />
+                        android:text="Mensajeria  " />
 
                     <!--<EditText-->
                         <!--android:id="@+id/totViaje"-->
@@ -159,9 +154,7 @@
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
                         android:textSize="20dp"
-                        android:text="Total: "
-
-                        />
+                        android:text="Total: "/>
 
 
                 </LinearLayout>

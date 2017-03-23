@@ -73,9 +73,8 @@ import java.util.regex.Pattern;
 
 import cz.msebera.android.httpclient.Header;
 
-public class WaitServiceActivity extends Activity implements OnClickListener, UpdateReceiver.UpdateReceiverListener, Connectivity.ConnectivityQualityCheckListener
-        ,
-        TextToSpeech.OnInitListener {
+public class WaitServiceActivity extends Activity implements OnClickListener, UpdateReceiver.UpdateReceiverListener, Connectivity.ConnectivityQualityCheckListener, TextToSpeech.OnInitListener {
+
     private static boolean inBackground = false;
     private static boolean isServiceInProgress = false;
     private String uuid;
@@ -86,7 +85,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     private SeekBar mSeekBar;
     private float mVoiceSpeed = 0.98F;
     private String[] mNumbers;
-    private ImageView volver;
+    //private ImageView volver;
     private Button btnDeshabilitar;
     private TextToSpeech tts;
     private TextView mPayTypeTextView;
@@ -177,20 +176,17 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         Log.v("onCreate", "WaitServiceActivity");
         super.onCreate(savedInstanceState);
 
-        SharedPreferences sharedPref = PreferenceManager
-                .getDefaultSharedPreferences(this);
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString("service", "espera");
         editor.commit();
 
         conf = new Conf(this);
-
         // open sqlite
         mySQLiteAdapter = new BDAdapter(this);
         mySQLiteAdapter.openToWrite();
 
         mVisibleServices = new ArrayList<String>();
-
 
         mNumbers = getResources().getStringArray(R.array.waitservice_numbers);
 
@@ -211,15 +207,10 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 // test servicio alternativo
 
         intentFilter.addAction(Actions.ACTION_NEW_SERVICES);
-
         intentFilter.addAction(Actions.ACTION_SERVICE_CANCEL);
-
         intentFilter.addAction(Actions.NO_NET);
-
         intentFilter.addAction(Actions.YES_NET);
-
         intentFilter.addAction(Actions.ACTION_DRIVER_CLOSE_SESSION);
-
         intentFilter.addAction(Actions.ACTION_MESSAGE_MASSIVE);
 
         mReceiver = new BroadcastReceiver() {
@@ -638,9 +629,9 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 
         setContentView(R.layout.activity_waitservice);
 
-        volver = (ImageView) findViewById(R.id.btn_volver);
+        //volver = (ImageView) findViewById(R.id.btn_volver);
 
-        volver.setOnClickListener(this);
+        //volver.setOnClickListener(this);
 
         btnDeshabilitar = (Button) findViewById(R.id.btnDeshabilitar);
 
@@ -770,9 +761,9 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     public void onClick(View v) {
 
         switch (v.getId()) {
-            case R.id.btn_volver:
+            /*case R.id.btn_volver:
                 Desabilitar_service();
-                break;
+                break;*/
 
             case R.id.btnDeshabilitar:
                 Desabilitar_service();
@@ -837,7 +828,8 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         if (status == TextToSpeech.SUCCESS) {
             Locale locSpanish = Locale.getDefault();
 
-            int result = tts.setLanguage(locSpanish);
+            //int result = tts.setLanguage(locSpanish);
+            int result = tts.isLanguageAvailable(locSpanish);
 
             tts.setPitch(1);
 

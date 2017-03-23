@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
+        "outputFile": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/src/taxisya/res/values-small/dimens.xml",
+                    "file": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/values-small/dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/src/taxisya/res/values-small/dimens.xml",
+                    "file": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/values-small/dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 211
                 },
                 "from": {
-                    "file": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/src/taxisya/res/values-small/dimens.xml",
+                    "file": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/values-small/dimens.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 1,
@@ -68,7 +68,7 @@
                     "endOffset": 253
                 },
                 "from": {
-                    "file": "/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/src/taxisya/res/values-small/dimens.xml",
+                    "file": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/values-small/dimens.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 1,

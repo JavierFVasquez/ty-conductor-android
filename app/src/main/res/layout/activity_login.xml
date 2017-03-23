@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="50dp">
 
-        <ImageView
+        <!--ImageView
             android:id="@+id/btn_volver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
             android:layout_alignParentTop="true"
             android:src="@drawable/btn_back"
             android:contentDescription="@string/app_name"
-            android:tag="3"/>
+            android:tag="3"/-->
 
         <ImageView
             android:id="@+id/banner_arriba"

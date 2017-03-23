@@ -33,7 +33,7 @@ import cz.msebera.android.httpclient.Header;
 public class HistoricActivity extends Activity implements OnClickListener {
 
     private ViewGroup mContainerView;
-    private ImageView volver;
+   // private ImageView volver;
     private ProgressDialog pDialog;
     private String driver_id;
     private String respuesta;
@@ -78,9 +78,9 @@ public class HistoricActivity extends Activity implements OnClickListener {
 
         setContentView(R.layout.activity_historic);
 
-        volver = (ImageView) findViewById(R.id.btn_volver);
+       // volver = (ImageView) findViewById(R.id.btn_volver);
 
-        volver.setOnClickListener(this);
+       // volver.setOnClickListener(this);
 
         conf = new Conf(this);
 
@@ -154,9 +154,9 @@ public class HistoricActivity extends Activity implements OnClickListener {
 
         switch (arg0.getId()) {
 
-            case R.id.btn_volver:
+            /*case R.id.btn_volver:z
                 finish();
-                break;
+                break;*/
 
         }
 

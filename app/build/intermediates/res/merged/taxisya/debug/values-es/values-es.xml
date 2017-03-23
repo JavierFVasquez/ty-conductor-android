@@ -79,6 +79,8 @@
     <string name="enable_driver">v2/driver/%1$s/enable</string>
     <string name="enable_error_message_part1">El vehículo esta en uso. Por favor contacte al conductor </string>
     <string name="enable_error_message_part2">al celular </string>
+    <string name="enable_gps">Por favor habilita tu GPS</string>
+    <string name="enable_internet">Habilita una conexión a internet para continuar</string>
     <string name="enable_titulo_dialogo">¡Vehiculo en uso!</string>
     <string name="enviando">Enviando...</string>
     <string name="error1">¡Este servicio fue confirmado por otro taxi!</string>
@@ -88,8 +90,8 @@
     <string name="error_cancel_service">Hubo un error al cancelar el servicio, intente de nuevo</string>
     <string name="error_disable">Hubo un error deshabilitando, intentelo de nuevo</string>
     <string name="error_dos">Este usuario ya esta logueado en otro dispositivo..</string>
-    <string name="error_net">¡No esta conectado internet!</string>
-    <string name="error_tres">Su afiliación se encuentra vencida , comuniquese con la central para activarla de nuevo.</string>
+    <string name="error_net">No está conectado internet</string>
+    <string name="error_tres">Su afiliación se encuentra vencida, comuniquese con la central para activarla de nuevo.</string>
     <string name="error_uno">Usuario o contraseña incorrectos.</string>
     <string name="finish_service">service/finish2</string>
     <string name="gcmintentservice_mensaje_otro_dispositivo">Sesíón cerrada por otro dispositivo</string>
@@ -119,7 +121,7 @@
     <string name="login_btn_forgot">¿Olvidaste la contraseña?</string>
     <string name="login_btn_ingresar">Ingresar</string>
     <string name="login_btn_register">Registro Primera Vez</string>
-    <string name="login_deshabilito_login_otro_dispositivo">Se deshabilitó , pues se inicio una sesión en otro dispositivo</string>
+    <string name="login_deshabilito_login_otro_dispositivo">Se deshabilitó, se inicio una sesión en otro dispositivo</string>
     <string name="login_titulo_autenticando">Autenticando...</string>
     <string name="login_titulo_dialogo">Información importante</string>
     <string name="login_titulo_dialogo_mensaje">Información importante</string>
@@ -213,7 +215,7 @@
     <string name="waitservice_numeros_septima">septima</string>
     <string name="waitservice_numeros_sexta">sexta</string>
     <string name="waitservice_numeros_tercera">tercera</string>
-    <string name="waitservice_se_deshabilito_otro_dispositivo">Se deshabilitó , pues se inicio una sesión en otro dispositivo</string>
+    <string name="waitservice_se_deshabilito_otro_dispositivo">Se deshabilitó, se inicio una sesión en otro dispositivo</string>
     <string name="waitservice_texto_barrio">"\nBarrio: "</string>
     <string name="waitservice_texto_barrio2">" Barrio: "</string>
     <string name="waitservice_texto_hablado_numero">"  numero  "</string>

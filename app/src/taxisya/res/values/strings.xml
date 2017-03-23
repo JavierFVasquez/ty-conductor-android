@@ -9,6 +9,7 @@
     <!-- TEXTOS LOGIN -->
     <string name="the_user_arrived">Customer has received the information.</string>
     <string name="error_dos">This user is already logged into another device ..</string>
+    <string name="enable_internet">There is not an internet connection</string>
     <string name="network_connectivity_message">Checking...</string>
     <string name="error_net">No Internet connection!</string>
     <string name="error2">This service was canceled by the user!</string>
@@ -125,6 +126,7 @@
     <string name="logint_titulo_1">Enter</string>
     <string name="message_app_version">A new version of Taxisya available; this version is no longer supported. To continue you must update the application</string>
     <string name="no_gps">There are problems with the GPS!</string>
+    <string name="enable_gps">Please enable your GPS</string>
     <string name="oper_cancel">The operator has canceled the service!</string>
     <string name="saliendo_aplicacion">Leaving the application...</string>
     <string name="servicio_finalizado">The service was successfully completed.</string>

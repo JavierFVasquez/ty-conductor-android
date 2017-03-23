@@ -23,7 +23,7 @@ android {
     defaultConfig {
         applicationId "co.taxisya.conductor"
         minSdkVersion 15
-        targetSdkVersion 18
+        targetSdkVersion 22
         versionCode 3
         versionName "1.2"
     }

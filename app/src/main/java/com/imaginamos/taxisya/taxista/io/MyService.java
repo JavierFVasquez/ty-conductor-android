@@ -294,8 +294,6 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
                 this.driver_id = extras.getString("driver_id");
         }
 */
-
-
         if (mGoogleApiClient != null) {
             mGoogleApiClient.connect();
         }
@@ -348,8 +346,6 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
             longitud = location.getLongitude();
             latitud = location.getLatitude();
 
-//            if (location.getAccuracy() < 100.0f) {
-//                stopLocationUpdates();
             Log.e(TAG, "sendMyPosition");
             MiddleConnect.sendMyPosition(this, driver_id, String.valueOf(latitud), String.valueOf(longitud), new AsyncHttpResponseHandler() {
                 @Override
@@ -370,6 +366,8 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                     String response = new String(responseBody);
                     Log.e(TAG, "onFailure" + response);
+                    Toast.makeText(getApplicationContext(), "test 2", Toast.LENGTH_SHORT).show();
+                    onFinish();
                 }
 
                 @Override
@@ -377,7 +375,6 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
                     Log.e(TAG, "onFinish");
                 }
             });
-//            }
         }
     }
 

@@ -1,7 +1,4 @@
-#Tue Mar 14 08:46:55 COT 2017
-base.0=/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/10000/instant-run-bootstrap_1bf5703c9567dc0c3626be74b93fd290a6e1dfb5
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/10000/instant-run_f1eb8701af2dc376a569caa51dad84feca546d30/classes.dex
-base.1=/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/10000/instant-run_f1eb8701af2dc376a569caa51dad84feca546d30
-file.0=/Users/developer_celuvans/Documents/workspace/android/tyconductor-android-master/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/10000/instant-run-bootstrap_1bf5703c9567dc0c3626be74b93fd290a6e1dfb5/classes.dex
+#Thu Mar 23 16:55:50 COT 2017
+base.0=/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/1f/main/classes.dex

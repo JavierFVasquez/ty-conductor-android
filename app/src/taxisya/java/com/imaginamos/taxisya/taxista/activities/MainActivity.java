@@ -19,6 +19,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.speech.tts.TextToSpeech;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
@@ -174,7 +175,27 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             Log.e("POSITION", lat + ":" + lng);
 
         } else {
-            Toast.makeText(this, "El GPS no esta habilitado", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "El GPS no esta habilitado", Toast.LENGTH_LONG).show();
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+            alertDialog.setTitle("El GPS no está habilitado");
+            alertDialog.setMessage(getString(R.string.no_gps));
+            alertDialog.setPositiveButton("Habilitar",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                            startActivity(intent);
+                            finish();
+                        }
+                    });
+
+            alertDialog.setNegativeButton("Cancelar",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), InicialActivityLogin.class);
+                            startActivity(intent);
+                        }
+                    });
+            alertDialog.show();
         }
 
         gps.stopUsingGPS();
@@ -211,7 +232,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                 Log.v("DRIVER_CLOSE_SESSION", "in MainActivity - antes de verificar");
                 if (intent.getAction().equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
                     Log.v("DRIVER_CLOSE_SESSION", "in MainActivity");
-                    Toast.makeText(getApplicationContext(), "Se deshabilitó , pues se inicio una sesión en otro dispositivo", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Se deshabilitó, se inicio una sesión en otro dispositivo", Toast.LENGTH_LONG).show();
                     Intent i = new Intent(getApplicationContext(), LoginActivity.class);
 
                     conf.setPass(null);
@@ -261,7 +282,27 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     private boolean enableService() {
         // check if gps enabled
         if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            Toast.makeText(this, "El GPS no esta habilitado", Toast.LENGTH_LONG).show();
+            // Toast.makeText(this, "El GPS no esta habilitado", Toast.LENGTH_LONG).show();
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+            alertDialog.setTitle("El GPS no está habilitado");
+            alertDialog.setMessage(getString(R.string.enable_gps));
+            alertDialog.setPositiveButton("Habilitar",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                            startActivity(intent);
+                            finish();
+                        }
+                    });
+
+            alertDialog.setNegativeButton("Cancelar",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), InicialActivityLogin.class);
+                            startActivity(intent);
+                        }
+                    });
+            alertDialog.show();
             return true;
         } else {
             setRequestedOrientation(getResources().getConfiguration().orientation);
@@ -908,7 +949,8 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 String response = new String(responseBody);
                 Log.v("checkService", "onFailure");
-
+                Toast.makeText(getApplicationContext(), "test 1", Toast.LENGTH_SHORT).show();
+                onFinish();
             }
 
             @Override
@@ -933,7 +975,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         if (status == TextToSpeech.SUCCESS) {
             Locale locSpanish = Locale.getDefault();
 
-            int result = tts.setLanguage(locSpanish);
+            int result = tts.isLanguageAvailable(locSpanish);
 
             tts.setPitch(1);
 

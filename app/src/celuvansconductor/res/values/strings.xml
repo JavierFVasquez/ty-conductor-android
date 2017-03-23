@@ -40,7 +40,7 @@
     <string name="login_aceptar">Aceptar</string>
     <string name="login_aviso_error_login">¡Ocurrio un problema al ingresar! inténtalo de nuevo</string>
     <string name="login_aviso_ingreso_datos">Ingrese sus datos de acceso</string>
-    <string name="login_deshabilito_login_otro_dispositivo">Se deshabilitó , pues se inicio una sesión en otro dispositivo</string>
+    <string name="login_deshabilito_login_otro_dispositivo">Se deshabilitó, se inicio una sesión en otro dispositivo</string>
     <string name="login_titulo_autenticando">Autenticando...</string>
     <string name="login_titulo_dialogo">Información importante</string>
     <string name="login_titulo_dialogo_mensaje">Información importante</string>
@@ -89,7 +89,7 @@
     <string name="waitservice_numeros_septima">septima</string>
     <string name="waitservice_numeros_sexta">sexta</string>
     <string name="waitservice_numeros_tercera">tercera</string>
-    <string name="waitservice_se_deshabilito_otro_dispositivo">Se deshabilitó , pues se inicio una sesión en otro dispositivo</string>
+    <string name="waitservice_se_deshabilito_otro_dispositivo">Se deshabilitó, se inicio una sesión en otro dispositivo</string>
     <string name="waitservice_texto_barrio">"\nBarrio: "</string>
     <string name="waitservice_texto_barrio2">" Barrio: "</string>
     <string name="waitservice_texto_hablado_numero">"  numero  "</string>

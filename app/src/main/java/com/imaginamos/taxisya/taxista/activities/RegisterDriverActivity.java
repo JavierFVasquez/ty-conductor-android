@@ -95,7 +95,7 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
     private ImageView document3ImageView;
     private ImageView document4ImageView;
 
-    private ImageView volver;
+    //private ImageView volver;
 
     private Spinner mCountrySpinner;
     private Spinner mDepartmentSpinner;
@@ -140,8 +140,7 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        photoFilesDirectory = new File(Environment
-                .getExternalStorageDirectory()+ "/TaxisYa");
+        photoFilesDirectory = new File(Environment.getExternalStorageDirectory()+ "/TaxisYa");
         if (!photoFilesDirectory.exists()) {
             photoFilesDirectory.mkdir();
         }
@@ -150,35 +149,22 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
         registerProgressDialog.setIndeterminate(true);
         registerProgressDialog.setMessage(getString(R.string.register_driver_in_progress));
 
-        volver = (ImageView) findViewById(R.id.btn_volver);
-        volver.setOnClickListener(this);
+        //volver = (ImageView) findViewById(R.id.btn_volver);
+        //volver.setOnClickListener(this);
 
         name = (EditText) findViewById(R.id.txtName);
-
         identity = (EditText) findViewById(R.id.txtIdentify);
-
         license = (EditText) findViewById(R.id.txtLicense);
-
         email = (EditText) findViewById(R.id.txtUser);
-
         phone = (EditText) findViewById(R.id.txtPhone);
-
         cellphone = (EditText) findViewById(R.id.txtCellphone);
-
         address = (EditText) findViewById(R.id.txtAddress);
-
         pass = (EditText) findViewById(R.id.txtPass);
-
         carPlate = (EditText) findViewById(R.id.txtCarPlate);
-
         carBrand = (EditText) findViewById(R.id.txtCarBrand);
-
         carLine = (EditText) findViewById(R.id.txtCarLine);
-
       //  carMobileId = (EditText) findViewById(R.id.txtCarMobileId);
-
         carYear = (EditText) findViewById(R.id.txtCarYear);
-
         carCompany = (EditText) findViewById(R.id.txtCarCompany);
 
         btnRegister = (Button) findViewById(R.id.btnLogin);
@@ -198,12 +184,9 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
         document4ImageView = (ImageView) findViewById(R.id.driver_document4);
         document4ImageView.setOnClickListener(this);
 
-
         getSpinnerData();
 
-
         storageRegister();
-
 
     }
 
@@ -217,7 +200,6 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
                 Log.i("COUNTRIES SUCCESS ", "SUCCESS RETURN " + response);
                 Log.v("MAKE_DATA", "create countries");
                 countriesArray = processCountriesResponse(new String(((TypedByteArray) response.getBody()).getBytes()));
-
 
 
                 ApiAdapter.getApiService().getDepartments("", new retrofit.Callback<RegisterResponse>() {
@@ -289,7 +271,7 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
 
                 Country item = (Country) parent.getItemAtPosition(pos);
 
-                Log.v("UPDATE_DATA", "    spinner country " + String.valueOf(item.getId() + " " + item.getName()));
+                Log.v("UPDATE_DATA", "spinner country" + String.valueOf(item.getId() + " " + item.getName()));
 
                 int departmentId = firstDepartment(item.getId());
                 updateDepartment(item.getId());
@@ -302,7 +284,6 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
             }
         });
 
-
         mDepartmentSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView parent, View view, int pos, long log) {
 
@@ -310,7 +291,7 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
 
                 int departmentId = item.getId();
 
-                Log.v("UPDATE_DATA", "    spinner department " + String.valueOf(item.getId() + " " + item.getName()));
+                Log.v("UPDATE_DATA", "spinner department" + String.valueOf(item.getId() + " " + item.getName()));
 
 
                 updateCities( departmentId );
@@ -327,7 +308,7 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
 
                 City item = (City) parent.getItemAtPosition(pos);
 
-                Log.v("UPDATE_DATA", "    spinner city " + String.valueOf(item.getId() + " " + item.getName()));
+                Log.v("UPDATE_DATA", "spinner city" + String.valueOf(item.getId() + " " + item.getName()));
 
                 mCityId = item.getId();
 
@@ -533,10 +514,6 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
 
         String md5Pass = md5(pass.getText().toString());
 
-
-
-
-
             registerProgressDialog.show();
 
             // save fields
@@ -737,9 +714,9 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
                 startActivityForResult(document4Intent, CAMERA_DOCUMENT4_REQUEST);
                 break;
 
-            case R.id.btn_volver:
+           /* case R.id.btn_volver:
                 finish();
-                break;
+                break;*/
 
 
             default:
