@@ -370,7 +370,7 @@
     <string name="checkstatuservice">service/status</string>
     <string name="code_pass">user/pwd/confirm</string>
     <string name="codigo_de_confirmaci_n">Confirmation code</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">8e62ee4b-f435-4ab7-8350-10e938bdd678</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">4e529864-88e6-42ce-9d21-dcf57866ae90</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns2:g id="app_name">%1$s</ns2:g> won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>

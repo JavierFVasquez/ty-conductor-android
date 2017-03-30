@@ -64,13 +64,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/taxisya/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/taxisya/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/taxisya/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testTaxisya/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testTaxisya/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testTaxisya/assets" type="java-test-resource" />
@@ -78,6 +71,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/testTaxisya/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testTaxisya/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testTaxisya/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestTaxisya/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />

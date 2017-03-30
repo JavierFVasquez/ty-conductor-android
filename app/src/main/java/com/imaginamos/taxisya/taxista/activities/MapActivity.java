@@ -77,36 +77,29 @@ import java.util.TimerTask;
 import cz.msebera.android.httpclient.Header;
 
 //public class MapActivity extends FragmentActivity implements OnClickListener, LocationListener {
-public class MapActivity extends Activity implements OnClickListener, LocationListener, UpdateReceiver.UpdateReceiverListener, Connectivity.ConnectivityQualityCheckListener
-        , OnMapReadyCallback {
+public class MapActivity extends Activity implements OnClickListener, LocationListener, UpdateReceiver.UpdateReceiverListener, Connectivity.ConnectivityQualityCheckListener, OnMapReadyCallback {
 
     PaymentezSDKClient paymentezsdk;
-
     private TextView view_direccion, nombre;
     private ImageView icon_radio_ope;
     private ProgressDialog pDialog;
-
     private Button btnLlegada;
     private Button btnCancelar;
     private Button btnFinalizar;
     public static Button btn_pay;
     private Button btnConfirmCode;
-
     private EditText mUnits;
     private String sUnits;
     private CheckBox mCheck1;
     private CheckBox mCheck2;
     private CheckBox mCheck3;
     private TextView mTotValue;
-
     private EditText mCode;
-
     private GoogleMap map;
     private ArrayList<LatLng> markerPoints;
     private double latitud, longitud = 0;
     private String driver_id, direccion;
     private String service_id;
-
     private String mTotUnits = "0";
     private String mTotCharge1 = "0";
     private String mTotCharge2 = "0";
@@ -115,34 +108,24 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
     private String mTotService = "0";
     private String mTransactionId = "";
     private String mUserPhone = "";
-
-
     private BroadcastReceiver mReceiver;
-
     private UpdateReceiver mNetworkMonitor;
     private ImageView mConnectivityLoaderImage;
     private RelativeLayout mNoConnectivityPanel;
     private Connectivity connectivityChecker = new Connectivity(this);
-
-
     private Timer myTimer = new Timer();
     private int reintento = 0;
     private int status = 0;
-
     private Conf conf;
-
     private int rand_id = -1;
     private int type_agend = -1;
     private int status_service = 0;
-
     private String mServiceId;
     private int mStatusOld;
-
     private BDAdapter mySQLiteAdapter;
     private Cursor mCursor;
     private boolean isFinished = true;
     private LatLng mCliente;
-
     private int mPayType = 1;
     private String mUserId;
     private String mUserCardReference;
@@ -163,9 +146,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         Log.v("onCreate", "MapActivity");
 
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_map);
-
         //Desarrollo true
         //Producción false
         paymentezsdk = new PaymentezSDKClient(this, ApiConstants.api_env, ApiConstants.app_code, ApiConstants.app_secret_key);
@@ -191,43 +172,29 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         btnFinalizar = (Button) findViewById(R.id.btnFinalizar);
         btn_pay = (Button) findViewById(R.id.btn_pay);
         btnConfirmCode = (Button) findViewById(R.id.btnConfirmCode);
-
         mUnits = (EditText) findViewById(R.id.totUnits);
        // mnits = (EditText) findViewById(R.id.totUnits);
         mCode = (EditText) findViewById(R.id.etCodeAuthorization);
-
         mCheck1 = (CheckBox) findViewById(R.id.chkRecargo1);
         mCheck2 = (CheckBox) findViewById(R.id.chkRecargo2);
         mCheck3 = (CheckBox) findViewById(R.id.chkRecargo3);
-
         mTotValue = (TextView) findViewById(R.id.totViaje);
-
         mNoConnectivityPanel = (RelativeLayout) findViewById(R.id.layout_no_connectivity);
         mConnectivityLoaderImage = (ImageView) findViewById(R.id.loader_icon);
-
         btnLlegada.setOnClickListener(this);
         btnCancelar.setOnClickListener(this);
         btnFinalizar.setOnClickListener(this);
         btn_pay.setOnClickListener(this);
         btnConfirmCode.setOnClickListener(this);
-
         mLinear1 = (LinearLayout) findViewById(R.id.layout_pay);
         mLinear2 = (LinearLayout) findViewById(R.id.layout_code_authorization);
-
         icon_radio_ope = (ImageView) findViewById(R.id.icon_radio_ope);
-
         view_direccion = (TextView) findViewById(R.id.direccion_cliente);
-
         nombre = (TextView) findViewById(R.id.nombre_cliente);
-
         markerPoints = new ArrayList<LatLng>();
-
         Bundle reicieveParams = getIntent().getExtras();
-
         latitud = reicieveParams.getDouble("lat");
-
         longitud = reicieveParams.getDouble("lng");
-
         service_id = reicieveParams.getString("id_servicio");
 
         if (latitud == 0 || longitud == 0) {
@@ -237,14 +204,11 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         Log.v("MapActivity", "latitud = " + String.valueOf(latitud) + " longitud = " + String.valueOf(longitud));
 
         direccion = reicieveParams.getString("direccion");
-
         view_direccion.setText(getString(R.string.mapa_titulo_direccion) + direccion);
-
         rand_id = reicieveParams.getInt("kind_id");
         type_agend = reicieveParams.getInt("schedule_type");
         status_service = reicieveParams.getInt("status_service");
         mPayType = reicieveParams.getInt("pay_type");
-
         mUserId = reicieveParams.getString("user_id");
         mUserCardReference = reicieveParams.getString("user_card_reference");
         mUserEmail = reicieveParams.getString("user_email");
@@ -318,12 +282,10 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
                 if (intent.getAction().equals(Actions.ACTION_USER_CANCELED_SERVICE)) {
                     Toast.makeText(getApplicationContext(), getString(R.string.error2), Toast.LENGTH_LONG).show();
-
                     toFinish();
 
                 } else if (intent.getAction().equals(Actions.ACTION_OPE_CANCELED_SERVICER)) {
                     Toast.makeText(getApplicationContext(), getString(R.string.oper_cancel), Toast.LENGTH_LONG).show();
-
                     toFinish();
 
                 } else if (intent.getAction().equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
@@ -373,12 +335,10 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         map = googleMap;
-
         mCliente = new LatLng(latitud, longitud);
-
         map.setMyLocationEnabled(true);
-
         markerPoints.add(mCliente);
 
         MarkerOptions options = new MarkerOptions();
@@ -387,11 +347,8 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         Log.v("MapActivity", "MyService = " + String.valueOf(MyService.latitud) + " , " + String.valueOf(MyService.longitud));
 
         options.position(mCliente);
-
         options.icon(BitmapDescriptorFactory.fromResource(R.drawable.us_uno));
-
         map.addMarker(options);
-
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(mCliente, 19.0f));
 
         //Criteria crit = new Criteria();
@@ -437,14 +394,12 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                 calcValor();
             }
         });
-
         mCheck2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 calcValor();
             }
         });
-
         mCheck3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -452,13 +407,10 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
             }
         });
 
-
         Log.v("TAXISTA_SRVCONF1", "ini");
         validateService();
 
-
         super.onResume();
-
 
         displayConnectivityPanel(!Connectivity.isConnected(this) && !connectivityChecker.getConnectivityCheckResult());
         connectivityChecker.startConnectivityMonitor();
@@ -548,7 +500,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
     }
 
-
     public boolean checkService() throws JSONException {
 
         //service_id = null; //conf.getServiceId();
@@ -567,7 +518,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
             public void onStart() {
                 Log.v("checkService", "onStart");
                 Log.e("TIMER_EJECUTANDO1", "checkService() onStart ");
-
             }
 
             @Override
@@ -576,7 +526,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
                 String response = new String(responseBody);
                 Log.e("TIMER_EJECUTANDO1", "checkService() response " + response);
-
 
                 try {
                     //Log.v("checkService", "SUCCES: "+response);
@@ -621,7 +570,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
                 String response = new String(responseBody);
                 Log.e("TIMER_EJECUTANDO1", "checkService() onFailure response " + response);
-
                 Log.v("checkService", "onFailure");
 
             }
@@ -629,7 +577,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
             @Override
             public void onFinish() {
                 Log.e("TIMER_EJECUTANDO1", "onFinish() ");
-
                 Log.v("checkService", "onFinish");
 
             }
@@ -693,7 +640,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
                         if (responsejson.getBoolean("success")) {
                             Log.v("SERVICE_CMS", "    MAP ARRIVED ok service_id= " + service_id);
-
 
                             // actualizar estado del servicio
                             Log.v("VALIDATE_SERVICE", "arrived service_id " + service_id);
@@ -766,7 +712,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
     private void finishService() {
         Log.v("FINISH2", "finishService() ini ");
         Log.v("FINISH2", "finishService() driver_id=" + driver_id + " service_id=" + service_id);
-
 
         MiddleConnect.finishService(this, driver_id, service_id, MyService.latitud, MyService.longitud, mTotUnits, mTotCharge1, mTotCharge2, mTotCharge3, mTotCharge4, mTotService, mTransactionId, new AsyncHttpResponseHandler() {
 
@@ -880,7 +825,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                 final CharSequence[] items = {"Trafico pesado", "Varado", "Dirección Errada"};
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Razon cancelar servicio");
+                builder.setTitle("Razón cancelar servicio");
                 builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
                         Toast toast = Toast.makeText(getApplicationContext(), "Haz elegido la opcion: " + items[item], Toast.LENGTH_SHORT);
@@ -906,18 +851,10 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                 }
                 break;
 
-
             case R.id.btn_pay:
-
                 String sUnits = mUnits.getText().toString();
-                String noUnits = "";
-
-                int vUnits[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27};
-                if(sUnits.equals(vUnits)){
-                    Toast.makeText(getApplicationContext(), "Ingresa unidades iguales o superiores 28", Toast.LENGTH_LONG).show();
-                }
-                else if (sUnits.equals(noUnits)){
-                    Toast.makeText(getApplicationContext(), "Las unidades no pueden estar vacias", Toast.LENGTH_LONG).show();
+                if(sUnits.equals("")|| sUnits.equals("1")|| sUnits.equals("2") || sUnits.equals("3") || sUnits.equals("4") || sUnits.equals("5") || sUnits.equals("6") || sUnits.equals("7") || sUnits.equals("8") || sUnits.equals("9") || sUnits.equals("10") || sUnits.equals("11") || sUnits.equals("12") || sUnits.equals("13") || sUnits.equals("14") || sUnits.equals("15") || sUnits.equals("16") || sUnits.equals("17") || sUnits.equals("18") || sUnits.equals("19") || sUnits.equals("20") || sUnits.equals("21") || sUnits.equals("22") || sUnits.equals("23") || sUnits.equals("24") || sUnits.equals("25") || sUnits.equals("26") || sUnits.equals("27")) {
+                    Toast.makeText(getApplicationContext(), "Las unidades no pueden estar vacias ni ser menores a 28", Toast.LENGTH_LONG).show();
                 } else {
                     prepareReceipt(String.valueOf(mTotalTrip));
                 }
@@ -976,9 +913,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
 
         mTotValue.setText("Total: " + String.valueOf(valp) + "+" + String.valueOf(p) + "= $ " + String.valueOf(val));
-
         mTotalTrip = Integer.valueOf(val);
-
         mTotUnits = String.valueOf(units);
         mTotService = String.valueOf(val);
 
@@ -1263,10 +1198,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                         android.support.v7.app.AlertDialog.Builder builder1 = new android.support.v7.app.AlertDialog.Builder(MapActivity.this);
 
                         Log.v("prepareReceipt", "paymentezResponse " + paymentezResponse.getTransactionId());
-
-
                         builder1.setMessage("Error: " + paymentezResponse.getErrorMessage());
-
                         builder1.setCancelable(false);
                         builder1.setPositiveButton("OK",
                                 new DialogInterface.OnClickListener() {

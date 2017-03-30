@@ -18,7 +18,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +32,6 @@ import cz.msebera.android.httpclient.Header;
 public class HistoricActivity extends Activity implements OnClickListener {
 
     private ViewGroup mContainerView;
-   // private ImageView volver;
     private ProgressDialog pDialog;
     private String driver_id;
     private String respuesta;
@@ -71,11 +69,8 @@ public class HistoricActivity extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.v("onCreate", "HistoricActivity");
-
         super.onCreate(savedInstanceState);
-
         overridePendingTransition(R.anim.pull_in_from_right, R.anim.hold);
-
         setContentView(R.layout.activity_historic);
 
        // volver = (ImageView) findViewById(R.id.btn_volver);
@@ -83,13 +78,9 @@ public class HistoricActivity extends Activity implements OnClickListener {
        // volver.setOnClickListener(this);
 
         conf = new Conf(this);
-
         driver_id = conf.getIdUser();
-
         uuid = conf.getUuid();
-
         servicios = new ArrayList<Servicio>();
-
         mContainerView = (ViewGroup) findViewById(R.id.mis_servicios);
 
         loadServices();
@@ -237,9 +228,7 @@ public class HistoricActivity extends Activity implements OnClickListener {
     private void convertirDatos() {
 
         try {
-
             JSONObject obj = new JSONObject(respuesta);
-
             JSONArray lista = obj.getJSONArray("services");
             Log.v("HISTORIAL", "services " + lista.toString());
 
@@ -253,15 +242,11 @@ public class HistoricActivity extends Activity implements OnClickListener {
             for (int i = 0; i < count; i++) {
 
                 JSONObject jsObject = lista.getJSONObject(i);
-
                 JSONObject cliente = jsObject.getJSONObject("user");
 
                 String nombre = cliente.getString("name");
-
                 String apellido = cliente.getString("lastname");
-
                 String id_service = jsObject.getString("id");
-
                 String indice = jsObject.getString("index_id");
                 String c1 = jsObject.getString("comp1");
                 String c2 = jsObject.getString("comp2");
@@ -270,14 +255,11 @@ public class HistoricActivity extends Activity implements OnClickListener {
                 String obs = jsObject.getString("obs");
                 String fecha = jsObject.getString("created_at");
                 String direccion = jsObject.getString("address");
-
                 String payType = jsObject.getString("pay_type");
                 String payReference = jsObject.getString("pay_reference");
                 String userId = jsObject.getString("user_id");
                 String userEmail = jsObject.getString("user_email");
-
                 String userCardReference = jsObject.getString("user_card_reference");
-
                 String units   = jsObject.getString("units");
                 String charge1 = jsObject.getString("charge1");
                 String charge2 = jsObject.getString("charge2");
@@ -285,11 +267,9 @@ public class HistoricActivity extends Activity implements OnClickListener {
                 String charge4 = jsObject.getString("charge4");
                 String value   = jsObject.getString("value");
 
-
                 Servicio s = new Servicio(id_service, indice, c1, c2, numero, barrio, obs, "", "", nombre, apellido, 1, "", "", direccion, Integer.valueOf(payType), payReference, userId, userEmail, userCardReference, units, charge1, charge2, charge3,charge4, value);
 
                 s.setFecha(fecha);
-
                 s.setRat(jsObject.getString("qualification"));
 
                 servicios.add(s);

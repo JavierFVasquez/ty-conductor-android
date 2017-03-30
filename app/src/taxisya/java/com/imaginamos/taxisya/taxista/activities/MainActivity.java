@@ -99,9 +99,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         Log.v("onCreate", "MainActivity");
 
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
-
         overridePendingTransition(R.anim.pull_in_from_right, R.anim.hold);
 
        if (!Utils.checkPlayServices(this)) {
@@ -120,15 +118,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         // Log.d("MainActivity", "Refreshed token: " + refreshedToken);
         // uuid = refreshedToken;
         uuid = conf.getUuid();
-
         fondo = (ImageView) findViewById(R.id.fondo);
-
         nombre = (ImageView) findViewById(R.id.nombre_head);
 
         AnimationSet traslation2 = new AnimationSet(true);
-
         DisplayMetrics metrics = getResources().getDisplayMetrics();
-
         TranslateAnimation a;
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -138,27 +132,16 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         }
 
         checkAppVersions();
-
         a.setDuration(1200);
-
         a.setStartOffset(0);
-
         traslation2.addAnimation(a);
-
         traslation2.setFillAfter(true);
-
         nombre.setAnimation(traslation2);
-
         traslation = AnimationUtils.loadAnimation(this, R.anim.pull_out_to_top);
-
         traslation.setFillAfter(true);
-
         fondo.setAnimation(traslation);
-
         carousel = new Carousel(this);
-
         carousel.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.FILL_PARENT, RelativeLayout.LayoutParams.FILL_PARENT));
-
         carousel.setGravity(Gravity.CENTER);
 
         setView();
@@ -169,7 +152,6 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
         if (gps.canGetLocation()) {
             lat = gps.getLatitude();
-
             lng = gps.getLongitude();
 
             Log.e("POSITION", lat + ":" + lng);
@@ -206,11 +188,8 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         try {
-
             name = getIntent().getExtras().getString("name");
-
             tts = new TextToSpeech(this, this);
-
         } catch (Exception e) {
         }
 
@@ -324,7 +303,6 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     private void err_enable() {
 
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-
         vibrator.vibrate(200);
 
         Toast.makeText(
@@ -343,16 +321,29 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     public void onRestart() {
 
         super.onRestart();
-
         overridePendingTransition(R.anim.hold, R.anim.pull_out_to_right);
-
         //reBuildView();
         if (current_item != null) {
             current_item.setVisibility(View.VISIBLE);
         }
 
+        try {
+            checkService();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        try {
+            checkService();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -375,9 +366,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         ((RelativeLayout) findViewById(R.id.contectt)).removeView(carousel);
 
         carousel = new Carousel(this);
-
         carousel.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.FILL_PARENT, RelativeLayout.LayoutParams.FILL_PARENT));
-
         carousel.setGravity(Gravity.CENTER);
 
         setView();
@@ -400,9 +389,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     private void setView() {
 
         try {
-
             carousel.setOnItemClickListener(null);
-
             carousel.setOnItemClickListener(new OnItemClickListener() {
 
                 public void onItemClick(CarouselAdapter<?> parent, final View view, final int position, long id) {
@@ -411,24 +398,18 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                         fade_out = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_out_item);
 
                         final CarouselItem item = (CarouselItem) parent.getChildAt(position);
-
                         item.getImage().setAnimation(fade_out);
-
                         fade_out.setAnimationListener(new AnimationListener() {
 
                             @Override
                             public void onAnimationEnd(Animation animation) {
 
                                 current_item = item;
-
                                 //item.setVisibility(View.INVISIBLE);
                                 //view.setVisibility(View.INVISIBLE);
-
                                 if (!Connectivity.isConnected(MainActivity.this)) {
                                     //view.setVisibility(View.VISIBLE);
-
                                     new Dialogos(MainActivity.this, R.string.error_net);
-
                                 } else {
 
                                     switch (position) {
@@ -487,19 +468,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                     if (old_item != null) {
                         try {
                             if (old_postion == 0) {
-                                ((ImageView) old_item
-                                        .findViewById(R.id.item_image))
-                                        .setImageResource(R.drawable.cerrar_normal);
-
+                                ((ImageView) old_item.findViewById(R.id.item_image)).setImageResource(R.drawable.cerrar_normal);
                             } else if (old_postion == 1) {
-                                ((ImageView) old_item
-                                        .findViewById(R.id.item_image))
-                                        .setImageResource(R.drawable.habilitarme_normal);
+                                ((ImageView) old_item.findViewById(R.id.item_image)).setImageResource(R.drawable.habilitarme_normal);
                             } else if (old_postion == 2) {
-
-                                ((ImageView) old_item
-                                        .findViewById(R.id.item_image))
-                                        .setImageResource(R.drawable.historial_normal);
+                                ((ImageView) old_item.findViewById(R.id.item_image)).setImageResource(R.drawable.historial_normal);
                             }
                         } catch (Exception e) {
 
@@ -507,21 +480,17 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                     }
 
                     old_postion = position;
-
                     old_item = view;
 
                     try {
                         if (position == 0) {
-                            ((ImageView) view.findViewById(R.id.item_image))
-                                    .setImageResource(R.drawable.cerrar_over);
+                            ((ImageView) view.findViewById(R.id.item_image)).setImageResource(R.drawable.cerrar_over);
 
                         } else if (position == 1) {
-                            ((ImageView) view.findViewById(R.id.item_image))
-                                    .setImageResource(R.drawable.habilitarme_over);
+                            ((ImageView) view.findViewById(R.id.item_image)).setImageResource(R.drawable.habilitarme_over);
                         } else if (position == 2) {
 
-                            ((ImageView) view.findViewById(R.id.item_image))
-                                    .setImageResource(R.drawable.historial_over);
+                            ((ImageView) view.findViewById(R.id.item_image)).setImageResource(R.drawable.historial_over);
                         }
                     } catch (Exception e) {
                     }
@@ -677,7 +646,6 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
                             savePreferencias("servicieTomado", "false");
 
-
                             Intent i = new Intent(MainActivity.this, WaitServiceActivity.class);
 
                             if (name != null && name != "") {
@@ -690,7 +658,6 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
                             //startActivity(i);
                             startActivityForResult(i, 1000);
-
 
                             shutDown();
 
@@ -792,30 +759,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                         if (current < remote) {
                             Log.d(TAG, "la versión instalada esta desactualizada");
                             updateAvailable = true;
-                           /*
-                           builder = new AlertDialog.Builder(MainActivity.this);
-                           builder.setMessage(getString(R.string.message_app_version))
-                               .setTitle(getString(R.string.title_app_version))
-                               .setPositiveButton(getString(R.string.button_app_version), new DialogInterface.OnClickListener() {
-                               public void onClick(DialogInterface dialog, int id) {
-                                   dialog.cancel();
 
-                                   final String appPackageName = getApplicationContext().getPackageName();
-                                   try {
-                                       startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-
-                                   }
-                                   catch (android.content.ActivityNotFoundException anfe) {
-                                       startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName)));
-                                   }
-
-                               }
-                            });
-
-                            builder.create();
-
-                            builder.show();
-                            */
                         } else {
                             Log.d(TAG, "la versión instalada es la última");
                         }
@@ -846,13 +790,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     public boolean checkService() throws JSONException {
 
         service_id = null; //conf.getServiceId();
-
         if (service_id != null && !service_id.isEmpty()) {
             Log.v("checkService", "driver_id=" + id_driver + " service_id=" + service_id);
         } else {
             Log.v("checkService", "driver_id=" + id_driver + " service_id=" + "NULO");
         }
-
         MiddleConnect.checkStatusService(this, id_driver, service_id, "uuid", new AsyncHttpResponseHandler() {
 
             @Override
