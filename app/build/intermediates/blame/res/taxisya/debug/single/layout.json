@@ -4,12 +4,12 @@
         "source": "/Users/developer_celuvans/.android/build-cache/7d977dc08e3fc59f7307ad2086fbe57d03c10f2a/output/res/layout/abc_select_dialog_material.xml"
     },
     {
-        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/7d977dc08e3fc59f7307ad2086fbe57d03c10f2a/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
-    },
-    {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/layout/abc_popup_menu_item_layout.xml",
         "source": "/Users/developer_celuvans/.android/build-cache/7d977dc08e3fc59f7307ad2086fbe57d03c10f2a/output/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/7d977dc08e3fc59f7307ad2086fbe57d03c10f2a/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/layout/select_dialog_singlechoice_material.xml",
@@ -56,12 +56,12 @@
         "source": "/Users/developer_celuvans/.android/build-cache/7d977dc08e3fc59f7307ad2086fbe57d03c10f2a/output/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/layout/abc_screen_simple_overlay_action_mode.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/7d977dc08e3fc59f7307ad2086fbe57d03c10f2a/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
-    },
-    {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/layout/activity_main.xml",
         "source": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/7d977dc08e3fc59f7307ad2086fbe57d03c10f2a/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/layout/abc_dialog_title_material.xml",

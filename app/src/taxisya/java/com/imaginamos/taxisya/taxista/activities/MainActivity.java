@@ -41,8 +41,6 @@ import com.carouseldemo.controls.CarouselAdapter;
 import com.carouseldemo.controls.CarouselAdapter.OnItemClickListener;
 import com.carouseldemo.controls.CarouselAdapter.OnItemSelectedListener;
 import com.carouseldemo.controls.CarouselItem;
-//import com.google.android.gcm.GCMRegistrar;
-import com.google.firebase.iid.FirebaseInstanceId;
 import com.imaginamos.taxisya.taxista.R;
 import com.imaginamos.taxisya.taxista.io.Connectivity;
 import com.imaginamos.taxisya.taxista.io.GPSTracker;
@@ -358,7 +356,6 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             }
         }
     }
-
 
     @SuppressWarnings("deprecation")
     private void reBuildView() {

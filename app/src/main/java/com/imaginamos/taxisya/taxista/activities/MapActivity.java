@@ -666,7 +666,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                             }
 
                         } else {
-                            Log.v("SERVICE_CMS", "    MAP ARRIVED bad service_id= " + service_id);
+                            Log.v("SERVICE_CMS", "MAP ARRIVED bad service_id= " + service_id);
 
                             err_arrived();
                         }
@@ -690,7 +690,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
             @Override
             public void onFinish() {
-                Log.v("SERVICE_CMS", "    MAP finish service_id= " + service_id);
+                Log.v("SERVICE_CMS", "MAP finish service_id= " + service_id);
 
                 try {
                     pDialog.dismiss();
@@ -735,7 +735,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
                 String response = new String(responseBody);
                 Log.v("FINISH2", "finishService() onSuccess() - " + response);
-                Log.v("SERVICE_CMS", "    MAP FINISHED success service_id= " + service_id + " response " + response);
+                Log.v("SERVICE_CMS", "MAP FINISHED success service_id= " + service_id + " response " + response);
                 Log.e("RESPOSNE", response + "");
                 try {
                     JSONObject responsejson = new JSONObject(response);
@@ -768,7 +768,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                 String response = new String(responseBody);
                 Log.v("FINISH2", "finishService() onFailure() - " + response);
 
-                Log.v("SERVICE_CMS", "    MAP FINISHED failure service_id= " + service_id + " response " + response);
+                Log.v("SERVICE_CMS", "MAP FINISHED failure service_id= " + service_id + " response " + response);
 
                 Log.e("RESPOSNE", response + "");
                 err_finish_service();
