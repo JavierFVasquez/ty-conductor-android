@@ -888,7 +888,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 String response = new String(responseBody);
                 Log.v("checkService", "onFailure");
-                Toast.makeText(getApplicationContext(), "test 1", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getApplicationContext(), "test 1", Toast.LENGTH_SHORT).show();
                 onFinish();
             }
 

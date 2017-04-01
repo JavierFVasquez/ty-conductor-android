@@ -276,7 +276,7 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
 
 		}
 		return START_NOT_STICKY;
-        */
+
         Bundle extras = intent.getExtras();
         if (extras != null) {
             this.driver_id = extras.getString("driver_id");
@@ -284,7 +284,7 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
             Log.e(TAG, "intent.getExtras() == null");
         }
 
-/*
+
         if (intent.getExtras() == null) {
            Log.e(TAG,"inten.getExtras() == null");
         }
@@ -366,7 +366,7 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                     String response = new String(responseBody);
                     Log.e(TAG, "onFailure" + response);
-                    Toast.makeText(getApplicationContext(), "test 2", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "test 2", Toast.LENGTH_SHORT).show();
                     onFinish();
                 }
 
