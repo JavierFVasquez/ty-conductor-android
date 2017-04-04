@@ -14,29 +14,53 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$12.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$7$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$7$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MapActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MapActivity$10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MapActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MapActivity$11.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/io/MyService$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/io/MyService$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/io/MyService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/io/MyService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/zip-cache/tWvBEiG8sDJeFPMVZhp_TwD1G6g=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/zip-cache/tWvBEiG8sDJeFPMVZhp_TwD1G6g=" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/debug_b83a7dc63e15e3639447996fdc5d4041979f23e5.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/debug_b83a7dc63e15e3639447996fdc5d4041979f23e5.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/gcm_21e7aadc15598a6db1936c5aa4f5ff6f4a7561ca.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/gcm_21e7aadc15598a6db1936c5aa4f5ff6f4a7561ca.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-taxisya-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-taxisya-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/1f/main/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-taxisya-debug-1.2-3.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-taxisya-debug-1.2-3.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/fabric/res/taxisya/debug/values/com_crashlytics_build_id.xml" afterPath="$PROJECT_DIR$/app/build/generated/fabric/res/taxisya/debug/values/com_crashlytics_build_id.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/taxisya/debug/crashlytics-build.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/taxisya/debug/crashlytics-build.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-hdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-mdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugAndroidTestResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merged.dir/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merged.dir/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/taxisya/debug/layout/activity_map.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/taxisya/debug/layout/activity_map.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/taxisya/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/taxisya/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_map.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_map.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/taxisya/res/layout/activity_map.xml" afterPath="$PROJECT_DIR$/app/src/taxisya/res/layout/activity_map.xml" />
     </list>
     <ignored path="ty-conductor-android-.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,98 +96,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MapActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="646" column="52" selection-start-line="646" selection-start-column="48" selection-end-line="646" selection-end-column="52" />
-              <folding>
-                <element signature="e#6133#6151#0" expanded="true" />
-                <element signature="e#8253#8294#0" expanded="true" />
-                <element signature="e#11712#12984#0" expanded="true" />
-                <element signature="e#11976#12002#0" expanded="true" />
-                <element signature="e#12218#12249#0" expanded="true" />
-                <element signature="e#12533#12582#0" expanded="true" />
-                <element signature="e#12983#12984#0" expanded="true" />
-                <element signature="e#15575#15781#0" expanded="true" />
-                <element signature="e#15780#15781#0" expanded="true" />
-                <element signature="e#15827#16033#0" expanded="true" />
-                <element signature="e#16032#16033#0" expanded="true" />
-                <element signature="e#16079#16285#0" expanded="true" />
-                <element signature="e#16284#16285#0" expanded="true" />
-                <element signature="e#16910#16947#0" expanded="true" />
-                <element signature="e#17020#17042#0" expanded="true" />
-                <element signature="e#17044#17230#0" expanded="true" />
-                <element signature="e#17229#17230#0" expanded="true" />
-                <element signature="e#17397#18097#0" expanded="true" />
-                <element signature="e#17703#17958#0" expanded="true" />
-                <element signature="e#17957#17958#0" expanded="true" />
-                <element signature="e#18096#18097#0" expanded="true" />
-                <element signature="e#18239#19532#0" expanded="true" />
-                <element signature="e#19531#19532#0" expanded="true" />
-                <element signature="e#21974#22020#0" expanded="true" />
-                <element signature="e#24166#24212#0" expanded="true" />
-                <element signature="e#25351#25387#0" expanded="true" />
-                <element signature="e#27479#27512#0" expanded="true" />
-                <element signature="e#28175#28220#0" expanded="true" />
-                <element signature="e#29505#29544#0" expanded="true" />
-                <element signature="e#31123#31156#0" expanded="true" />
-                <element signature="e#32310#32684#0" expanded="true" />
-                <element signature="e#32683#32684#0" expanded="true" />
-                <element signature="e#36091#36120#0" expanded="true" />
-                <element signature="e#36150#36191#0" expanded="true" />
-                <element signature="e#36266#36292#0" expanded="true" />
-                <element signature="e#36310#36509#0" expanded="true" />
-                <element signature="e#36508#36509#0" expanded="true" />
-                <element signature="e#36546#36572#0" expanded="true" />
-                <element signature="e#36590#36788#0" expanded="true" />
-                <element signature="e#36787#36788#0" expanded="true" />
-                <element signature="e#37135#37179#0" expanded="true" />
-                <element signature="e#39076#39116#0" expanded="true" />
-                <element signature="e#45173#45488#0" expanded="true" />
-                <element signature="e#45487#45488#0" expanded="true" />
-                <element signature="e#46522#46553#0" expanded="true" />
-                <element signature="e#46591#46926#0" expanded="true" />
-                <element signature="e#46925#46926#0" expanded="true" />
-                <element signature="e#47958#47989#0" expanded="true" />
-                <element signature="e#48027#48362#0" expanded="true" />
-                <element signature="e#48361#48362#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="890" column="64" selection-start-line="890" selection-start-column="59" selection-end-line="890" selection-end-column="64" />
-              <folding>
-                <element signature="e#5969#5995#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="114">
+              <caret line="124" column="32" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java">
+      <file leaf-file-name="InicialActivityLogin.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="368" column="35" selection-start-line="368" selection-start-column="35" selection-end-line="368" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_map.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="3525">
-              <caret line="235" column="16" selection-start-line="235" selection-start-column="16" selection-end-line="235" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="54">
+              <caret line="363" column="50" selection-start-line="363" selection-start-column="50" selection-end-line="363" selection-end-column="50" />
+              <folding>
+                <element signature="e#7338#7354#0" expanded="true" />
+                <element signature="e#7864#7893#0" expanded="true" />
+                <element signature="e#8489#8490#0" expanded="true" />
+                <element signature="e#8553#8554#0" expanded="true" />
+                <element signature="e#14123#14124#0" expanded="true" />
+                <element signature="e#14188#14189#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -4328,8 +4283,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_map.xml" />
         <option value="$PROJECT_DIR$/app/src/taxisya/res/layout/activity_map.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/usuariofinal/taxisya/activities/HomeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java" />
+        <option value="$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.java" />
       </list>
     </option>
   </component>
@@ -4364,8 +4321,8 @@
     </navigator>
     <panes>
       <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -4445,10 +4402,36 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taxista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ty-conductor-android-" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4799,25 +4782,26 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49676898" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24798061" sideWeight="0.31529412" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24798061" sideWeight="0.3560606" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35312024" sideWeight="0.4838449" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3561644" sideWeight="0.4838449" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24232633" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.48802397" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24798061" sideWeight="0.68470585" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5234114" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24798061" sideWeight="0.6439394" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3105023" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39726028" sideWeight="0.49353796" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39726028" sideWeight="0.49353796" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -4825,7 +4809,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24232633" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -4843,104 +4826,50 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java</url>
-          <line>279</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java</url>
+          <line>945</line>
           <properties />
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java</url>
-          <line>246</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java</url>
+          <line>951</line>
           <properties />
-          <option name="timeStamp" value="33" />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java</url>
+          <line>965</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java</url>
+          <line>814</line>
+          <properties />
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="34" />
+      <option name="time" value="56" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7620">
-          <caret line="588" column="13" selection-start-line="588" selection-start-column="13" selection-end-line="588" selection-end-column="13" />
-          <folding>
-            <element signature="e#6133#6151#0" expanded="true" />
-            <element signature="e#8253#8294#0" expanded="true" />
-            <element signature="e#11712#12984#0" expanded="true" />
-            <element signature="e#11976#12002#0" expanded="true" />
-            <element signature="e#12218#12249#0" expanded="true" />
-            <element signature="e#12533#12582#0" expanded="true" />
-            <element signature="e#12983#12984#0" expanded="true" />
-            <element signature="e#15575#15781#0" expanded="true" />
-            <element signature="e#15780#15781#0" expanded="true" />
-            <element signature="e#15827#16033#0" expanded="true" />
-            <element signature="e#16032#16033#0" expanded="true" />
-            <element signature="e#16079#16285#0" expanded="true" />
-            <element signature="e#16284#16285#0" expanded="true" />
-            <element signature="e#16910#16947#0" expanded="true" />
-            <element signature="e#17020#17042#0" expanded="true" />
-            <element signature="e#17044#17230#0" expanded="true" />
-            <element signature="e#17229#17230#0" expanded="true" />
-            <element signature="e#17397#18097#0" expanded="true" />
-            <element signature="e#17703#17958#0" expanded="true" />
-            <element signature="e#17957#17958#0" expanded="true" />
-            <element signature="e#18096#18097#0" expanded="true" />
-            <element signature="e#18239#19532#0" expanded="true" />
-            <element signature="e#19531#19532#0" expanded="true" />
-            <element signature="e#21974#22020#0" expanded="true" />
-            <element signature="e#24166#24212#0" expanded="true" />
-            <element signature="e#25351#25387#0" expanded="true" />
-            <element signature="e#27479#27512#0" expanded="true" />
-            <element signature="e#28175#28220#0" expanded="true" />
-            <element signature="e#29505#29544#0" expanded="true" />
-            <element signature="e#31123#31156#0" expanded="true" />
-            <element signature="e#32310#32684#0" expanded="true" />
-            <element signature="e#32683#32684#0" expanded="true" />
-            <element signature="e#36091#36120#0" expanded="true" />
-            <element signature="e#36150#36191#0" expanded="true" />
-            <element signature="e#36266#36292#0" expanded="true" />
-            <element signature="e#36310#36509#0" expanded="true" />
-            <element signature="e#36508#36509#0" expanded="true" />
-            <element signature="e#36546#36572#0" expanded="true" />
-            <element signature="e#36590#36788#0" expanded="true" />
-            <element signature="e#36787#36788#0" expanded="true" />
-            <element signature="e#37135#37179#0" expanded="true" />
-            <element signature="e#39076#39116#0" expanded="true" />
-            <element signature="e#45173#45488#0" expanded="true" />
-            <element signature="e#45487#45488#0" expanded="true" />
-            <element signature="e#46522#46553#0" expanded="true" />
-            <element signature="e#46591#46926#0" expanded="true" />
-            <element signature="e#46925#46926#0" expanded="true" />
-            <element signature="e#47958#47989#0" expanded="true" />
-            <element signature="e#48027#48362#0" expanded="true" />
-            <element signature="e#48361#48362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="3525">
-          <caret line="235" column="16" selection-start-line="235" selection-start-column="16" selection-end-line="235" selection-end-column="16" />
+        <state relative-caret-position="12630">
+          <caret line="905" column="31" selection-start-line="905" selection-start-column="30" selection-end-line="905" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9615">
-          <caret line="721" column="39" selection-start-line="721" selection-start-column="37" selection-end-line="721" selection-end-column="39" />
+        <state relative-caret-position="13065">
+          <caret line="955" column="35" selection-start-line="955" selection-start-column="35" selection-end-line="955" selection-end-column="35" />
           <folding>
             <element signature="e#6133#6151#0" expanded="true" />
-            <element signature="e#8253#8294#0" expanded="true" />
             <element signature="e#11712#12984#0" expanded="true" />
-            <element signature="e#11976#12002#0" expanded="true" />
-            <element signature="e#12218#12249#0" expanded="true" />
-            <element signature="e#12533#12582#0" expanded="true" />
             <element signature="e#12983#12984#0" expanded="true" />
             <element signature="e#15575#15781#0" expanded="true" />
             <element signature="e#15780#15781#0" expanded="true" />
@@ -4948,8 +4877,6 @@
             <element signature="e#16032#16033#0" expanded="true" />
             <element signature="e#16079#16285#0" expanded="true" />
             <element signature="e#16284#16285#0" expanded="true" />
-            <element signature="e#16910#16947#0" expanded="true" />
-            <element signature="e#17020#17042#0" expanded="true" />
             <element signature="e#17044#17230#0" expanded="true" />
             <element signature="e#17229#17230#0" expanded="true" />
             <element signature="e#17397#18097#0" expanded="true" />
@@ -4958,128 +4885,39 @@
             <element signature="e#18096#18097#0" expanded="true" />
             <element signature="e#18239#19532#0" expanded="true" />
             <element signature="e#19531#19532#0" expanded="true" />
-            <element signature="e#21974#22020#0" expanded="true" />
-            <element signature="e#24166#24212#0" expanded="true" />
-            <element signature="e#25351#25387#0" expanded="true" />
-            <element signature="e#27479#27512#0" expanded="true" />
-            <element signature="e#28175#28220#0" expanded="true" />
-            <element signature="e#29505#29544#0" expanded="true" />
-            <element signature="e#31123#31156#0" expanded="true" />
-            <element signature="e#32310#32684#0" expanded="true" />
-            <element signature="e#32683#32684#0" expanded="true" />
-            <element signature="e#36091#36120#0" expanded="true" />
-            <element signature="e#36150#36191#0" expanded="true" />
-            <element signature="e#36266#36292#0" expanded="true" />
-            <element signature="e#36310#36509#0" expanded="true" />
-            <element signature="e#36508#36509#0" expanded="true" />
-            <element signature="e#36546#36572#0" expanded="true" />
-            <element signature="e#36590#36788#0" expanded="true" />
-            <element signature="e#36787#36788#0" expanded="true" />
-            <element signature="e#37135#37179#0" expanded="true" />
-            <element signature="e#39076#39116#0" expanded="true" />
-            <element signature="e#45173#45488#0" expanded="true" />
-            <element signature="e#45487#45488#0" expanded="true" />
-            <element signature="e#46522#46553#0" expanded="true" />
-            <element signature="e#46591#46926#0" expanded="true" />
-            <element signature="e#46925#46926#0" expanded="true" />
-            <element signature="e#47958#47989#0" expanded="true" />
-            <element signature="e#48027#48362#0" expanded="true" />
-            <element signature="e#48361#48362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="3525">
-          <caret line="235" column="16" selection-start-line="235" selection-start-column="16" selection-end-line="235" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
-          <folding>
-            <element signature="e#6133#6151#0" expanded="true" />
-            <element signature="e#8253#8294#0" expanded="true" />
-            <element signature="e#11712#12984#0" expanded="true" />
-            <element signature="e#11976#12002#0" expanded="true" />
-            <element signature="e#12218#12249#0" expanded="true" />
-            <element signature="e#12533#12582#0" expanded="true" />
-            <element signature="e#12983#12984#0" expanded="true" />
-            <element signature="e#15575#15781#0" expanded="true" />
-            <element signature="e#15780#15781#0" expanded="true" />
-            <element signature="e#15827#16033#0" expanded="true" />
-            <element signature="e#16032#16033#0" expanded="true" />
-            <element signature="e#16079#16285#0" expanded="true" />
-            <element signature="e#16284#16285#0" expanded="true" />
-            <element signature="e#16910#16947#0" expanded="true" />
-            <element signature="e#17020#17042#0" expanded="true" />
-            <element signature="e#17044#17230#0" expanded="true" />
-            <element signature="e#17229#17230#0" expanded="true" />
-            <element signature="e#17397#18097#0" expanded="true" />
-            <element signature="e#17703#17958#0" expanded="true" />
-            <element signature="e#17957#17958#0" expanded="true" />
-            <element signature="e#18096#18097#0" expanded="true" />
-            <element signature="e#18239#19532#0" expanded="true" />
-            <element signature="e#19531#19532#0" expanded="true" />
-            <element signature="e#21974#22020#0" expanded="true" />
-            <element signature="e#24166#24212#0" expanded="true" />
-            <element signature="e#25351#25387#0" expanded="true" />
-            <element signature="e#27479#27512#0" expanded="true" />
-            <element signature="e#28175#28220#0" expanded="true" />
-            <element signature="e#29505#29544#0" expanded="true" />
-            <element signature="e#31123#31156#0" expanded="true" />
-            <element signature="e#32310#32684#0" expanded="true" />
-            <element signature="e#32683#32684#0" expanded="true" />
-            <element signature="e#36091#36120#0" expanded="true" />
-            <element signature="e#36150#36191#0" expanded="true" />
-            <element signature="e#36266#36292#0" expanded="true" />
-            <element signature="e#36310#36509#0" expanded="true" />
-            <element signature="e#36508#36509#0" expanded="true" />
-            <element signature="e#36546#36572#0" expanded="true" />
-            <element signature="e#36590#36788#0" expanded="true" />
-            <element signature="e#36787#36788#0" expanded="true" />
-            <element signature="e#37135#37179#0" expanded="true" />
-            <element signature="e#39076#39116#0" expanded="true" />
-            <element signature="e#45173#45488#0" expanded="true" />
-            <element signature="e#45487#45488#0" expanded="true" />
-            <element signature="e#46522#46553#0" expanded="true" />
-            <element signature="e#46591#46926#0" expanded="true" />
-            <element signature="e#46925#46926#0" expanded="true" />
-            <element signature="e#47958#47989#0" expanded="true" />
-            <element signature="e#48027#48362#0" expanded="true" />
-            <element signature="e#48361#48362#0" expanded="true" />
+            <element signature="e#32326#32700#0" expanded="true" />
+            <element signature="e#32699#32700#0" expanded="true" />
+            <element signature="e#36107#36136#0" expanded="true" />
+            <element signature="e#36326#36525#0" expanded="true" />
+            <element signature="e#36524#36525#0" expanded="true" />
+            <element signature="e#36606#36804#0" expanded="true" />
+            <element signature="e#36803#36804#0" expanded="true" />
+            <element signature="e#39092#39132#0" expanded="true" />
+            <element signature="e#45189#45504#0" expanded="true" />
+            <element signature="e#45503#45504#0" expanded="true" />
+            <element signature="e#46607#46942#0" expanded="true" />
+            <element signature="e#46941#46942#0" expanded="true" />
+            <element signature="e#48043#48378#0" expanded="true" />
+            <element signature="e#48377#48378#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#5969#5995#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="12630">
+          <caret line="905" column="31" selection-start-line="905" selection-start-column="30" selection-end-line="905" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="100" column="19" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
           <folding>
             <element signature="e#6133#6151#0" expanded="true" />
-            <element signature="e#8253#8294#0" expanded="true" />
             <element signature="e#11712#12984#0" expanded="true" />
-            <element signature="e#11976#12002#0" expanded="true" />
-            <element signature="e#12218#12249#0" expanded="true" />
-            <element signature="e#12533#12582#0" expanded="true" />
             <element signature="e#12983#12984#0" expanded="true" />
             <element signature="e#15575#15781#0" expanded="true" />
             <element signature="e#15780#15781#0" expanded="true" />
@@ -5087,8 +4925,6 @@
             <element signature="e#16032#16033#0" expanded="true" />
             <element signature="e#16079#16285#0" expanded="true" />
             <element signature="e#16284#16285#0" expanded="true" />
-            <element signature="e#16910#16947#0" expanded="true" />
-            <element signature="e#17020#17042#0" expanded="true" />
             <element signature="e#17044#17230#0" expanded="true" />
             <element signature="e#17229#17230#0" expanded="true" />
             <element signature="e#17397#18097#0" expanded="true" />
@@ -5097,136 +4933,44 @@
             <element signature="e#18096#18097#0" expanded="true" />
             <element signature="e#18239#19532#0" expanded="true" />
             <element signature="e#19531#19532#0" expanded="true" />
-            <element signature="e#21974#22020#0" expanded="true" />
-            <element signature="e#24166#24212#0" expanded="true" />
-            <element signature="e#25351#25387#0" expanded="true" />
-            <element signature="e#27479#27512#0" expanded="true" />
-            <element signature="e#28175#28220#0" expanded="true" />
-            <element signature="e#29505#29544#0" expanded="true" />
-            <element signature="e#31123#31156#0" expanded="true" />
-            <element signature="e#32310#32684#0" expanded="true" />
-            <element signature="e#32683#32684#0" expanded="true" />
-            <element signature="e#36091#36120#0" expanded="true" />
-            <element signature="e#36150#36191#0" expanded="true" />
-            <element signature="e#36266#36292#0" expanded="true" />
-            <element signature="e#36310#36509#0" expanded="true" />
-            <element signature="e#36508#36509#0" expanded="true" />
-            <element signature="e#36546#36572#0" expanded="true" />
-            <element signature="e#36590#36788#0" expanded="true" />
-            <element signature="e#36787#36788#0" expanded="true" />
-            <element signature="e#37135#37179#0" expanded="true" />
-            <element signature="e#39076#39116#0" expanded="true" />
-            <element signature="e#45173#45488#0" expanded="true" />
-            <element signature="e#45487#45488#0" expanded="true" />
-            <element signature="e#46522#46553#0" expanded="true" />
-            <element signature="e#46591#46926#0" expanded="true" />
-            <element signature="e#46925#46926#0" expanded="true" />
-            <element signature="e#47958#47989#0" expanded="true" />
-            <element signature="e#48027#48362#0" expanded="true" />
-            <element signature="e#48361#48362#0" expanded="true" />
+            <element signature="e#32326#32700#0" expanded="true" />
+            <element signature="e#32699#32700#0" expanded="true" />
+            <element signature="e#36107#36136#0" expanded="true" />
+            <element signature="e#36326#36525#0" expanded="true" />
+            <element signature="e#36524#36525#0" expanded="true" />
+            <element signature="e#36606#36804#0" expanded="true" />
+            <element signature="e#36803#36804#0" expanded="true" />
+            <element signature="e#39092#39132#0" expanded="true" />
+            <element signature="e#45189#45504#0" expanded="true" />
+            <element signature="e#45503#45504#0" expanded="true" />
+            <element signature="e#46607#46942#0" expanded="true" />
+            <element signature="e#46941#46942#0" expanded="true" />
+            <element signature="e#48043#48378#0" expanded="true" />
+            <element signature="e#48377#48378#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
-          <folding>
-            <element signature="e#6133#6151#0" expanded="true" />
-            <element signature="e#8253#8294#0" expanded="true" />
-            <element signature="e#11712#12984#0" expanded="true" />
-            <element signature="e#11976#12002#0" expanded="true" />
-            <element signature="e#12218#12249#0" expanded="true" />
-            <element signature="e#12533#12582#0" expanded="true" />
-            <element signature="e#12983#12984#0" expanded="true" />
-            <element signature="e#15575#15781#0" expanded="true" />
-            <element signature="e#15780#15781#0" expanded="true" />
-            <element signature="e#15827#16033#0" expanded="true" />
-            <element signature="e#16032#16033#0" expanded="true" />
-            <element signature="e#16079#16285#0" expanded="true" />
-            <element signature="e#16284#16285#0" expanded="true" />
-            <element signature="e#16910#16947#0" expanded="true" />
-            <element signature="e#17020#17042#0" expanded="true" />
-            <element signature="e#17044#17230#0" expanded="true" />
-            <element signature="e#17229#17230#0" expanded="true" />
-            <element signature="e#17397#18097#0" expanded="true" />
-            <element signature="e#17703#17958#0" expanded="true" />
-            <element signature="e#17957#17958#0" expanded="true" />
-            <element signature="e#18096#18097#0" expanded="true" />
-            <element signature="e#18239#19532#0" expanded="true" />
-            <element signature="e#19531#19532#0" expanded="true" />
-            <element signature="e#21974#22020#0" expanded="true" />
-            <element signature="e#24166#24212#0" expanded="true" />
-            <element signature="e#25351#25387#0" expanded="true" />
-            <element signature="e#27479#27512#0" expanded="true" />
-            <element signature="e#28175#28220#0" expanded="true" />
-            <element signature="e#29505#29544#0" expanded="true" />
-            <element signature="e#31123#31156#0" expanded="true" />
-            <element signature="e#32310#32684#0" expanded="true" />
-            <element signature="e#32683#32684#0" expanded="true" />
-            <element signature="e#36091#36120#0" expanded="true" />
-            <element signature="e#36150#36191#0" expanded="true" />
-            <element signature="e#36266#36292#0" expanded="true" />
-            <element signature="e#36310#36509#0" expanded="true" />
-            <element signature="e#36508#36509#0" expanded="true" />
-            <element signature="e#36546#36572#0" expanded="true" />
-            <element signature="e#36590#36788#0" expanded="true" />
-            <element signature="e#36787#36788#0" expanded="true" />
-            <element signature="e#37135#37179#0" expanded="true" />
-            <element signature="e#39076#39116#0" expanded="true" />
-            <element signature="e#45173#45488#0" expanded="true" />
-            <element signature="e#45487#45488#0" expanded="true" />
-            <element signature="e#46522#46553#0" expanded="true" />
-            <element signature="e#46591#46926#0" expanded="true" />
-            <element signature="e#46925#46926#0" expanded="true" />
-            <element signature="e#47958#47989#0" expanded="true" />
-            <element signature="e#48027#48362#0" expanded="true" />
-            <element signature="e#48361#48362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2235">
-          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="167" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_map.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="237" column="59" selection-start-line="237" selection-start-column="59" selection-end-line="237" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/taxisya/res/layout/activity_map.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="237" column="55" selection-start-line="237" selection-start-column="55" selection-end-line="237" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/LoginActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_map.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/taxisya/res/layout/activity_map.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/usuariofinal/taxisya/activities/HomeActivity.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/MapActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="646" column="52" selection-start-line="646" selection-start-column="48" selection-end-line="646" selection-end-column="52" />
           <folding>
             <element signature="e#6133#6151#0" expanded="true" />
-            <element signature="e#8253#8294#0" expanded="true" />
             <element signature="e#11712#12984#0" expanded="true" />
-            <element signature="e#11976#12002#0" expanded="true" />
-            <element signature="e#12218#12249#0" expanded="true" />
-            <element signature="e#12533#12582#0" expanded="true" />
             <element signature="e#12983#12984#0" expanded="true" />
             <element signature="e#15575#15781#0" expanded="true" />
             <element signature="e#15780#15781#0" expanded="true" />
@@ -5234,8 +4978,6 @@
             <element signature="e#16032#16033#0" expanded="true" />
             <element signature="e#16079#16285#0" expanded="true" />
             <element signature="e#16284#16285#0" expanded="true" />
-            <element signature="e#16910#16947#0" expanded="true" />
-            <element signature="e#17020#17042#0" expanded="true" />
             <element signature="e#17044#17230#0" expanded="true" />
             <element signature="e#17229#17230#0" expanded="true" />
             <element signature="e#17397#18097#0" expanded="true" />
@@ -5244,63 +4986,117 @@
             <element signature="e#18096#18097#0" expanded="true" />
             <element signature="e#18239#19532#0" expanded="true" />
             <element signature="e#19531#19532#0" expanded="true" />
-            <element signature="e#21974#22020#0" expanded="true" />
-            <element signature="e#24166#24212#0" expanded="true" />
-            <element signature="e#25351#25387#0" expanded="true" />
-            <element signature="e#27479#27512#0" expanded="true" />
-            <element signature="e#28175#28220#0" expanded="true" />
-            <element signature="e#29505#29544#0" expanded="true" />
-            <element signature="e#31123#31156#0" expanded="true" />
-            <element signature="e#32310#32684#0" expanded="true" />
-            <element signature="e#32683#32684#0" expanded="true" />
-            <element signature="e#36091#36120#0" expanded="true" />
-            <element signature="e#36150#36191#0" expanded="true" />
-            <element signature="e#36266#36292#0" expanded="true" />
-            <element signature="e#36310#36509#0" expanded="true" />
-            <element signature="e#36508#36509#0" expanded="true" />
-            <element signature="e#36546#36572#0" expanded="true" />
-            <element signature="e#36590#36788#0" expanded="true" />
-            <element signature="e#36787#36788#0" expanded="true" />
-            <element signature="e#37135#37179#0" expanded="true" />
-            <element signature="e#39076#39116#0" expanded="true" />
-            <element signature="e#45173#45488#0" expanded="true" />
-            <element signature="e#45487#45488#0" expanded="true" />
-            <element signature="e#46522#46553#0" expanded="true" />
-            <element signature="e#46591#46926#0" expanded="true" />
-            <element signature="e#46925#46926#0" expanded="true" />
-            <element signature="e#47958#47989#0" expanded="true" />
-            <element signature="e#48027#48362#0" expanded="true" />
-            <element signature="e#48361#48362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="890" column="64" selection-start-line="890" selection-start-column="59" selection-end-line="890" selection-end-column="64" />
-          <folding>
-            <element signature="e#5969#5995#0" expanded="true" />
+            <element signature="e#32326#32700#0" expanded="true" />
+            <element signature="e#32699#32700#0" expanded="true" />
+            <element signature="e#36107#36136#0" expanded="true" />
+            <element signature="e#36326#36525#0" expanded="true" />
+            <element signature="e#36524#36525#0" expanded="true" />
+            <element signature="e#36606#36804#0" expanded="true" />
+            <element signature="e#36803#36804#0" expanded="true" />
+            <element signature="e#39092#39132#0" expanded="true" />
+            <element signature="e#45189#45504#0" expanded="true" />
+            <element signature="e#45503#45504#0" expanded="true" />
+            <element signature="e#46607#46942#0" expanded="true" />
+            <element signature="e#46941#46942#0" expanded="true" />
+            <element signature="e#48043#48378#0" expanded="true" />
+            <element signature="e#48377#48378#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="368" column="35" selection-start-line="368" selection-start-column="35" selection-end-line="368" selection-end-column="35" />
+        <state relative-caret-position="165">
+          <caret line="256" column="30" selection-start-line="256" selection-start-column="30" selection-end-line="256" selection-end-column="30" />
+          <folding>
+            <element signature="e#10223#10224#0" expanded="true" />
+            <element signature="e#10250#10251#0" expanded="true" />
+            <element signature="e#10919#10920#0" expanded="true" />
+            <element signature="e#10980#10981#0" expanded="true" />
+            <element signature="e#11640#11641#0" expanded="true" />
+            <element signature="e#11702#11703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_inicial.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-22/android/os/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-22/android/os/Looper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+          <folding>
+            <element signature="e#5688#5689#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="3525">
-          <caret line="235" column="16" selection-start-line="235" selection-start-column="16" selection-end-line="235" selection-end-column="16" />
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-22/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/5d171c3cd5343e5997f974561abed21442273fd1/android-async-http-1.4.9-sources.jar!/com/loopj/android/http/AsyncHttpResponseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="510" column="0" selection-start-line="510" selection-start-column="0" selection-end-line="510" selection-end-column="0" />
+          <folding>
+            <element signature="e#18627#18628#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="124" column="32" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="363" column="50" selection-start-line="363" selection-start-column="50" selection-end-line="363" selection-end-column="50" />
+          <folding>
+            <element signature="e#7338#7354#0" expanded="true" />
+            <element signature="e#7864#7893#0" expanded="true" />
+            <element signature="e#8489#8490#0" expanded="true" />
+            <element signature="e#8553#8554#0" expanded="true" />
+            <element signature="e#14123#14124#0" expanded="true" />
+            <element signature="e#14188#14189#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

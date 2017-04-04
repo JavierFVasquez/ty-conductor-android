@@ -41,6 +41,8 @@ import com.carouseldemo.controls.CarouselAdapter;
 import com.carouseldemo.controls.CarouselAdapter.OnItemClickListener;
 import com.carouseldemo.controls.CarouselAdapter.OnItemSelectedListener;
 import com.carouseldemo.controls.CarouselItem;
+//import com.google.android.gcm.GCMRegistrar;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.imaginamos.taxisya.taxista.R;
 import com.imaginamos.taxisya.taxista.io.Connectivity;
 import com.imaginamos.taxisya.taxista.io.GPSTracker;
@@ -57,6 +59,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 import cz.msebera.android.httpclient.Header;
@@ -222,13 +225,10 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                     Log.v("MESSAGE_MASSIVE", "mensaje global recibido");
                     String message = intent.getExtras().getString("message");
                     mostrarMensaje(message);
-
                 }
-
             }
         };
         registerReceiver(mReceiver, intentfilter);
-
     }
 
     void mostrarMensaje(final String message) {
@@ -356,6 +356,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             }
         }
     }
+
 
     @SuppressWarnings("deprecation")
     private void reBuildView() {
@@ -786,7 +787,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
     public boolean checkService() throws JSONException {
 
-        service_id = null; //conf.getServiceId();
+        service_id = null;
         if (service_id != null && !service_id.isEmpty()) {
             Log.v("checkService", "driver_id=" + id_driver + " service_id=" + service_id);
         } else {
@@ -803,32 +804,31 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 String response = new String(responseBody);
                 try {
-                    //Log.v("checkService", "SUCCES: "+response);
+
                     JSONObject responsejson = new JSONObject(response);
-                    //if (responsejson.getInt("status_id"))
-                    //{
+
                     status_service = responsejson.getInt("status_id");
                     Log.v("checkService", "status_id: " + String.valueOf(status_service));
 
 
                     // si hay un servicio asignado lo recupera
                     if ((status_service == 2) || (status_service == 4)) {
-                        Log.v("MainActivity", "checkService() servicio asignado recuperado");
-                        Log.v("MainActivity", "responsejson = " + responsejson.toString());
-                        Log.v("MainActivity", "responsejson = " + responsejson.getJSONObject("driver").toString());
-
-                        Log.v("MainActivity", "responsejson id = " + responsejson.getString("id"));
-                        Log.v("MainActivity", "responsejson lat = " + responsejson.getString("from_lat"));
 
                         Intent intent = new Intent(MainActivity.this, MapActivity.class);
                         intent.putExtra("lat", Double.parseDouble(responsejson.getString("from_lat")));
                         intent.putExtra("lng", Double.parseDouble(responsejson.getString("from_lng")));
-
                         intent.putExtra("id_servicio", responsejson.getString("id"));
+
+                        Log.v("MainActivity", "checkService() servicio asignado recuperado");
+                        Log.v("MainActivity", "responsejson = " + responsejson.toString());
+                        Log.v("MainActivity", "responsejson = " + responsejson.getJSONObject("driver").toString());
+                        Log.v("MainActivity", "responsejson id = " + responsejson.getString("id"));
+                        Log.v("MainActivity", "responsejson lat = " + responsejson.getString("from_lat"));
                         Log.v("MainActivity", "responsejson schedule_type = " + responsejson.getString("schedule_type"));
 
                         String type = String.valueOf(responsejson.getString("schedule_type"));
                         String direccion = "";
+
                         if ((type.equals("2")) || (type.equals("3"))) {
                             String serviceDateTime = responsejson.getString("service_date_time");
                             String substr = serviceDateTime.substring(11, 16);
@@ -888,7 +888,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 String response = new String(responseBody);
                 Log.v("checkService", "onFailure");
-               // Toast.makeText(getApplicationContext(), "test 1", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "test 1", Toast.LENGTH_SHORT).show();
                 onFinish();
             }
 
@@ -906,7 +906,6 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             return false;
 
     }
-
 
     @Override
     public void onInit(int status) {

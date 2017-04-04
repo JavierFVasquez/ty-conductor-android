@@ -86,26 +86,26 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
     private boolean mSendPosition = false;
 
 
-/*
-    Handler han = new Handler(){
-    	public void handleMessage(android.os.Message msg) {
-    		Log.e(TAG, "*** run *****");
+    /*
+        Handler han = new Handler(){
+            public void handleMessage(android.os.Message msg) {
+                Log.e(TAG, "*** run *****");
 
-	    	try {
-	    		mLocationClient.removeLocationUpdates(MyService.this);
-			} catch (Exception e) {
-				Log.e(TAG, "" + e.toString());
-			}
+                try {
+                    mLocationClient.removeLocationUpdates(MyService.this);
+                } catch (Exception e) {
+                    Log.e(TAG, "" + e.toString());
+                }
 
-	    	try {
-	    		locationManager.removeUpdates(loca);
-			} catch (Exception e) {
-				Log.e(TAG, "" + e.toString());
-			}
-	    	activeLocation();
-    	};
-    };
-*/
+                try {
+                    locationManager.removeUpdates(loca);
+                } catch (Exception e) {
+                    Log.e(TAG, "" + e.toString());
+                }
+                activeLocation();
+            };
+        };
+    */
     public static int getMeters() {
         Log.v("MyService","getMeters");
 
@@ -245,57 +245,24 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         mGoogleApiClient = new GoogleApiClient.Builder(MyService.this)
-                    .addConnectionCallbacks(MyService.this)
-                    .addOnConnectionFailedListener(MyService.this)
-                    .addApi(LocationServices.API)
-                    .build();
-        /*
-        Bundle extras = intent.getExtras();
+                .addConnectionCallbacks(MyService.this)
+                .addOnConnectionFailedListener(MyService.this)
+                .addApi(LocationServices.API)
+                .build();
 
-		if (extras != null) {
-
-			activeLocation();
-
-			try {
-				timer = new Timer();
-
-				timer.schedule(new TimerTask() {
-
-					@Override
-					public void run() {
-						han.sendEmptyMessage(0);
-                        Log.e(TAG,"han.sendEmptyMessage");
-					}
-
-				}, 1200000,1200000);
-
-			    this.driver_id = extras.getString("driver_id");
-			} catch (Exception e) {
-				Log.e(TAG, "" + e.toString());
-			}
-
-		}
-		return START_NOT_STICKY;
-
-        Bundle extras = intent.getExtras();
-        if (extras != null) {
-            this.driver_id = extras.getString("driver_id");
-        } else {
+        /*Bundle extras = intent.getExtras();
+        if (extras.equals(null)){
             Log.e(TAG, "intent.getExtras() == null");
-        }
+            System.exit(0);
+        }if (extras != null) {
+            this.driver_id = extras.getString("driver_id");
+        }*/
 
-
-        if (intent.getExtras() == null) {
-           Log.e(TAG,"inten.getExtras() == null");
-        }
-        else {
-            Bundle extras = intent.getExtras();
-            if (extras != null)
-                this.driver_id = extras.getString("driver_id");
-        }
-*/
         if (mGoogleApiClient != null) {
             mGoogleApiClient.connect();
+        } if (mGoogleApiClient.equals(null)) {
+            System.exit(0);
+
         }
 
 
@@ -346,6 +313,8 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
             longitud = location.getLongitude();
             latitud = location.getLatitude();
 
+//            if (location.getAccuracy() < 100.0f) {
+//                stopLocationUpdates();
             Log.e(TAG, "sendMyPosition");
             MiddleConnect.sendMyPosition(this, driver_id, String.valueOf(latitud), String.valueOf(longitud), new AsyncHttpResponseHandler() {
                 @Override
@@ -366,8 +335,6 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                     String response = new String(responseBody);
                     Log.e(TAG, "onFailure" + response);
-                    //Toast.makeText(getApplicationContext(), "test 2", Toast.LENGTH_SHORT).show();
-                    onFinish();
                 }
 
                 @Override
@@ -375,6 +342,7 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
                     Log.e(TAG, "onFinish");
                 }
             });
+//            }
         }
     }
 
