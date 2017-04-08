@@ -89,7 +89,7 @@
     <string name="error_arrived">Hubo un error en la confirmacion de llegada , intentelo de nuevo!</string>
     <string name="error_cancel_service">Hubo un error al cancelar el servicio, intente de nuevo</string>
     <string name="error_disable">Hubo un error deshabilitando, intentelo de nuevo</string>
-    <string name="error_dos">Este usuario ya esta logueado en otro dispositivo..</string>
+    <string name="error_dos">Este usuario ya esta logueado en otro dispositivo.</string>
     <string name="error_net">No está conectado internet</string>
     <string name="error_tres">Su afiliación se encuentra vencida, comuniquese con la central para activarla de nuevo.</string>
     <string name="error_uno">Usuario o contraseña incorrectos.</string>
@@ -203,7 +203,7 @@
     <string name="user_cancel">¡El usuario ha cancelado el servicio!</string>
     <string name="verificando">Verificando...</string>
     <string name="waitservice_button_deshabilitarme">Deshabilitarme</string>
-    <string name="waitservice_errot_conexion">Hubo un error en su conexión a internet! En este momento no recibirá servicios</string>
+    <string name="waitservice_errot_conexion">Hubo un error en su conexión a internet, En este momento no recibirá servicios.</string>
     <string name="waitservice_no_permitido_otro_servicio">No puede tomar otro servicio adicional</string>
     <string name="waitservice_numeros_cuarta">cuarta</string>
     <string name="waitservice_numeros_decima">decima</string>

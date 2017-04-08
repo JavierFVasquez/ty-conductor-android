@@ -103,12 +103,12 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         setContentView(R.layout.activity_main);
         overridePendingTransition(R.anim.pull_in_from_right, R.anim.hold);
 
-       if (!Utils.checkPlayServices(this)) {
-           Toast.makeText(this, getString(R.string.update_play_service), Toast.LENGTH_SHORT).show();
+        if (!Utils.checkPlayServices(this)) {
+            Toast.makeText(this, getString(R.string.update_play_service), Toast.LENGTH_SHORT).show();
 
-       } else if (!Connectivity.isConnected(this)) {
-           new Dialogos(MainActivity.this, R.string.error_net);
-       }
+        } else if (!Connectivity.isConnected(this)) {
+            new Dialogos(MainActivity.this, R.string.error_net);
+        }
 
         conf = new Conf(this);
 

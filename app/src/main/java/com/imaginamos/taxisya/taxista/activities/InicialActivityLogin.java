@@ -353,7 +353,7 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                String response = new String(responseBody);
+                //String response = new String(responseBody);
                 Log.v("checkService", "onFailure");
                 //Toast.makeText(getApplicationContext(), "test 1", Toast.LENGTH_SHORT).show();
                 onFinish();

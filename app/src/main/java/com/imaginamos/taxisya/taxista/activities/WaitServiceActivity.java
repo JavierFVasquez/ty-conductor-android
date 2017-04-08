@@ -22,6 +22,7 @@ import android.os.PowerManager;
 import android.os.SystemClock;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.speech.tts.TextToSpeech;
 import android.text.TextUtils;
 import android.util.Log;
@@ -94,28 +95,20 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     private String name = "";
     private JSONArray services_init;
     private BroadcastReceiver mReceiver;
-
     private ArrayList<ViewGroup> services;
     private List<String> mVisibleServices;
-
     private Conf conf;
     private AlertDialog.Builder builder;
-
     private PowerManager.WakeLock mWakeLock;
     private double lat, lng = 0;
-
     private Timer myTimer = new Timer();
     private Timer myTimerSpeak = new Timer();
-
     private Integer recibe_push = 0;
-
     private String mServiceId;
     private int mStatusOld;
     private int mStatusNew;
-
     private BDAdapter mySQLiteAdapter;
     private Cursor mCursor;
-
     private long mLastClickTime = 0;
 
     PendingIntent mPendingIntent;
@@ -126,7 +119,6 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     private ImageView mConnectivityLoaderImage;
     private RelativeLayout mNoConnectivityPanel;
     private Connectivity connectivityChecker = new Connectivity(this);
-
 
     @Override
     public void onRestart() {
@@ -153,9 +145,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                     lng = gps.getLongitude();
                 }
                 gps.stopUsingGPS();
-
                 isServiceInProgress = false;
-
                 enable(driver_id, uuid);
 
                 // enableService();
@@ -185,18 +175,13 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         // open sqlite
         mySQLiteAdapter = new BDAdapter(this);
         mySQLiteAdapter.openToWrite();
-
         mVisibleServices = new ArrayList<String>();
-
         mNumbers = getResources().getStringArray(R.array.waitservice_numbers);
 
         try {
             overridePendingTransition(R.anim.pull_in_from_right, R.anim.hold);
-
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
-
             loc = Locale.getDefault();
 
         } catch (Exception e) {
@@ -219,8 +204,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
             public void onReceive(Context context, Intent intent) {
                 String value = intent.getAction();
 
-                getWindow().addFlags(
-                        WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+                getWindow().addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
 
                 Log.e("PUSH", "WaitServiceActivity - onReceive() value = " + value);
                 Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - onReceive() value = " + value);
@@ -231,15 +215,10 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 
                     try {
                         Log.v("WaitServiceActivity", "Action NEW_SERVICES ok " + String.valueOf(new Date()));
-                        Intent i = new Intent(getApplicationContext(),
-                                NotificationActivity.class);
-
+                        Intent i = new Intent(getApplicationContext(), NotificationActivity.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
                         getApplication().startActivity(i);
-
-                        setService(intent.getExtras().getString("service"),
-                                intent.getExtras().getString("user_name"));
+                        setService(intent.getExtras().getString("service"), intent.getExtras().getString("user_name"));
 
                     } catch (Exception e) {
                         Log.e("ERROR", "" + e.toString());
@@ -250,26 +229,21 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                 } else if (value.equals(Actions.ACTION_SERVICE_CANCEL)) {
                     recibe_push = 0;
                     Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_SERVICE_CANCEL");
-
-                    Log.e("ESTEBAAN", intent.getExtras()
-                            .getString("service_id"));
+                    Log.e("ESTEBAAN", intent.getExtras().getString("service_id"));
                     Log.v("WaitServiceActivity", "Action SERVICE_CANCEL " + String.valueOf(new Date()));
 
                     deleteService(intent.getExtras().getString("service_id"));
-
                     mySQLiteAdapter.updateStatusService(intent.getExtras().getString("service_id"), "7");
 
 
                 } else if (value.equals(Actions.NO_NET)) {
-                    Log.v("WaitServiceActivity", "Action NO NET " + String.valueOf(new Date()));
-                    Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_NO_NET");
+                    //Log.v("WaitServiceActivity", "Action NO NET " + String.valueOf(new Date()));
+                    //Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_NO_NET");
+                    Toast.makeText(getApplicationContext(), R.string.waitservice_errot_conexion, Toast.LENGTH_LONG).show();
 
-                    // showDialog("Hubo un error en su conexión a internet! En este momento no recibirá servicios");
-                    // enviar enable service
-                    Toast.makeText(
-                            getApplicationContext(),
-                            R.string.waitservice_errot_conexion,
-                            Toast.LENGTH_LONG).show();
+                    intent = new Intent(getApplicationContext(), InicialActivityLogin.class);
+                    startActivity(intent);
+
                 } else if (value.equals(Actions.YES_NET)) {
                     Log.v("WaitServiceActivity", "Action YES NET " + String.valueOf(new Date()));
 
@@ -279,9 +253,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                     Log.v("DRIVER_CLOSE_SESSION", "close ");
                     Log.v("WaitServiceActivity", "Action DRIVER_CLOSE_SESSION " + String.valueOf(new Date()));
 
-                    Toast.makeText(getApplicationContext(),
-                            R.string.waitservice_se_deshabilito_otro_dispositivo,
-                            Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.waitservice_se_deshabilito_otro_dispositivo, Toast.LENGTH_LONG).show();
                     Intent i = new Intent(getApplicationContext(), LoginActivity.class);
 
                     conf.setPass(null);
@@ -361,7 +333,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         mAlarmManager = (AlarmManager) (this.getSystemService(Context.ALARM_SERVICE));
 
         setup();
-
+        checkConections();
         recibe_push = 0;
         // timer
         validateStatusDriver();
@@ -369,7 +341,32 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         servicesToSpeek();
 
     }
+private void checkConections(){
 
+    if (!Connectivity.isConnected(WaitServiceActivity.this)) {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("No tiene habilitada una conexión a Internet");
+        alertDialog.setMessage(getString(R.string.no_gps));
+        alertDialog.setPositiveButton("Habilitar",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+
+        alertDialog.setNegativeButton("Cancelar",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(getApplicationContext(), InicialActivityLogin.class);
+                        startActivity(intent);
+                    }
+                });
+        alertDialog.show();
+
+    }
+}
 
     private void setup() {
         mBroadcastReceiver = new BroadcastReceiver() {
@@ -628,22 +625,15 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     private void buildView() {
 
         setContentView(R.layout.activity_waitservice);
-
         //volver = (ImageView) findViewById(R.id.btn_volver);
-
         //volver.setOnClickListener(this);
 
         btnDeshabilitar = (Button) findViewById(R.id.btnDeshabilitar);
-
         btnDeshabilitar.setOnClickListener(this);
-
         mNoConnectivityPanel = (RelativeLayout) findViewById(R.id.layout_no_connectivity);
         mConnectivityLoaderImage = (ImageView) findViewById(R.id.loader_icon);
-
         mContainerView = (ViewGroup) findViewById(R.id.content_services);
-
         mSeekBar = (SeekBar) findViewById(R.id.seekBar);
-
         mVoiceSpeed = Utils.getVoiceSpeedPreference(getApplicationContext());
 
         if(!mSeekBar.isIndeterminate())

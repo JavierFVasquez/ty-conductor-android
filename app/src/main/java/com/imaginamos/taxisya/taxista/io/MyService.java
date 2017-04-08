@@ -249,7 +249,7 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
                 .addOnConnectionFailedListener(MyService.this)
                 .addApi(LocationServices.API)
                 .build();
-
+        /******* check  ********/
         /*Bundle extras = intent.getExtras();
         if (extras.equals(null)){
             Log.e(TAG, "intent.getExtras() == null");
