@@ -460,8 +460,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
             carousel.setOnItemSelectedListener(new OnItemSelectedListener() {
 
-                public void onItemSelected(CarouselAdapter<?> parent,
-                                           View view, int position, long id) {
+                public void onItemSelected(CarouselAdapter<?> parent, View view, int position, long id) {
 
                     if (old_item != null) {
                         try {

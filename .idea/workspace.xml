@@ -14,516 +14,32 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/compileTaxisyaDebugAidl/dependency.store" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/compileTaxisyaDebugAidl/dependency.store" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/compileTaxisyaDebugAndroidTestAidl/dependency.store" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/compileTaxisyaDebugAndroidTestAidl/dependency.store" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/activities/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/io/MyService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/taxisya/debug/com/imaginamos/taxisya/taxista/io/MyService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/zip-cache/tWvBEiG8sDJeFPMVZhp_TwD1G6g=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/zip-cache/tWvBEiG8sDJeFPMVZhp_TwD1G6g=" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/android-async-http-1.4.9_b5cdc09af579a249a020bd152297a359cbe945ae.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/android-async-http-1.4.9_b5cdc09af579a249a020bd152297a359cbe945ae.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_237e6c68ec59362839878d4afbb4ea1d0168315c.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_237e6c68ec59362839878d4afbb4ea1d0168315c.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_24fc955fa72c3a54dc668126e6348d768ef6fc7e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_24fc955fa72c3a54dc668126e6348d768ef6fc7e.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_372e9069394263d75c8e7e503a26bace1d38346e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_372e9069394263d75c8e7e503a26bace1d38346e.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_3c01464ab842fbb525fd80b154c2170b571ab537.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_3c01464ab842fbb525fd80b154c2170b571ab537.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_3dae185c01b2653d0f2805500a5fe3f56beb5941.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_3dae185c01b2653d0f2805500a5fe3f56beb5941.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_40e47ca28f823b9387c583c34d21366d8cf86dfa.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_40e47ca28f823b9387c583c34d21366d8cf86dfa.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_4263c9afb6afd5761f4dd6794e38e2b7bdc8a62e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_4263c9afb6afd5761f4dd6794e38e2b7bdc8a62e.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_42d47d3658554b5f348cb9d0180a4552f94ffa23.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_42d47d3658554b5f348cb9d0180a4552f94ffa23.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_45d286d83d9ff0e18101267208cd6ddc30156b6f.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_45d286d83d9ff0e18101267208cd6ddc30156b6f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_531e8391d7eb4edff1cbd21cc7d7b6fffaaabad7.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_531e8391d7eb4edff1cbd21cc7d7b6fffaaabad7.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_5862facec3a98b1649acabf5f04d676bdb25ebec.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_5862facec3a98b1649acabf5f04d676bdb25ebec.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_5cc595d0c3c5af090da7fd8e332fdcb4a10adc6b.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_5cc595d0c3c5af090da7fd8e332fdcb4a10adc6b.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_7e9af009813061148f6eb64f003bdbe67c5ea608.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_7e9af009813061148f6eb64f003bdbe67c5ea608.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_8559cc262ea699b8f39356ced6cb2ff6b020fdc2.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_8559cc262ea699b8f39356ced6cb2ff6b020fdc2.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_8579d0c9c6d38f6eb3e7c1d7e05b3afd0779777c.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_8579d0c9c6d38f6eb3e7c1d7e05b3afd0779777c.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_8c4a20239fd1ba1cfd0400618053a9e426d924cc.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_8c4a20239fd1ba1cfd0400618053a9e426d924cc.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_8d2537f3662791ba08fafdea84c7c62c6af61adb.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_8d2537f3662791ba08fafdea84c7c62c6af61adb.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_92606e8cf840d74f2e5a90f8ef21cb6c2f2c560d.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_92606e8cf840d74f2e5a90f8ef21cb6c2f2c560d.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_959d192f08ae531c40b79a29bb58688b939c19cc.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_959d192f08ae531c40b79a29bb58688b939c19cc.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_95b2e607cce643c1fca5bf0a3d2ceb5b9c8bdc1f.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_95b2e607cce643c1fca5bf0a3d2ceb5b9c8bdc1f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_9b531a7b294d04bf1d69215c4d7e19f58071669a.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_9b531a7b294d04bf1d69215c4d7e19f58071669a.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c17a97ad932038adcef52826f254a12bbc750585.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c17a97ad932038adcef52826f254a12bbc750585.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c2f8530fc6a45ce949999efcc7ab5d1726362ae6.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c2f8530fc6a45ce949999efcc7ab5d1726362ae6.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c5978c20494198dd36b300828caab6e18bb9adf4.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c5978c20494198dd36b300828caab6e18bb9adf4.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c7f7fa3e6ffd3d7c2a58303f6de7aaaf44888e34.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c7f7fa3e6ffd3d7c2a58303f6de7aaaf44888e34.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c8fdcb69e4e94a6d9c3bc65345c5fff0b28dabeb.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c8fdcb69e4e94a6d9c3bc65345c5fff0b28dabeb.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c9a88ab6611bc6bea2ddadf74043483203dcb9da.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_c9a88ab6611bc6bea2ddadf74043483203dcb9da.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_d440e815bb172fedd27a2fc52104f8937b90c02f.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_d440e815bb172fedd27a2fc52104f8937b90c02f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_e4bf273af3cdfd0944268ba12f235c715ba8cf6c.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_e4bf273af3cdfd0944268ba12f235c715ba8cf6c.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_f595ab0a3178776d7a7576426291216854dfa4ab.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_f595ab0a3178776d7a7576426291216854dfa4ab.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_f71a66a11258985c3fa98fb3367e026071076d2e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/classes_f71a66a11258985c3fa98fb3367e026071076d2e.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/debug_b83a7dc63e15e3639447996fdc5d4041979f23e5.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/debug_b83a7dc63e15e3639447996fdc5d4041979f23e5.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/devicecollector-sdk-2.5_bd1592ae1dabe60ccf743192156f99435b9a426a.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/devicecollector-sdk-2.5_bd1592ae1dabe60ccf743192156f99435b9a426a.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/gcm_21e7aadc15598a6db1936c5aa4f5ff6f4a7561ca.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/gcm_21e7aadc15598a6db1936c5aa4f5ff6f4a7561ca.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/gson-2.3.1_ec3043f14aa70610177bf8cbff4784aa18f4af1b.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/gson-2.3.1_ec3043f14aa70610177bf8cbff4784aa18f4af1b.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/httpclient-4.3.6_69f68084216084a303a42b08e6252d3717c30da3.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/httpclient-4.3.6_69f68084216084a303a42b08e6252d3717c30da3.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/internal_impl-25.0.0_1380c5e35e20304ecba6b53b1bb3de0107e15585.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/internal_impl-25.0.0_1380c5e35e20304ecba6b53b1bb3de0107e15585.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/internal_impl-25.0.0_41d6b4c2185ca65fa921283730d6c4631b0627aa.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/internal_impl-25.0.0_41d6b4c2185ca65fa921283730d6c4631b0627aa.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/internal_impl-25.0.0_44a40638417515405c9b8534aa9233c8b91516e3.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/internal_impl-25.0.0_44a40638417515405c9b8534aa9233c8b91516e3.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/internal_impl-25.0.0_53e12bd89f4d0f583c188e4745ef37588d4a8cee.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/internal_impl-25.0.0_53e12bd89f4d0f583c188e4745ef37588d4a8cee.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/internal_impl-25.0.0_c56b3bd212919f2be690d1f4634cf0ba0f9bf7be.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/internal_impl-25.0.0_c56b3bd212919f2be690d1f4634cf0ba0f9bf7be.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/okhttp-2.5.0_6418c09903f53eb38d28cb7892906ce68de2540d.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/okhttp-2.5.0_6418c09903f53eb38d28cb7892906ce68de2540d.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/okio-1.6.0_54ee80b99723b61bab2c476858506315ddf2487f.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/okio-1.6.0_54ee80b99723b61bab2c476858506315ddf2487f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/retrofit-1.9.0_c1d036998dcd3910b328f6041527e1d15e0cabd6.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/retrofit-1.9.0_c1d036998dcd3910b328f6041527e1d15e0cabd6.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/support-annotations-25.0.0_28230d548c58e81ebccfbe055d44bbe332c21d21.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/taxisya/debug/support-annotations-25.0.0_28230d548c58e81ebccfbe055d44bbe332c21d21.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-taxisya-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-taxisya-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/taxisya/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/taxisya/debug/jars/2/1f/main.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/taxisya/debug/jars/2/1f/main.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/arm64-v8a/libcardioDecider.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/arm64-v8a/libcardioDecider.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/arm64-v8a/libcardioRecognizer.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/arm64-v8a/libcardioRecognizer.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/arm64-v8a/libcardioRecognizer_tegra2.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/arm64-v8a/libcardioRecognizer_tegra2.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/arm64-v8a/libopencv_core.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/arm64-v8a/libopencv_core.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/arm64-v8a/libopencv_imgproc.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/arm64-v8a/libopencv_imgproc.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi-v7a/libcardioDecider.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi-v7a/libcardioDecider.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi-v7a/libcardioRecognizer.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi-v7a/libcardioRecognizer.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi-v7a/libcardioRecognizer_tegra2.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi-v7a/libcardioRecognizer_tegra2.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi-v7a/libopencv_core.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi-v7a/libopencv_core.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi-v7a/libopencv_imgproc.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi-v7a/libopencv_imgproc.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi/libcardioDecider.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/armeabi/libcardioDecider.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/mips/libcardioDecider.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/mips/libcardioDecider.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86/libcardioDecider.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86/libcardioDecider.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86/libcardioRecognizer.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86/libcardioRecognizer.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86/libcardioRecognizer_tegra2.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86/libcardioRecognizer_tegra2.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86/libopencv_core.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86/libopencv_core.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86/libopencv_imgproc.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86/libopencv_imgproc.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86_64/libcardioDecider.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86_64/libcardioDecider.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86_64/libcardioRecognizer.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86_64/libcardioRecognizer.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86_64/libcardioRecognizer_tegra2.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86_64/libcardioRecognizer_tegra2.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86_64/libopencv_core.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86_64/libopencv_core.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86_64/libopencv_imgproc.so" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJniLibs/taxisya/debug/folders/2000/1f/main/lib/x86_64/libopencv_imgproc.so" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-taxisya-debug-1.2-3.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-taxisya-debug-1.2-3.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-47-16-031.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-47-16-031.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-47-22-743.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-47-22-743.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-47-59-972.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-47-59-972.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-48-32-947.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-48-32-947.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-49-13-019.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-49-13-019.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-49-42-254.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-49-42-254.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-50-08-842.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-50-08-842.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-50-32-029.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-14-50-32-029.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-15-35-55-324.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-15-35-55-324.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-17-05-29-539.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-13-17-05-29-539.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-14-08-46-38-783.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-14-08-46-38-783.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-14-10-32-44-076.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-14-10-32-44-076.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-14-15-24-44-726.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-14-15-24-44-726.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-14-15-24-54-901.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-14-15-24-54-901.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-26-00-706.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-26-00-706.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-26-17-080.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-26-17-080.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-28-52-130.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-28-52-130.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-37-17-778.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-37-17-778.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-39-25-627.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-39-25-627.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-42-01-839.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-42-01-839.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-47-23-613.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-47-23-613.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-47-56-535.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-47-56-535.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-55-38-764.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-55-38-764.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-56-40-048.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-56-40-048.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-57-57-677.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-57-57-677.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-58-26-893.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-08-58-26-893.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-01-08-884.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-01-08-884.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-05-49-950.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-05-49-950.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-05-58-659.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-05-58-659.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-06-35-579.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-06-35-579.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-07-28-329.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-07-28-329.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-07-33-947.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-07-33-947.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-14-38-582.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-14-38-582.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-14-42-595.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-14-42-595.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-15-55-570.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-15-55-570.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-27-15-679.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-27-15-679.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-41-32-230.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-41-32-230.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-41-50-227.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-41-50-227.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-48-55-654.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-09-48-55-654.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-10-32-19-532.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-10-32-19-532.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-11-06-20-194.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-11-06-20-194.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-11-20-01-156.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-11-20-01-156.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-14-15-03-160.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-14-15-03-160.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-14-15-52-070.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-14-15-52-070.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-14-24-00-307.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-14-24-00-307.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-14-47-25-700.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-14-47-25-700.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-15-19-07-935.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-16-15-19-07-935.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-09-00-22-664.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-09-00-22-664.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-09-04-25-742.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-09-04-25-742.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-09-06-19-608.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-09-06-19-608.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-09-07-12-901.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-09-07-12-901.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-09-13-06-431.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-09-13-06-431.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-10-27-02-135.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-10-27-02-135.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-10-30-38-522.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-10-30-38-522.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-10-44-19-702.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-10-44-19-702.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-01-04-001.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-01-04-001.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-23-36-438.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-23-36-438.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-25-04-979.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-25-04-979.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-31-40-238.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-31-40-238.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-35-24-583.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-35-24-583.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-38-31-930.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-38-31-930.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-40-48-982.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-40-48-982.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-44-49-792.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-44-49-792.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-55-10-619.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-11-55-10-619.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-03-05-545.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-03-05-545.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-12-09-560.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-12-09-560.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-32-14-461.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-32-14-461.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-38-38-884.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-38-38-884.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-45-41-983.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-45-41-983.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-55-43-260.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-55-43-260.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-58-50-138.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-12-58-50-138.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-13-05-40-145.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-13-05-40-145.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-15-22-44-814.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-15-22-44-814.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-15-26-00-618.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-15-26-00-618.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-15-33-40-142.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-15-33-40-142.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-15-37-02-446.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-15-37-02-446.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-16-19-10-194.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-16-19-10-194.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-16-28-56-036.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-16-28-56-036.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-16-31-46-870.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-16-31-46-870.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-16-34-09-903.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-16-34-09-903.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-16-42-03-875.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-16-42-03-875.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-17-02-35-739.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-17-02-35-739.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-17-12-48-909.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-17-12-48-909.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-17-16-07-892.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-17-16-07-892.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-17-21-12-581.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-17-21-12-581.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-17-22-09-104.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-17-17-22-09-104.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-08-53-57-428.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-08-53-57-428.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-02-44-252.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-02-44-252.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-03-53-998.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-03-53-998.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-04-08-591.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-04-08-591.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-04-33-394.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-04-33-394.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-09-00-243.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-09-00-243.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-14-53-069.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-14-53-069.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-17-16-950.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-17-16-950.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-19-53-080.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-19-53-080.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-24-44-854.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-24-44-854.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-28-59-353.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-28-59-353.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-30-20-129.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-30-20-129.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-33-27-670.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-33-27-670.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-34-34-004.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-34-34-004.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-36-16-329.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-36-16-329.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-38-29-534.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-38-29-534.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-44-24-220.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-44-24-220.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-44-40-301.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-44-40-301.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-44-50-313.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-44-50-313.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-52-44-924.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-52-44-924.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-59-11-021.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-09-59-11-021.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-00-40-683.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-00-40-683.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-11-39-348.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-11-39-348.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-21-39-166.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-21-39-166.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-24-16-901.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-24-16-901.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-25-25-726.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-25-25-726.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-28-51-735.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-28-51-735.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-32-32-848.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-32-32-848.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-35-09-709.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-35-09-709.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-37-07-777.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-37-07-777.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-39-52-149.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-39-52-149.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-41-58-521.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-41-58-521.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-44-12-046.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-44-12-046.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-50-38-430.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-50-38-430.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-56-48-621.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-56-48-621.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-59-42-070.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-59-42-070.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-59-58-336.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-10-59-58-336.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-04-21-038.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-04-21-038.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-08-14-939.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-08-14-939.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-24-02-750.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-24-02-750.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-26-11-716.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-26-11-716.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-29-38-669.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-29-38-669.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-30-44-125.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-30-44-125.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-31-26-411.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-31-26-411.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-32-06-093.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-32-06-093.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-36-09-821.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-36-09-821.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-38-46-560.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-38-46-560.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-40-45-189.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-40-45-189.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-44-32-511.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-44-32-511.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-46-16-729.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-46-16-729.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-50-51-091.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-50-51-091.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-57-14-038.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-57-14-038.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-58-04-962.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-11-58-04-962.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-12-02-16-543.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-12-02-16-543.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-12-06-23-464.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-12-06-23-464.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-12-07-05-362.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-12-07-05-362.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-12-09-19-359.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-12-09-19-359.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-12-36-07-751.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-18-12-36-07-751.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-08-50-44-151.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-08-50-44-151.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-20-02-801.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-20-02-801.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-25-54-023.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-25-54-023.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-28-41-858.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-28-41-858.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-34-24-060.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-34-24-060.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-43-56-317.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-43-56-317.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-56-28-566.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-11-56-28-566.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-01-43-397.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-01-43-397.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-03-52-008.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-03-52-008.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-20-37-664.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-20-37-664.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-25-10-707.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-25-10-707.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-28-00-117.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-28-00-117.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-33-57-295.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-33-57-295.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-35-35-517.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-35-35-517.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-38-08-104.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-38-08-104.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-42-51-465.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-42-51-465.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-44-13-245.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-44-13-245.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-46-23-880.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-46-23-880.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-49-23-529.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-49-23-529.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-54-40-864.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-54-40-864.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-56-31-833.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-12-56-31-833.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-13-01-15-607.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-13-01-15-607.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-13-03-41-629.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-13-03-41-629.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-13-04-05-359.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-13-04-05-359.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-27-27-660.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-27-27-660.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-34-38-484.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-34-38-484.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-36-13-715.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-36-13-715.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-42-46-333.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-42-46-333.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-45-08-761.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-45-08-761.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-47-58-747.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-47-58-747.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-49-47-834.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-49-47-834.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-52-15-676.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-52-15-676.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-57-14-347.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-14-57-14-347.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-15-05-27-823.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-15-05-27-823.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-15-50-02-574.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-15-50-02-574.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-15-53-28-657.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-21-15-53-28-657.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-08-50-08-166.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-08-50-08-166.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-08-51-36-778.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-08-51-36-778.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-00-13-685.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-00-13-685.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-07-29-930.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-07-29-930.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-09-44-698.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-09-44-698.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-13-31-599.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-13-31-599.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-40-20-892.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-40-20-892.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-43-21-528.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-43-21-528.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-46-50-678.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-46-50-678.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-49-02-229.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-49-02-229.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-49-45-894.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-49-45-894.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-58-05-595.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-10-58-05-595.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-05-58-100.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-05-58-100.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-08-28-949.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-08-28-949.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-15-46-926.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-15-46-926.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-20-55-947.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-20-55-947.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-23-53-529.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-23-53-529.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-26-31-235.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-26-31-235.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-28-46-995.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-28-46-995.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-31-17-294.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-31-17-294.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-39-27-398.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-39-27-398.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-44-50-097.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-44-50-097.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-50-41-524.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-11-50-41-524.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-04-00-806.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-04-00-806.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-07-47-669.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-07-47-669.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-11-47-379.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-11-47-379.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-14-12-069.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-14-12-069.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-18-27-113.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-18-27-113.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-22-09-145.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-22-09-145.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-54-51-133.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-22-12-54-51-133.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-23-16-55-36-166.rawproto" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-03-23-16-55-36-166.rawproto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/fabric/res/taxisya/debug/values/com_crashlytics_build_id.xml" afterPath="$PROJECT_DIR$/app/build/generated/fabric/res/taxisya/debug/values/com_crashlytics_build_id.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/taxisya/debug/co/taxisya/conductor/test/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/taxisya/debug/co/taxisya/conductor/test/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/taxisya/debug/com/imaginamos/taxisya/taxista/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/taxisya/debug/com/imaginamos/taxisya/taxista/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/assets/taxisya/debug/crashlytics-build.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/assets/taxisya/debug/crashlytics-build.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/color.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/color.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-af.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-af.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-am.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-am.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ar.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-az-rAZ.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-az-rAZ.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-az.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-az.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-be.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-be.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-bg.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-bg.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-bn-rBD.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-bn-rBD.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-bn.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-bn.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-bs.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-bs.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ca.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ca.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-cs.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-cs.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-da.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-da.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-de.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-de.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-el.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-el.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-en-rAU.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-en-rAU.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-en-rGB.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-en-rGB.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-en-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-en-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-es-rUS.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-es-rUS.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-es.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-es.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-et-rEE.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-et-rEE.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-et.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-et.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-eu-rES.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-eu-rES.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-eu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-eu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-fa.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-fa.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-fi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-fi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-fr-rCA.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-fr-rCA.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-fr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-fr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-gl-rES.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-gl-rES.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-gl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-gl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-gu-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-gu-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-gu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-gu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-h320dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-h320dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-h720dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-h720dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hy-rAM.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hy-rAM.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hy.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-hy.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-in.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-in.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-is-rIS.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-is-rIS.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-is.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-is.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-it.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-it.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-iw.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-iw.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ja.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ja.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ka-rGE.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ka-rGE.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ka.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ka.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-kk-rKZ.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-kk-rKZ.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-kk.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-kk.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-km-rKH.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-km-rKH.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-km.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-km.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-kn-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-kn-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-kn.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-kn.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ko.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ko.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ky-rKG.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ky-rKG.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ky.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ky.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-land.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-land.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-large-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-large-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ldltr-v21.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ldltr-v21.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ldpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ldpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-lo-rLA.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-lo-rLA.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-lo.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-lo.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-lt.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-lt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-lv.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-lv.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mk-rMK.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mk-rMK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mk.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mk.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ml-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ml-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ml.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ml.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mn-rMN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mn-rMN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mn.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mn.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mr-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mr-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-mr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ms-rMY.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ms-rMY.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ms.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ms.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-my-rMM.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-my-rMM.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-my.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-my.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-nb.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-nb.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ne-rNP.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ne-rNP.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ne.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ne.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-night-v8.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-night-v8.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-nl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-nl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pa-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pa-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pa.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pa.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-port.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-port.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pt-rBR.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pt-rBR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pt-rPT.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pt-rPT.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pt.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-pt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ro.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ro.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ru.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ru.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-si-rLK.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-si-rLK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-si.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-si.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sk.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sk.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-small-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-small-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sq-rAL.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sq-rAL.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sq.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sq.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sv.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sv.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sw.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sw.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sw600dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sw600dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sw720dp-land-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-sw720dp-land-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ta-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ta-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ta.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ta.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-te-rIN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-te-rIN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-te.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-te.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-th.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-th.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-tl.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-tl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-tr.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-tr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-uk.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-uk.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ur-rPK.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ur-rPK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ur.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-ur.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-uz-rUZ.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-uz-rUZ.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-uz.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-uz.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v11.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v12.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v12.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v14.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v14.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v15.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v15.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v16.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v16.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v18.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v18.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v21.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v21.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v22.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v22.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v23.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-v23.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-vi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-vi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w360dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w360dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w480dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w480dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w500dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w500dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w600dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w600dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w720dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w720dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w820dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-w820dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-xhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-xlarge-land-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-xlarge-land-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-xlarge-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-xlarge-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-zh-rCN.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-zh-rCN.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-zh-rHK.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-zh-rHK.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-zh-rTW.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-zh-rTW.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-zu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values-zu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/anim.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/anim.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/color-v11.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/color-v11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/color-v23.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/color-v23.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/color.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/color.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-hdpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-hdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-ldpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-ldpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-mdpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-mdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-xhdpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-xhdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-xxhdpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-xxhdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-xxxhdpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-es-xxxhdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-hdpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-hdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldrtl-hdpi-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldrtl-hdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldrtl-mdpi-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldrtl-mdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldrtl-xhdpi-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldrtl-xhdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldrtl-xxhdpi-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldrtl-xxhdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldrtl-xxxhdpi-v17.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-ldrtl-xxxhdpi-v17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-mdpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-mdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-v21.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-v21.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-v23.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-v23.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xhdpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xhdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xxhdpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xxhdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xxxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xxxhdpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable-xxxhdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/layout-land.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/layout-land.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/layout-sw600dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/layout-sw600dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/menu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/menu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/raw.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/taxisya/debug/single/raw.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-safeguard/taxisya/debug/tag.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental-safeguard/taxisya/debug/tag.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugAndroidTestResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugAndroidTestResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugJniLibFolders/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugJniLibFolders/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merged.dir/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merged.dir/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeTaxisyaDebugShaders/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageTaxisyaDebug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifest/androidTest/taxisya/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest/androidTest/taxisya/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/taxisya/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/taxisya/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/taxisya/debug/values-es/values-es.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/taxisya/debug/values-es/values-es.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/taxisya/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/taxisya/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/taxisya/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/taxisya/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-taxisya-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-taxisya-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/taxisya/res/values-es/strings.xml" afterPath="$PROJECT_DIR$/app/src/taxisya/res/values-es/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ty-conductor-android-.iml" afterPath="$PROJECT_DIR$/ty-conductor-android-.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tyconductor-android-master.iml" afterPath="$PROJECT_DIR$/tyconductor-android-master.iml" />
     </list>
     <ignored path="ty-conductor-android-.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -559,11 +75,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="385" column="0" selection-start-line="385" selection-start-column="0" selection-end-line="385" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="476" column="21" selection-start-line="476" selection-start-column="21" selection-end-line="476" selection-end-column="21" />
               <folding>
                 <element signature="e#3834#3873#0" expanded="true" />
                 <element signature="e#4002#4020#0" expanded="true" />
@@ -587,21 +103,21 @@
                 <element signature="e#13933#16988#0" expanded="true" />
                 <element signature="e#15032#15050#0" expanded="true" />
                 <element signature="e#16987#16988#0" expanded="true" />
-                <element signature="e#19205#19244#0" expanded="true" />
-                <element signature="e#22464#22490#0" expanded="true" />
-                <element signature="e#24626#24672#0" expanded="true" />
-                <element signature="e#24694#24740#0" expanded="true" />
-                <element signature="e#25610#25640#0" expanded="true" />
-                <element signature="e#25713#25729#0" expanded="true" />
-                <element signature="e#25731#25912#0" expanded="true" />
-                <element signature="e#25911#25912#0" expanded="true" />
-                <element signature="e#26317#26348#0" expanded="true" />
-                <element signature="e#35277#35310#0" expanded="true" />
-                <element signature="e#35807#35846#0" expanded="true" />
-                <element signature="e#35874#35911#0" expanded="true" />
-                <element signature="e#35948#35986#0" expanded="true" />
-                <element signature="e#35988#36699#0" expanded="true" />
-                <element signature="e#36698#36699#0" expanded="true" />
+                <element signature="e#19162#19201#0" expanded="true" />
+                <element signature="e#22421#22447#0" expanded="true" />
+                <element signature="e#24583#24629#0" expanded="true" />
+                <element signature="e#24651#24697#0" expanded="true" />
+                <element signature="e#25567#25597#0" expanded="true" />
+                <element signature="e#25670#25686#0" expanded="true" />
+                <element signature="e#25688#25869#0" expanded="true" />
+                <element signature="e#25868#25869#0" expanded="true" />
+                <element signature="e#26274#26305#0" expanded="true" />
+                <element signature="e#35234#35267#0" expanded="true" />
+                <element signature="e#35764#35803#0" expanded="true" />
+                <element signature="e#35831#35868#0" expanded="true" />
+                <element signature="e#35905#35943#0" expanded="true" />
+                <element signature="e#35945#36656#0" expanded="true" />
+                <element signature="e#36655#36656#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -612,25 +128,21 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="14700">
               <caret line="1054" column="0" selection-start-line="1054" selection-start-column="0" selection-end-line="1054" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#31263#31264#0" expanded="false" />
+                <element signature="e#31299#31300#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3150">
-              <caret line="244" column="44" selection-start-line="244" selection-start-column="44" selection-end-line="244" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#10256#10257#0" expanded="false" />
-                <element signature="e#10283#10284#0" expanded="false" />
-                <element signature="e#10952#10953#0" expanded="false" />
-                <element signature="e#11013#11014#0" expanded="false" />
-                <element signature="e#11673#11674#0" expanded="false" />
-                <element signature="e#11735#11736#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="27">
+              <caret line="252" column="0" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -638,7 +150,7 @@
       <file leaf-file-name="InicialActivityLogin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4815">
+            <state relative-caret-position="402">
               <caret line="356" column="44" selection-start-line="356" selection-start-column="44" selection-end-line="356" selection-end-column="44" />
               <folding />
             </state>
@@ -648,7 +160,7 @@
       <file leaf-file-name="Connectivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/Connectivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2610">
+            <state relative-caret-position="2535">
               <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
               <folding />
             </state>
@@ -660,9 +172,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -672,7 +182,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3360">
               <caret line="235" column="45" selection-start-line="235" selection-start-column="45" selection-end-line="235" selection-end-column="45" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -4850,12 +4362,12 @@
         <option value="$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/usuariofinal/taxisya/activities/HomeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/taxisya/res/values-es/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/WaitServiceActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MiddleConnect.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/Connect.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/Connectivity.java" />
         <option value="$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java" />
       </list>
     </option>
   </component>
@@ -4889,8 +4401,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -4911,13 +4423,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="FA48WWM00779" />
+    <property name="device.picker.selection" value="CB5A1QXPP9" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="settings.editor.selected.configurable" value="instant.run" />
@@ -5263,18 +4775,18 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49676898" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24798061" sideWeight="0.4359673" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24798061" sideWeight="0.44208038" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4414003" sideWeight="0.4838449" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3561644" sideWeight="0.4838449" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.48802397" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24798061" sideWeight="0.5640327" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24798061" sideWeight="0.5579196" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Fabric" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -5326,7 +4838,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java</url>
-          <line>815</line>
+          <line>814</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
@@ -5346,15 +4858,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3255">
           <caret line="251" column="24" selection-start-line="251" selection-start-column="24" selection-end-line="251" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#10256#10257#0" expanded="false" />
-            <element signature="e#10283#10284#0" expanded="false" />
-            <element signature="e#10952#10953#0" expanded="false" />
-            <element signature="e#11013#11014#0" expanded="false" />
-            <element signature="e#11673#11674#0" expanded="false" />
-            <element signature="e#11735#11736#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5403,21 +4907,21 @@
             <element signature="e#13933#16988#0" expanded="true" />
             <element signature="e#15032#15050#0" expanded="true" />
             <element signature="e#16987#16988#0" expanded="true" />
-            <element signature="e#19205#19244#0" expanded="true" />
-            <element signature="e#22464#22490#0" expanded="true" />
-            <element signature="e#24626#24672#0" expanded="true" />
-            <element signature="e#24694#24740#0" expanded="true" />
-            <element signature="e#25610#25640#0" expanded="true" />
-            <element signature="e#25713#25729#0" expanded="true" />
-            <element signature="e#25731#25912#0" expanded="true" />
-            <element signature="e#25911#25912#0" expanded="true" />
-            <element signature="e#26317#26348#0" expanded="true" />
-            <element signature="e#35277#35310#0" expanded="true" />
-            <element signature="e#35807#35846#0" expanded="true" />
-            <element signature="e#35874#35911#0" expanded="true" />
-            <element signature="e#35948#35986#0" expanded="true" />
-            <element signature="e#35988#36699#0" expanded="true" />
-            <element signature="e#36698#36699#0" expanded="true" />
+            <element signature="e#19162#19201#0" expanded="true" />
+            <element signature="e#22421#22447#0" expanded="true" />
+            <element signature="e#24583#24629#0" expanded="true" />
+            <element signature="e#24651#24697#0" expanded="true" />
+            <element signature="e#25567#25597#0" expanded="true" />
+            <element signature="e#25670#25686#0" expanded="true" />
+            <element signature="e#25688#25869#0" expanded="true" />
+            <element signature="e#25868#25869#0" expanded="true" />
+            <element signature="e#26274#26305#0" expanded="true" />
+            <element signature="e#35234#35267#0" expanded="true" />
+            <element signature="e#35764#35803#0" expanded="true" />
+            <element signature="e#35831#35868#0" expanded="true" />
+            <element signature="e#35905#35943#0" expanded="true" />
+            <element signature="e#35945#36656#0" expanded="true" />
+            <element signature="e#36655#36656#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5426,7 +4930,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3825">
           <caret line="255" column="60" selection-start-line="255" selection-start-column="60" selection-end-line="255" selection-end-column="60" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#31263#31264#0" expanded="false" />
+            <element signature="e#31299#31300#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -5434,15 +4942,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#10256#10257#0" expanded="false" />
-            <element signature="e#10283#10284#0" expanded="false" />
-            <element signature="e#10952#10953#0" expanded="false" />
-            <element signature="e#11013#11014#0" expanded="false" />
-            <element signature="e#11673#11674#0" expanded="false" />
-            <element signature="e#11735#11736#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5481,21 +4981,21 @@
             <element signature="e#13933#16988#0" expanded="true" />
             <element signature="e#15032#15050#0" expanded="true" />
             <element signature="e#16987#16988#0" expanded="true" />
-            <element signature="e#19205#19244#0" expanded="true" />
-            <element signature="e#22464#22490#0" expanded="true" />
-            <element signature="e#24626#24672#0" expanded="true" />
-            <element signature="e#24694#24740#0" expanded="true" />
-            <element signature="e#25610#25640#0" expanded="true" />
-            <element signature="e#25713#25729#0" expanded="true" />
-            <element signature="e#25731#25912#0" expanded="true" />
-            <element signature="e#25911#25912#0" expanded="true" />
-            <element signature="e#26317#26348#0" expanded="true" />
-            <element signature="e#35277#35310#0" expanded="true" />
-            <element signature="e#35807#35846#0" expanded="true" />
-            <element signature="e#35874#35911#0" expanded="true" />
-            <element signature="e#35948#35986#0" expanded="true" />
-            <element signature="e#35988#36699#0" expanded="true" />
-            <element signature="e#36698#36699#0" expanded="true" />
+            <element signature="e#19162#19201#0" expanded="true" />
+            <element signature="e#22421#22447#0" expanded="true" />
+            <element signature="e#24583#24629#0" expanded="true" />
+            <element signature="e#24651#24697#0" expanded="true" />
+            <element signature="e#25567#25597#0" expanded="true" />
+            <element signature="e#25670#25686#0" expanded="true" />
+            <element signature="e#25688#25869#0" expanded="true" />
+            <element signature="e#25868#25869#0" expanded="true" />
+            <element signature="e#26274#26305#0" expanded="true" />
+            <element signature="e#35234#35267#0" expanded="true" />
+            <element signature="e#35764#35803#0" expanded="true" />
+            <element signature="e#35831#35868#0" expanded="true" />
+            <element signature="e#35905#35943#0" expanded="true" />
+            <element signature="e#35945#36656#0" expanded="true" />
+            <element signature="e#36655#36656#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5535,21 +5035,21 @@
             <element signature="e#13933#16988#0" expanded="true" />
             <element signature="e#15032#15050#0" expanded="true" />
             <element signature="e#16987#16988#0" expanded="true" />
-            <element signature="e#19205#19244#0" expanded="true" />
-            <element signature="e#22464#22490#0" expanded="true" />
-            <element signature="e#24626#24672#0" expanded="true" />
-            <element signature="e#24694#24740#0" expanded="true" />
-            <element signature="e#25610#25640#0" expanded="true" />
-            <element signature="e#25713#25729#0" expanded="true" />
-            <element signature="e#25731#25912#0" expanded="true" />
-            <element signature="e#25911#25912#0" expanded="true" />
-            <element signature="e#26317#26348#0" expanded="true" />
-            <element signature="e#35277#35310#0" expanded="true" />
-            <element signature="e#35807#35846#0" expanded="true" />
-            <element signature="e#35874#35911#0" expanded="true" />
-            <element signature="e#35948#35986#0" expanded="true" />
-            <element signature="e#35988#36699#0" expanded="true" />
-            <element signature="e#36698#36699#0" expanded="true" />
+            <element signature="e#19162#19201#0" expanded="true" />
+            <element signature="e#22421#22447#0" expanded="true" />
+            <element signature="e#24583#24629#0" expanded="true" />
+            <element signature="e#24651#24697#0" expanded="true" />
+            <element signature="e#25567#25597#0" expanded="true" />
+            <element signature="e#25670#25686#0" expanded="true" />
+            <element signature="e#25688#25869#0" expanded="true" />
+            <element signature="e#25868#25869#0" expanded="true" />
+            <element signature="e#26274#26305#0" expanded="true" />
+            <element signature="e#35234#35267#0" expanded="true" />
+            <element signature="e#35764#35803#0" expanded="true" />
+            <element signature="e#35831#35868#0" expanded="true" />
+            <element signature="e#35905#35943#0" expanded="true" />
+            <element signature="e#35945#36656#0" expanded="true" />
+            <element signature="e#36655#36656#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5621,21 +5121,21 @@
             <element signature="e#13933#16988#0" expanded="true" />
             <element signature="e#15032#15050#0" expanded="true" />
             <element signature="e#16987#16988#0" expanded="true" />
-            <element signature="e#19205#19244#0" expanded="true" />
-            <element signature="e#22464#22490#0" expanded="true" />
-            <element signature="e#24626#24672#0" expanded="true" />
-            <element signature="e#24694#24740#0" expanded="true" />
-            <element signature="e#25610#25640#0" expanded="true" />
-            <element signature="e#25713#25729#0" expanded="true" />
-            <element signature="e#25731#25912#0" expanded="true" />
-            <element signature="e#25911#25912#0" expanded="true" />
-            <element signature="e#26317#26348#0" expanded="true" />
-            <element signature="e#35277#35310#0" expanded="true" />
-            <element signature="e#35807#35846#0" expanded="true" />
-            <element signature="e#35874#35911#0" expanded="true" />
-            <element signature="e#35948#35986#0" expanded="true" />
-            <element signature="e#35988#36699#0" expanded="true" />
-            <element signature="e#36698#36699#0" expanded="true" />
+            <element signature="e#19162#19201#0" expanded="true" />
+            <element signature="e#22421#22447#0" expanded="true" />
+            <element signature="e#24583#24629#0" expanded="true" />
+            <element signature="e#24651#24697#0" expanded="true" />
+            <element signature="e#25567#25597#0" expanded="true" />
+            <element signature="e#25670#25686#0" expanded="true" />
+            <element signature="e#25688#25869#0" expanded="true" />
+            <element signature="e#25868#25869#0" expanded="true" />
+            <element signature="e#26274#26305#0" expanded="true" />
+            <element signature="e#35234#35267#0" expanded="true" />
+            <element signature="e#35764#35803#0" expanded="true" />
+            <element signature="e#35831#35868#0" expanded="true" />
+            <element signature="e#35905#35943#0" expanded="true" />
+            <element signature="e#35945#36656#0" expanded="true" />
+            <element signature="e#36655#36656#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5765,39 +5265,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="81" column="44" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1035">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_waitservice.xml">
-      <provider editor-type-id="android-designer2">
+      <provider editor-type-id="android-manifest">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_waitservice.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/GPSTracker.java">
@@ -5863,63 +5364,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3150">
-          <caret line="244" column="44" selection-start-line="244" selection-start-column="44" selection-end-line="244" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#10256#10257#0" expanded="false" />
-            <element signature="e#10283#10284#0" expanded="false" />
-            <element signature="e#10952#10953#0" expanded="false" />
-            <element signature="e#11013#11014#0" expanded="false" />
-            <element signature="e#11673#11674#0" expanded="false" />
-            <element signature="e#11735#11736#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_inicial.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4815">
-          <caret line="356" column="44" selection-start-line="356" selection-start-column="44" selection-end-line="356" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/Connect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MiddleConnect.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3360">
           <caret line="235" column="45" selection-start-line="235" selection-start-column="45" selection-end-line="235" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/Connectivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2610">
-          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -5927,14 +5388,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14700">
           <caret line="1054" column="0" selection-start-line="1054" selection-start-column="0" selection-end-line="1054" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#31263#31264#0" expanded="false" />
+            <element signature="e#31299#31300#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/taxisya/java/com/imaginamos/taxisya/taxista/activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="385" column="0" selection-start-line="385" selection-start-column="0" selection-end-line="385" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="476" column="21" selection-start-line="476" selection-start-column="21" selection-end-line="476" selection-end-column="21" />
           <folding>
             <element signature="e#3834#3873#0" expanded="true" />
             <element signature="e#4002#4020#0" expanded="true" />
@@ -5958,22 +5423,54 @@
             <element signature="e#13933#16988#0" expanded="true" />
             <element signature="e#15032#15050#0" expanded="true" />
             <element signature="e#16987#16988#0" expanded="true" />
-            <element signature="e#19205#19244#0" expanded="true" />
-            <element signature="e#22464#22490#0" expanded="true" />
-            <element signature="e#24626#24672#0" expanded="true" />
-            <element signature="e#24694#24740#0" expanded="true" />
-            <element signature="e#25610#25640#0" expanded="true" />
-            <element signature="e#25713#25729#0" expanded="true" />
-            <element signature="e#25731#25912#0" expanded="true" />
-            <element signature="e#25911#25912#0" expanded="true" />
-            <element signature="e#26317#26348#0" expanded="true" />
-            <element signature="e#35277#35310#0" expanded="true" />
-            <element signature="e#35807#35846#0" expanded="true" />
-            <element signature="e#35874#35911#0" expanded="true" />
-            <element signature="e#35948#35986#0" expanded="true" />
-            <element signature="e#35988#36699#0" expanded="true" />
-            <element signature="e#36698#36699#0" expanded="true" />
+            <element signature="e#19162#19201#0" expanded="true" />
+            <element signature="e#22421#22447#0" expanded="true" />
+            <element signature="e#24583#24629#0" expanded="true" />
+            <element signature="e#24651#24697#0" expanded="true" />
+            <element signature="e#25567#25597#0" expanded="true" />
+            <element signature="e#25670#25686#0" expanded="true" />
+            <element signature="e#25688#25869#0" expanded="true" />
+            <element signature="e#25868#25869#0" expanded="true" />
+            <element signature="e#26274#26305#0" expanded="true" />
+            <element signature="e#35234#35267#0" expanded="true" />
+            <element signature="e#35764#35803#0" expanded="true" />
+            <element signature="e#35831#35868#0" expanded="true" />
+            <element signature="e#35905#35943#0" expanded="true" />
+            <element signature="e#35945#36656#0" expanded="true" />
+            <element signature="e#36655#36656#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/Connect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/Connectivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2535">
+          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/activities/InicialActivityLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="356" column="44" selection-start-line="356" selection-start-column="44" selection-end-line="356" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/imaginamos/taxisya/taxista/io/MyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="252" column="0" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

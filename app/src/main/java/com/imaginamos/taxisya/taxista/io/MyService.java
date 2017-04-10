@@ -250,13 +250,14 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
                 .addApi(LocationServices.API)
                 .build();
         /******* check  ********/
-        /*Bundle extras = intent.getExtras();
+
+        Bundle extras = intent.getExtras();
         if (extras.equals(null)){
             Log.e(TAG, "intent.getExtras() == null");
             System.exit(0);
         }if (extras != null) {
             this.driver_id = extras.getString("driver_id");
-        }*/
+        }
 
         if (mGoogleApiClient != null) {
             mGoogleApiClient.connect();
