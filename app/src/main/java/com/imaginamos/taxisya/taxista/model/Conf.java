@@ -17,6 +17,7 @@ public class Conf {
     private String ISFIRST = "isFirst";
     private String IDSERVICE = "IDSERVICE";
     private String APPVERSION = "APPVERSION";
+    private String IDDRIVER ="IDDRIVER";
 
 
     private Context mContext;
@@ -75,6 +76,11 @@ public class Conf {
 
     public String getIdUser() {
         return prefs.getString(IDUSER, null);
+    }
+
+    public String getDriverId() {
+
+        return prefs.getString(IDDRIVER, null);
     }
 
     public void setIsFirst(boolean isFirst) {

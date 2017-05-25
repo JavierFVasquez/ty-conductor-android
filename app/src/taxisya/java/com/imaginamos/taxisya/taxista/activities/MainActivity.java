@@ -87,7 +87,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     private int currentVersionCode;
     private String currentVersionName;
     private Boolean updateAvailable = false;
-    private String service_id, driver_id;
+    private String service_id, driver_id, id_user;
     private int status_service = 0;
     private Intent intent_service;
 
@@ -193,13 +193,8 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             tts = new TextToSpeech(this, this);
         } catch (Exception e) {
         }
-
         //checkAppVersions();
 
-        try {
-            checkService();
-        } catch (JSONException e) {
-        }
 
 // broadcast
         IntentFilter intentfilter = new IntentFilter();
@@ -291,10 +286,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     private void err_logout() {
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(200);
-        Toast.makeText(
-                getApplicationContext(),
-                getString(R.string.error_net),
-                Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), getString(R.string.aceptar), Toast.LENGTH_SHORT).show();
         reBuildView();
     }
 
@@ -303,10 +295,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(200);
 
-        Toast.makeText(
-                getApplicationContext(),
-                getString(R.string.error_net),
-                Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), getString(R.string.login_aviso_error_login), Toast.LENGTH_SHORT).show();
 
         //reBuildView();
         if (current_item != null) {
@@ -325,21 +314,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             current_item.setVisibility(View.VISIBLE);
         }
 
-        try {
-            checkService();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        try {
-            checkService();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
 
     }
 
@@ -580,8 +559,6 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             if (logstatus == 0) {// [{"logstatus":"0"}]
 
                 Log.e("Logout: ", "valido");
-//                GCMRegistrar.unregister(this);
-//                Log.e("info", "unregistered....." + GCMRegistrar.getRegistrationId(this));
                 return true;
 
             } else {// [{"logstatus":"1"}]
@@ -601,15 +578,13 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         Log.v("MainActivity","clearServices");
         mySQLiteAdapter = new BDAdapter(this);
         mySQLiteAdapter.openToWrite();
-        mySQLiteAdapter.deleteAllServices();
+       // mySQLiteAdapter.deleteAllServices();
         mySQLiteAdapter.close();
     }
 
     private void enable(String driver_id, String id) {
-        Log.v("MainActivity", "enable");
 
-        clearServices();
-//        MiddleConnect.enableDrive(this, lat, lng, driver_id, id, new AsyncHttpResponseHandler() {
+        Log.v("MainActivity", "enable");
 
         MiddleConnect.enableDrive(this, lat, lng, driver_id, id, new AsyncHttpResponseHandler() {
 
@@ -628,7 +603,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 String response = new String(responseBody);
-                Log.e(TAG, "" + response);
+               // Log.e(TAG, "" + response);
 
                 try {
 
@@ -639,11 +614,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                     if (error == 0) {
 
                         if (repsonsejson.getBoolean("success")) {
-                            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
 
+                            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
                             savePreferencias("servicieTomado", "false");
 
-                            Intent i = new Intent(MainActivity.this, WaitServiceActivity.class);
+                                Intent i = new Intent(MainActivity.this, WaitServiceActivity.class);
 
                             if (name != null && name != "") {
                                 i.putExtra("name", name);
@@ -652,7 +627,6 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                             if (repsonsejson.has("services")) {
                                 i.putExtra("services", repsonsejson.getString("services"));
                             }
-
                             //startActivity(i);
                             startActivityForResult(i, 1000);
 
@@ -701,6 +675,8 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
             }
         });
+
+
     }
 
     void showEnableAlert(final String message) {
@@ -768,8 +744,8 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                String response = new String(responseBody);
-                Log.e(TAG, "" + response);
+             //   String response = new String(responseBody);
+             //   Log.e(TAG, "" + response);
             }
 
             @Override
@@ -784,15 +760,15 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         return false;
     }
 
-    public boolean checkService() throws JSONException {
+    /*public boolean checkService() throws JSONException {
 
-        service_id = null;
-        if (service_id != null && !service_id.isEmpty()) {
-            Log.v("checkService", "driver_id=" + id_driver + " service_id=" + service_id);
-        } else {
-            Log.v("checkService", "driver_id=" + id_driver + " service_id=" + "NULO");
-        }
-        MiddleConnect.checkStatusService(this, id_driver, service_id, "uuid", new AsyncHttpResponseHandler() {
+        //service_id = conf.getServiceId();
+        id_driver = conf.getIdUser();
+        service_id = "";
+        Log.v("checkService", "ini");
+        Log.v("checkService", "id_driver=" + id_driver + " service_id=" + service_id);
+
+        MiddleConnect.checkStatusService(this, id_driver, service_id, id_user, "uuid", new AsyncHttpResponseHandler() {
 
             @Override
             public void onStart() {
@@ -808,7 +784,6 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
                     status_service = responsejson.getInt("status_id");
                     Log.v("checkService", "status_id: " + String.valueOf(status_service));
-
 
                     // si hay un servicio asignado lo recupera
                     if ((status_service == 2) || (status_service == 4)) {
@@ -856,7 +831,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
 
                         intent.putExtra("direccion", direccion);
-                        intent.putExtra("status_service",status_service);
+                        intent.putExtra("status_service", status_service);
                         intent.putExtra("kind_id", responsejson.getInt("schedule_id"));
                         intent.putExtra("schedule_type", responsejson.getInt("schedule_type"));
                         intent.putExtra("name", responsejson.getString("index_id"));
@@ -899,12 +874,8 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
             }
 
         });
-        if (status_service == 2)
-            return true;
-        else
-            return false;
-
-    }
+        return true;
+    }*/
 
     @Override
     public void onInit(int status) {

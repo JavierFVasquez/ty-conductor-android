@@ -20,6 +20,8 @@ public class Connect {
 
     public static final String BASE_URL = "http://" + BuildConfig.HOST + "/public/";
     private static final String CONNECTIVITY_QUALITY_CHECKING = "http://www.taxisya.co/dev/";
+
+
     public static final int timeout = 40;
 
     public static AsyncHttpClient syncHttpClient= new SyncHttpClient();
@@ -49,6 +51,19 @@ public class Connect {
             //ByteArrayEntity entity = new ByteArrayEntity(bodyAsJson.toString().getBytes("UTF-8"));
             getClient().post(context, getAbsoluteUrl(url), stringEntity, "application/json", responseHandler);
 
+        } catch (Exception e) {
+            Log.e("sendJson error", e.toString());
+        }
+    }
+
+    public static void sendJsons(Context context, String url, RequestParams params, JSONObject bodyAsJson,
+                                AsyncHttpResponseHandler responseHandler) {
+        try {
+            //ByteArrayEntity entity = new ByteArrayEntity(bodyAsJson.toString().getBytes("UTF-8"));
+            StringEntity stringEntity = new StringEntity(bodyAsJson.toString());
+            Log.v("sendJson","String Json "+bodyAsJson.toString());
+            //client.post(context,getAbsoluteUrl(url), entity, "application/json", responseHandler);
+            getClient().post(context,getAbsoluteUrl(url), stringEntity, "application/json", responseHandler);
         } catch (Exception e) {
             Log.e("sendJson error", e.toString());
         }

@@ -224,7 +224,6 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
 
         gcmKeepAlive = new GcmKeepAlive(this);
 
-//
 //        if (mGoogleApiClient == null) {
 //            mGoogleApiClient = new GoogleApiClient.Builder(MyService.this)
 //                    .addConnectionCallbacks(MyService.this)
@@ -233,8 +232,8 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
 //                    .build();
 //        }
 
-        locationManager =
-                (android.location.LocationManager) this.getSystemService(LOCATION_SERVICE);
+        locationManager = (android.location.LocationManager) this.getSystemService(LOCATION_SERVICE);
+
         if (!locationManager.isProviderEnabled(android.location.LocationManager.GPS_PROVIDER)) {
             Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
             this.startActivity(intent);
@@ -251,13 +250,11 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
                 .build();
         /******* check  ********/
 
-        Bundle extras = intent.getExtras();
-        if (extras.equals(null)){
+        /*Bundle extras = intent.getExtras();
+        if (extras.equals("")){
             Log.e(TAG, "intent.getExtras() == null");
             System.exit(0);
-        }if (extras != null) {
-            this.driver_id = extras.getString("driver_id");
-        }
+        }*/
 
         if (mGoogleApiClient != null) {
             mGoogleApiClient.connect();
@@ -265,7 +262,6 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
             System.exit(0);
 
         }
-
 
         //setUpLocationClientIfNeeded();
 //        if(!mGoogleApiClient.isConnected() || !mGoogleApiClient.isConnecting())
@@ -275,7 +271,6 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
 
         return START_STICKY;
 
-//
 //        if (!currentlyProcessingLocation) {
 //            currentlyProcessingLocation = true;
 //            activeLocation();
@@ -334,8 +329,8 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                    String response = new String(responseBody);
-                    Log.e(TAG, "onFailure" + response);
+                   // String response = new String(responseBody);
+                    Log.e(TAG, "onFailure" );
                 }
 
                 @Override

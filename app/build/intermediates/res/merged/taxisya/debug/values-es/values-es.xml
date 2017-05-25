@@ -147,6 +147,8 @@
     <string name="my_cars_button_confirmar">Confirmar</string>
     <string name="network_connectivity_message">Verificando...</string>
     <string name="no_gps">¡Hay problemas con el gps!</string>
+    <string name="no_internet">No tiene una conexión a internet activa</string>
+    <string name="no_update_services">Actualice Google Play Services</string>
     <string name="oper_cancel">¡La operadora ha cancelado el servicio!</string>
     <string name="ready_enable">%1$s te encuentras habilitado.</string>
     <string name="recover_password">Recuperar Contraseña</string>
@@ -178,6 +180,7 @@
     <string name="saliendo_aplicacion">Saliendo de la aplicación...</string>
     <string name="se_ha_enviado_a_tu_correo_electronico_un_codigo_de_confirmaci_n">Se ha enviado a tu correo electrónico un codigo de confirmacion</string>
     <string name="sendmyposition">v2/driver/%1$s/updateposition</string>
+    <string name="services_user">service/user</string>
     <string name="servicio_finalizado">El servicio se finalizó exitosamente.</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
     <string name="text_campos_imcompletos">Campos incompletos</string>

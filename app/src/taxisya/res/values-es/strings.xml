@@ -12,6 +12,7 @@
     <string name="error1">¡Este servicio fue confirmado por otro taxi!</string>
     <string name="error2">¡Este servicio fue cancelado por el usuario!</string>
     <string name="error3">¡Este servicio fue confirmado!"</string>
+    <string name="no_update_services">Actualice Google Play Services</string>
     <string name="error_arrived">Hubo un error en la confirmacion de llegada , intentelo de nuevo!</string>
     <string name="error_cancel_service">Hubo un error al cancelar el servicio, intente de nuevo</string>
     <string name="error_disable">Hubo un error deshabilitando, intentelo de nuevo</string>
@@ -80,6 +81,8 @@
     <string name="verificando">Verificando...</string>
     <string name="waitservice_button_deshabilitarme">Deshabilitarme</string>
     <string name="waitservice_errot_conexion">Hubo un error en su conexión a internet, En este momento no recibirá servicios.</string>
+    <string name="no_internet">No tiene una conexión a internet activa</string>
+    <string name="services_user">service/user</string>
     <string name="waitservice_no_permitido_otro_servicio">No puede tomar otro servicio adicional</string>
     <string name="waitservice_numeros_cuarta">cuarta</string>
     <string name="waitservice_numeros_decima">decima</string>

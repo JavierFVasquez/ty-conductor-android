@@ -173,7 +173,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         btn_pay = (Button) findViewById(R.id.btn_pay);
         btnConfirmCode = (Button) findViewById(R.id.btnConfirmCode);
         mUnits = (EditText) findViewById(R.id.totUnits);
-       // mnits = (EditText) findViewById(R.id.totUnits);
+        // mnits = (EditText) findViewById(R.id.totUnits);
         mCode = (EditText) findViewById(R.id.etCodeAuthorization);
         mCheck1 = (CheckBox) findViewById(R.id.chkRecargo1);
         mCheck2 = (CheckBox) findViewById(R.id.chkRecargo2);
@@ -810,7 +810,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
             case R.id.btnConfirmCode:
                 Log.v("BTN1", "btn_confirm_code");
-                // TODO:  aplicar mascara de XX 
+                // TODO:  aplicar mascara de XX
                 if (confirmCodeAuthorization()) {
                     mLinear2.setVisibility(View.GONE);
                     btnCancelar.setVisibility(View.GONE);

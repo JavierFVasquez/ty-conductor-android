@@ -4,7 +4,7 @@ import org.json.JSONObject;
 
 public class Servicio {
 
-    private String idServicio;
+    private String service_id;
     private String indice;
     private String comp1;
     private String comp2;
@@ -58,7 +58,7 @@ public class Servicio {
                     String latitud, String longitud, String name, String lastname,
                     int typeagend, String destino, String houragend, String direccion, int payType, String payReference, String userId, String userEmail, String cardReference,
                     String units, String charge1, String charge2, String charge3, String charge4, String value) {
-        this.idServicio = idServicio;
+        this.service_id = idServicio;
         this.indice = indice;
         this.comp1 = comp1;
         this.comp2 = comp2;
@@ -92,7 +92,7 @@ public class Servicio {
                     int kind_id, String destino, String houragend, String direccion,
                     int payType, String payReference, String userId, String userEmail, String cardReference,
                     String units, String charge1, String charge2, String charge3, String charge4, String value,String code) {
-        this.idServicio = idServicio;
+        this.service_id = idServicio;
         this.indice = indice;
         this.comp1 = comp1;
         this.comp2 = comp2;
@@ -130,7 +130,7 @@ public class Servicio {
     }
 
     public Servicio() {
-        idServicio = "1";
+        service_id = "1";
         indice = "Calle";
         comp1 = "82B";
         comp2 = "95D";
@@ -144,11 +144,11 @@ public class Servicio {
     }
 
     public String getIdServicio() {
-        return idServicio;
+        return service_id;
     }
 
     public void setIdServicio(String idServicio) {
-        this.idServicio = idServicio;
+        this.service_id = idServicio;
     }
 
     public String getIndice() {

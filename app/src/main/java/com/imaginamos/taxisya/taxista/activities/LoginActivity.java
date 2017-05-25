@@ -43,14 +43,17 @@ import com.imaginamos.taxisya.taxista.io.MiddleConnect;
 import com.imaginamos.taxisya.taxista.model.Actions;
 import com.imaginamos.taxisya.taxista.model.Car;
 import com.imaginamos.taxisya.taxista.model.Conf;
+import com.imaginamos.taxisya.taxista.model.Preferencias;
 import com.imaginamos.taxisya.taxista.utils.Dialogos;
 import com.imaginamos.taxisya.taxista.utils.Utils;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
@@ -63,8 +66,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private Button reset_pass;
     private Button btnLogin;
    // private ImageView btn_volver;
-    private String id_user;
-    private String uuid;
+    private String id_user, uuid, driver_id, service_id, status_id, id_driver, service;
     private ProgressDialog pDialog;
     private Conf conf;
     private int inte = 0;
@@ -76,11 +78,15 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private CheckBox CheckTerms;
     private TextView Terminos;
     private String direccion;
+    private int status_service = 0;
+    private int car_id = 0;
+    private Preferencias mPref;
 
     private int status = -1;
 
     private BroadcastReceiver mReceiver;
 
+    ArrayList<HashMap<String, String>> contactList;
 
     @Override
     public void onRestart() {
@@ -100,24 +106,13 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             Fabric.with(this, new Crashlytics());
 
         setContentView(R.layout.activity_login);
-
         user = (EditText) findViewById(R.id.txtUser);
-
         pass = (EditText) findViewById(R.id.txtPass);
-
         btnLogin = (Button) findViewById(R.id.btnLogin);
-
-        //btn_volver = (ImageView) findViewById(R.id.btn_volver);
-        //btn_volver.setOnClickListener(this);
-
         CheckTerms = (CheckBox) findViewById(R.id.CheckTerms);
-
         Terminos = (TextView) findViewById(R.id.Terminos);
         Terminos.setOnClickListener(this);
-
         direccion = "";
-
-
         reset_pass = (Button) findViewById(R.id.reset_pass);
 
         conf = new Conf(this);
@@ -129,12 +124,10 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         if (Connectivity.isConnected(this)) {
             if (conf.getUser() != null && conf.getPass() != null) {
+
                 login_automatico = true;
-
                 login(conf.getUser(), conf.getPass());
-
                 btnLogin.setEnabled(false);
-
             //    btnRegister.setEnabled(false);
 
            } else {
@@ -189,6 +182,15 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         registerReceiver(mReceiver, intentfilter);
 
+
+        try {
+            checkService();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        //id_driver = conf.getIdUser();
+        contactList = new ArrayList<>();
     }
 
 
@@ -440,19 +442,12 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                         if (status == 0) {
                             id_user = responsejson.getString("id");
 
-
                             SharedPreferences prefs = getSharedPreferences("taxista", Context.MODE_PRIVATE);
-
                             SharedPreferences.Editor editor = prefs.edit();
-
                             editor.putString("driver_id", id_user);
-
                             editor.putString("login", user);
-
                             editor.putString("password", pass);
-
                             editor.commit();
-
 
                             if (login_automatico) {
                                 Intent i = new Intent(LoginActivity.this, MainActivity.class);
@@ -533,6 +528,104 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
     }
 
+
+    public boolean checkService() throws JSONException {
+
+        //service_id = conf.getServiceId();
+        id_driver = conf.getIdUser();
+        service_id = "";
+        Log.v("checkService", "ini");
+        Log.v("checkService", "id_driver=" + driver_id + " service_id=" + service_id);
+
+        MiddleConnect.checkStatusService(this, driver_id, service_id, "uuid", new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onStart() {
+                Log.v("checkService", "onStart");
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                String response = new String(responseBody);
+
+                try {
+
+
+                    JSONObject responsejson = new JSONObject(response);
+                    JSONArray services = responsejson.getJSONArray("services");
+
+                            // looping through All Contacts
+                            for (int i = 0; i < services.length(); i++) {
+                                JSONObject c = services.getJSONObject(i);
+
+                                String id = c.getString("id");
+                                String user_id = c.getString("user_id");
+                                String driver_id = c.getString("driver_id");
+                                String status_id = c.getString("status_id");
+                                String qualification = c.getString("qualification");
+                                String kind_id = c.getString("kind_id");
+
+                                if (!id_user.equals(driver_id)){
+                                    Toast.makeText(getApplicationContext(), "test", Toast.LENGTH_SHORT).show();
+                                } else if(status_id.equals(2) || status_id.equals(4)){
+
+                                    service_id = responsejson.getString("id");
+                                    conf.setServiceId(service_id);
+
+                                    Intent intent = new Intent(LoginActivity.this, MapActivity.class);
+                                    intent.putExtra("lat", Double.parseDouble(responsejson.getString("from_lat")));
+                                    intent.putExtra("lng", Double.parseDouble(responsejson.getString("from_lng")));
+                                    intent.putExtra("id_servicio", responsejson.getString("id"));
+
+                                    Log.v("InicialActivityLogin", "checkService() servicio asignado recuperado");
+                                    Log.v("InicialActivityLogin", "responsejson = " + responsejson.toString());
+                                    Log.v("InicialActivityLogin", "responsejson = " + responsejson.getJSONObject("driver").toString());
+                                    Log.v("InicialActivityLogin", "responsejson id = " + responsejson.getString("id"));
+                                    Log.v("InicialActivityLogin", "responsejson lat = " + responsejson.getString("from_lat"));
+                                    Log.v("InicialActivityLogin", "responsejson schedule_type = " + responsejson.getString("schedule_type"));
+
+                                    String type = String.valueOf(responsejson.getString("schedule_type"));
+                                    String direccion = "";
+                                    startActivity(intent);
+
+                                }else if (status_id.equals(5)|| qualification.equals(null)){
+                                    Toast.makeText(getApplicationContext(), "El usuario no ha calificado el servicio.", Toast.LENGTH_SHORT).show();
+                                }
+
+                                HashMap<String, String> contact = new HashMap<>();
+
+                                contact.put("id", id);
+                                contact.put("user_id", user_id);
+                                contact.put("driver_id", driver_id);
+                                contact.put("status_id", status_id);
+                                contact.put("qualification", qualification);
+                                contact.put("kind_id", kind_id);
+                                contactList.add(contact);
+
+                            }
+
+
+                    } catch (JSONException e1) {
+                    e1.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                //  String response = new String(responseBody);
+                // Log.v("checkService", "onFailure = " + response);
+
+            }
+
+            @Override
+            public void onFinish() {
+                Log.v("checkService", "onFinish");
+            }
+
+        });
+        return true;
+    }
 
     // update car +
     private void updateCar(final String driver_id, final String car_id) {

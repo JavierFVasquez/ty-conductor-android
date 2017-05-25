@@ -370,7 +370,7 @@
     <string name="checkstatuservice">service/status</string>
     <string name="code_pass">user/pwd/confirm</string>
     <string name="codigo_de_confirmaci_n">Confirmation code</string>
-    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">cc0ddcad-9cf9-44e9-9e4b-c65252894b5f</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">d2051034-a687-4bb5-8ee0-f46fa7ad556d</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns2:g id="app_name">%1$s</ns2:g> won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
@@ -474,6 +474,8 @@
     <string name="my_cars_button_confirmar">Confirm</string>
     <string name="network_connectivity_message">Checking...</string>
     <string name="no_gps">There are problems with the GPS!</string>
+    <string name="no_internet">You do not have an active internet connection</string>
+    <string name="no_update_services">Update Google Play Services</string>
     <string name="oper_cancel">The operator has canceled the service!</string>
     <string name="ready_enable">%1$s you are enabled.</string>
     <string name="recover_password">Recover password</string>
@@ -505,6 +507,7 @@
     <string name="saliendo_aplicacion">Leaving the application...</string>
     <string name="se_ha_enviado_a_tu_correo_electronico_un_codigo_de_confirmaci_n">It has been sent to your email a confirmation code</string>
     <string name="sendmyposition">v2/driver/%1$s/updateposition</string>
+    <string name="services_user">service/user</string>
     <string name="servicio_finalizado">The service was successfully completed.</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="text_campos_imcompletos">Incomplete fields</string>

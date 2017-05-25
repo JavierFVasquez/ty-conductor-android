@@ -24,8 +24,8 @@ android {
         applicationId "co.taxisya.conductor"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 3
-        versionName "1.2"
+        versionCode 0
+        versionName "1.6.2"
     }
 
     buildTypes {
@@ -97,6 +97,7 @@ def appendVersionNameVersionCode(variant, defaultConfig) {
 }
 
 dependencies {
+
     compile 'com.android.support:support-v4:25.0.0'
     compile 'com.google.android.gms:play-services-maps:9.8.0'
     compile 'com.google.android.gms:play-services-appindexing:9.8.0'

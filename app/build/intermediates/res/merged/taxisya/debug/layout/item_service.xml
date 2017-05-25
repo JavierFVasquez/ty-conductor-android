@@ -3,10 +3,10 @@
     android:id="@+id/cell_service"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="#F6F6F6"
     android:baselineAligned="false">
 
     <RelativeLayout
+        android:id="@+id/back_color"
         android:layout_width="0sp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"

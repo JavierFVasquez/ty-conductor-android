@@ -49,6 +49,7 @@ import com.imaginamos.taxisya.taxista.io.MyService;
 import com.imaginamos.taxisya.taxista.io.UpdateReceiver;
 import com.imaginamos.taxisya.taxista.model.Actions;
 import com.imaginamos.taxisya.taxista.model.Conf;
+import com.imaginamos.taxisya.taxista.model.Preferencias;
 import com.imaginamos.taxisya.taxista.model.Servicio;
 import com.imaginamos.taxisya.taxista.utils.BDAdapter;
 import com.imaginamos.taxisya.taxista.utils.Dialogos;
@@ -56,6 +57,7 @@ import com.imaginamos.taxisya.taxista.utils.Utils;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -104,7 +106,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     private Timer myTimer = new Timer();
     private Timer myTimerSpeak = new Timer();
     private Integer recibe_push = 0;
-    private String mServiceId;
+    private String service_id;
     private int mStatusOld;
     private int mStatusNew;
     private BDAdapter mySQLiteAdapter;
@@ -119,6 +121,9 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     private ImageView mConnectivityLoaderImage;
     private RelativeLayout mNoConnectivityPanel;
     private Connectivity connectivityChecker = new Connectivity(this);
+    private int status_service = 0;
+    private int qualification = 0;
+    private Preferencias mPref;
 
     @Override
     public void onRestart() {
@@ -337,36 +342,42 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         recibe_push = 0;
         // timer
         validateStatusDriver();
-
         servicesToSpeek();
 
-    }
-private void checkConections(){
-
-    if (!Connectivity.isConnected(WaitServiceActivity.this)) {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-        alertDialog.setTitle("No tiene habilitada una conexión a Internet");
-        alertDialog.setMessage(getString(R.string.no_gps));
-        alertDialog.setPositiveButton("Habilitar",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                        startActivity(intent);
-                        finish();
-                    }
-                });
-
-        alertDialog.setNegativeButton("Cancelar",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(getApplicationContext(), InicialActivityLogin.class);
-                        startActivity(intent);
-                    }
-                });
-        alertDialog.show();
+        try {
+            checkService();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
-}
+
+    private void checkConections() {
+
+        if (!Connectivity.isConnected(WaitServiceActivity.this)) {
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+            alertDialog.setTitle("No tiene habilitada una conexión a Internet");
+            alertDialog.setMessage(getString(R.string.no_gps));
+            alertDialog.setPositiveButton("Habilitar",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                            startActivity(intent);
+                            finish();
+                        }
+                    });
+
+            alertDialog.setNegativeButton("Cancelar",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(), InicialActivityLogin.class);
+                            startActivity(intent);
+                        }
+                    });
+            alertDialog.show();
+
+        }
+    }
 
     private void setup() {
         mBroadcastReceiver = new BroadcastReceiver() {
@@ -430,23 +441,13 @@ private void checkConections(){
             }
             Log.v("ADDRESS1", "direccion " + service.getString("address"));
 
-            // mServiceId = service.getString("service_id");
-            // Log.v("VALIDATE_SERVICE", "CHECK service service_id " + mServiceId);
-            // mCursor = mySQLiteAdapter.filterService(mServiceId);
-            // if (mCursor.getCount() > 0) {
-            //     mCursor.moveToPosition(0);
-            //     Log.v("VALIDATE_SERVICE", "NO ADD SERVICE ");
-            //     mCursor.close();
-            // }
-            // else {
-            // Log.v("VALIDATE_SERVICE", "ADD SERVICE ");
             int kindId = Integer.parseInt(service.getString("kind_id"));
 
             if (kindId == 2) {
                 if (getDistance(Double.parseDouble(service.getString("lat")),
-                                Double.parseDouble(service.getString("lng")),
-                                MyService.latitud,
-                                MyService.longitud) <= MyService.getMeters()) {
+                        Double.parseDouble(service.getString("lng")),
+                        MyService.latitud,
+                        MyService.longitud) <= MyService.getMeters()) {
                     addNewService(new Servicio(
                             service.getString("service_id"), service.getString("index_id"),
                             service.getString("comp1"), service.getString("comp2"),
@@ -470,21 +471,20 @@ private void checkConections(){
 
                     ));
                 }
-            }
-            else {
+            } else {
 
                 if (getDistance(Double.parseDouble(service.getString("lat")),
-                                Double.parseDouble(service.getString("lng")),
-                                MyService.latitud,
-                                MyService.longitud) <= MyService.getMeters()) {
+                        Double.parseDouble(service.getString("lng")),
+                        MyService.latitud,
+                        MyService.longitud) <= MyService.getMeters()) {
                     addNewService(new Servicio(
-                        service.getString("service_id"), service.getString("index_id"),
-                        service.getString("comp1"), service.getString("comp2"),
-                        service.getString("no"), service.getString("barrio"),
-                        service.getString("obs"), service.getString("lat"),
-                        service.getString("lng"), agendamiento,
-                        service.getString("username"), Integer.parseInt(service
-                        .getString("kind_id")), destino, hora, service.getString("address"),
+                            service.getString("service_id"), service.getString("index_id"),
+                            service.getString("comp1"), service.getString("comp2"),
+                            service.getString("no"), service.getString("barrio"),
+                            service.getString("obs"), service.getString("lat"),
+                            service.getString("lng"), agendamiento,
+                            service.getString("username"), Integer.parseInt(service
+                            .getString("kind_id")), destino, hora, service.getString("address"),
                             Integer.valueOf(service.getString("pay_type")),
                             service.getString("pay_reference"),
                             service.getString("user_id"),
@@ -498,7 +498,7 @@ private void checkConections(){
                             service.getString("value"),
                             service.getString("code")
                     ));
-                 }
+                }
             }
             // }
         } catch (Exception e) {
@@ -533,51 +533,40 @@ private void checkConections(){
                 hora = service.getString("service_date_time");
             }
 
-            // mServiceId = service.getString("service_id");
-            // Log.v("SQLITE", "2 CHECK service service_id " + mServiceId);
-            // mCursor = mySQLiteAdapter.filterService(mServiceId);
-            // if (mCursor.getCount() > 0) {
-            //     mCursor.moveToPosition(0);
-            //     Log.v("SQLITE", "2 NO ADD SERVICE ");
-            //     mCursor.close();
-            // }
-            // else {
-            // Log.v("SQLITE", "2 ADD SERVICE ");
             int kindId = Integer.parseInt(service.getString("kind_id"));
             if (kindId == 2) {
                 if (getDistance(Double.parseDouble(service.getString("lat")),
-                                Double.parseDouble(service.getString("lng")),
-                                MyService.latitud,
-                                MyService.longitud) <= MyService.getMeters()) {
-                     addNewService(new Servicio(
-                         service.getString("service_id"), service.getString("index_id"),
-                         service.getString("comp1"), service.getString("comp2"),
-                         service.getString("no"), service.getString("barrio"),
-                         service.getString("obs"), service.getString("lat"),
-                         service.getString("lng"), agendamiento, username,
-                             Integer.parseInt(service.getString("kind_id")), destino,
-                             hora, service.getString("address"),
-                             Integer.valueOf(service.getString("pay_type")),
-                             service.getString("pay_reference"),
-                             service.getString("user_id"),
-                             service.getString("user_email"),
-                             service.getString("user_card_reference"),
-                             service.getString("units"),
-                             service.getString("charge1"),
-                             service.getString("charge2"),
-                             service.getString("charge3"),
-                             service.getString("charge4"),
-                             service.getString("value"),
-                             service.getString("code")
+                        Double.parseDouble(service.getString("lng")),
+                        MyService.latitud,
+                        MyService.longitud) <= MyService.getMeters()) {
+                    addNewService(new Servicio(
+                            service.getString("service_id"), service.getString("index_id"),
+                            service.getString("comp1"), service.getString("comp2"),
+                            service.getString("no"), service.getString("barrio"),
+                            service.getString("obs"), service.getString("lat"),
+                            service.getString("lng"), agendamiento, username,
+                            Integer.parseInt(service.getString("kind_id")), destino,
+                            hora, service.getString("address"),
+                            Integer.valueOf(service.getString("pay_type")),
+                            service.getString("pay_reference"),
+                            service.getString("user_id"),
+                            service.getString("user_email"),
+                            service.getString("user_card_reference"),
+                            service.getString("units"),
+                            service.getString("charge1"),
+                            service.getString("charge2"),
+                            service.getString("charge3"),
+                            service.getString("charge4"),
+                            service.getString("value"),
+                            service.getString("code")
 
-                     ));
+                    ));
                 }
-            }
-            else {
+            } else {
                 if (getDistance(Double.parseDouble(service.getString("lat")),
-                                Double.parseDouble(service.getString("lng")),
-                                MyService.latitud,
-                                MyService.longitud) <= MyService.getMeters()) {
+                        Double.parseDouble(service.getString("lng")),
+                        MyService.latitud,
+                        MyService.longitud) <= MyService.getMeters()) {
                     addNewService(new Servicio(
                             service.getString("service_id"), service.getString("index_id"),
                             service.getString("comp1"), service.getString("comp2"),
@@ -609,7 +598,7 @@ private void checkConections(){
     }
 
     private float getDistance(double latA, double lngA, double latB, double lngB) {
-       // Log.e(TAG, "getDistance:" + latA + "," + lngA + " <->" + latB + "," + lngB);
+        // Log.e(TAG, "getDistance:" + latA + "," + lngA + " <->" + latB + "," + lngB);
         Log.e("getDistance", "getDistance:" + latA + "," + lngA + " <->" + latB + "," + lngB);
         Location locationA = new Location("point A");
         locationA.setLatitude(latA);
@@ -636,14 +625,14 @@ private void checkConections(){
         mSeekBar = (SeekBar) findViewById(R.id.seekBar);
         mVoiceSpeed = Utils.getVoiceSpeedPreference(getApplicationContext());
 
-        if(!mSeekBar.isIndeterminate())
-            mSeekBar.setProgress((int) (mVoiceSpeed*100));
+        if (!mSeekBar.isIndeterminate())
+            mSeekBar.setProgress((int) (mVoiceSpeed * 100));
 
         mSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
-                float value = (float)progresValue / 100;
+                float value = (float) progresValue / 100;
                 Log.v("SEEKBAR", "progress " + String.valueOf(value));
             }
 
@@ -655,7 +644,7 @@ private void checkConections(){
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 //Toast.makeText(getApplicationContext(), "Stopped tracking seekbar", Toast.LENGTH_SHORT).show();
-                mVoiceSpeed = (float)seekBar.getProgress() / 100;
+                mVoiceSpeed = (float) seekBar.getProgress() / 100;
                 testSpeak();
                 Utils.saveVoiceSpeedPreference(mVoiceSpeed, getApplicationContext());
             }
@@ -684,10 +673,10 @@ private void checkConections(){
 
     }
 
-    private void displayConnectivityPanel(boolean display){
-        mNoConnectivityPanel.setVisibility(display ? View.VISIBLE:View.GONE);
-        if(display)
-            mConnectivityLoaderImage.startAnimation(AnimationUtils.loadAnimation(this,R.anim.connection_loader));
+    private void displayConnectivityPanel(boolean display) {
+        mNoConnectivityPanel.setVisibility(display ? View.VISIBLE : View.GONE);
+        if (display)
+            mConnectivityLoaderImage.startAnimation(AnimationUtils.loadAnimation(this, R.anim.connection_loader));
     }
 
     public void onResume() {
@@ -777,7 +766,7 @@ private void checkConections(){
         mAlarmManager.cancel(mPendingIntent);
 
         //if (mReceiver != null) {
-            unregisterReceiver(mReceiver);
+        unregisterReceiver(mReceiver);
         //}
         unregisterReceiver(mBroadcastReceiver);
 
@@ -814,7 +803,7 @@ private void checkConections(){
 
     @Override
     public void onInit(int status) {
-        Log.v("SPEAK1","onInit init");
+        Log.v("SPEAK1", "onInit init");
         if (status == TextToSpeech.SUCCESS) {
             Locale locSpanish = Locale.getDefault();
 
@@ -827,11 +816,11 @@ private void checkConections(){
 
             if (result != TextToSpeech.LANG_MISSING_DATA || result != TextToSpeech.LANG_NOT_SUPPORTED) {
                 try {
-                    Log.v("SPEAK1","onInit se pronuncio");
+                    Log.v("SPEAK1", "onInit se pronuncio");
                     tts.speak(getString(R.string.ready_enable, name), TextToSpeech.QUEUE_FLUSH, null);
                 } catch (Exception e) {
                     Log.e("error", "" + e.toString());
-                    Log.v("SPEAK1","onInit catch se pronuncio");
+                    Log.v("SPEAK1", "onInit catch se pronuncio");
                 }
             }
         } else {
@@ -845,17 +834,15 @@ private void checkConections(){
 
         try {
 
-         //   JSONObject service = new JSONObject(service_json);
-            String texto1 = "" ;
+            //   JSONObject service = new JSONObject(service_json);
+            String texto1 = "";
 
             if (pt == 2) {
-                texto1 = " pago tarjeta" ;
-            }
-            else if (pt == 3) {
-                texto1 = " con vale" ;
-            }
-            else {
-               texto1 = "";
+                texto1 = " pago tarjeta";
+            } else if (pt == 3) {
+                texto1 = " con vale";
+            } else {
+                texto1 = "";
             }
 
             if (tts != null) {
@@ -863,7 +850,7 @@ private void checkConections(){
                     Locale loc = Locale.getDefault();
 
 
-                    texto = texto.toLowerCase(loc) + texto1  ;
+                    texto = texto.toLowerCase(loc) + texto1;
 
                     Log.e("LECTURA ", texto);
 
@@ -983,8 +970,7 @@ private void checkConections(){
     private void deshabilitarme() {
         this.sendBroadcast(new Intent("com.google.android.intent.action.GTALK_HEARTBEAT"));
         this.sendBroadcast(new Intent("com.google.android.intent.action.MCS_HEARTBEAT"));
-        MiddleConnect.disableDrive(this, driver_id, uuid,
-                new AsyncHttpResponseHandler() {
+        MiddleConnect.disableDrive(this, driver_id, uuid, new AsyncHttpResponseHandler() {
 
                     @Override
                     public void onStart() {
@@ -1052,8 +1038,7 @@ private void checkConections(){
         // remove services operator in erray
         this.sendBroadcast(new Intent("com.google.android.intent.action.GTALK_HEARTBEAT"));
         this.sendBroadcast(new Intent("com.google.android.intent.action.MCS_HEARTBEAT"));
-        MiddleConnect.enableDrive(this, lat, lng, driver_id, id,
-                new AsyncHttpResponseHandler() {
+        MiddleConnect.enableDrive(this, lat, lng, driver_id, id, new AsyncHttpResponseHandler() {
 
                     @Override
                     public void onStart() {
@@ -1117,8 +1102,8 @@ private void checkConections(){
                                         // ver si esta dentro de la distancia +
 
                                         if (getDistance(Double.parseDouble(serviceJson.getString("lat")),
-                                                        Double.parseDouble(serviceJson.getString("lng")),
-                                                        MyService.latitud, MyService.longitud) <= MyService.getMeters()) {
+                                                Double.parseDouble(serviceJson.getString("lng")),
+                                                MyService.latitud, MyService.longitud) <= MyService.getMeters()) {
                                             receivedServices.add(serviceJson.getString("service_id"));
 
                                         }
@@ -1244,7 +1229,7 @@ private void checkConections(){
                                             intent.putExtra("user_id", serviceJson.getString("user_id"));
                                             intent.putExtra("user_card_reference", serviceJson.getString("user_card_reference"));
                                             intent.putExtra("user_email", serviceJson.getString("user_email"));
-                                            intent.putExtra("code", serviceJson.getString("code"));                                            
+                                            intent.putExtra("code", serviceJson.getString("code"));
 
 
                                             // kill speak
@@ -1310,14 +1295,95 @@ private void checkConections(){
                 Toast.LENGTH_SHORT).show();
     }
 
+    public boolean checkService() throws JSONException {
+
+        //service_id = conf.getServiceId();
+        driver_id = conf.getIdUser();
+        service_id = "";
+        Log.v("checkService", "ini");
+        Log.v("checkService", "id_driver=" + driver_id + " service_id=" + service_id);
+
+        MiddleConnect.checkStatusService(this, driver_id, service_id, "uuid", new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onStart() {
+                Log.v("checkService", "onStart");
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                String response = new String(responseBody);
+                try {
+                    JSONObject responsejson = new JSONObject(response);
+                    String qualy = Integer.toString(qualification);
+                    status_service = responsejson.getInt("status_id");
+                    Log.v("checkService", "status_id: " + String.valueOf(status_service));
+                    // si hay un servicio asignado lo recupera
+
+                    if (qualy.equals("0") || (status_service == 5 )) {
+                        Toast.makeText(getApplicationContext(), "cambiar", Toast.LENGTH_SHORT).show();
+                        Log.v("InicialActivityLogin", "checkService() servicio recuperado - status_service " + String.valueOf(qualification) + " service_id=" + qualification);
+                        Log.v("InicialActivityLogin", "checkService() servicio recuperado - driver " + responsejson.getJSONObject("driver").toString());
+                        Log.v("CNF_SRV1", "HomeActivity before call ConfirmacionActivity.class");
+                        mPref.setRootActivity("HomeActivity");
+                        //Intent mIntent = new Intent(getApplicationContext(), CalificarActivity.class);
+                        //mIntent.putExtra("qualification", "1");
+                        Log.v("checkService", "servicios detectado por socket, sin push");
+                        Intent mIntent = new Intent(getApplicationContext(), MapActivity.class);
+                        mIntent.putExtra("driver", responsejson.getJSONObject("driver").toString());
+                        startActivity(mIntent);
+                    }
+
+                    else if ((status_service == 2) || (status_service == 4)) {
+                        Toast.makeText(getApplicationContext(), "cambiar", Toast.LENGTH_SHORT).show();
+                        service_id = responsejson.getString("id");
+                        conf.setServiceId(service_id);
+                        Log.v("InicialActivityLogin", "checkService() servicio recuperado - status_service " + String.valueOf(status_service) + " service_id=" + service_id);
+                        Log.v("InicialActivityLogin", "checkService() servicio recuperado - driver " + responsejson.getJSONObject("driver").toString());
+                        Log.v("CNF_SRV1", "InicialActivityLogin before call ConfirmacionActivity.class");
+                        mPref.setRootActivity("InicialActivityLogin");
+                        Intent mIntent = new Intent(getApplicationContext(), MapActivity.class);
+                        mIntent.putExtra("driver", responsejson.getJSONObject("driver").toString());
+                        startActivity(mIntent);
+                    }
+
+                    Log.v("InicialActivityLogin", "checkService() no tenia servicio para recuperar");
+                    Log.v("InicialActivityLogin", "responsejson = " + responsejson.getJSONObject("driver").toString());
+
+                    if(status_service == 7 || status_service == 8 || status_service == 9){
+                        Toast.makeText(getApplicationContext(), "cambiar", Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    Log.v("checkService", "Problema json " + e.toString());
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                //  String response = new String(responseBody);
+                // Log.v("checkService", "onFailure = " + response);
+
+            }
+
+            @Override
+            public void onFinish() {
+                Log.v("checkService", "onFinish");
+            }
+
+        });
+        return true;
+    }
+
+
     private void addNewService(final Servicio service) {
 
         boolean addNew = false;
 
         // check si servicio existe
-        mServiceId = service.getIdServicio();
-        Log.v("VALIDATE_SERVICE3", "CHECK service service_id " + mServiceId);
-        mCursor = mySQLiteAdapter.filterService(mServiceId);
+        service_id = service.getIdServicio();
+        Log.v("VALIDATE_SERVICE3", "CHECK service service_id " + service_id);
+        mCursor = mySQLiteAdapter.filterService(service_id);
         if (mCursor.getCount() > 0) {
             mCursor.moveToPosition(0);
             int status = Integer.valueOf(mCursor.getString(mCursor.getColumnIndex(BDAdapter.SRV_STA)));
@@ -1332,34 +1398,25 @@ private void checkConections(){
             long actualDate = c.getTimeInMillis();
 
             Log.v("VALIDATE_SERVICE", "ADD SERVICE ");
-            mVisibleServices.add(mServiceId);
-            Log.v("VALIDATE_SERVICE3", "ADD SERVICE mVisibleServices " + mServiceId);
+            mVisibleServices.add(service_id);
+            Log.v("VALIDATE_SERVICE3", "ADD SERVICE mVisibleServices " + service_id);
 
             addNew = true;
 
             int kid = service.getRand_id();
 
-
-            mySQLiteAdapter.insertService(mServiceId, "1", "", "", driver_id, actualDate,kid);
+            mySQLiteAdapter.insertService(service_id, "1", "", "", driver_id, actualDate, kid);
         }
 
 
         if (addNew) {
-            final ViewGroup newView = (ViewGroup) LayoutInflater.from(this)
-                    .inflate(R.layout.item_service, mContainerView, false);
+            final ViewGroup newView = (ViewGroup) LayoutInflater.from(this).inflate(R.layout.item_service, mContainerView, false);
 
-            //ImageView imagen = (ImageView) newView.findViewById(R.id.imgElement);
-            //Button btnElement = (Button) newView.findViewById(R.id.btnElement);
             LinearLayout btnElement = (LinearLayout) newView.findViewById(R.id.cell_service);
-
             ImageView icon = (ImageView) newView.findViewById(R.id.icon_desti);
-
             TextView direccion = (TextView) newView.findViewById(R.id.txtElement);
-
             TextView txtBarrio = (TextView) newView.findViewById(R.id.txtBarrio);
-
             TextView txtDestino = (TextView) newView.findViewById(R.id.txtDestino);
-
             TextView nombre = (TextView) newView.findViewById(R.id.txtElement_dos);
 
             ImageView payType = (ImageView) newView.findViewById(R.id.payTypeImg);
@@ -1367,13 +1424,9 @@ private void checkConections(){
             int pt = service.getPayType();
             if (pt == 2) { // Tarjeta
                 payType.setImageResource(R.drawable.ic_pay_tc);
-            }
-            else if  (pt == 3) {
+            } else if (pt == 3) {
                 payType.setImageResource(R.drawable.ic_pay_vale);
             }
-           // else {
-             //   payType.setImageResource(R.drawable.ic_pay_cash);
-           // }
 
             nombre.setText(service.getName());
             String destino = service.getDestino();
@@ -1399,8 +1452,7 @@ private void checkConections(){
                     String obs = service.getObs();
                     if (obs != null && obs != "") {
                         dir_full = service.getDireccion() + " - " + service.getObs();
-                    }
-                    else
+                    } else
                         dir_full = service.getDireccion();
                 } else {
 //                    dir_full = service.getIndiceName() + " - " + service.getComp1()
@@ -1427,8 +1479,7 @@ private void checkConections(){
                     String obs = service.getObs();
                     if (obs != null && obs != "" && (obs.length() > 0)) {
                         dir_full = service.getDireccion() + " - " + service.getObs();
-                    }
-                    else
+                    } else
                         dir_full = service.getDireccion();
 
 
@@ -1552,7 +1603,7 @@ private void checkConections(){
 
             pt = service.getPayType();
 
-            speakOut(mServiceId, full_dir, pt);
+            speakOut(service_id, full_dir, pt);
 
             newView.setId(Integer.parseInt(service.getIdServicio()));
 
@@ -1627,20 +1678,20 @@ private void checkConections(){
         isServiceInProgress = true;
 
         // add randome delay
-        int delay = randInt(300,1500);
+        int delay = randInt(300, 1500);
 
         // call function
-        Log.v("SEND_CONFIRMATION","ini " + String.valueOf(new Date()));
+        Log.v("SEND_CONFIRMATION", "ini " + String.valueOf(new Date()));
         try {
             Thread.sleep(delay);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Log.v("SEND_CONFIRMATION","delay " + String.valueOf(delay));
-        Log.v("SEND_CONFIRMATION","fin " + String.valueOf(new Date()));
+        Log.v("SEND_CONFIRMATION", "delay " + String.valueOf(delay));
+        Log.v("SEND_CONFIRMATION", "fin " + String.valueOf(new Date()));
 
-        MiddleConnect.sendConfirmation(this, service.getIdServicio(),
-                conf.getIdUser(), new AsyncHttpResponseHandler() {
+        MiddleConnect.sendConfirmation(this, service.getIdServicio(), conf.getIdUser(), new AsyncHttpResponseHandler() {
+
                     @Override
                     public void onStart() {
                         try {
@@ -1740,7 +1791,7 @@ private void checkConections(){
                                                     + service.getBarrio();
                                         }
                                     }
-                                    Log.v("VER_MAP","direccion = " + direccion);
+                                    Log.v("VER_MAP", "direccion = " + direccion);
                                     intent.putExtra("direccion", direccion);
                                     intent.putExtra("kind_id", service.getRand_id());
                                     intent.putExtra("schedule_type", service.getTypeagend());
@@ -1751,7 +1802,7 @@ private void checkConections(){
                                     intent.putExtra("user_id", service.getUserId());
                                     intent.putExtra("user_card_reference", service.getCardReference());
                                     intent.putExtra("user_email", service.getUserEmail());
-                                    intent.putExtra("code", service.getCode() );                                            
+                                    intent.putExtra("code", service.getCode());
 
 
                                     // remove kind
@@ -1759,19 +1810,19 @@ private void checkConections(){
                                     mySQLiteAdapter.deleteServicesOperator();
 
                                     isServiceInProgress = false;
-                                            if (myTimerSpeak != null) {
-                                                Log.v("wait_service", "1 stop myTimerSpeak");
-                                                myTimerSpeak.cancel();
-                                                myTimerSpeak.purge();
-                                                myTimerSpeak = null;
-                                            }
+                                    if (myTimerSpeak != null) {
+                                        Log.v("wait_service", "1 stop myTimerSpeak");
+                                        myTimerSpeak.cancel();
+                                        myTimerSpeak.purge();
+                                        myTimerSpeak = null;
+                                    }
 
-                                            if (tts != null) {
-                                                Log.v("wait_service", "1 stop tts");
-                                                tts.stop();
-                                                tts.shutdown();
-                                                tts = null;
-                                            }
+                                    if (tts != null) {
+                                        Log.v("wait_service", "1 stop tts");
+                                        tts.stop();
+                                        tts.shutdown();
+                                        tts = null;
+                                    }
 
                                     startActivity(intent);
                                     Log.v("finish", "WaitServiceActivity sendConfirmation()");

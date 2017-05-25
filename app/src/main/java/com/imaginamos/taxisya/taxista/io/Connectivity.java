@@ -216,9 +216,9 @@ public class Connectivity {
 
         @Override
         public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-            String s = new String(responseBody);
+            /*String s = new String(responseBody);
             connectivityMonitorHandler.sendEmptyMessage(-1);
-            connectivityCheckResult = false;
+            connectivityCheckResult = false; */
         }
     };
 

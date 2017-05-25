@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -19,6 +20,13 @@ public class Utils {
     private static final String PREFERENCE_KEY_VOICE_SPEED = "voice_speed";
 
     public Utils() {
+    }
+
+    public static void log(String Tag,String log) {
+        if(log != null && log != "")
+        {
+            Log.e(Tag, log);
+        }
     }
 
     public static final String md5(final String s) {

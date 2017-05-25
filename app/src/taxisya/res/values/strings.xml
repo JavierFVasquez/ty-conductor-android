@@ -12,6 +12,7 @@
     <string name="enable_internet">There is not an internet connection</string>
     <string name="network_connectivity_message">Checking...</string>
     <string name="error_net">No Internet connection!</string>
+    <string name="no_update_services">Update Google Play Services</string>
     <string name="error2">This service was canceled by the user!</string>
     <string name="error_arrived">There was an error in the confirmation of arrival, try again!</string>
     <string name="error_cancel_service">There was an error cancelling the service, try again</string>
@@ -134,6 +135,7 @@
     <string name="title_app_version">Update available</string>
     <string name="verificando">Verifying...</string>
     <string name="waitservice_errot_conexion">There was an error in your internet connection! At this time you will not receive services</string>
+    <string name="no_internet">You do not have an active internet connection</string>
     <string name="waitservice_numeros_novena">ninth</string>
     <string name="waitservice_numeros_octava">eighth</string>
     <string name="waitservice_numeros_primera">first</string>
