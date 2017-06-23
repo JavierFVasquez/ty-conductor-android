@@ -86,8 +86,6 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
     private BroadcastReceiver mReceiver;
 
-    ArrayList<HashMap<String, String>> contactList;
-
     @Override
     public void onRestart() {
         super.onRestart();
@@ -183,14 +181,14 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         registerReceiver(mReceiver, intentfilter);
 
 
-        try {
+        /*try {
             checkService();
         } catch (JSONException e) {
             e.printStackTrace();
-        }
+        }*/
 
         //id_driver = conf.getIdUser();
-        contactList = new ArrayList<>();
+        //contactList = new ArrayList<>();
     }
 
 
@@ -529,7 +527,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     }
 
 
-    public boolean checkService() throws JSONException {
+    /*public boolean checkService() throws JSONException {
 
         //service_id = conf.getServiceId();
         id_driver = conf.getIdUser();
@@ -550,11 +548,10 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
                 try {
 
-
                     JSONObject responsejson = new JSONObject(response);
                     JSONArray services = responsejson.getJSONArray("services");
 
-                            // looping through All Contacts
+                            // looping through All Services
                             for (int i = 0; i < services.length(); i++) {
                                 JSONObject c = services.getJSONObject(i);
 
@@ -565,28 +562,14 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                                 String qualification = c.getString("qualification");
                                 String kind_id = c.getString("kind_id");
 
-                                if (!id_user.equals(driver_id)){
-                                    Toast.makeText(getApplicationContext(), "test", Toast.LENGTH_SHORT).show();
-                                } else if(status_id.equals(2) || status_id.equals(4)){
+                                /*if (id_user.equals(driver_id)){
+                                    Toast.makeText(getApplicationContext(), "Servicio recuperado", Toast.LENGTH_SHORT).show();
+                                } elseif(status_id.equals("2")){
 
-                                    service_id = responsejson.getString("id");
-                                    conf.setServiceId(service_id);
 
                                     Intent intent = new Intent(LoginActivity.this, MapActivity.class);
-                                    intent.putExtra("lat", Double.parseDouble(responsejson.getString("from_lat")));
-                                    intent.putExtra("lng", Double.parseDouble(responsejson.getString("from_lng")));
-                                    intent.putExtra("id_servicio", responsejson.getString("id"));
-
-                                    Log.v("InicialActivityLogin", "checkService() servicio asignado recuperado");
-                                    Log.v("InicialActivityLogin", "responsejson = " + responsejson.toString());
-                                    Log.v("InicialActivityLogin", "responsejson = " + responsejson.getJSONObject("driver").toString());
-                                    Log.v("InicialActivityLogin", "responsejson id = " + responsejson.getString("id"));
-                                    Log.v("InicialActivityLogin", "responsejson lat = " + responsejson.getString("from_lat"));
-                                    Log.v("InicialActivityLogin", "responsejson schedule_type = " + responsejson.getString("schedule_type"));
-
-                                    String type = String.valueOf(responsejson.getString("schedule_type"));
-                                    String direccion = "";
                                     startActivity(intent);
+
 
                                 }else if (status_id.equals(5)|| qualification.equals(null)){
                                     Toast.makeText(getApplicationContext(), "El usuario no ha calificado el servicio.", Toast.LENGTH_SHORT).show();
@@ -604,6 +587,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
                             }
 
+                    return;
 
                     } catch (JSONException e1) {
                     e1.printStackTrace();
@@ -625,7 +609,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         });
         return true;
-    }
+    }*/
 
     // update car +
     private void updateCar(final String driver_id, final String car_id) {

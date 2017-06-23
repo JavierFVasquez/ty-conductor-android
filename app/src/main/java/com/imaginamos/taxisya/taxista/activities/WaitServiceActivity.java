@@ -63,6 +63,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
@@ -106,7 +107,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     private Timer myTimer = new Timer();
     private Timer myTimerSpeak = new Timer();
     private Integer recibe_push = 0;
-    private String service_id;
+    private String service_id, id_driver, id_user;
     private int mStatusOld;
     private int mStatusNew;
     private BDAdapter mySQLiteAdapter;
@@ -124,6 +125,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     private int status_service = 0;
     private int qualification = 0;
     private Preferencias mPref;
+
 
     @Override
     public void onRestart() {
@@ -157,6 +159,11 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
             }
         }
 
+        /*try {
+            checkService();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }*/
     }
 
     @Override
@@ -344,11 +351,6 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         validateStatusDriver();
         servicesToSpeek();
 
-        try {
-            checkService();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
 
     }
 
@@ -702,6 +704,12 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 //        else {
 //            // You just returned from another activity within your own app
 //        }
+
+        /*try {
+            checkService();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }*/
     }
 
     @Override
@@ -833,7 +841,6 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     private void speakOut(String service_id, String texto, int pt) {
 
         try {
-
             //   JSONObject service = new JSONObject(service_json);
             String texto1 = "";
 
@@ -848,14 +855,10 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
             if (tts != null) {
                 if (!tts.isSpeaking()) {
                     Locale loc = Locale.getDefault();
-
-
-                    texto = texto.toLowerCase(loc) + texto1;
-
+                    texto = texto1 + texto.toLowerCase(loc) ;
                     Log.e("LECTURA ", texto);
 
                     texto = parseAddresToSpeak(texto).toString();
-
                     Log.e("LECTURA2 ", texto);
                     Log.v("SERVICE_SPEAK", "addNewService se reproducira ");
 
@@ -867,9 +870,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                     Locale loc = Locale.getDefault();
 
                     texto = texto.toLowerCase(loc);
-
                     texto = parseAddresToSpeak(texto).toString();
-
                     Log.v("SERVICE_SPEAK", "addNewService se almacena ");
 
                     mySQLiteAdapter.updateAddressService(service_id, texto);
@@ -1150,8 +1151,8 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                                 } catch (Exception e) {
                                     Log.e("WaitServiceActivity", "" + e.toString());
                                     Log.v("VALIDATE_SERVICE4", "ver si hay services catch " + response);
-//                                  clearAllServices();
-//                                  mVisibleServices.clear();
+                                   clearAllServices();
+                                   mVisibleServices.clear();
 
                                     services = null;
                                     services = new ArrayList<ViewGroup>();
@@ -1295,86 +1296,6 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                 Toast.LENGTH_SHORT).show();
     }
 
-    public boolean checkService() throws JSONException {
-
-        //service_id = conf.getServiceId();
-        driver_id = conf.getIdUser();
-        service_id = "";
-        Log.v("checkService", "ini");
-        Log.v("checkService", "id_driver=" + driver_id + " service_id=" + service_id);
-
-        MiddleConnect.checkStatusService(this, driver_id, service_id, "uuid", new AsyncHttpResponseHandler() {
-
-            @Override
-            public void onStart() {
-                Log.v("checkService", "onStart");
-            }
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                String response = new String(responseBody);
-                try {
-                    JSONObject responsejson = new JSONObject(response);
-                    String qualy = Integer.toString(qualification);
-                    status_service = responsejson.getInt("status_id");
-                    Log.v("checkService", "status_id: " + String.valueOf(status_service));
-                    // si hay un servicio asignado lo recupera
-
-                    if (qualy.equals("0") || (status_service == 5 )) {
-                        Toast.makeText(getApplicationContext(), "cambiar", Toast.LENGTH_SHORT).show();
-                        Log.v("InicialActivityLogin", "checkService() servicio recuperado - status_service " + String.valueOf(qualification) + " service_id=" + qualification);
-                        Log.v("InicialActivityLogin", "checkService() servicio recuperado - driver " + responsejson.getJSONObject("driver").toString());
-                        Log.v("CNF_SRV1", "HomeActivity before call ConfirmacionActivity.class");
-                        mPref.setRootActivity("HomeActivity");
-                        //Intent mIntent = new Intent(getApplicationContext(), CalificarActivity.class);
-                        //mIntent.putExtra("qualification", "1");
-                        Log.v("checkService", "servicios detectado por socket, sin push");
-                        Intent mIntent = new Intent(getApplicationContext(), MapActivity.class);
-                        mIntent.putExtra("driver", responsejson.getJSONObject("driver").toString());
-                        startActivity(mIntent);
-                    }
-
-                    else if ((status_service == 2) || (status_service == 4)) {
-                        Toast.makeText(getApplicationContext(), "cambiar", Toast.LENGTH_SHORT).show();
-                        service_id = responsejson.getString("id");
-                        conf.setServiceId(service_id);
-                        Log.v("InicialActivityLogin", "checkService() servicio recuperado - status_service " + String.valueOf(status_service) + " service_id=" + service_id);
-                        Log.v("InicialActivityLogin", "checkService() servicio recuperado - driver " + responsejson.getJSONObject("driver").toString());
-                        Log.v("CNF_SRV1", "InicialActivityLogin before call ConfirmacionActivity.class");
-                        mPref.setRootActivity("InicialActivityLogin");
-                        Intent mIntent = new Intent(getApplicationContext(), MapActivity.class);
-                        mIntent.putExtra("driver", responsejson.getJSONObject("driver").toString());
-                        startActivity(mIntent);
-                    }
-
-                    Log.v("InicialActivityLogin", "checkService() no tenia servicio para recuperar");
-                    Log.v("InicialActivityLogin", "responsejson = " + responsejson.getJSONObject("driver").toString());
-
-                    if(status_service == 7 || status_service == 8 || status_service == 9){
-                        Toast.makeText(getApplicationContext(), "cambiar", Toast.LENGTH_SHORT).show();
-                    }
-
-                } catch (JSONException e) {
-                    Log.v("checkService", "Problema json " + e.toString());
-                }
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                //  String response = new String(responseBody);
-                // Log.v("checkService", "onFailure = " + response);
-
-            }
-
-            @Override
-            public void onFinish() {
-                Log.v("checkService", "onFinish");
-            }
-
-        });
-        return true;
-    }
-
 
     private void addNewService(final Servicio service) {
 
@@ -1424,10 +1345,14 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
             int pt = service.getPayType();
             if (pt == 2) { // Tarjeta
                 payType.setImageResource(R.drawable.ic_pay_tc);
+                btnElement.setBackgroundColor(0xFF63BBB8);
             } else if (pt == 3) {
                 payType.setImageResource(R.drawable.ic_pay_vale);
+                btnElement.setBackgroundColor(0xFFECE870);
             }
-
+            else{
+                btnElement.setBackgroundColor(0xF6F6F6);
+            }
             nombre.setText(service.getName());
             String destino = service.getDestino();
             //if (destino.length() > 0) {

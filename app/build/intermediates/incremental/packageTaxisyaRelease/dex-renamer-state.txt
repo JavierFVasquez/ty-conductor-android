@@ -1,0 +1,4 @@
+#Sun Jun 18 00:12:00 COT 2017
+base.0=/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/transforms/dex/taxisya/release/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/transforms/dex/taxisya/release/folders/1000/1f/main/classes.dex

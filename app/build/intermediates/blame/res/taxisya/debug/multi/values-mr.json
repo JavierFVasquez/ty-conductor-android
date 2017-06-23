@@ -324,6 +324,44 @@
                         "endOffset": 2558
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 2627,
+                    "endColumn": 101,
+                    "endOffset": 2724
+                },
+                "from": {
+                    "file": "/Users/developer_celuvans/.android/build-cache/b56e068ee11508a48b603c798326e5a38cd2e2dd/output/res/values-mr/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 233,
+                        "endColumn": 97,
+                        "endOffset": 330
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 2729,
+                    "endColumn": 92,
+                    "endOffset": 2817
+                },
+                "from": {
+                    "file": "/Users/developer_celuvans/.android/build-cache/b56e068ee11508a48b603c798326e5a38cd2e2dd/output/res/values-mr/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 331,
+                        "endColumn": 88,
+                        "endOffset": 419
+                    }
+                }
             }
         ]
     }

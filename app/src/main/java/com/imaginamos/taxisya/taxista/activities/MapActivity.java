@@ -192,6 +192,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         view_direccion = (TextView) findViewById(R.id.direccion_cliente);
         nombre = (TextView) findViewById(R.id.nombre_cliente);
         markerPoints = new ArrayList<LatLng>();
+
         Bundle reicieveParams = getIntent().getExtras();
         latitud = reicieveParams.getDouble("lat");
         longitud = reicieveParams.getDouble("lng");
@@ -214,16 +215,8 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         mUserEmail = reicieveParams.getString("user_email");
         mUserPhone = reicieveParams.getString("code");
 
-
-//        if (mPayType == 2) {
-//            mLinear1.setVisibility(View.VISIBLE);
-//        }
         if (rand_id == 3) {
             icon_radio_ope.setVisibility(View.VISIBLE);
-            //yallege.setImageDrawable(getResources().getDrawable(R.drawable.onboard));
-            //yallege.setVisibility(View.GONE);
-            //yallege.setEnabled(false);
-            //fin.setVisibility(View.VISIBLE);
         } else if (type_agend != 0) {
             if (type_agend == 1) {
                 icon_radio_ope.setImageResource(R.drawable.aero_over);
@@ -246,27 +239,14 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         nombre.setText(reicieveParams.getString("name"));
 
         driver_id = conf.getIdUser();
-
-//        SupportMapFragment fm = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         MapFragment fm = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
-
-
-        //map = fm.getMap();
         fm.getMapAsync(this);
 
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         Criteria criteria = new Criteria(); // object to retrieve provider
         criteria.setAccuracy(Criteria.ACCURACY_FINE);
-        //criteria.setAltitudeRequired(false);
-        //criteria.setBearingRequired(false);
-        //criteria.setSpeedRequired(false);
-        //criteria.setCostAllowed(true);
-        //criteria.setPowerRequirement(Criteria.POWER_HIGH);
 
         String provider = locationManager.getBestProvider(criteria, true);
-
-///        locationManager.requestLocationUpdates(locationManager.getBestProvider(criteria, true), 1000, 2f, (LocationListener) this);
-        //locationManager.requestLocationUpdates(locationManager.getBestProvider(criteria, true), 200, 0, (LocationListener) this);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 200, 0, (LocationListener) this);
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 200, 0, (LocationListener) this);
 
@@ -375,7 +355,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
     private OnMapLongClickListener onLongClickMapSettings() {
         // TODO Auto-generated method stub
         return new OnMapLongClickListener() {
-
             @Override
             public void onMapLongClick(LatLng arg0) {
                 // TODO Auto-generated method stub
@@ -652,6 +631,32 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                                 toFinish();
                             } else {
 
+                                if (mPayType == 0) {
+                                    mLinear2.setVisibility(View.VISIBLE);
+                                    btnLlegada.setVisibility(View.GONE);
+                                    btnCancelar.setVisibility(View.VISIBLE);
+                                    btnConfirmCode.setVisibility(View.VISIBLE);
+                                    btnFinalizar.setVisibility(View.GONE);
+
+                                } else {
+                                    btnLlegada.setVisibility(View.GONE);
+                                    btnCancelar.setVisibility(View.GONE);
+                                    btnFinalizar.setVisibility(View.GONE);
+                                }
+
+                                if (mPayType == 1) {
+                                    mLinear2.setVisibility(View.VISIBLE);
+                                    btnLlegada.setVisibility(View.GONE);
+                                    btnCancelar.setVisibility(View.VISIBLE);
+                                    btnConfirmCode.setVisibility(View.VISIBLE);
+                                    btnFinalizar.setVisibility(View.GONE);
+
+                                } else {
+                                    btnLlegada.setVisibility(View.GONE);
+                                    btnCancelar.setVisibility(View.GONE);
+                                    btnFinalizar.setVisibility(View.GONE);
+                                }
+
                                 if (mPayType == 3) {
                                     mLinear2.setVisibility(View.VISIBLE);
                                     btnLlegada.setVisibility(View.GONE);
@@ -661,12 +666,12 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                                 } else {
                                     btnLlegada.setVisibility(View.GONE);
                                     btnCancelar.setVisibility(View.GONE);
-                                    btnFinalizar.setVisibility(View.VISIBLE);
+                                    btnFinalizar.setVisibility(View.GONE);
                                 }
                             }
 
                         } else {
-                            Log.v("SERVICE_CMS", "    MAP ARRIVED bad service_id= " + service_id);
+                            Log.v("SERVICE_CMS", "MAP ARRIVED bad service_id= " + service_id);
 
                             err_arrived();
                         }
@@ -690,7 +695,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
             @Override
             public void onFinish() {
-                Log.v("SERVICE_CMS", "    MAP finish service_id= " + service_id);
+                Log.v("SERVICE_CMS", "MAP finish service_id= " + service_id);
 
                 try {
                     pDialog.dismiss();
@@ -840,7 +845,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
             case R.id.btnFinalizar:
                 Log.v("BTN1", "finalizar_action");
                 Log.v("FINISH2", "call finishService()");
-                if ((mPayType == 1) || (mPayType == 2) || (mPayType == 3) || (type_agend == 1) || (type_agend == 2) || (type_agend == 3) || (type_agend == 4)) {
+                if ((mPayType == 0) || (mPayType == 1) || (mPayType == 2) || (mPayType == 3) || (type_agend == 1) || (type_agend == 2) || (type_agend == 3) || (type_agend == 4)) {
                     mLinear1.setVisibility(View.VISIBLE);
                     btnFinalizar.setVisibility(View.GONE);
                     btn_pay.setVisibility(View.VISIBLE);

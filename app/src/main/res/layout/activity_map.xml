@@ -108,41 +108,49 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/black"
-                        android:text="Ingrese las unidades" />
+
+                        android:text="Ingrese las unidades"
+
+                        />
 
                     <EditText
                         android:id="@+id/totUnits"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="number" />
+                        android:hint="Total unidades"
+                        android:inputType="number"
+                        />
 
                     <CheckBox
                         android:id="@+id/chkRecargo1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/black"
-                        android:text="Aeropuerto = COP 4100" />
+                        android:text="Aeropuerto = COP 4100"
+                        />
 
                     <CheckBox
                         android:id="@+id/chkRecargo2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/black"
-                        android:text="Nocturno, Dominical y Festivo = COP 2000" />
+                        android:text="Nocturno, Dominical y Festivo = COP 2000"
+                        />
 
                     <CheckBox
                         android:id="@+id/chkRecargo3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="@android:color/black"
-                        android:text="Mensajeria  " />
+                        android:text="Mensajeria  "
+                        />
 
                     <!--<EditText-->
-                        <!--android:id="@+id/totViaje"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:hint="Total viaje"-->
-                        <!--/>-->
+                    <!--android:id="@+id/totViaje"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="Total viaje"-->
+                    <!--/>-->
 
                     <TextView
                         android:id="@+id/totViaje"
@@ -151,7 +159,9 @@
                         android:textColor="@android:color/black"
                         android:textStyle="bold"
                         android:textSize="20dp"
-                        android:text="Total: " />
+                        android:text="Total: "
+
+                        />
 
 
                 </LinearLayout>
@@ -180,15 +190,76 @@
                 </LinearLayout>
 
                 <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:gravity="center">
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center">
 
                     <Button
-                        android:id="@+id/btn_pay"
+                        android:id="@+id/btnLlegada"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/btn_green"
+                        android:paddingBottom="2dp"
+                        android:text="@string/map_button_ya_llegue"
+                        android:textColor="@android:color/white"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btnConfirmCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/btn_green"
+                        android:paddingBottom="2dp"
+                        android:text="@string/btn_confirm_code"
+                        android:textColor="@android:color/white"
+                        android:visibility="gone" />
+
+
+                    <Button
+                        android:id="@+id/btnCancelar"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/btn_request"
+                        android:paddingBottom="2dp"
+                        android:text="@string/map_button_cancelar"
+                        android:textColor="@android:color/white"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btnFinalizar"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_request"
+                        android:paddingBottom="2dp"
+                        android:text="@string/map_button_finalizar"
+                        android:textColor="@android:color/white"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnPay"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
                         android:layout_marginBottom="2dp"
@@ -200,70 +271,10 @@
                         android:paddingBottom="2dp"
                         android:text="Confirmar pago y finalizar"
                         android:textColor="@android:color/white"
-                        android:visibility="invisible" />
-
-                <Button
-                    android:id="@+id/btnLlegada"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_weight=".5"
-                    android:background="@drawable/btn_green"
-                    android:paddingBottom="2dp"
-                    android:text="@string/map_button_ya_llegue"
-                    android:textColor="@android:color/white"
-                    android:visibility="visible" />
-
-                <Button
-                    android:id="@+id/btnConfirmCode"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_weight=".5"
-                    android:background="@drawable/btn_green"
-                    android:paddingBottom="2dp"
-                    android:text="@string/btn_confirm_code"
-                    android:textColor="@android:color/white"
-                    android:visibility="gone" />
+                        android:visibility="gone" />
 
 
-                <Button
-                    android:id="@+id/btnCancelar"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_weight=".5"
-                    android:background="@drawable/btn_request"
-                    android:paddingBottom="2dp"
-                    android:text="@string/map_button_cancelar"
-                    android:textColor="@android:color/white"
-                    android:visibility="visible" />
-
-                <Button
-                    android:id="@+id/btnFinalizar"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_request"
-                    android:paddingBottom="2dp"
-                    android:text="@string/map_button_finalizar"
-                    android:textColor="@android:color/white"
-                    android:visibility="invisible" />
-
-            </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
 
         </RelativeLayout>

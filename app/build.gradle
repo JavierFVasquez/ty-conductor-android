@@ -25,13 +25,13 @@ android {
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 0
-        versionName "1.6.2"
+        versionName "1.7.1"
     }
 
     buildTypes {
         debug {
-          //  minifyEnabled false
-          //  shrinkResources true
+            //  minifyEnabled false
+            //  shrinkResources true
             buildConfigField "boolean", "USE_PUSH", "true"
             buildConfigField "boolean", "USE_CRASHLYTICS", "true"
             buildConfigField 'String', "HOST", '"www.taxisya.co"'
@@ -98,22 +98,25 @@ def appendVersionNameVersionCode(variant, defaultConfig) {
 
 dependencies {
 
+    compile files('libs/gcm.jar')
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
+        transitive = true;
+    }
     compile 'com.android.support:support-v4:25.0.0'
     compile 'com.google.android.gms:play-services-maps:9.8.0'
     compile 'com.google.android.gms:play-services-appindexing:9.8.0'
     compile 'com.google.android.gms:play-services-location:9.8.0'
     compile 'com.google.android.gms:play-services-analytics:9.8.0'
     compile 'com.google.android.gms:play-services-gcm:9.8.0'
+    compile 'com.google.android.gms:play-services-places:9.8.0'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
-    compile files('libs/gcm.jar')
     compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'com.google.firebase:firebase-core:9.8.0'
     compile 'com.google.firebase:firebase-messaging:9.8.0'
     compile 'com.paymentez.paymentezsdk:paymentezsdk:1.0.4'
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
-        transitive = true;
-    }
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

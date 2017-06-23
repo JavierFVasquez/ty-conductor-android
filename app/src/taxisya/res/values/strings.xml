@@ -112,7 +112,7 @@
     <string name="mapview_servicio_cancelado">The service was canceled by the user</string>
     <string name="error1">This service was confirmed by another taxi!</string>
     <string name="error3">This service was confirmed! "</string>
-    <string name="error_tres">Your membership is expired, contact the center to activate it again.</string>
+    <string name="error_tres">Your membership is in progress, please try again in 6 hours.</string>
     <string name="error_uno">Username or password incorrect.</string>
     <string name="gcmintentservice_mensaje_otro_dispositivo">Closed session by another device</string>
     <string name="historial_subtitulo">in the last month</string>
@@ -137,6 +137,7 @@
     <string name="waitservice_errot_conexion">There was an error in your internet connection! At this time you will not receive services</string>
     <string name="no_internet">You do not have an active internet connection</string>
     <string name="waitservice_numeros_novena">ninth</string>
+    <string name="codigo_invalido">Invalid code</string>
     <string name="waitservice_numeros_octava">eighth</string>
     <string name="waitservice_numeros_primera">first</string>
     <string name="waitservice_numeros_quinta">fifth</string>
@@ -204,4 +205,5 @@
     <string name="btn_ok_text">OK</string>
     <string name="btn_confirm_code">Confirm code</string>
     <string name="title_confirm_code">Enter authorization code</string>
+    <string name="title_activity_recovery_map">RecoveryMapActivity</string>
 </resources>

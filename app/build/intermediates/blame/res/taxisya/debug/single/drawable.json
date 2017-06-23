@@ -1,7 +1,11 @@
 [
     {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_vector_test.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_vector_test.xml"
+    },
+    {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_textfield_search_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_textfield_search_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_textfield_search_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/textfield_registro.png",
@@ -13,23 +17,27 @@
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_item_background_holo_light.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_item_background_holo_light.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_item_background_holo_dark.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/linea_gris.png",
         "source": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/drawable/linea_gris.png"
     },
     {
-        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_dialog_material_background_dark.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_dialog_material_background_dark.xml"
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_ic_ab_back_material.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/design_fab_background.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/4c88f8162d094f27fe8c43cb4d46319ee53529c8/output/res/drawable/design_fab_background.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/btn_close_n.png",
@@ -45,19 +53,15 @@
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_ratingbar_small_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_ratingbar_small_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_ratingbar_small_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_btn_borderless_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_btn_borderless_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_edit_text_material.xml"
-    },
-    {
-        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_ratingbar_full_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_ratingbar_full_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_edit_text_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/ic_launcher.png",
@@ -65,11 +69,19 @@
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_btn_default_mtrl_shape.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_btn_default_mtrl_shape.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/ic_ubic.png",
         "source": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/drawable/ic_ubic.png"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_dialog_material_background.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_dialog_material_background.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/btn_close_p.png",
@@ -77,7 +89,11 @@
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_spinner_textfield_background_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/notification_bg.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/notification_bg.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
@@ -85,11 +101,15 @@
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_seekbar_track_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_seekbar_track_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_seekbar_track_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/common_google_signin_btn_icon_light.xml",
         "source": "/Users/developer_celuvans/.android/build-cache/633fda648e6c4d395cb10bf9bd9a57907c589f55/output/res/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_ratingbar_material.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_ratingbar_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/btn_back_p.png",
@@ -97,11 +117,11 @@
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_btn_colored_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_btn_colored_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_btn_radio_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_btn_radio_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_btn_radio_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/btn_gray_n.9.png",
@@ -117,7 +137,7 @@
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_tab_indicator_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_tab_indicator_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/sombra.png",
@@ -129,11 +149,15 @@
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_cab_background_internal_bg.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_cab_background_internal_bg.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_cab_background_internal_bg.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/btn_d.9.png",
         "source": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/drawable/btn_d.9.png"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/design_bottom_navigation_item_background.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/4c88f8162d094f27fe8c43cb4d46319ee53529c8/output/res/drawable/design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/btn_request.xml",
@@ -141,7 +165,11 @@
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_switch_thumb_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/loader_sombra.png",
@@ -157,7 +185,11 @@
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_list_selector_holo_light.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_ic_clear_material.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_ic_clear_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/fondodos.png",
@@ -172,16 +204,12 @@
         "source": "/Users/developer_celuvans/.android/build-cache/633fda648e6c4d395cb10bf9bd9a57907c589f55/output/res/drawable/common_google_signin_btn_text_light_focused.xml"
     },
     {
-        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_dialog_material_background_light.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_dialog_material_background_light.xml"
-    },
-    {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/common_google_signin_btn_text_light.xml",
         "source": "/Users/developer_celuvans/.android/build-cache/633fda648e6c4d395cb10bf9bd9a57907c589f55/output/res/drawable/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_list_selector_holo_dark.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_list_selector_holo_dark.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/btn_n.9.png",
@@ -189,55 +217,95 @@
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_ratingbar_indicator_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_ratingbar_indicator_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/633fda648e6c4d395cb10bf9bd9a57907c589f55/output/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/notification_bg_low.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/notification_bg_low.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/btn_back_n.png",
         "source": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/drawable/btn_back_n.png"
     },
     {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/633fda648e6c4d395cb10bf9bd9a57907c589f55/output/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_btn_check_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_btn_check_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_btn_check_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/mapa.png",
         "source": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/drawable/mapa.png"
     },
     {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_ic_search_api_material.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/design_snackbar_background.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/4c88f8162d094f27fe8c43cb4d46319ee53529c8/output/res/drawable/design_snackbar_background.xml"
+    },
+    {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_cab_background_top_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_cab_background_top_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/notification_tile_bg.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/notification_tile_bg.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/fondouno.png",
         "source": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/drawable/fondouno.png"
     },
     {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_seekbar_thumb_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_seekbar_thumb_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/texturauno_formap.png",
         "source": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/drawable/texturauno_formap.png"
     },
     {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/design_password_eye.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/4c88f8162d094f27fe8c43cb4d46319ee53529c8/output/res/drawable/design_password_eye.xml"
+    },
+    {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/btn_back.xml",
         "source": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/drawable/btn_back.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/notification_icon_background.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/notification_icon_background.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
         "source": "/Users/developer_celuvans/.android/build-cache/633fda648e6c4d395cb10bf9bd9a57907c589f55/output/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
     },
     {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_ic_go_search_api_material.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/navigation_empty_icon.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/4c88f8162d094f27fe8c43cb4d46319ee53529c8/output/res/drawable/navigation_empty_icon.xml"
+    },
+    {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/abc_text_cursor_material.xml",
-        "source": "/Users/developer_celuvans/.android/build-cache/f0583d0c6f254efb82691366406c11ea6e1fe385/output/res/drawable/abc_text_cursor_material.xml"
+        "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/drawable/abc_text_cursor_material.xml"
     },
     {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/debug/drawable/loader.png",

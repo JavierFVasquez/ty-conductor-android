@@ -13,13 +13,13 @@
     <string name="error2">¡Este servicio fue cancelado por el usuario!</string>
     <string name="error3">¡Este servicio fue confirmado!"</string>
     <string name="no_update_services">Actualice Google Play Services</string>
-    <string name="error_arrived">Hubo un error en la confirmacion de llegada , intentelo de nuevo!</string>
+    <string name="error_arrived">Hubo un error en la confirmacion de llegada, intentelo de nuevo</string>
     <string name="error_cancel_service">Hubo un error al cancelar el servicio, intente de nuevo</string>
     <string name="error_disable">Hubo un error deshabilitando, intentelo de nuevo</string>
     <string name="error_dos">Este usuario ya esta logueado en otro dispositivo.</string>
     <string name="network_connectivity_message">Verificando...</string>
     <string name="error_net">No está conectado internet</string>
-    <string name="error_tres">Su afiliación se encuentra vencida, comuniquese con la central para activarla de nuevo.</string>
+    <string name="error_tres">SU afiliación se encuentra en proceso de verificación, intentelo de nuevo en 6 horas</string>
     <string name="error_uno">Usuario o contraseña incorrectos.</string>
     <string name="gcmintentservice_mensaje_otro_dispositivo">Sesíón cerrada por otro dispositivo</string>
     <string name="hello_world">kr 72 j bis # 40 c 50 sur apt 402 in 10 Barrio Timiza Nombre Esteban Quintero</string>
@@ -87,6 +87,7 @@
     <string name="waitservice_numeros_cuarta">cuarta</string>
     <string name="waitservice_numeros_decima">decima</string>
     <string name="waitservice_numeros_novena">novena</string>
+    <string name="codigo_invalido">Código invalido</string>
     <string name="waitservice_numeros_octava">octava</string>
     <string name="waitservice_numeros_primera">primera</string>
     <string name="waitservice_numeros_quinta">quinta</string>
@@ -96,7 +97,7 @@
     <string name="waitservice_numeros_tercera">tercera</string>
     <string name="waitservice_se_deshabilito_otro_dispositivo">Se deshabilitó, se inicio una sesión en otro dispositivo</string>
     <string name="waitservice_texto_barrio">"\nBarrio: "</string>
-    <string name="waitservice_texto_barrio2">" Barrio: "</string>
+    <string name="waitservice_texto_barrio2">"Barrio: "</string>
     <string name="waitservice_texto_hablado_numero">"  numero  "</string>
     <string name="waitservice_texto_hora">" Hora: "</string>
     <string name="waitservice_texto_servicio">" Servicio "</string>
@@ -184,4 +185,5 @@
     <string name="btn_ok_text">Aceptar</string>
     <string name="btn_confirm_code">Confirma código</string>
     <string name="title_confirm_code">Ingrese código de autorización</string>
+    <string name="title_activity_recovery_map">RecoveryMapActivity</string>
 </resources>

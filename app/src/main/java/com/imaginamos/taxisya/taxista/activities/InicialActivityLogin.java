@@ -31,11 +31,17 @@ import com.imaginamos.taxisya.taxista.model.Preferencias;
 import com.imaginamos.taxisya.taxista.utils.BDAdapter;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import cz.msebera.android.httpclient.Header;
 import io.fabric.sdk.android.Fabric;
+
+import static android.R.attr.value;
 
 /**
  * Created by TaxisYa on 14/10/16.
@@ -58,6 +64,9 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
     private TextToSpeech tts;
     private int qualification = 0;
     private Preferencias mPref;
+    public String address, from_lat, from_lng, pay_type;
+
+    ArrayList<HashMap<String, String>> contactList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,14 +87,6 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
         btnRegister.setOnClickListener(this);
         btnLogin.setOnClickListener(this);
 
-    }
-
-    public void clearServices() {
-        Log.v("MainActivity","clearServices");
-        mySQLiteAdapter = new BDAdapter(this);
-        mySQLiteAdapter.openToWrite();
-        mySQLiteAdapter.deleteAllServices();
-        mySQLiteAdapter.close();
     }
 
     private void enable() {
@@ -232,16 +233,6 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
     }
 
 
-    private void enable_position_service() {
-
-        if (intent_service == null && !isMyServiceRunning()) {
-            intent_service = new Intent(this, MyService.class);
-            intent_service.putExtra("driver_id", id_driver);
-            intent_service.putExtra("uuid", uuid);
-            startService(intent_service);
-        }
-    }
-
     private boolean isMyServiceRunning() {
 
         ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
@@ -258,7 +249,7 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
     public void onRestart() {
 
         super.onRestart();
-        enable();
+        //enable();
 
     }
 
@@ -266,7 +257,13 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
     @Override
     public void onResume() {
         super.onResume();
-        enable();
+        //enable();
+
+        try {
+            checkService();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -284,5 +281,99 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
                 break;
 
         }
+    }
+
+
+    public boolean checkService() throws JSONException {
+
+        //service_id = conf.getServiceId();
+        id_driver = conf.getIdUser();
+        service_id = "";
+        Log.v("checkService", "ini");
+        Log.v("checkService", "id_driver=" + driver_id + " service_id=" + service_id);
+
+        MiddleConnect.checkStatusService(this, driver_id, service_id, "uuid", new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onStart() {
+                Log.v("checkService", "onStart");
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                String response = new String(responseBody);
+
+                try {
+
+                    JSONObject responsejson = new JSONObject(response);
+                    JSONArray services = responsejson.getJSONArray("services");
+
+                    // looping through All Services
+                    for (int i = 0; i < services.length(); i++) {
+                        JSONObject c = services.getJSONObject(i);
+
+                        String service_id = c.getString("id");
+                        String user_id = c.getString("user_id");
+                        String driver_id = c.getString("driver_id");
+                        String status_id = c.getString("status_id");
+                        String address = c.getString("address");
+                        String from_lat = c.getString("from_lat");
+                        String from_lng = c.getString("from_lng");
+                        String pay_type = c.getString("pay_type");
+                        String pay_reference = c.getString("pay_reference");
+                        String qualification = c.getString("qualification");
+                        String barrio = c.getString("barrio");
+                        String rCode = c.getString("code");
+
+                        if(id_driver == null){
+
+                        }
+
+                        else if (id_driver.equals(driver_id)) {
+
+                            if (status_id.equals("2") || status_id.equals("4")) {
+
+                                Intent intent = new Intent(InicialActivityLogin.this, RecoveryMapActivity.class);
+                                intent.putExtra("address",address);
+                                intent.putExtra("from_lat",from_lat);
+                                intent.putExtra("from_lng",from_lng);
+                                intent.putExtra("pay_type",pay_type);
+                                intent.putExtra("user_id",user_id);
+                                intent.putExtra("pay_reference",pay_reference);
+                                intent.putExtra("status_id",status_id);
+                                intent.putExtra("barrio",barrio);
+                                intent.putExtra("service_recoverid",service_id);
+                                intent.putExtra("rCode",rCode);
+                                startActivity(intent);
+                                Toast.makeText(getApplicationContext(), "Servicio recuperado", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        else if (status_id.equals("5") && qualification.equals(null)) {
+                            Toast.makeText(getApplicationContext(), "El usuario no ha calificado el servicio.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    return;
+
+                } catch (JSONException e1) {
+                    e1.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                //  String response = new String(responseBody);
+                // Log.v("checkService", "onFailure = " + response);
+
+            }
+
+            @Override
+            public void onFinish() {
+                Log.v("checkService", "onFinish");
+            }
+
+        });
+        return true;
     }
 }

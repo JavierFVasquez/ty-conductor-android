@@ -137,7 +137,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
         a.setStartOffset(0);
         traslation2.addAnimation(a);
         traslation2.setFillAfter(true);
-        nombre.setAnimation(traslation2);
+       // nombre.setAnimation(traslation);
         traslation = AnimationUtils.loadAnimation(this, R.anim.pull_out_to_top);
         traslation.setFillAfter(true);
         fondo.setAnimation(traslation);
