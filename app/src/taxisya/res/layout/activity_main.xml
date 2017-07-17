@@ -4,6 +4,7 @@
     android:id="@+id/contectt"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:pj="http://schemas.android.com/apk/res-auto"
     android:gravity="center_horizontal">
 
     <HorizontalScrollView
@@ -82,5 +83,18 @@
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
+    <com.carouseldemo.controls.Carousel
+        android:id="@+id/carouseles"
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:animationDuration="300"
+        android:gravity="center"
+        pj:Items="@array/entries"
+        pj:Names="@array/names"
+        pj:SelectedItem="1"
+        pj:UseReflection="false"
+        android:visibility="visible" >
+    </com.carouseldemo.controls.Carousel>
 
 </RelativeLayout>

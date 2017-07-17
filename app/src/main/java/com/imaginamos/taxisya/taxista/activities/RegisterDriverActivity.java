@@ -670,14 +670,13 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
                 startActivityForResult(photoIntent, CAMERA_PHOTO_REQUEST);
                 break;
 
-            case R.id.driver_document:
-                Log.v("onClick", "driver_document" );
+            case R.id.driver_document:Log.v("onClick", "driver_document" );
+
 
                 String documentName = getString(R.string.register_driver_document_photo).replace(" ", "_") + "_" + getCurrentDate();
                 mDocumentFilePath = new File(photoFilesDirectory.toString(), documentName + ".jpg");
                 Intent documentIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                documentIntent.putExtra(MediaStore.EXTRA_OUTPUT,
-                        Uri.fromFile(mDocumentFilePath));
+                documentIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mDocumentFilePath));
                 startActivityForResult(documentIntent, CAMERA_DOCUMENT_REQUEST);
                 break;
 
@@ -724,29 +723,6 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
 
         }
     }
-
-    /*
-    private String saveToInternalSorage(Bitmap bitmapImage){
-        ContextWrapper cw = new ContextWrapper(getApplicationContext());
-        // path to /data/data/yourapp/app_data/imageDir
-        File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
-        // Create imageDir
-        File mypath=new File(directory,"profile.jpg");
-
-        FileOutputStream fos = null;
-        try {
-            fos = new FileOutputStream(mypath);
-            // Use the compress method on the BitMap object to write image to the OutputStream
-            bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fos);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            fos.close();
-        }
-        return directory.getAbsolutePath();
-    }
-    */
-
 
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

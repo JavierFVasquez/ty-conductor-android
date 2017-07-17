@@ -15,6 +15,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
@@ -104,7 +105,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
     private String mTotCharge1 = "0";
     private String mTotCharge2 = "0";
     private String mTotCharge3 = "0";
-    private String mTotCharge4 = "0";
+    private String mTotCharge4 = "700";
     private String mTotService = "0";
     private String mTransactionId = "";
     private String mUserPhone = "";
@@ -202,7 +203,8 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
             latitud = 4.283435;
             longitud = -74.22404;
         }
-        Log.v("MapActivity", "latitud = " + String.valueOf(latitud) + " longitud = " + String.valueOf(longitud));
+
+        //Log.v("MapActivity", "latitud = " + String.valueOf(latitud) + " longitud = " + String.valueOf(longitud));
 
         direccion = reicieveParams.getString("direccion");
         view_direccion.setText(getString(R.string.mapa_titulo_direccion) + direccion);
@@ -312,7 +314,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
     }
 
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
@@ -340,29 +341,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         map.moveCamera(camUpdate);
 
     }
-
-    //    @Override
-//    public void onStart() {
-//        Log.v("TAXISTA_SRVCONF1","onStart");
-//
-//        super.onStart();
-//
-//        validateService();
-//
-//    }
-
-    /*
-    private OnMapLongClickListener onLongClickMapSettings() {
-        // TODO Auto-generated method stub
-        return new OnMapLongClickListener() {
-            @Override
-            public void onMapLongClick(LatLng arg0) {
-                // TODO Auto-generated method stub
-                Log.i(arg0.toString(), "User long clicked");
-            }
-        };
-   }
-    */
 
     @Override
     protected void onResume() {
@@ -449,39 +427,46 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
                 try {
                     Log.e("TIMER_EJECUTANDO1", "checkService()");
-                    checkService();
+
+                    final boolean[] connected = {false};
+                    ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+                    if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                            connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
+                        //we are connected to a network
+                        connected[0] = true;
+                        checkService();
+                    }
+                    else {
+                        Thread timerThread = new Thread(){
+                            public void run(){
+                                try{
+                                    sleep(12000);
+                                }catch(InterruptedException e){
+                                    e.printStackTrace();
+                                }finally{
+                                    Toast.makeText(getApplicationContext(), "Prueba", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(MapActivity.this,MainActivity.class);
+                                    startActivity(intent);
+                                    connected[0] = false;
+                                }
+                            }
+                        };
+                        timerThread.start();
+                    }
+
                 } catch (JSONException je) {
 
                 }
 
                 Log.e("TIMER EJECUTNDO", "CONFIRMATION cerrando activity status " + String.valueOf(status));
-//                if (status >= 6) {
-////                      myTimer.cancel();
-//                    Log.e("TIMER EJECUTNDO", "CONFIRMATION cerrando activity status " + String.valueOf(status));
-//                    String msg;
-//                    if (status == 8) {
-//                        msg = "Servicio cancelado";
-//                    } else {
-//                        msg = "Servicio cancelado";
-//                    }
-//                    myTimer.cancel();
-//                    finish();
-//
-//                }
-
-                //if (reintento >= 3) {
                 Log.e("TIMER_EJECUTANDO1", "CARGANDO TAXISTA FIN EJECUTANDO *** ");
-                //puente.sendEmptyMessage(2000);
-                //myTimer.cancel();
-                //}
+
             }
         }, 5000, 10000); // 20000
 
     }
 
     public boolean checkService() throws JSONException {
-
-        //service_id = null; //conf.getServiceId();
 
         Log.e("TIMER_EJECUTANDO1", "checkService() ini ");
 
@@ -498,6 +483,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                 Log.v("checkService", "onStart");
                 Log.e("TIMER_EJECUTANDO1", "checkService() onStart ");
             }
+
 
             @Override
             //public void onSuccess(String response) {
@@ -577,7 +563,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                 .zoom(map.getCameraPosition().zoom)
                 .bearing(0)
                 .build();
-//     map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition),10, null);
         map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 
@@ -588,7 +573,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         }
         Log.v("arrivedService", " b params: " + driver_id + " " + service_id);
 
-        //MiddleConnect.arrived(this, driver_id, new AsyncHttpResponseHandler() {
         MiddleConnect.arrived2(this, driver_id, service_id, new AsyncHttpResponseHandler() {
 
             @Override
@@ -660,7 +644,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
                                 if (mPayType == 3) {
                                     mLinear2.setVisibility(View.VISIBLE);
                                     btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.VISIBLE);
+                                    btnCancelar.setVisibility(View.GONE);
                                     btnConfirmCode.setVisibility(View.VISIBLE);
 
                                 } else {
@@ -706,6 +690,8 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         });
 
     }
+
+
 
     private void err_arrived() {
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -858,7 +844,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
             case R.id.btn_pay:
                 String sUnits = mUnits.getText().toString();
-                if(sUnits.equals("")|| sUnits.equals("1")|| sUnits.equals("2") || sUnits.equals("3") || sUnits.equals("4") || sUnits.equals("5") || sUnits.equals("6") || sUnits.equals("7") || sUnits.equals("8") || sUnits.equals("9") || sUnits.equals("10") || sUnits.equals("11") || sUnits.equals("12") || sUnits.equals("13") || sUnits.equals("14") || sUnits.equals("15") || sUnits.equals("16") || sUnits.equals("17") || sUnits.equals("18") || sUnits.equals("19") || sUnits.equals("20") || sUnits.equals("21") || sUnits.equals("22") || sUnits.equals("23") || sUnits.equals("24") || sUnits.equals("25") || sUnits.equals("26") || sUnits.equals("27")) {
+                if(sUnits.equals("")|| sUnits.equals("0") || sUnits.equals("00") || sUnits.equals("1")|| sUnits.equals("2") || sUnits.equals("3") || sUnits.equals("4") || sUnits.equals("5") || sUnits.equals("6") || sUnits.equals("7") || sUnits.equals("8") || sUnits.equals("9") || sUnits.equals("10") || sUnits.equals("11") || sUnits.equals("12") || sUnits.equals("13") || sUnits.equals("14") || sUnits.equals("15") || sUnits.equals("16") || sUnits.equals("17") || sUnits.equals("18") || sUnits.equals("19") || sUnits.equals("20") || sUnits.equals("21") || sUnits.equals("22") || sUnits.equals("23") || sUnits.equals("24") || sUnits.equals("25") || sUnits.equals("26") || sUnits.equals("27")) {
                     Toast.makeText(getApplicationContext(), "Las unidades no pueden estar vacias ni ser menores a 28", Toast.LENGTH_LONG).show();
                 } else {
                     prepareReceipt(String.valueOf(mTotalTrip));
@@ -887,7 +873,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         int val = 0;
         int valp = 0;
 
-        int roundTo = 100;
+        //int roundTo = 100;
 
         // get unidades
         int units = 0;
@@ -898,24 +884,31 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         if (mCheck1.isChecked()) {
             c1 = 4100;
             mTotCharge1 = "4100";
+        } else if(!mCheck1.isChecked()){
+            c1 = 0;
+            mTotCharge1 = "0";
         }
+
         if (mCheck2.isChecked()) {
             c2 = 2000;
             mTotCharge2 = "2000";
+        } else if(!mCheck2.isChecked()){
+            c1 = 0;
+            mTotCharge2 = "0";
         }
+
         if (mCheck3.isChecked()) {
             c3 = 5000;
             mTotCharge3 = "5000";
+        } else if(!mCheck3.isChecked()){
+            c1 = 0;
+            mTotCharge3 = "0";
         }
 
         val = 82 * units;
-        val = roundTo * Math.round(val / roundTo);
-        //val = p + (82 * units)  + c1 + c2 + c3;
+        //val = roundTo * Math.round(val / roundTo);
         val = p + val + c1 + c2 + c3;
         valp = val - p;
-
-        // round
-
 
         mTotValue.setText("Total: " + String.valueOf(valp) + "+" + String.valueOf(p) + "= $ " + String.valueOf(val));
         mTotalTrip = Integer.valueOf(val);
@@ -1048,11 +1041,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
             mySQLiteAdapter.close();
         }
 
-/*
-        if( mReceiver != null ) {
-            unregisterReceiver(mReceiver);
-        }
-*/
         if (myTimer != null) {
             myTimer.cancel();
             myTimer.purge();
@@ -1129,12 +1117,12 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
     @Override
     public void onNetworkConnectivityChange(boolean connected) {
-        displayConnectivityPanel(!connected);
+        //displayConnectivityPanel(!connected);
     }
 
     @Override
     public void onConnectivityQualityChecked(boolean Optimal) {
-        displayConnectivityPanel(!Optimal);
+        //displayConnectivityPanel(!Optimal);
     }
 
     public boolean typePayment() {
@@ -1151,18 +1139,10 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
 
         double v1 = Double.valueOf(value);
-//        double money=Double.valueOf(value);
-//        String str=String.valueOf(money);
-//        str.replace('.',',');
-//        double v1 = Double.valueOf(str);
-
         debitParameters.setUid(mUserId);
         debitParameters.setEmail(mUserEmail);
         debitParameters.setCardReference(mUserCardReference);
-//        debitParameters.setProductAmount(Integer.valueOf(value));
-//        debitParameters.setProductAmount(Double.valueOf(value));
         debitParameters.setProductAmount(v1);
-
 
         debitParameters.setProductDescription("Servicio de transporte");
         debitParameters.setDevReference("Prueba cobro servicio");
@@ -1174,12 +1154,18 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         Log.v("prepareReceipt", "mUserReference " + mUserCardReference);
         Log.v("prepareReceipt", "val " + v1);
 
+        if (mPayType == 0){
+
+            mTransactionId = "EFECTIVO";
+            finishService();
+        }
 
         if (mPayType == 1) {
             mTransactionId = "EFECTIVO";
             finishService();
 
         } else if (mPayType == 3) {
+
             mTransactionId = "VALE";
             finishService();
         } else if (((type_agend == 1) || (type_agend == 2) || (type_agend == 3) || (type_agend == 4))) {
@@ -1187,7 +1173,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
             mTransactionId = "AGENDAMIENTO";
             finishService();
         } else {
-
 
             final ProgressDialog pd = new ProgressDialog(MapActivity.this);
             pd.setMessage("");
@@ -1242,10 +1227,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
                             mTransactionId = paymentezResponse.getTransactionId();
 
-//                        builder1.setMessage("status: " + paymentezResponse.getStatus() +
-//                                "\nstatus_detail: " + paymentezResponse.getStatusDetail() +
-//                                "\nshouldVerify: " + paymentezResponse.shouldVerify() +
-//                                "\ntransaction_id:" + paymentezResponse.getTransactionId());
                             builder1.setMessage("Transacción exitosa. Su código de transacción es: " + paymentezResponse.getTransactionId());
 
                             builder1.setCancelable(false);
@@ -1295,7 +1276,6 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         }
 
     }
-
 
     private double s(double d) {
         DecimalFormat twoDForm = new DecimalFormat("#.##");

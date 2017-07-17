@@ -171,6 +171,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         super.onStop();
         Log.v("onStop", "WaitServiceActivity");
 
+
     }
 
     @Override
@@ -230,7 +231,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                         Intent i = new Intent(getApplicationContext(), NotificationActivity.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         getApplication().startActivity(i);
-                        setService(intent.getExtras().getString("service"), intent.getExtras().getString("user_name"));
+                        //  setService(intent.getExtras().getString("service"), intent.getExtras().getString("user_name"));
 
                     } catch (Exception e) {
                         Log.e("ERROR", "" + e.toString());
@@ -333,6 +334,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                 services_init = new JSONArray(getIntent().getExtras().getString("services"));
 
                 for (int i = 0; i < services_init.length(); i++) {
+
                     setService(services_init.getString(i));
                 }
 
@@ -351,7 +353,99 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         validateStatusDriver();
         servicesToSpeek();
 
+    }
 
+    public boolean checkService() throws JSONException {
+
+        //service_id = conf.getServiceId();
+        id_driver = conf.getIdUser();
+        service_id = "";
+        Log.v("checkService", "ini");
+        Log.v("checkService", "id_driver=" + driver_id + " service_id=" + service_id);
+
+        MiddleConnect.checkStatusService(this, driver_id, service_id, "uuid", new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onStart() {
+                Log.v("checkService", "onStart");
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                String response = new String(responseBody);
+
+                try {
+
+                    JSONObject responsejson = new JSONObject(response);
+                    JSONArray services = responsejson.getJSONArray("services");
+
+                    // looping through All Services
+                    for (int i = 0; i < services.length(); i++) {
+                        JSONObject c = services.getJSONObject(i);
+
+                        String service_id = c.getString("id");
+                        String user_id = c.getString("user_id");
+                        String driver_id = c.getString("driver_id");
+                        String status_id = c.getString("status_id");
+                        String address = c.getString("address");
+                        String from_lat = c.getString("from_lat");
+                        String from_lng = c.getString("from_lng");
+                        String pay_type = c.getString("pay_type");
+                        String pay_reference = c.getString("pay_reference");
+                        String qualification = c.getString("qualification");
+                        String barrio = c.getString("barrio");
+                        String rCode = c.getString("code");
+
+                        if(id_driver == null){
+
+                        }
+
+                        else if (id_driver.equals(driver_id)) {
+
+                            if (status_id.equals("2") || status_id.equals("4")) {
+
+                                Intent intent = new Intent(WaitServiceActivity.this, RecoveryMapActivity.class);
+                                intent.putExtra("address",address);
+                                intent.putExtra("from_lat",from_lat);
+                                intent.putExtra("from_lng",from_lng);
+                                intent.putExtra("pay_type",pay_type);
+                                intent.putExtra("user_id",user_id);
+                                intent.putExtra("pay_reference",pay_reference);
+                                intent.putExtra("status_id",status_id);
+                                intent.putExtra("barrio",barrio);
+                                intent.putExtra("service_recoverid",service_id);
+                                intent.putExtra("rCode",rCode);
+                                startActivity(intent);
+                                Toast.makeText(getApplicationContext(), "Servicio recuperado", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        else if (status_id.equals("5") && qualification.equals(null)) {
+                            Toast.makeText(getApplicationContext(), "El usuario no ha calificado el servicio.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    return;
+
+                } catch (JSONException e1) {
+                    e1.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                //  String response = new String(responseBody);
+                // Log.v("checkService", "onFailure = " + response);
+
+            }
+
+            @Override
+            public void onFinish() {
+                Log.v("checkService", "onFinish");
+            }
+
+        });
+        return true;
     }
 
     private void checkConections() {
@@ -445,7 +539,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 
             int kindId = Integer.parseInt(service.getString("kind_id"));
 
-            if (kindId == 2) {
+            if (kindId == 2|| kindId == 3) {
                 if (getDistance(Double.parseDouble(service.getString("lat")),
                         Double.parseDouble(service.getString("lng")),
                         MyService.latitud,
@@ -508,7 +602,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         }
     }
 
-    private void setService(String service_json, String username) {
+    /*private void setService(String service_json, String username) {
 
         try {
             JSONObject service = new JSONObject(service_json);
@@ -536,7 +630,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
             }
 
             int kindId = Integer.parseInt(service.getString("kind_id"));
-            if (kindId == 2) {
+            if (kindId == 2 || kindId == 3) {
                 if (getDistance(Double.parseDouble(service.getString("lat")),
                         Double.parseDouble(service.getString("lng")),
                         MyService.latitud,
@@ -549,7 +643,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                             service.getString("lng"), agendamiento, username,
                             Integer.parseInt(service.getString("kind_id")), destino,
                             hora, service.getString("address"),
-                            Integer.valueOf(service.getString("pay_type")),
+                            service.getString("pay_type"),
                             service.getString("pay_reference"),
                             service.getString("user_id"),
                             service.getString("user_email"),
@@ -577,7 +671,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                             service.getString("lng"), agendamiento, username,
                             Integer.parseInt(service.getString("kind_id")), destino,
                             hora, service.getString("address"),
-                            Integer.valueOf(service.getString("pay_type")),
+                            service.getString("pay_type"),
                             service.getString("pay_reference"),
                             service.getString("user_id"),
                             service.getString("user_email"),
@@ -597,7 +691,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
             Log.e("ERROR", "error con el servicio" + e.toString());
         }
 
-    }
+    }*/
 
     private float getDistance(double latA, double lngA, double latB, double lngB) {
         // Log.e(TAG, "getDistance:" + latA + "," + lngA + " <->" + latB + "," + lngB);
@@ -684,32 +778,18 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     public void onResume() {
 
         super.onResume();
+
+        try {
+            checkService();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         displayConnectivityPanel(!Connectivity.isConnected(this) && !connectivityChecker.getConnectivityCheckResult());
         connectivityChecker.startConnectivityMonitor();
         mNetworkMonitor = new UpdateReceiver(this);
         registerReceiver(mNetworkMonitor, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
-//        MyApplication myApp = (MyApplication)this.getApplication();
-//        if (myApp.wasInBackground)
-//        {
-//            //Do specific came-here-from-background code
-//            Log.v("MY_APP","despierta");
-//        }
-//
-//        myApp.stopActivityTransitionTimer();
-//
-//        if (inBackground) {
-//            // You just came from the background
-//            inBackground = false;
-//        }
-//        else {
-//            // You just returned from another activity within your own app
-//        }
 
-        /*try {
-            checkService();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }*/
     }
 
     @Override
@@ -718,7 +798,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         Log.w("ALARMA_ACTIVA", "onUserLeaveHint en background 1");
 
         mAlarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() +
-                300000, mPendingIntent);
+                900000, mPendingIntent);
         inBackground = true;
         super.onUserLeaveHint();
     }
@@ -969,6 +1049,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     }
 
     private void deshabilitarme() {
+
         this.sendBroadcast(new Intent("com.google.android.intent.action.GTALK_HEARTBEAT"));
         this.sendBroadcast(new Intent("com.google.android.intent.action.MCS_HEARTBEAT"));
         MiddleConnect.disableDrive(this, driver_id, uuid, new AsyncHttpResponseHandler() {
@@ -1023,6 +1104,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     }
 
     private void enable(String driver_id, String id) {
+
         Log.v("WaitServiceActivity", "driver_id=" + driver_id + " uuid=" + id);
         Log.v("WaitServiceActivity", "MyService.lat=" + String.valueOf(MyService.latitud) + " MyService.longitud=" + String.valueOf(MyService.longitud));
 
@@ -1032,11 +1114,6 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         //clearAllServices();
         Log.v("VALIDATE_SERVICE", "enable");
 
-
-        // elimina todos los servicios de operadora almacenados
-//        mySQLiteAdapter.deleteServicesOperator();
-
-        // remove services operator in erray
         this.sendBroadcast(new Intent("com.google.android.intent.action.GTALK_HEARTBEAT"));
         this.sendBroadcast(new Intent("com.google.android.intent.action.MCS_HEARTBEAT"));
         MiddleConnect.enableDrive(this, lat, lng, driver_id, id, new AsyncHttpResponseHandler() {
@@ -1068,17 +1145,8 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                             if (respJson.getBoolean("success")) {
                                 Log.v("VALIDATE_SERVICE1", "enable onSuccess in try " + response);
 
-
                                 Log.e("WaitServiceActivity", "responsejson" + respJson.toString());
                                 Log.e("WaitServiceActivity", "en respJson hay services");
-
-// TEST
-                                // clearAllServices();
-                                // mVisibleServices.clear();
-
-                                // services = null;
-                                // services = new ArrayList<ViewGroup>();
-
                                 Log.e("WaitServiceActivity", "se limpiaron las views");
 
                                 List<String> receivedServices = new ArrayList<String>();
@@ -1350,8 +1418,9 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                 payType.setImageResource(R.drawable.ic_pay_vale);
                 btnElement.setBackgroundColor(0xFFECE870);
             }
-            else{
-                btnElement.setBackgroundColor(0xF6F6F6);
+            else if (pt == 1){
+                payType.setImageResource(R.drawable.ic_pay_cash);
+                //btnElement.setBackgroundColor(R.color.white);
             }
             nombre.setText(service.getName());
             String destino = service.getDestino();
@@ -1928,11 +1997,11 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 
     @Override
     public void onConnectivityQualityChecked(boolean Optimal) {
-        displayConnectivityPanel(!Optimal);
+        //displayConnectivityPanel(!Optimal);
     }
 
     @Override
     public void onNetworkConnectivityChange(boolean connected) {
-        displayConnectivityPanel(!connected);
+        //displayConnectivityPanel(!connected);
     }
 }

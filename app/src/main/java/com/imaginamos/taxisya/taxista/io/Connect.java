@@ -28,12 +28,12 @@ public class Connect {
     public static AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
 
     public static void get(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
-        getClient().setTimeout(timeout * 1000);
+        getClient().setTimeout(timeout * 150000);
         getClient().get(getAbsoluteUrl(url), params, responseHandler);
     }
 
     public static void post(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
-        getClient().setTimeout(timeout * 1000);
+        getClient().setTimeout(timeout * 150000);
         getClient().post(getAbsoluteUrl(url), params, responseHandler);
     }
 

@@ -320,6 +320,11 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     public void onResume() {
         super.onResume();
 
+        try {
+            checkService();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -334,6 +339,99 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
                 enableService();
             }
         }
+    }
+
+    public boolean checkService() throws JSONException {
+
+        //service_id = conf.getServiceId();
+        id_driver = conf.getIdUser();
+        service_id = "";
+        Log.v("checkService", "ini");
+        Log.v("checkService", "id_driver=" + driver_id + " service_id=" + service_id);
+
+        MiddleConnect.checkStatusService(this, driver_id, service_id, "uuid", new AsyncHttpResponseHandler() {
+
+            @Override
+            public void onStart() {
+                Log.v("checkService", "onStart");
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                String response = new String(responseBody);
+
+                try {
+
+                    JSONObject responsejson = new JSONObject(response);
+                    JSONArray services = responsejson.getJSONArray("services");
+
+                    // looping through All Services
+                    for (int i = 0; i < services.length(); i++) {
+                        JSONObject c = services.getJSONObject(i);
+
+                        String service_id = c.getString("id");
+                        String user_id = c.getString("user_id");
+                        String driver_id = c.getString("driver_id");
+                        String status_id = c.getString("status_id");
+                        String address = c.getString("address");
+                        String from_lat = c.getString("from_lat");
+                        String from_lng = c.getString("from_lng");
+                        String pay_type = c.getString("pay_type");
+                        String pay_reference = c.getString("pay_reference");
+                        String qualification = c.getString("qualification");
+                        String barrio = c.getString("barrio");
+                        String rCode = c.getString("code");
+
+                        if(id_driver == null){
+
+                        }
+
+                        else if (id_driver.equals(driver_id)) {
+
+                            if (status_id.equals("2") || status_id.equals("4")) {
+
+                                Intent intent = new Intent(MainActivity.this, RecoveryMapActivity.class);
+                                intent.putExtra("address",address);
+                                intent.putExtra("from_lat",from_lat);
+                                intent.putExtra("from_lng",from_lng);
+                                intent.putExtra("pay_type",pay_type);
+                                intent.putExtra("user_id",user_id);
+                                intent.putExtra("pay_reference",pay_reference);
+                                intent.putExtra("status_id",status_id);
+                                intent.putExtra("barrio",barrio);
+                                intent.putExtra("service_recoverid",service_id);
+                                intent.putExtra("rCode",rCode);
+                                startActivity(intent);
+                                Toast.makeText(getApplicationContext(), "Servicio recuperado", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        else if (status_id.equals("5") && qualification.equals(null)) {
+                            Toast.makeText(getApplicationContext(), "El usuario no ha calificado el servicio.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    return;
+
+                } catch (JSONException e1) {
+                    e1.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                //  String response = new String(responseBody);
+                // Log.v("checkService", "onFailure = " + response);
+
+            }
+
+            @Override
+            public void onFinish() {
+                Log.v("checkService", "onFinish");
+            }
+
+        });
+        return true;
     }
 
 
@@ -759,123 +857,6 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
         return false;
     }
-
-    /*public boolean checkService() throws JSONException {
-
-        //service_id = conf.getServiceId();
-        id_driver = conf.getIdUser();
-        service_id = "";
-        Log.v("checkService", "ini");
-        Log.v("checkService", "id_driver=" + id_driver + " service_id=" + service_id);
-
-        MiddleConnect.checkStatusService(this, id_driver, service_id, id_user, "uuid", new AsyncHttpResponseHandler() {
-
-            @Override
-            public void onStart() {
-                Log.v("checkService", "onStart");
-            }
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                String response = new String(responseBody);
-                try {
-
-                    JSONObject responsejson = new JSONObject(response);
-
-                    status_service = responsejson.getInt("status_id");
-                    Log.v("checkService", "status_id: " + String.valueOf(status_service));
-
-                    // si hay un servicio asignado lo recupera
-                    if ((status_service == 2) || (status_service == 4)) {
-
-                        Intent intent = new Intent(MainActivity.this, MapActivity.class);
-                        intent.putExtra("lat", Double.parseDouble(responsejson.getString("from_lat")));
-                        intent.putExtra("lng", Double.parseDouble(responsejson.getString("from_lng")));
-                        intent.putExtra("id_servicio", responsejson.getString("id"));
-
-                        Log.v("MainActivity", "checkService() servicio asignado recuperado");
-                        Log.v("MainActivity", "responsejson = " + responsejson.toString());
-                        Log.v("MainActivity", "responsejson = " + responsejson.getJSONObject("driver").toString());
-                        Log.v("MainActivity", "responsejson id = " + responsejson.getString("id"));
-                        Log.v("MainActivity", "responsejson lat = " + responsejson.getString("from_lat"));
-                        Log.v("MainActivity", "responsejson schedule_type = " + responsejson.getString("schedule_type"));
-
-                        String type = String.valueOf(responsejson.getString("schedule_type"));
-                        String direccion = "";
-
-                        if ((type.equals("2")) || (type.equals("3"))) {
-                            String serviceDateTime = responsejson.getString("service_date_time");
-                            String substr = serviceDateTime.substring(11, 16);
-
-                            direccion = responsejson.getString("index_id") + " - " +
-                                    responsejson.getString("comp1") + " # " +
-                                    responsejson.getString("comp2") + " - " +
-                                    responsejson.getString("no") + " " +
-                                    responsejson.getString("obs") + " Barrio: " + responsejson.getString("barrio") +
-                                    "\n" +
-                                    responsejson.getString("destination") +
-                                    " Hora: " + substr;
-                        } else {
-                            // determina nuevo formato
-                            String cad = responsejson.getString("index_id");
-                            //if (cad != null && cad != "") {
-                            if (cad.length() > 0) {
-                                direccion = responsejson.getString("index_id") + " - " + responsejson.getString("comp1") + " # " + responsejson.getString("comp2") + " - " + responsejson.getString("no") + " " + responsejson.getString("obs") + " Barrio: " + responsejson.getString("barrio");
-                            } else {
-                                //direccion = responsejson.getString("no");
-                                direccion = responsejson.getString("no") + " Barrio: " + responsejson.getString("barrio");
-                            }
-                        }
-
-                        enable_position_service();
-
-
-                        intent.putExtra("direccion", direccion);
-                        intent.putExtra("status_service", status_service);
-                        intent.putExtra("kind_id", responsejson.getInt("schedule_id"));
-                        intent.putExtra("schedule_type", responsejson.getInt("schedule_type"));
-                        intent.putExtra("name", responsejson.getString("index_id"));
-                        intent.putExtra("pay_type", responsejson.getString("pay_type"));
-                        intent.putExtra("card_reference", responsejson.getString("card_reference"));
-                        intent.putExtra("code", responsejson.getString("code"));
-
-                        startActivity(intent);
-                        //finish();
-
-                    } else if (status_service == 5) {
-                        if (responsejson.isNull("qualification")) {
-                            Log.v("MainActivity", "checkService() servicio asignado recuperado sin calificar");
-                        }
-                    } else {
-                        Log.v("MainActivity", "checkService() servicio asignado no tenia");
-                        Log.v("MainActivity", "responsejson = " + responsejson.getJSONObject("driver").toString());
-
-                    }
-
-
-                } catch (Exception e) {
-                    Log.v("checkService", "Problema json" + e.toString());
-                }
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                String response = new String(responseBody);
-                Log.v("checkService", "onFailure");
-                //Toast.makeText(getApplicationContext(), "test 1", Toast.LENGTH_SHORT).show();
-                onFinish();
-            }
-
-            @Override
-            public void onFinish() {
-
-                Log.v("checkService", "onFinish");
-
-            }
-
-        });
-        return true;
-    }*/
 
     @Override
     public void onInit(int status) {

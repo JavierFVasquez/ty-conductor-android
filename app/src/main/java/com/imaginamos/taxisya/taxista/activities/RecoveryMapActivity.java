@@ -880,7 +880,7 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
 
             case R.id.btn_pay:
                 String sUnits = mUnits.getText().toString();
-                if(sUnits.equals("")|| sUnits.equals("1")|| sUnits.equals("2") || sUnits.equals("3") || sUnits.equals("4") || sUnits.equals("5") || sUnits.equals("6") || sUnits.equals("7") || sUnits.equals("8") || sUnits.equals("9") || sUnits.equals("10") || sUnits.equals("11") || sUnits.equals("12") || sUnits.equals("13") || sUnits.equals("14") || sUnits.equals("15") || sUnits.equals("16") || sUnits.equals("17") || sUnits.equals("18") || sUnits.equals("19") || sUnits.equals("20") || sUnits.equals("21") || sUnits.equals("22") || sUnits.equals("23") || sUnits.equals("24") || sUnits.equals("25") || sUnits.equals("26") || sUnits.equals("27")) {
+                if(sUnits.equals("") || sUnits.equals("0") || sUnits.equals("0") || sUnits.equals("1")|| sUnits.equals("2") || sUnits.equals("3") || sUnits.equals("4") || sUnits.equals("5") || sUnits.equals("6") || sUnits.equals("7") || sUnits.equals("8") || sUnits.equals("9") || sUnits.equals("10") || sUnits.equals("11") || sUnits.equals("12") || sUnits.equals("13") || sUnits.equals("14") || sUnits.equals("15") || sUnits.equals("16") || sUnits.equals("17") || sUnits.equals("18") || sUnits.equals("19") || sUnits.equals("20") || sUnits.equals("21") || sUnits.equals("22") || sUnits.equals("23") || sUnits.equals("24") || sUnits.equals("25") || sUnits.equals("26") || sUnits.equals("27")) {
                     Toast.makeText(getApplicationContext(), "Las unidades no pueden estar vacias ni ser menores a 28", Toast.LENGTH_LONG).show();
                 } else {
                     prepareReceipt(String.valueOf(mTotalTrip));
@@ -1142,12 +1142,12 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
 
     @Override
     public void onNetworkConnectivityChange(boolean connected) {
-        displayConnectivityPanel(!connected);
+        //displayConnectivityPanel(!connected);
     }
 
     @Override
     public void onConnectivityQualityChecked(boolean Optimal) {
-        displayConnectivityPanel(!Optimal);
+        //displayConnectivityPanel(!Optimal);
     }
 
     public boolean typePayment() {
@@ -1320,5 +1320,11 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
 
         return String.format(Locale.US, "%1$,.2f", number);
     }
+
+    /*@Override
+    public void onStop(){
+        super.onStop();
+        unregisterReceiver(mReceiver);
+    }*/
 
 }

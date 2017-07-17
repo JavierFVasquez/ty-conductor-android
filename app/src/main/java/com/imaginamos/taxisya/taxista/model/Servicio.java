@@ -129,14 +129,14 @@ public class Servicio {
         this.typeagend = typeagend;
     }
 
-    public Servicio() {
-        service_id = "1";
+    public Servicio(String service_id, String index_id, String comp1, String comp2, String no, String barrio, String obs, String lat, String lng, Integer agendamiento, String username, int kind_id, String destino, String hora, String address, String pay_type, String pay_reference, String user_id, String user_email, String user_card_reference, String units, String charge1, String charge2, String charge3, String charge4, String value, String code) {
+        this.service_id = "1";
         indice = "Calle";
-        comp1 = "82B";
-        comp2 = "95D";
+        this.comp1 = "82B";
+        this.comp2 = "95D";
         numero = "44";
-        barrio = "Bochica";
-        obs = "Apartamento";
+        this.barrio = "Bochica";
+        this.obs = "Apartamento";
         latitud = "4";
         longitud = "-4";
         name = "Didier";

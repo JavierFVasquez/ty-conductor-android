@@ -452,7 +452,7 @@ public final class R {
         public static final int notification_template_icon_bg = 0x7f0200ab;
     }
     public static final class id {
-        public static final int action0 = 0x7f0e0112;
+        public static final int action0 = 0x7f0e0113;
         public static final int action_bar = 0x7f0e008c;
         public static final int action_bar_activity_content = 0x7f0e0000;
         public static final int action_bar_container = 0x7f0e008b;
@@ -461,7 +461,7 @@ public final class R {
         public static final int action_bar_subtitle = 0x7f0e006a;
         public static final int action_bar_title = 0x7f0e0069;
         public static final int action_context_bar = 0x7f0e008d;
-        public static final int action_divider = 0x7f0e0116;
+        public static final int action_divider = 0x7f0e0117;
         public static final int action_menu_divider = 0x7f0e0002;
         public static final int action_menu_presenter = 0x7f0e0003;
         public static final int action_mode_bar = 0x7f0e0089;
@@ -472,9 +472,9 @@ public final class R {
         public static final int always = 0x7f0e0053;
         public static final int beginning = 0x7f0e004c;
         public static final int buttonPanel = 0x7f0e0073;
-        public static final int cancel_action = 0x7f0e0113;
+        public static final int cancel_action = 0x7f0e0114;
         public static final int checkbox = 0x7f0e0083;
-        public static final int chronometer = 0x7f0e011b;
+        public static final int chronometer = 0x7f0e011c;
         public static final int collapseActionView = 0x7f0e0054;
         public static final int contentPanel = 0x7f0e0076;
         public static final int custom = 0x7f0e007d;
@@ -484,7 +484,7 @@ public final class R {
         public static final int disableHome = 0x7f0e001b;
         public static final int edit_query = 0x7f0e008e;
         public static final int end = 0x7f0e0032;
-        public static final int end_padder = 0x7f0e0124;
+        public static final int end_padder = 0x7f0e0125;
         public static final int expand_activities_button = 0x7f0e006d;
         public static final int expanded_menu = 0x7f0e0082;
         public static final int home = 0x7f0e0004;
@@ -492,12 +492,12 @@ public final class R {
         public static final int icon = 0x7f0e0071;
         public static final int ifRoom = 0x7f0e0055;
         public static final int image = 0x7f0e006e;
-        public static final int info = 0x7f0e011c;
-        public static final int line1 = 0x7f0e0121;
-        public static final int line3 = 0x7f0e0122;
+        public static final int info = 0x7f0e011d;
+        public static final int line1 = 0x7f0e0122;
+        public static final int line3 = 0x7f0e0123;
         public static final int listMode = 0x7f0e0018;
         public static final int list_item = 0x7f0e0070;
-        public static final int media_actions = 0x7f0e0115;
+        public static final int media_actions = 0x7f0e0116;
         public static final int middle = 0x7f0e004d;
         public static final int multiply = 0x7f0e0027;
         public static final int never = 0x7f0e0056;
@@ -531,13 +531,13 @@ public final class R {
         public static final int src_atop = 0x7f0e0029;
         public static final int src_in = 0x7f0e002a;
         public static final int src_over = 0x7f0e002b;
-        public static final int status_bar_latest_event_content = 0x7f0e0114;
+        public static final int status_bar_latest_event_content = 0x7f0e0115;
         public static final int submit_area = 0x7f0e0097;
         public static final int tabMode = 0x7f0e001a;
-        public static final int text = 0x7f0e0123;
+        public static final int text = 0x7f0e0124;
         public static final int text2 = 0x7f0e0047;
         public static final int textSpacerNoButtons = 0x7f0e007a;
-        public static final int time = 0x7f0e011a;
+        public static final int time = 0x7f0e011b;
         public static final int title = 0x7f0e0072;
         public static final int title_template = 0x7f0e007f;
         public static final int topPanel = 0x7f0e007e;

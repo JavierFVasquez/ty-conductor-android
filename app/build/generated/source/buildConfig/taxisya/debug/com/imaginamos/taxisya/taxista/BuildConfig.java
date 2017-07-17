@@ -9,7 +9,7 @@ public final class BuildConfig {
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "taxisya";
   public static final int VERSION_CODE = 0;
-  public static final String VERSION_NAME = "1.7";
+  public static final String VERSION_NAME = "1.7.6";
   // Fields from build type: debug
   public static final String HOST = "www.taxisya.co";
   public static final boolean USE_CRASHLYTICS = true;

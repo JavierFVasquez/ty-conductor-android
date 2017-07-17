@@ -64,6 +64,10 @@
         "source": "/Users/developer_celuvans/.android/build-cache/5cee67df77d64fe13df887d44affcc355f2df42e/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
+        "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/release/anim/mapa_main.xml",
+        "source": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/main/res/anim/mapa_main.xml"
+    },
+    {
         "merged": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/build/intermediates/res/merged/taxisya/release/anim/fade_out_item.xml",
         "source": "/Users/developer_celuvans/Documents/workspace/android/ty-conductor-android-/app/src/taxisya/res/anim/fade_out_item.xml"
     },

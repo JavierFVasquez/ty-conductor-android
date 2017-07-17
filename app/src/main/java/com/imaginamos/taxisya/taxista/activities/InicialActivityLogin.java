@@ -253,7 +253,6 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
 
     }
 
-
     @Override
     public void onResume() {
         super.onResume();
@@ -283,14 +282,13 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
         }
     }
 
-
     public boolean checkService() throws JSONException {
 
         //service_id = conf.getServiceId();
         id_driver = conf.getIdUser();
         service_id = "";
         Log.v("checkService", "ini");
-        Log.v("checkService", "id_driver=" + driver_id + " service_id=" + service_id);
+        //Log.v("checkService", "id_driver=" + driver_id + " service_id=" + service_id);
 
         MiddleConnect.checkStatusService(this, driver_id, service_id, "uuid", new AsyncHttpResponseHandler() {
 

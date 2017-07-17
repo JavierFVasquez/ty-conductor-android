@@ -5,8 +5,7 @@
     android:id="@+id/contectt"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    tools:context=".LoginActivity">
+    android:gravity="center_horizontal">
 
     <HorizontalScrollView
         android:id="@+id/mapa_la"
