@@ -12,7 +12,8 @@
         <ImageView
             android:id="@+id/banner_arriba"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0sp"
+            android:layout_weight="0.1"
             android:layout_gravity="center"
             android:layout_marginBottom="5sp"
             android:layout_marginTop="5sp"
@@ -37,9 +38,10 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/linea_gris" />
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="50sp"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/icon_radio_ope"
@@ -48,17 +50,18 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5sp"
                     android:contentDescription="@string/app_name"
-                    android:visibility="gone" />
+                    android:visibility="visible" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10sp"
+                    android:layout_marginLeft="75sp"
+                    android:layout_marginRight="105sp"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/address"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#000"
                         android:textSize="@dimen/fontdirmap"
@@ -66,13 +69,24 @@
 
                     <TextView
                         android:id="@+id/nombre_cliente"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColor="#000"
                         android:textSize="@dimen/fontdirmap"
                         android:textStyle="bold" />
                 </LinearLayout>
-            </LinearLayout>
+
+                <Button
+                    android:id="@+id/BT_Chat"
+                    android:layout_width="90sp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/chat"
+                    android:layout_margin="5sp"
+                    android:background="@drawable/gray_border"
+                    android:textColor="@color/text_gray"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
         </LinearLayout>
 
         <fragment
@@ -94,66 +108,79 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/layout_pay"
-                    android:visibility="gone"
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:orientation="vertical"
                     android:layout_height="wrap_content">
-
-                    <TextView
+                    <LinearLayout
+                        android:id="@+id/layout_pay"
+                        android:visibility="gone"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@android:color/black"
-                        android:text="Ingrese las unidades" />
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
 
-                    <EditText
-                        android:id="@+id/totUnits"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:maxLength="4"
-                        android:inputType="number" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
 
-                    <CheckBox
-                        android:id="@+id/chkRecargo1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@android:color/black"
-                        android:text="Aeropuerto = COP 4100" />
+                            android:text="Ingrese las unidades"
 
-                    <CheckBox
-                        android:id="@+id/chkRecargo2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@android:color/black"
-                        android:text="Nocturno, Dominical y Festivo = COP 2000" />
+                            />
 
-                    <CheckBox
-                        android:id="@+id/chkRecargo3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@android:color/black"
-                        android:text="Mensajeria  " />
+                        <EditText
+                            android:id="@+id/totUnits"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Total unidades"
+                            android:maxLength="4"
+                            android:inputType="number"
+                            />
 
-                    <!--<EditText-->
-                    <!--android:id="@+id/totViaje"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:hint="Total viaje"-->
-                    <!--/>-->
+                        <CheckBox
+                            android:id="@+id/chkRecargo1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text="Aeropuerto = COP 4100"
+                            />
 
-                    <TextView
-                        android:id="@+id/totViaje"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@android:color/black"
-                        android:textStyle="bold"
-                        android:textSize="20dp"
-                        android:text="Total: " />
+                        <CheckBox
+                            android:id="@+id/chkRecargo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text="Nocturno, Dominical y Festivo = COP 2000"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/chkRecargo3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:text="Mensajeria  "
+                            />
+
+                        <!--<EditText-->
+                        <!--android:id="@+id/totViaje"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:hint="Total viaje"-->
+                        <!--/>-->
+
+                        <TextView
+                            android:id="@+id/totViaje"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:text="Total: "
+
+                            />
 
 
-                </LinearLayout>
-
+                    </LinearLayout>
+                </ScrollView>
                 <LinearLayout
                     android:id="@+id/layout_code_authorization"
                     android:layout_width="fill_parent"

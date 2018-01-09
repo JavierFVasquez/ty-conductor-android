@@ -2,6 +2,7 @@ package com.imaginamos.taxisya.taxista.io;
 
 import android.Manifest;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -37,7 +38,7 @@ import java.util.Timer;
 import cz.msebera.android.httpclient.Header;
 
 //public class MyService extends Service implements LocationListener, GooglePlayServicesClient.ConnectionCallbacks, GooglePlayServicesClient.OnConnectionFailedListener {
-public class MyService extends Service implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener , LocationListener {
+public class MyService extends Service implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     private static final int MILLISECONDS_PER_SECOND = 1000;
     private static final int FASTEST_INTERVAL_IN_SECONDS = 5; //1; //5;
@@ -60,7 +61,6 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
 //    private LocationRequest mLocationRequest;
 //    private LocationClient mLocationClient;
 //    private android.location.LocationListener loca;
-
 
 
     private LocationManager locationManager;
@@ -107,14 +107,13 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
         };
     */
     public static int getMeters() {
-        Log.v("MyService","getMeters");
+        Log.v("MyService", "getMeters");
 
         if (isTimeBetweenTwoTime()) {
-            Log.v("MyService","getMeters esta entre 22:00 y 05:00");
+            Log.v("MyService", "getMeters esta entre 22:00 y 05:00");
             return 5000;
-        }
-        else {
-            Log.v("MyService","getMeters no esta entre 22:00 y 05:00");
+        } else {
+            Log.v("MyService", "getMeters no esta entre 22:00 y 05:00");
             return 2000;
         }
 
@@ -140,20 +139,19 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
             calendar3.setTime(time3);
             Date x = calendar3.getTime();
 
-            Log.v("MyService","isTimeBetweenTwoTime date = " + x.toString());
+            Log.v("MyService", "isTimeBetweenTwoTime date = " + x.toString());
             if (x.after(calendar1.getTime()) && x.before(calendar2.getTime())) {
                 //checkes whether the current time is between 05:00:00 and 22:00:00.
-                Log.v("MyService","isTimeBetweenTwoTime true");
+                Log.v("MyService", "isTimeBetweenTwoTime true");
                 return true;
-            }
-            else {
-                Log.v("MyService","isTimeBetweenTwoTime false");
+            } else {
+                Log.v("MyService", "isTimeBetweenTwoTime false");
                 return false;
             }
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        Log.v("MyService","isTimeBetweenTwoTime false (default)");
+        Log.v("MyService", "isTimeBetweenTwoTime false (default)");
         return false;
     }
 
@@ -258,7 +256,8 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
 
         if (mGoogleApiClient != null) {
             mGoogleApiClient.connect();
-        } if (mGoogleApiClient.equals(null)) {
+        }
+        if (mGoogleApiClient.equals(null)) {
             System.exit(0);
 
         }
@@ -312,10 +311,11 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
 //            if (location.getAccuracy() < 100.0f) {
 //                stopLocationUpdates();
             Log.e(TAG, "sendMyPosition");
+            driver_id = getApplicationContext().getSharedPreferences("taxista", Context.MODE_PRIVATE).getString("driver_id", "");
             MiddleConnect.sendMyPosition(this, driver_id, String.valueOf(latitud), String.valueOf(longitud), new AsyncHttpResponseHandler() {
                 @Override
                 public void onStart() {
-                    Log.e(TAG, "onStart");
+                    Log.e(TAG, "onStart === >" + driver_id);
                 }
 
                 @Override
@@ -329,8 +329,8 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
 
                 @Override
                 public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                   // String response = new String(responseBody);
-                    Log.e(TAG, "onFailure" );
+                    // String response = new String(responseBody);
+                    Log.e(TAG, "onFailure");
                 }
 
                 @Override
@@ -351,6 +351,16 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
 
     private void displayLocation() {
 
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
         if (mLastLocation != null) {
@@ -378,6 +388,16 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
         }
         if (mLocationRequest == null) {
             Log.i("RouteActivity", "location request is null");
+        }
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
         }
         LocationServices.FusedLocationApi.requestLocationUpdates(
                 mGoogleApiClient, mLocationRequest, this);

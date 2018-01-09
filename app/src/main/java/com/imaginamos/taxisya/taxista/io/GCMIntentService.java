@@ -16,7 +16,9 @@ import com.google.android.gcm.GCMBaseIntentService;
 import com.imaginamos.taxisya.taxista.R;
 import com.imaginamos.taxisya.taxista.activities.NotificationActivity;
 import com.imaginamos.taxisya.taxista.model.Actions;
+import com.imaginamos.taxisya.taxista.model.MessageEvent;
 
+import org.greenrobot.eventbus.EventBus;
 import org.json.JSONObject;
 
 public class GCMIntentService extends GCMBaseIntentService {
@@ -96,19 +98,23 @@ public class GCMIntentService extends GCMBaseIntentService {
                                     Intent mintent = new Intent(Actions.ACTION_SERVICE_CANCEL);
                                     mintent.putExtra("service_id", extra.getString("service_id"));
                                     sendBroadcast(mintent);
+
+                                    EventBus.getDefault().post(new MessageEvent(Actions.ACTION_SERVICE_CANCEL));
                                     break;
 
                                 case Actions.USER_CANCELED_SERVICE:
                                     Log.v("SERVICE_CMS", "GCM USER_CANCELED_SERVICE service_id= " + extra.getString("service_id"));
-                                    Intent i = new Intent(Actions.ACTION_USER_CANCELED_SERVICE);
-                                    sendBroadcast(i);
+//                                    Intent i = new Intent(Actions.ACTION_USER_CANCELED_SERVICE);
+//                                    sendBroadcast(i);
+                                    EventBus.getDefault().post(new MessageEvent(Actions.ACTION_USER_CANCELED_SERVICE));
                                     generateNotification(context, message);
                                     break;
 
                                 case Actions.CANCEL_FOR_O:
                                     Log.v("SERVICE_CMS", "GCM CANCEL_FOR_O service_id= " + extra.getString("service_id"));
-                                    Intent io = new Intent(Actions.ACTION_OPE_CANCELED_SERVICER);
-                                    sendBroadcast(io);
+//                                    Intent io = new Intent(Actions.ACTION_OPE_CANCELED_SERVICER);
+//                                    sendBroadcast(io);
+                                    EventBus.getDefault().post(new MessageEvent(Actions.ACTION_OPE_CANCELED_SERVICER));
                                     generateNotification(context, message);
                                     break;
 
@@ -116,16 +122,18 @@ public class GCMIntentService extends GCMBaseIntentService {
                                     Log.e("PUSH", "Mensaje masivo");
                                     Log.e("PUSH", message);
                                     // se quita para la prueba de hoy
-                                    Intent im = new Intent(Actions.ACTION_MESSAGE_MASSIVE);
-                                    im.putExtra("message", message);
-                                    sendBroadcast(im);
+//                                    Intent im = new Intent(Actions.ACTION_MESSAGE_MASSIVE);
+//                                    im.putExtra("message", message);
+//                                    sendBroadcast(im);
+                                    EventBus.getDefault().post(new MessageEvent(Actions.ACTION_MESSAGE_MASSIVE,message));
                                     generateNotification(context, message);
                                     break;
 
                                 case Actions.DRIVER_CLOSE_SESSION:
                                     Log.e("PUSH", "Sesíón: cerrada por otro dispositivo");
-                                    Intent ic = new Intent(Actions.ACTION_DRIVER_CLOSE_SESSION);
-                                    sendBroadcast(ic);
+//                                    Intent ic = new Intent(Actions.ACTION_DRIVER_CLOSE_SESSION);
+//                                    sendBroadcast(ic);
+                                    EventBus.getDefault().post(new MessageEvent(Actions.ACTION_DRIVER_CLOSE_SESSION));
                                     generateNotification(context, getString(R.string.gcmintentservice_mensaje_otro_dispositivo));
                                     break;
 
@@ -172,26 +180,38 @@ public class GCMIntentService extends GCMBaseIntentService {
                 Log.e("getDistance", "por obtener distancia ");
                 if (getDistance(Double.parseDouble(extra.getJSONObject("service").getString("lat")), Double.parseDouble(extra.getJSONObject("service").getString("lng")), MyService.latitud, MyService.longitud) <= MyService.getMeters()) {
                     Log.e("getDistance", "dentro de distancia kind_id 3 - operadora");
-                    Intent intent = new Intent(Actions.ACTION_NEW_SERVICES);
-                    intent.putExtra("user_name", extra.getString("user_name"));
-                    intent.putExtra("service", extra.getString("service"));
-                    sendBroadcast(intent);
+//                    Intent intent = new Intent(Actions.ACTION_NEW_SERVICES);
+//                    intent.putExtra("user_name", extra.getString("user_name"));
+//                    intent.putExtra("service", extra.getString("service"));
+//                    sendBroadcast(intent);
+                    MessageEvent me = new MessageEvent(Actions.ACTION_NEW_SERVICES);
+                    me.setUser_name(extra.getString("user_name"));
+                    me.setService(extra.getString("service"));
+                    EventBus.getDefault().post(me);
                 }
             }
             else if (extra.getJSONObject("service").getString("kind_id").equals("2")) {
-                Intent intent = new Intent(Actions.ACTION_NEW_SERVICES);
-                intent.putExtra("user_name", extra.getString("user_name"));
-                intent.putExtra("service", extra.getString("service"));
-                sendBroadcast(intent);
+//                Intent intent = new Intent(Actions.ACTION_NEW_SERVICES);
+//                intent.putExtra("user_name", extra.getString("user_name"));
+//                intent.putExtra("service", extra.getString("service"));
+//                sendBroadcast(intent);
+                MessageEvent me = new MessageEvent(Actions.ACTION_NEW_SERVICES);
+                me.setUser_name(extra.getString("user_name"));
+                me.setService(extra.getString("service"));
+                EventBus.getDefault().post(me);
             }
             else {
                 Log.e("getDistance", "por obtener distancia ");
                 if (getDistance(Double.parseDouble(extra.getJSONObject("service").getString("lat")), Double.parseDouble(extra.getJSONObject("service").getString("lng")), MyService.latitud, MyService.longitud) <= MyService.getMeters()) {
                     Log.e("getDistance", "dentro de distancia kind_id 1 - normal");
-                    Intent intent = new Intent(Actions.ACTION_NEW_SERVICES);
-                    intent.putExtra("user_name", extra.getString("user_name"));
-                    intent.putExtra("service", extra.getString("service"));
-                    sendBroadcast(intent);
+//                    Intent intent = new Intent(Actions.ACTION_NEW_SERVICES);
+//                    intent.putExtra("user_name", extra.getString("user_name"));
+//                    intent.putExtra("service", extra.getString("service"));
+//                    sendBroadcast(intent);
+                    MessageEvent me = new MessageEvent(Actions.ACTION_NEW_SERVICES);
+                    me.setUser_name(extra.getString("user_name"));
+                    me.setService(extra.getString("service"));
+                    EventBus.getDefault().post(me);
                 }
             }
 

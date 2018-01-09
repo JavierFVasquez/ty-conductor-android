@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v15/values-v15.xml",
+            "map": [
+                {
+                    "source": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/res/values-v15/theme.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "171"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "3",
+                        "endColumns": "12",
+                        "endOffsets": "149"
+                    }
+                }
+            ]
+        }
+    ]
+}

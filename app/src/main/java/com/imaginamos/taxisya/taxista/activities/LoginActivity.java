@@ -57,7 +57,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import cz.msebera.android.httpclient.Header;
-import io.fabric.sdk.android.Fabric;
+
 
 public class LoginActivity extends Activity implements View.OnClickListener{
 
@@ -100,8 +100,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (BuildConfig.USE_CRASHLYTICS)
-            Fabric.with(this, new Crashlytics());
+
 
         setContentView(R.layout.activity_login);
         user = (EditText) findViewById(R.id.txtUser);

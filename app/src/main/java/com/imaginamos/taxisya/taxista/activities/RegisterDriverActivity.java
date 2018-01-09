@@ -29,7 +29,6 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.carouseldemo.controls.CarouselAdapter;
 import com.google.gson.JsonElement;
 import com.imaginamos.taxisya.taxista.R;
 import com.imaginamos.taxisya.taxista.io.ApiAdapter;

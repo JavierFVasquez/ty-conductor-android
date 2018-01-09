@@ -18,6 +18,8 @@ import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.support.design.widget.Snackbar;
+import android.support.v4.content.res.ResourcesCompat;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -46,6 +48,14 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.imaginamos.taxisya.taxista.GcmKeepAlive;
 import com.imaginamos.taxisya.taxista.R;
 import com.imaginamos.taxisya.taxista.io.ApiConstants;
@@ -55,6 +65,7 @@ import com.imaginamos.taxisya.taxista.io.MyService;
 import com.imaginamos.taxisya.taxista.io.UpdateReceiver;
 import com.imaginamos.taxisya.taxista.model.Actions;
 import com.imaginamos.taxisya.taxista.model.Conf;
+import com.imaginamos.taxisya.taxista.model.MessageEvent;
 import com.imaginamos.taxisya.taxista.utils.BDAdapter;
 import com.imaginamos.taxisya.taxista.utils.Dialogos;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -63,6 +74,9 @@ import com.paymentez.androidsdk.models.DebitCardResponseHandler;
 import com.paymentez.androidsdk.models.PaymentezDebitParameters;
 import com.paymentez.androidsdk.models.PaymentezResponseDebitCard;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -114,7 +128,7 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
     private String mTotService = "0";
     private String mTransactionId = "";
     private String mUserPhone = "";
-    private BroadcastReceiver mReceiver;
+//    private BroadcastReceiver mReceiver;
     private UpdateReceiver mNetworkMonitor;
     private ImageView mConnectivityLoaderImage;
     private RelativeLayout mNoConnectivityPanel;
@@ -140,8 +154,37 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
     private LinearLayout mLinear2;
     public String from_lng, from_lat, service_recoverid, reCode;
     private GcmKeepAlive gcmKeepAlive;
+    private Button BT_Chat;
 
     private long mTotalTrip = 0;
+    private boolean first_time = false;
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MessageEvent event) {
+
+
+        if (event.getAction().equals(Actions.ACTION_USER_CANCELED_SERVICE)) {
+            Toast.makeText(getApplicationContext(), getString(R.string.error2), Toast.LENGTH_LONG).show();
+            toFinish();
+
+        } else if (event.getAction().equals(Actions.ACTION_OPE_CANCELED_SERVICER)) {
+            Toast.makeText(getApplicationContext(), getString(R.string.oper_cancel), Toast.LENGTH_LONG).show();
+            toFinish();
+
+        } else if (event.getAction().equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
+            Log.v("DRIVER_CLOSE_SESSION", "in MapActivity");
+            Toast.makeText(getApplicationContext(), R.string.login_deshabilito_login_otro_dispositivo, Toast.LENGTH_LONG).show();
+
+            loggedInOtherDevie();
+
+        } else if (event.getAction().equals(Actions.ACTION_MESSAGE_MASSIVE)) {
+
+            Log.v("MESSAGE_MASSIVE", "mensaje global recibido");
+            String message = event.getMessage();
+            mostrarMensaje(message);
+
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,8 +192,6 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recovery_map);
-        //Desarrollo true
-        //Producción false
         paymentezsdk = new PaymentezSDKClient(this, ApiConstants.api_env, ApiConstants.app_code, ApiConstants.app_secret_key);
 
         try {
@@ -168,6 +209,8 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
         if (!Connectivity.isConnected(this)) {
             new Dialogos(RecoveryMapActivity.this, R.string.error_net);
         }
+
+
 
         btnLlegada = (Button) findViewById(R.id.btnLlegada);
         btnCancelar = (Button) findViewById(R.id.btnCancelar);
@@ -236,6 +279,54 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
         longitud = reicieveParams.getDouble("lng");
         service_id = reicieveParams.getString("service_recoverid");
 
+
+        FirebaseOptions options = new FirebaseOptions.Builder()
+                .setApplicationId("1:254682418821:android:a62d955d84b45b78") // Required for Analytics.
+                .setApiKey("AIzaSyDUvcRAQqBsyMlmJ-kZ_nGaqCwMNSNxKfI") // Required for Auth.
+                .setDatabaseUrl("https://taxis-ya-usuario-android.firebaseio.com/") // Required for RTDB.
+                .build();
+
+        FirebaseApp.initializeApp(this /* Context */, options, "secondary");
+
+
+        BT_Chat = (Button) findViewById(R.id.BT_Chat);
+
+        FirebaseApp secondary = FirebaseApp.getInstance("secondary");
+        FirebaseDatabase database = FirebaseDatabase.getInstance(secondary);
+        DatabaseReference chat_ref = database.getReference("chat/taxi_user/"+service_id);
+
+
+//        chat_ref.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                if(first_time) {
+//                    BT_Chat.setBackgroundResource(R.drawable.orange_border);
+//                    BT_Chat.setTextColor(ResourcesCompat.getColor(getResources(), R.color.text_orange, null));
+//                    Log.i("Chat", "New Message");
+//                    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+//                    vibrator.vibrate(500);
+//                    Toast.makeText(RecoveryMapActivity.this, R.string.new_message, Toast.LENGTH_SHORT).show();
+//                }
+//                first_time = true;
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//                Log.e("The read failed: " , String.valueOf(databaseError.getCode()));
+//            }
+//        });
+
+        BT_Chat.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(RecoveryMapActivity.this,ChatActivity.class);
+                Bundle b = new Bundle();
+                b.putString("service_id", service_id);
+                i.putExtras(b);
+                startActivity(i);
+            }
+        });
+
         Log.v("MapActivity", "latitud = " + String.valueOf(latitud) + " longitud = " + String.valueOf(longitud));
 
 
@@ -278,43 +369,43 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 200, 0, (LocationListener) this);
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 200, 0, (LocationListener) this);
 
-        IntentFilter intentfilter = new IntentFilter();
-        intentfilter.addAction(Actions.ACTION_USER_CANCELED_SERVICE);
-        intentfilter.addAction(Actions.ACTION_OPE_CANCELED_SERVICER);
-        intentfilter.addAction(Actions.ACTION_DRIVER_CLOSE_SESSION);
-        intentfilter.addAction(Actions.ACTION_MESSAGE_MASSIVE);
-
-        mReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-
-                if (intent.getAction().equals(Actions.ACTION_USER_CANCELED_SERVICE)) {
-                    Toast.makeText(getApplicationContext(), getString(R.string.error2), Toast.LENGTH_LONG).show();
-                    toFinish();
-
-                } else if (intent.getAction().equals(Actions.ACTION_OPE_CANCELED_SERVICER)) {
-                    Toast.makeText(getApplicationContext(), getString(R.string.oper_cancel), Toast.LENGTH_LONG).show();
-                    toFinish();
-
-                } else if (intent.getAction().equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
-                    Log.v("DRIVER_CLOSE_SESSION", "in MapActivity");
-                    Toast.makeText(getApplicationContext(), R.string.login_deshabilito_login_otro_dispositivo, Toast.LENGTH_LONG).show();
-
-                    loggedInOtherDevie();
-
-                } else if (intent.getAction().equals(Actions.ACTION_MESSAGE_MASSIVE)) {
-
-                    Log.v("MESSAGE_MASSIVE", "mensaje global recibido");
-                    String message = intent.getExtras().getString("message");
-                    mostrarMensaje(message);
-
-                }
-
-            }
-
-        };
-
-        registerReceiver(mReceiver, intentfilter);
+//        IntentFilter intentfilter = new IntentFilter();
+//        intentfilter.addAction(Actions.ACTION_USER_CANCELED_SERVICE);
+//        intentfilter.addAction(Actions.ACTION_OPE_CANCELED_SERVICER);
+//        intentfilter.addAction(Actions.ACTION_DRIVER_CLOSE_SESSION);
+//        intentfilter.addAction(Actions.ACTION_MESSAGE_MASSIVE);
+//
+//        mReceiver = new BroadcastReceiver() {
+//            @Override
+//            public void onReceive(Context context, Intent intent) {
+//
+//                if (intent.getAction().equals(Actions.ACTION_USER_CANCELED_SERVICE)) {
+//                    Toast.makeText(getApplicationContext(), getString(R.string.error2), Toast.LENGTH_LONG).show();
+//                    toFinish();
+//
+//                } else if (intent.getAction().equals(Actions.ACTION_OPE_CANCELED_SERVICER)) {
+//                    Toast.makeText(getApplicationContext(), getString(R.string.oper_cancel), Toast.LENGTH_LONG).show();
+//                    toFinish();
+//
+//                } else if (intent.getAction().equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
+//                    Log.v("DRIVER_CLOSE_SESSION", "in MapActivity");
+//                    Toast.makeText(getApplicationContext(), R.string.login_deshabilito_login_otro_dispositivo, Toast.LENGTH_LONG).show();
+//
+//                    loggedInOtherDevie();
+//
+//                } else if (intent.getAction().equals(Actions.ACTION_MESSAGE_MASSIVE)) {
+//
+//                    Log.v("MESSAGE_MASSIVE", "mensaje global recibido");
+//                    String message = intent.getExtras().getString("message");
+//                    mostrarMensaje(message);
+//
+//                }
+//
+//            }
+//
+//        };
+//
+//        registerReceiver(mReceiver, intentfilter);
         validateService();
 
         TextWatcher textWatcher = new TextWatcher() {
@@ -524,8 +615,7 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
 
                 String response = new String(responseBody);
-                Log.e("TIMER_EJECUTANDO1", "checkService() response " + response);
-
+                Log.w("Service Response" , response);
                 try {
                     //Log.v("checkService", "SUCCES: "+response);
                     JSONObject responsejson = new JSONObject(response);
@@ -641,19 +731,19 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
 
                                 } else {
                                     btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.GONE);
+                                    btnCancelar.setVisibility(View.VISIBLE);
                                     btnFinalizar.setVisibility(View.GONE);
                                 }
                                 if (mPayType == 1) {
                                     mLinear2.setVisibility(View.VISIBLE);
                                     btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.GONE);
+                                    btnCancelar.setVisibility(View.VISIBLE);
                                     btnConfirmCode.setVisibility(View.GONE);
                                     btnFinalizar.setVisibility(View.VISIBLE);
 
                                 } else {
                                     btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.GONE);
+                                    btnCancelar.setVisibility(View.VISIBLE);
                                     btnFinalizar.setVisibility(View.VISIBLE);
                                 }
 
@@ -665,7 +755,7 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
 
                                 } else {
                                     btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.GONE);
+                                    btnCancelar.setVisibility(View.VISIBLE);
                                     btnFinalizar.setVisibility(View.VISIBLE);
                                 }
                             }
@@ -1076,9 +1166,10 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
     private void toFinish() {
         Log.v("FINISH2", "finishService() toFinish()");
 
-        if (mReceiver != null) {
-            unregisterReceiver(mReceiver);
-        }
+//        if (mReceiver != null) {
+//            unregisterReceiver(mReceiver);
+//        }
+        EventBus.getDefault().unregister(this);
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString("service", "ended");
@@ -1091,9 +1182,10 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
     }
 
     private void loggedInOtherDevie() {
-        if (mReceiver != null) {
-            unregisterReceiver(mReceiver);
-        }
+//        if (mReceiver != null) {
+//            unregisterReceiver(mReceiver);
+//        }
+        EventBus.getDefault().unregister(this);
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString("service", "ended");
@@ -1103,10 +1195,22 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
         connectivityChecker.stopConnectivityMonitor();
         unregisterReceiver(mNetworkMonitor);
+    }
+
+    @Override
+    protected void onStop() {
+        EventBus.getDefault().unregister(this);
+        super.onStop();
     }
 
     @Override

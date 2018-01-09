@@ -67,7 +67,7 @@
     <string name="no_gps">¡Hay problemas con el gps!</string>
     <string name="enable_gps">Por favor habilita tu GPS</string>
     <string name="oper_cancel">¡La operadora ha cancelado el servicio!</string>
-    <string name="ready_enable">%1$s te encuentras habilitado.</string>
+    <string name="ready_enable">Te encuentras habilitado %1$s</string>
     <string name="saliendo_aplicacion">Saliendo de la aplicación...</string>
     <string name="servicio_finalizado">El servicio se finalizó exitosamente.</string>
     <string name="the_user_arrived">El Cliente ha recibido la informacion.</string>
@@ -107,7 +107,7 @@
     <string name="waitservice_titulo_deshabilitando">Deshabilitando...</string>
     <string name="waitservice_titulo_dialogo">Información importante</string>
     <string name="waitservice_titulo_envio_confirmacion">Enviando Confirmacion...</string>
-    <string name="welcome">Bienvenido   %1$s   a taxisya</string>
+    <string name="welcome">Bienvenido   %1$s   a taxis ya</string>
     <string name="yourpassword">Contraseña</string>
     <string name="app_versions">app/versions</string>
     <string name="arrived_serivce">v2/driver/%1$s/arrive</string>

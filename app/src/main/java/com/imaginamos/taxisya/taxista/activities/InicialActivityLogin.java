@@ -20,7 +20,8 @@ import android.widget.Button;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.carouseldemo.controls.CarouselItem;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
 import com.imaginamos.taxisya.taxista.R;
 import com.crashlytics.android.Crashlytics;
 import com.imaginamos.taxisya.taxista.BuildConfig;
@@ -51,7 +52,6 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
 
     private Button btnLogin;
     private Button btnRegister;
-    private CarouselItem current_item;
     private String service_id, id_driver, login, uuid, id_user,driver_id, id;
     private int status_service = 0;
     private Intent intent_service;
@@ -72,8 +72,11 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
     protected void onCreate(Bundle savedInstanceState) {
         Log.v("onCreate", "InicialActivityLogin");
         super.onCreate(savedInstanceState);
-        if (BuildConfig.USE_CRASHLYTICS)
-            Fabric.with(this, new Crashlytics());
+
+
+
+
+
 
         setContentView(R.layout.activity_inicial);
 
@@ -86,6 +89,7 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
         btnRegister = (Button) findViewById(R.id.btnRegister);
         btnRegister.setOnClickListener(this);
         btnLogin.setOnClickListener(this);
+        enable();
 
     }
 
@@ -225,11 +229,6 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
 
         Toast.makeText(getApplicationContext(), getString(R.string.error_net), Toast.LENGTH_SHORT).show();
 
-        //reBuildView();
-        if (current_item != null) {
-            current_item.setVisibility(View.VISIBLE);
-        }
-
     }
 
 
@@ -290,7 +289,7 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
         Log.v("checkService", "ini");
         //Log.v("checkService", "id_driver=" + driver_id + " service_id=" + service_id);
 
-        MiddleConnect.checkStatusService(this, driver_id, service_id, "uuid", new AsyncHttpResponseHandler() {
+        MiddleConnect.checkStatusService(this, driver_id, service_id, uuid, new AsyncHttpResponseHandler() {
 
             @Override
             public void onStart() {
@@ -302,7 +301,7 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
                 String response = new String(responseBody);
 
                 try {
-
+                    Log.w("Service Response" , response);
                     JSONObject responsejson = new JSONObject(response);
                     JSONArray services = responsejson.getJSONArray("services");
 

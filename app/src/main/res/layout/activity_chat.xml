@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:id="@+id/RL_Title"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:paddingLeft="20sp"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:id="@+id/TV_Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/chat"
+            android:textSize="23sp"
+            android:textColor="@color/text_orange"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_Chat_Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10sp"
+        android:layout_below="@id/RL_Title"
+        android:layout_above="@id/RL_Chat_Text_Editor_Container">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/RV_Chat_Content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:stackFromEnd ="true">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RL_Chat_Text_Editor_Container"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:id="@+id/ET_Chat_Text"
+            android:layout_width="match_parent"
+            android:layout_marginRight="115sp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5sp"
+            android:layout_marginBottom="5sp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/text_orange"
+            android:textColorHint="@color/text_gray"
+            android:hint="@string/type_your_message_here"
+            android:inputType="textCapSentences"
+            android:backgroundTint="@color/text_orange"
+            android:layout_alignParentLeft="true"/>
+        <Button
+            android:id="@+id/BT_Send"
+            android:layout_width="100sp"
+            android:layout_margin="10sp"
+            android:textColor="@color/text_orange"
+            android:text="@string/send"
+            android:background="@drawable/orange_border"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,1267 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:2:1-139:12
+INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:2:1-139:12
+INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:2:1-139:12
+INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:2:1-139:12
+MERGED from [com.firebaseui:firebase-ui:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-1.2.0.aar/a27602a4612c5e79894a55a0f0561488/AndroidManifest.xml:2:1-13:12
+MERGED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:2:1-71:12
+MERGED from [com.android.support:design:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/design-26.0.0.aar/b00fa2a6bde9de33f99fc031fe2e69aa/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:multidex:1.0.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/ac5ca2092a284282077e6192d8c8b3d6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.5] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-2.6.5.aar/3482cb52f2e7686c64a7bed8d1940a98/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-10.2.6.aar/dad9c5311eee66fb0fde18972e4c50d5/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-appindexing:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-appindexing-10.2.6.aar/e7c2080c2858bc71ef9d741a4a78466d/AndroidManifest.xml:16:1-19:12
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:2:1-49:12
+MERGED from [com.firebaseui:firebase-ui-database:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.2.0.aar/7571e8fc43031c96b119d14a374b245d/AndroidManifest.xml:2:1-19:12
+MERGED from [com.firebaseui:firebase-ui-storage:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-1.2.0.aar/64ce82e791c663c76882d4e9666dc3c3/AndroidManifest.xml:2:1-12:12
+MERGED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:21:1-50:12
+MERGED from [com.google.android.gms:play-services-cast-framework:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-cast:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-10.2.6.aar/50b446a28fb417464588098fa8318afc/AndroidManifest.xml:16:1-19:12
+MERGED from [com.android.support:mediarouter-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.0.0.aar/97f05ebb60cd6978498106e215a14e75/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/45577aced078d40ef2c59d24d3e2387a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-awareness:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-awareness-10.2.6.aar/136b393550692152933fc34e14a1eee0/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-places:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-places-10.2.6.aar/148ea2e40b9b1ad70f87fe0d41bda6f2/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-wallet:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-wallet-10.2.6.aar/fd159279ff7c9a16fbd09036e88a13f2/AndroidManifest.xml:16:1-20:12
+MERGED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.android.gms:play-services-fitness:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-fitness-10.2.6.aar/a190b86ad4fd6a311d10d800ecbc51cf/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-location:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.6.aar/2fc2c2b2434dd4cf230979dae2a0ffba/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-10.2.6.aar/85f814f2e1c693c29ab1f125fb8c5ce8/AndroidManifest.xml:16:1-27:12
+MERGED from [com.google.android.gms:play-services-gcm:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.6.aar/6e333c6c9611c54cbede4ad1e6f9eadf/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/7efb0815702a3de3a453f680f525bd9f/AndroidManifest.xml:16:1-30:12
+MERGED from [com.google.firebase:firebase-crash:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-crash-10.2.6.aar/9eb89ccca6c8ac9ea8313e6a149b6306/AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.android.gms:play-services-plus:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-plus-10.2.6.aar/a9474624f5bc8e535f0030b8cf9ebca8/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-v4-impl-10.2.6.aar/210b3bed53823d6648351331d0cab0fe/AndroidManifest.xml:16:1-20:12
+MERGED from [com.google.android.gms:play-services-tagmanager:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-10.2.6.aar/c7b159e7efc5d06a8c6652239a66d990/AndroidManifest.xml:16:1-18:12
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-impl-10.2.6.aar/d0d7f9ea943705c84a18776a026f9ec1/AndroidManifest.xml:16:1-27:12
+MERGED from [com.google.android.gms:play-services-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.6.aar/313ab8f4a3c378452e60e8625f5fbd46/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-ads:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-10.2.6.aar/dd28cb3600195704341e2d4bd36653dd/AndroidManifest.xml:16:1-18:12
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:16:1-27:12
+MERGED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:16:1-26:12
+MERGED from [com.google.android.gms:play-services-auth-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-10.2.6.aar/59701c2d251720c2b137d578d2521e6b/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-10.2.6.aar/d8f03ddb60781900dc785ae8c69d4f20/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.firebase:firebase-config:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-config-10.2.6.aar/1a77f958c8c6d94dfa023194b3eb18a5/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-games:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-games-10.2.6.aar/abe0d054f679d133acc25998d4174216/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-drive:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-drive-10.2.6.aar/562e9b62c26665bc6ed767a8acd1cea4/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-identity:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-identity-10.2.6.aar/304eea1da27930aa0cc662e4fc08de63/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-instantapps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-instantapps-10.2.6.aar/329cc2574c60f72a184116900191d8d4/AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.android.gms:play-services-nearby:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-nearby-10.2.6.aar/9d2776bdaa58ffadfe2de1a962e50fa7/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-panorama:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-panorama-10.2.6.aar/634245b4e02f4db378c340c655dfa8e2/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-safetynet:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-10.2.6.aar/1aa25a02e847d9d7a95f7c7a4f715030/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-vision:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-vision-10.2.6.aar/4ff13c3c353ba7a64c4a8a01aef5459e/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-wearable:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-wearable-10.2.6.aar/016978d37eb665beff9d796f1518a543/AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.firebase:firebase-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-auth-10.2.6.aar/a9ec923dd67adf5d2e5eb9005b0b182b/AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.android.gms:play-services-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.6.aar/2a619918426ac4d5e2c03ec2d2a84415/AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.firebase:firebase-core:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.6.aar/8afd5939871398f53773cc18d60b5bbd/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:16:1-34:12
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:16:1-34:12
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:16:1-29:12
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:16:1-50:12
+MERGED from [com.google.firebase:firebase-database:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-database-10.2.6.aar/0f9f8560be09296dc96f2e514c3ba82d/AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-database-connection:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-10.2.6.aar/eac985c2f4f703162e5e3f8accdc2268/AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-storage:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-storage-10.2.6.aar/252086202e6ac8607165b52f3a99005b/AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.6.aar/746a907872e3e9ec72ec503e5ebadf5f/AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.6.aar/0094efb55c1a39e28bda5442474d1b05/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:16:1-28:12
+MERGED from [com.google.firebase:firebase-storage-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-10.2.6.aar/a719b8c41fe09729ae2664d05472ce12/AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.android.gms:play-services-gass:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gass-10.2.6.aar/f9c0e34cf8a1105514c9d4fa38bc16b4/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.6.aar/7227cef2961eb0a540c7dac2a7519666/AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:transition:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/transition-26.0.0.aar/6d475527c04083855fe5d058e92ad011/AndroidManifest.xml:17:1-28:12
+MERGED from [com.twitter.sdk.android:twitter:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-2.3.0.aar/c344098d5dee5adfd54957b443e4fc4e/AndroidManifest.xml:18:1-27:12
+MERGED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:18:1-37:12
+MERGED from [com.android.support:support-v4:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/d4f728e23104067ca92110efa2e4fb8a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.yinglan.keyboard:hidekeyboard:1.1.3] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/hidekeyboard-1.1.3.aar/83ad423cbca08927a691b8eb2abd292b/AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:recyclerview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0.aar/551c969c1d95bbe9ceeefc143d8a2580/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/66b444f8c13abb9cf777e5e03e776c55/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:cardview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0.aar/422266af8b0274e1c75984f65d8c0f23/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/e8f801d63e149741e09f7c6841027c68/AndroidManifest.xml:2:1-13:12
+MERGED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:18:1-39:12
+MERGED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:18:1-42:12
+MERGED from [de.hdodenhof:circleimageview:1.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/circleimageview-1.3.0.aar/ac5f837ba5ded47cf4a85bb69bf2a046/AndroidManifest.xml:2:1-11:12
+MERGED from [info.hoang8f:android-segmented:1.0.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-segmented-1.0.6.aar/ec60a756c4abe9ca67c3ff0eb9abed4b/AndroidManifest.xml:2:1-11:12
+MERGED from [com.crashlytics.sdk.android:beta:1.2.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/beta-1.2.2.aar/6cedadfce86f19c7a0fea964d22c8e60/AndroidManifest.xml:2:1-13:12
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.3.14.aar/7696029ca8ab7712cd2165ec1e566fcf/AndroidManifest.xml:2:1-13:12
+MERGED from [com.crashlytics.sdk.android:answers:1.3.10] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/answers-1.3.10.aar/ffb53c9f7472a403d0054de10dcd5946/AndroidManifest.xml:2:1-13:12
+MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/fabric-1.3.14.aar/0ca0beaae7a89903c18ecdc1eccf3459/AndroidManifest.xml:18:1-29:12
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/4f0b3546cbc8d8502cee092bc2dc311c/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/c664d2925026d950295d8172114209f1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:palette-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/palette-v7-26.0.0.aar/6baf01d123113e52b7265e97ee29626e/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/41d93c5eae88ca5d096aa0ad6d5d8d6a/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/94f1b94f61e421346fc7099f2fe0084f/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/790b368a7386a3a86b3e87a22810863b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2f9f97a6b1d03d2018aa82fe37bdfdd1/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:customtabs:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/customtabs-26.0.0.aar/eb0f482ed3e6f668be6fd94c8d92176e/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/f45f4630d26428584ae327193f122288/AndroidManifest.xml:17:1-31:12
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:2:1-139:12
+INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:2:1-139:12
+INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:2:1-139:12
+	package
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:4:5-45
+		INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:2:1-139:12
+		INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:2:1-139:12
+		INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:2:11-69
+permission#com.imaginamos.taxisya.taxista.permission.MAPS_RECEIVE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:7:5-9:47
+	android:protectionLevel
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:9:9-44
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:8:9-78
+uses-permission#com.imaginamos.taxisya.taxista.permission.MAPS_RECEIVE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:11:5-94
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:11:22-91
+uses-permission#android.permission.INTERNET
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:12:5-67
+MERGED from [com.firebaseui:firebase-ui:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-1.2.0.aar/a27602a4612c5e79894a55a0f0561488/AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-1.2.0.aar/a27602a4612c5e79894a55a0f0561488/AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:12:5-67
+MERGED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:12:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.5] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-2.6.5.aar/3482cb52f2e7686c64a7bed8d1940a98/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.5] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-2.6.5.aar/3482cb52f2e7686c64a7bed8d1940a98/AndroidManifest.xml:9:5-67
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:11:5-67
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui-database:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.2.0.aar/7571e8fc43031c96b119d14a374b245d/AndroidManifest.xml:11:5-67
+MERGED from [com.firebaseui:firebase-ui-database:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.2.0.aar/7571e8fc43031c96b119d14a374b245d/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-10.2.6.aar/85f814f2e1c693c29ab1f125fb8c5ce8/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-10.2.6.aar/85f814f2e1c693c29ab1f125fb8c5ce8/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-gcm:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.6.aar/6e333c6c9611c54cbede4ad1e6f9eadf/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-gcm:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.6.aar/6e333c6c9611c54cbede4ad1e6f9eadf/AndroidManifest.xml:21:5-66
+MERGED from [com.google.firebase:firebase-crash:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-crash-10.2.6.aar/9eb89ccca6c8ac9ea8313e6a149b6306/AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-crash:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-crash-10.2.6.aar/9eb89ccca6c8ac9ea8313e6a149b6306/AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-impl-10.2.6.aar/d0d7f9ea943705c84a18776a026f9ec1/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-impl-10.2.6.aar/d0d7f9ea943705c84a18776a026f9ec1/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.6.aar/313ab8f4a3c378452e60e8625f5fbd46/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.6.aar/313ab8f4a3c378452e60e8625f5fbd46/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:19:5-66
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:19:5-66
+MERGED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:25:5-67
+MERGED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:25:5-67
+MERGED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:25:5-67
+MERGED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:25:5-67
+MERGED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:25:5-67
+MERGED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:25:5-67
+MERGED from [com.crashlytics.sdk.android:beta:1.2.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/beta-1.2.2.aar/6cedadfce86f19c7a0fea964d22c8e60/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:beta:1.2.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/beta-1.2.2.aar/6cedadfce86f19c7a0fea964d22c8e60/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.3.14.aar/7696029ca8ab7712cd2165ec1e566fcf/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.3.14.aar/7696029ca8ab7712cd2165ec1e566fcf/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:answers:1.3.10] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/answers-1.3.10.aar/ffb53c9f7472a403d0054de10dcd5946/AndroidManifest.xml:9:5-67
+MERGED from [com.crashlytics.sdk.android:answers:1.3.10] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/answers-1.3.10.aar/ffb53c9f7472a403d0054de10dcd5946/AndroidManifest.xml:9:5-67
+MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/fabric-1.3.14.aar/0ca0beaae7a89903c18ecdc1eccf3459/AndroidManifest.xml:25:5-67
+MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/fabric-1.3.14.aar/0ca0beaae7a89903c18ecdc1eccf3459/AndroidManifest.xml:25:5-67
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:12:22-64
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:13:5-66
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:20:5-66
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:20:5-66
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:12:5-66
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:12:5-66
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:13:22-63
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:14:5-98
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:14:22-95
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:15:5-79
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:16:5-79
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:16:5-79
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:15:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:16:5-81
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:17:5-81
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:17:5-81
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:16:22-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:17:5-81
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:17:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:18:5-75
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:18:22-72
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:19:5-71
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:19:22-68
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:20:5-68
+MERGED from [com.google.android.gms:play-services-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-10.2.6.aar/85f814f2e1c693c29ab1f125fb8c5ce8/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-10.2.6.aar/85f814f2e1c693c29ab1f125fb8c5ce8/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-impl-10.2.6.aar/d0d7f9ea943705c84a18776a026f9ec1/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-impl-10.2.6.aar/d0d7f9ea943705c84a18776a026f9ec1/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:20:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:21:5-79
+MERGED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:11:5-79
+MERGED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:11:5-79
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:12:5-79
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:12:5-79
+MERGED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-10.2.6.aar/85f814f2e1c693c29ab1f125fb8c5ce8/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-10.2.6.aar/85f814f2e1c693c29ab1f125fb8c5ce8/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-impl-10.2.6.aar/d0d7f9ea943705c84a18776a026f9ec1/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-impl-10.2.6.aar/d0d7f9ea943705c84a18776a026f9ec1/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-nearby:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-nearby-10.2.6.aar/9d2776bdaa58ffadfe2de1a962e50fa7/AndroidManifest.xml:4:5-78
+MERGED from [com.google.android.gms:play-services-nearby:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-nearby-10.2.6.aar/9d2776bdaa58ffadfe2de1a962e50fa7/AndroidManifest.xml:4:5-78
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:20:5-78
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:21:22-76
+uses-permission#android.permission.FLAG_KEEP_SCREEN_ON
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:22:5-78
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:22:22-75
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-gcm:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.6.aar/6e333c6c9611c54cbede4ad1e6f9eadf/AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-gcm:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.6.aar/6e333c6c9611c54cbede4ad1e6f9eadf/AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.6.aar/313ab8f4a3c378452e60e8625f5fbd46/AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.6.aar/313ab8f4a3c378452e60e8625f5fbd46/AndroidManifest.xml:20:5-81
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:22:5-81
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:23:22-79
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:25:5-74
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:25:22-71
+uses-permission#android.permission.ACCESS_BACKGROUND_SERVICE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:26:5-84
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:26:22-81
+uses-permission#android.permission.CAMERA
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:27:5-65
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:23:5-65
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:23:5-65
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:11:5-65
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:11:5-65
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:27:22-62
+uses-permission#android.permission.READ_OWNER_DATA
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:28:5-74
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:28:22-71
+uses-permission#android.permission.WRITE_OWNER_DATA
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:29:5-75
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:29:22-72
+uses-permission#android.permission.WRITE_INTERNAL_STORAGE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:30:5-81
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:30:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:31:5-80
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:31:22-77
+application
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:38:5-137:19
+MERGED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:14:5-69:19
+MERGED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:14:5-69:19
+MERGED from [com.android.support:design:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/design-26.0.0.aar/b00fa2a6bde9de33f99fc031fe2e69aa/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/design-26.0.0.aar/b00fa2a6bde9de33f99fc031fe2e69aa/AndroidManifest.xml:25:5-29:19
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.5] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-2.6.5.aar/3482cb52f2e7686c64a7bed8d1940a98/AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.5] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-2.6.5.aar/3482cb52f2e7686c64a7bed8d1940a98/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.gms:play-services:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-10.2.6.aar/dad9c5311eee66fb0fde18972e4c50d5/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-10.2.6.aar/dad9c5311eee66fb0fde18972e4c50d5/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-appindexing:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-appindexing-10.2.6.aar/e7c2080c2858bc71ef9d741a4a78466d/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-appindexing:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-appindexing-10.2.6.aar/e7c2080c2858bc71ef9d741a4a78466d/AndroidManifest.xml:18:5-19
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:36:5-47:19
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:36:5-47:19
+MERGED from [com.firebaseui:firebase-ui-database:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.2.0.aar/7571e8fc43031c96b119d14a374b245d/AndroidManifest.xml:13:5-17:19
+MERGED from [com.firebaseui:firebase-ui-database:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.2.0.aar/7571e8fc43031c96b119d14a374b245d/AndroidManifest.xml:13:5-17:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:28:5-48:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:28:5-48:19
+MERGED from [com.google.android.gms:play-services-cast-framework:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/AndroidManifest.xml:4:5-8:19
+MERGED from [com.google.android.gms:play-services-cast-framework:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/AndroidManifest.xml:4:5-8:19
+MERGED from [com.google.android.gms:play-services-cast:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-10.2.6.aar/50b446a28fb417464588098fa8318afc/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-cast:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-10.2.6.aar/50b446a28fb417464588098fa8318afc/AndroidManifest.xml:18:5-19
+MERGED from [com.android.support:mediarouter-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.0.0.aar/97f05ebb60cd6978498106e215a14e75/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:mediarouter-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.0.0.aar/97f05ebb60cd6978498106e215a14e75/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/45577aced078d40ef2c59d24d3e2387a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/45577aced078d40ef2c59d24d3e2387a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.google.android.gms:play-services-awareness:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-awareness-10.2.6.aar/136b393550692152933fc34e14a1eee0/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-awareness:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-awareness-10.2.6.aar/136b393550692152933fc34e14a1eee0/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-places:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-places-10.2.6.aar/148ea2e40b9b1ad70f87fe0d41bda6f2/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-places:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-places-10.2.6.aar/148ea2e40b9b1ad70f87fe0d41bda6f2/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-fitness:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-fitness-10.2.6.aar/a190b86ad4fd6a311d10d800ecbc51cf/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-fitness:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-fitness-10.2.6.aar/a190b86ad4fd6a311d10d800ecbc51cf/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-location:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.6.aar/2fc2c2b2434dd4cf230979dae2a0ffba/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.6.aar/2fc2c2b2434dd4cf230979dae2a0ffba/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-10.2.6.aar/85f814f2e1c693c29ab1f125fb8c5ce8/AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-10.2.6.aar/85f814f2e1c693c29ab1f125fb8c5ce8/AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-gcm:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.6.aar/6e333c6c9611c54cbede4ad1e6f9eadf/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-gcm:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.6.aar/6e333c6c9611c54cbede4ad1e6f9eadf/AndroidManifest.xml:23:5-19
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/7efb0815702a3de3a453f680f525bd9f/AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/7efb0815702a3de3a453f680f525bd9f/AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-crash:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-crash-10.2.6.aar/9eb89ccca6c8ac9ea8313e6a149b6306/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-crash:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-crash-10.2.6.aar/9eb89ccca6c8ac9ea8313e6a149b6306/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-plus:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-plus-10.2.6.aar/a9474624f5bc8e535f0030b8cf9ebca8/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-plus:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-plus-10.2.6.aar/a9474624f5bc8e535f0030b8cf9ebca8/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-v4-impl-10.2.6.aar/210b3bed53823d6648351331d0cab0fe/AndroidManifest.xml:19:5-19
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-v4-impl-10.2.6.aar/210b3bed53823d6648351331d0cab0fe/AndroidManifest.xml:19:5-19
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-impl-10.2.6.aar/d0d7f9ea943705c84a18776a026f9ec1/AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-impl-10.2.6.aar/d0d7f9ea943705c84a18776a026f9ec1/AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.6.aar/313ab8f4a3c378452e60e8625f5fbd46/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.6.aar/313ab8f4a3c378452e60e8625f5fbd46/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:19:5-26:19
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:19:5-26:19
+MERGED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-10.2.6.aar/d8f03ddb60781900dc785ae8c69d4f20/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-10.2.6.aar/d8f03ddb60781900dc785ae8c69d4f20/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-config:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-config-10.2.6.aar/1a77f958c8c6d94dfa023194b3eb18a5/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-config:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-config-10.2.6.aar/1a77f958c8c6d94dfa023194b3eb18a5/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-games:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-games-10.2.6.aar/abe0d054f679d133acc25998d4174216/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-games:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-games-10.2.6.aar/abe0d054f679d133acc25998d4174216/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-drive:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-drive-10.2.6.aar/562e9b62c26665bc6ed767a8acd1cea4/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-drive:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-drive-10.2.6.aar/562e9b62c26665bc6ed767a8acd1cea4/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-identity:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-identity-10.2.6.aar/304eea1da27930aa0cc662e4fc08de63/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-identity:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-identity-10.2.6.aar/304eea1da27930aa0cc662e4fc08de63/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-nearby:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-nearby-10.2.6.aar/9d2776bdaa58ffadfe2de1a962e50fa7/AndroidManifest.xml:5:5-19
+MERGED from [com.google.android.gms:play-services-nearby:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-nearby-10.2.6.aar/9d2776bdaa58ffadfe2de1a962e50fa7/AndroidManifest.xml:5:5-19
+MERGED from [com.google.android.gms:play-services-panorama:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-panorama-10.2.6.aar/634245b4e02f4db378c340c655dfa8e2/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-panorama:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-panorama-10.2.6.aar/634245b4e02f4db378c340c655dfa8e2/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-safetynet:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-10.2.6.aar/1aa25a02e847d9d7a95f7c7a4f715030/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-safetynet:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-10.2.6.aar/1aa25a02e847d9d7a95f7c7a4f715030/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-vision:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-vision-10.2.6.aar/4ff13c3c353ba7a64c4a8a01aef5459e/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-vision:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-vision-10.2.6.aar/4ff13c3c353ba7a64c4a8a01aef5459e/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-wearable:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-wearable-10.2.6.aar/016978d37eb665beff9d796f1518a543/AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-wearable:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-wearable-10.2.6.aar/016978d37eb665beff9d796f1518a543/AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-auth-10.2.6.aar/a9ec923dd67adf5d2e5eb9005b0b182b/AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.firebase:firebase-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-auth-10.2.6.aar/a9ec923dd67adf5d2e5eb9005b0b182b/AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.android.gms:play-services-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.6.aar/2a619918426ac4d5e2c03ec2d2a84415/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.6.aar/2a619918426ac4d5e2c03ec2d2a84415/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-core:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.6.aar/8afd5939871398f53773cc18d60b5bbd/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.6.aar/8afd5939871398f53773cc18d60b5bbd/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.6.aar/746a907872e3e9ec72ec503e5ebadf5f/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.6.aar/746a907872e3e9ec72ec503e5ebadf5f/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.6.aar/0094efb55c1a39e28bda5442474d1b05/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.6.aar/0094efb55c1a39e28bda5442474d1b05/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:23:5-27:19
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:23:5-27:19
+MERGED from [com.google.android.gms:play-services-gass:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gass-10.2.6.aar/f9c0e34cf8a1105514c9d4fa38bc16b4/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-gass:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gass-10.2.6.aar/f9c0e34cf8a1105514c9d4fa38bc16b4/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.6.aar/7227cef2961eb0a540c7dac2a7519666/AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.6.aar/7227cef2961eb0a540c7dac2a7519666/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:transition:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/transition-26.0.0.aar/6d475527c04083855fe5d058e92ad011/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/transition-26.0.0.aar/6d475527c04083855fe5d058e92ad011/AndroidManifest.xml:22:5-26:19
+MERGED from [com.twitter.sdk.android:twitter:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-2.3.0.aar/c344098d5dee5adfd54957b443e4fc4e/AndroidManifest.xml:25:5-20
+MERGED from [com.twitter.sdk.android:twitter:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-2.3.0.aar/c344098d5dee5adfd54957b443e4fc4e/AndroidManifest.xml:25:5-20
+MERGED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:27:5-35:19
+MERGED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:27:5-35:19
+MERGED from [com.android.support:support-v4:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/d4f728e23104067ca92110efa2e4fb8a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/d4f728e23104067ca92110efa2e4fb8a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.yinglan.keyboard:hidekeyboard:1.1.3] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/hidekeyboard-1.1.3.aar/83ad423cbca08927a691b8eb2abd292b/AndroidManifest.xml:11:5-15:19
+MERGED from [com.yinglan.keyboard:hidekeyboard:1.1.3] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/hidekeyboard-1.1.3.aar/83ad423cbca08927a691b8eb2abd292b/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:recyclerview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0.aar/551c969c1d95bbe9ceeefc143d8a2580/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0.aar/551c969c1d95bbe9ceeefc143d8a2580/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/66b444f8c13abb9cf777e5e03e776c55/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/66b444f8c13abb9cf777e5e03e776c55/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:cardview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0.aar/422266af8b0274e1c75984f65d8c0f23/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0.aar/422266af8b0274e1c75984f65d8c0f23/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/e8f801d63e149741e09f7c6841027c68/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/e8f801d63e149741e09f7c6841027c68/AndroidManifest.xml:7:5-11:19
+MERGED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:27:5-37:19
+MERGED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:27:5-37:19
+MERGED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:27:5-40:19
+MERGED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:27:5-40:19
+MERGED from [de.hdodenhof:circleimageview:1.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/circleimageview-1.3.0.aar/ac5f837ba5ded47cf4a85bb69bf2a046/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:1.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/circleimageview-1.3.0.aar/ac5f837ba5ded47cf4a85bb69bf2a046/AndroidManifest.xml:9:5-20
+MERGED from [com.crashlytics.sdk.android:beta:1.2.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/beta-1.2.2.aar/6cedadfce86f19c7a0fea964d22c8e60/AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:beta:1.2.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/beta-1.2.2.aar/6cedadfce86f19c7a0fea964d22c8e60/AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.3.14.aar/7696029ca8ab7712cd2165ec1e566fcf/AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.3.14.aar/7696029ca8ab7712cd2165ec1e566fcf/AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:answers:1.3.10] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/answers-1.3.10.aar/ffb53c9f7472a403d0054de10dcd5946/AndroidManifest.xml:11:5-20
+MERGED from [com.crashlytics.sdk.android:answers:1.3.10] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/answers-1.3.10.aar/ffb53c9f7472a403d0054de10dcd5946/AndroidManifest.xml:11:5-20
+MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/fabric-1.3.14.aar/0ca0beaae7a89903c18ecdc1eccf3459/AndroidManifest.xml:27:5-20
+MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/fabric-1.3.14.aar/0ca0beaae7a89903c18ecdc1eccf3459/AndroidManifest.xml:27:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/4f0b3546cbc8d8502cee092bc2dc311c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/4f0b3546cbc8d8502cee092bc2dc311c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/c664d2925026d950295d8172114209f1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/c664d2925026d950295d8172114209f1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:palette-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/palette-v7-26.0.0.aar/6baf01d123113e52b7265e97ee29626e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:palette-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/palette-v7-26.0.0.aar/6baf01d123113e52b7265e97ee29626e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/41d93c5eae88ca5d096aa0ad6d5d8d6a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/41d93c5eae88ca5d096aa0ad6d5d8d6a/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/94f1b94f61e421346fc7099f2fe0084f/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/94f1b94f61e421346fc7099f2fe0084f/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/790b368a7386a3a86b3e87a22810863b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/790b368a7386a3a86b3e87a22810863b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2f9f97a6b1d03d2018aa82fe37bdfdd1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2f9f97a6b1d03d2018aa82fe37bdfdd1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:customtabs:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/customtabs-26.0.0.aar/eb0f482ed3e6f668be6fd94c8d92176e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:customtabs:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/customtabs-26.0.0.aar/eb0f482ed3e6f668be6fd94c8d92176e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/f45f4630d26428584ae327193f122288/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/f45f4630d26428584ae327193f122288/AndroidManifest.xml:25:5-29:19
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:21:5-26:19
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:21:5-26:19
+	android:screenOrientation
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:39:9-45
+	android:supportsRtl
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:43:9-35
+		REJECTED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:40:9-35
+		REJECTED from [com.yinglan.keyboard:hidekeyboard:1.1.3] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/hidekeyboard-1.1.3.aar/83ad423cbca08927a691b8eb2abd292b/AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:42:9-41
+	android:hardwareAccelerated
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:45:9-43
+	android:largeHeap
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:46:9-33
+	android:icon
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:41:9-45
+	android:allowBackup
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:40:9-35
+	android:theme
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:44:9-40
+	tools:replace
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:47:9-44
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:39:9-38
+meta-data#com.google.android.maps.v2.API_KEY
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:48:9-50:71
+	android:value
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:50:13-68
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:49:13-62
+uses-library#com.google.android.maps
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:52:9-64
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:52:23-61
+service#com.imaginamos.taxisya.taxista.io.MyFirebaseMessagingService
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:55:9-59:19
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:55:18-63
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:56:13-58:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:57:17-78
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:57:25-75
+service#com.imaginamos.taxisya.taxista.io.MyFirebaseInstanceIDService
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:62:9-66:19
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:62:18-64
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:63:13-65:29
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:64:17-80
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:64:25-77
+activity#com.imaginamos.taxisya.taxista.activities.InicialActivityLogin
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:69:9-79:20
+	android:hardwareAccelerated
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:72:13-47
+	android:windowSoftInputMode
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:73:13-52
+	android:configChanges
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:71:13-63
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:70:13-60
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:74:13-78:29
+action#android.intent.action.MAIN
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:75:17-69
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:75:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:77:17-77
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:77:27-74
+activity#com.imaginamos.taxisya.taxista.activities.NotificationActivity
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:80:9-82:50
+	android:hardwareAccelerated
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:82:13-47
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:81:13-60
+activity#com.imaginamos.taxisya.taxista.activities.MainActivity
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:83:9-85:50
+	android:hardwareAccelerated
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:85:13-47
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:84:13-52
+activity#com.imaginamos.taxisya.taxista.activities.WaitServiceActivity
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:86:9-88:77
+	android:configChanges
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:88:13-74
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:87:13-59
+activity#com.imaginamos.taxisya.taxista.activities.HistoricActivity
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:89:9-91:50
+	android:hardwareAccelerated
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:91:13-47
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:90:13-56
+activity#com.imaginamos.taxisya.taxista.activities.MapActivity
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:92:9-95:50
+	android:hardwareAccelerated
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:95:13-47
+	android:configChanges
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:94:13-74
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:93:13-51
+activity#com.imaginamos.taxisya.taxista.activities.LoginActivity
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:96:9-98:50
+	android:hardwareAccelerated
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:98:13-47
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:97:13-53
+receiver#com.imaginamos.taxisya.taxista.io.GcmBroadcastReceiver
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:100:9-108:20
+	android:permission
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:102:13-73
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:101:13-52
+intent-filter#com.google.android.c2dm.intent.RECEIVE+com.imaginamos.taxisya.taxista
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:103:13-107:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:104:17-81
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:104:25-78
+category#com.imaginamos.taxisya.taxista
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:106:17-75
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:106:27-72
+receiver#com.imaginamos.taxisya.taxista.io.UpdateReceiver
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:109:9-113:20
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:109:19-52
+intent-filter#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:110:13-112:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:111:17-79
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:111:25-76
+service#com.imaginamos.taxisya.taxista.io.GCMIntentService
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:115:9-56
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:115:18-53
+service#com.imaginamos.taxisya.taxista.io.MyService
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:119:9-49
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:119:18-46
+service#com.imaginamos.taxisya.taxista.io.DriverService
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:120:9-53
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:120:18-50
+activity#com.imaginamos.taxisya.taxista.activities.RegisterDriverActivity
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:126:9-128:70
+	android:label
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:128:13-67
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:127:13-62
+activity#com.imaginamos.taxisya.taxista.activities.ResetPassActivity
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:129:9-131:65
+	android:label
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:131:13-62
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:130:13-57
+activity#com.imaginamos.taxisya.taxista.activities.RecoveryMapActivity
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:132:9-135:59
+	android:label
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:134:13-64
+	android:theme
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:135:13-56
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:133:13-59
+activity#com.imaginamos.taxisya.taxista.activities.ChatActivity
+ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:136:9-70
+	android:name
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml:136:19-58
+uses-sdk
+INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+MERGED from [com.firebaseui:firebase-ui:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-1.2.0.aar/a27602a4612c5e79894a55a0f0561488/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-1.2.0.aar/a27602a4612c5e79894a55a0f0561488/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/design-26.0.0.aar/b00fa2a6bde9de33f99fc031fe2e69aa/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/design-26.0.0.aar/b00fa2a6bde9de33f99fc031fe2e69aa/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:multidex:1.0.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/ac5ca2092a284282077e6192d8c8b3d6/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/ac5ca2092a284282077e6192d8c8b3d6/AndroidManifest.xml:20:5-43
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.5] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-2.6.5.aar/3482cb52f2e7686c64a7bed8d1940a98/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:crashlytics:2.6.5] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-2.6.5.aar/3482cb52f2e7686c64a7bed8d1940a98/AndroidManifest.xml:7:5-43
+MERGED from [com.google.android.gms:play-services:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-10.2.6.aar/dad9c5311eee66fb0fde18972e4c50d5/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-10.2.6.aar/dad9c5311eee66fb0fde18972e4c50d5/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-appindexing:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-appindexing-10.2.6.aar/e7c2080c2858bc71ef9d741a4a78466d/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-appindexing:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-appindexing-10.2.6.aar/e7c2080c2858bc71ef9d741a4a78466d/AndroidManifest.xml:17:5-43
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:7:5-9:41
+MERGED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-database:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.2.0.aar/7571e8fc43031c96b119d14a374b245d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-database:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.2.0.aar/7571e8fc43031c96b119d14a374b245d/AndroidManifest.xml:7:5-9:41
+MERGED from [com.firebaseui:firebase-ui-storage:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-1.2.0.aar/64ce82e791c663c76882d4e9666dc3c3/AndroidManifest.xml:8:5-10:41
+MERGED from [com.firebaseui:firebase-ui-storage:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-storage-1.2.0.aar/64ce82e791c663c76882d4e9666dc3c3/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:24:5-26:41
+MERGED from [com.google.android.gms:play-services-cast-framework:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-cast-framework:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-cast:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-10.2.6.aar/50b446a28fb417464588098fa8318afc/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-cast:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-10.2.6.aar/50b446a28fb417464588098fa8318afc/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:mediarouter-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.0.0.aar/97f05ebb60cd6978498106e215a14e75/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:mediarouter-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.0.0.aar/97f05ebb60cd6978498106e215a14e75/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/45577aced078d40ef2c59d24d3e2387a/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/45577aced078d40ef2c59d24d3e2387a/AndroidManifest.xml:21:5-23:78
+MERGED from [com.google.android.gms:play-services-awareness:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-awareness-10.2.6.aar/136b393550692152933fc34e14a1eee0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-awareness:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-awareness-10.2.6.aar/136b393550692152933fc34e14a1eee0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-places:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-places-10.2.6.aar/148ea2e40b9b1ad70f87fe0d41bda6f2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-places:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-places-10.2.6.aar/148ea2e40b9b1ad70f87fe0d41bda6f2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-wallet:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-wallet-10.2.6.aar/fd159279ff7c9a16fbd09036e88a13f2/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-wallet:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-wallet-10.2.6.aar/fd159279ff7c9a16fbd09036e88a13f2/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-fitness:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-fitness-10.2.6.aar/a190b86ad4fd6a311d10d800ecbc51cf/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-fitness:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-fitness-10.2.6.aar/a190b86ad4fd6a311d10d800ecbc51cf/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-location:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.6.aar/2fc2c2b2434dd4cf230979dae2a0ffba/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.6.aar/2fc2c2b2434dd4cf230979dae2a0ffba/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-10.2.6.aar/85f814f2e1c693c29ab1f125fb8c5ce8/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-10.2.6.aar/85f814f2e1c693c29ab1f125fb8c5ce8/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-gcm:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.6.aar/6e333c6c9611c54cbede4ad1e6f9eadf/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-gcm:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gcm-10.2.6.aar/6e333c6c9611c54cbede4ad1e6f9eadf/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/7efb0815702a3de3a453f680f525bd9f/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-messaging:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/7efb0815702a3de3a453f680f525bd9f/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-crash:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-crash-10.2.6.aar/9eb89ccca6c8ac9ea8313e6a149b6306/AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-crash:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-crash-10.2.6.aar/9eb89ccca6c8ac9ea8313e6a149b6306/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-plus:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-plus-10.2.6.aar/a9474624f5bc8e535f0030b8cf9ebca8/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-plus:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-plus-10.2.6.aar/a9474624f5bc8e535f0030b8cf9ebca8/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-v4-impl-10.2.6.aar/210b3bed53823d6648351331d0cab0fe/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-v4-impl-10.2.6.aar/210b3bed53823d6648351331d0cab0fe/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-10.2.6.aar/c7b159e7efc5d06a8c6652239a66d990/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-10.2.6.aar/c7b159e7efc5d06a8c6652239a66d990/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-impl-10.2.6.aar/d0d7f9ea943705c84a18776a026f9ec1/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-analytics-impl-10.2.6.aar/d0d7f9ea943705c84a18776a026f9ec1/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.6.aar/313ab8f4a3c378452e60e8625f5fbd46/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-iid-10.2.6.aar/313ab8f4a3c378452e60e8625f5fbd46/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-ads:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-10.2.6.aar/dd28cb3600195704341e2d4bd36653dd/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-ads:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-10.2.6.aar/dd28cb3600195704341e2d4bd36653dd/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-10.2.6.aar/59701c2d251720c2b137d578d2521e6b/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-base-10.2.6.aar/59701c2d251720c2b137d578d2521e6b/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-10.2.6.aar/d8f03ddb60781900dc785ae8c69d4f20/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-clearcut:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-clearcut-10.2.6.aar/d8f03ddb60781900dc785ae8c69d4f20/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-config:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-config-10.2.6.aar/1a77f958c8c6d94dfa023194b3eb18a5/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-config:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-config-10.2.6.aar/1a77f958c8c6d94dfa023194b3eb18a5/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-games:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-games-10.2.6.aar/abe0d054f679d133acc25998d4174216/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-games:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-games-10.2.6.aar/abe0d054f679d133acc25998d4174216/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-drive:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-drive-10.2.6.aar/562e9b62c26665bc6ed767a8acd1cea4/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-drive:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-drive-10.2.6.aar/562e9b62c26665bc6ed767a8acd1cea4/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-identity:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-identity-10.2.6.aar/304eea1da27930aa0cc662e4fc08de63/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-identity:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-identity-10.2.6.aar/304eea1da27930aa0cc662e4fc08de63/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-instantapps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-instantapps-10.2.6.aar/329cc2574c60f72a184116900191d8d4/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-instantapps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-instantapps-10.2.6.aar/329cc2574c60f72a184116900191d8d4/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-nearby:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-nearby-10.2.6.aar/9d2776bdaa58ffadfe2de1a962e50fa7/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-nearby:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-nearby-10.2.6.aar/9d2776bdaa58ffadfe2de1a962e50fa7/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-panorama:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-panorama-10.2.6.aar/634245b4e02f4db378c340c655dfa8e2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-panorama:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-panorama-10.2.6.aar/634245b4e02f4db378c340c655dfa8e2/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-safetynet:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-10.2.6.aar/1aa25a02e847d9d7a95f7c7a4f715030/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-safetynet:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-10.2.6.aar/1aa25a02e847d9d7a95f7c7a4f715030/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-vision:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-vision-10.2.6.aar/4ff13c3c353ba7a64c4a8a01aef5459e/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-vision:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-vision-10.2.6.aar/4ff13c3c353ba7a64c4a8a01aef5459e/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-wearable:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-wearable-10.2.6.aar/016978d37eb665beff9d796f1518a543/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-wearable:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-wearable-10.2.6.aar/016978d37eb665beff9d796f1518a543/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-auth-10.2.6.aar/a9ec923dd67adf5d2e5eb9005b0b182b/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-auth-10.2.6.aar/a9ec923dd67adf5d2e5eb9005b0b182b/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.6.aar/2a619918426ac4d5e2c03ec2d2a84415/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.6.aar/2a619918426ac4d5e2c03ec2d2a84415/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-core:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.6.aar/8afd5939871398f53773cc18d60b5bbd/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-core:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-core-10.2.6.aar/8afd5939871398f53773cc18d60b5bbd/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-database:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-database-10.2.6.aar/0f9f8560be09296dc96f2e514c3ba82d/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-database-10.2.6.aar/0f9f8560be09296dc96f2e514c3ba82d/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database-connection:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-10.2.6.aar/eac985c2f4f703162e5e3f8accdc2268/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database-connection:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-database-connection-10.2.6.aar/eac985c2f4f703162e5e3f8accdc2268/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-storage:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-storage-10.2.6.aar/252086202e6ac8607165b52f3a99005b/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-storage:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-storage-10.2.6.aar/252086202e6ac8607165b52f3a99005b/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.6.aar/746a907872e3e9ec72ec503e5ebadf5f/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.6.aar/746a907872e3e9ec72ec503e5ebadf5f/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.6.aar/0094efb55c1a39e28bda5442474d1b05/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tasks-10.2.6.aar/0094efb55c1a39e28bda5442474d1b05/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:22:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:22:5-43
+MERGED from [com.google.firebase:firebase-storage-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-10.2.6.aar/a719b8c41fe09729ae2664d05472ce12/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-storage-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-storage-common-10.2.6.aar/a719b8c41fe09729ae2664d05472ce12/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-gass:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gass-10.2.6.aar/f9c0e34cf8a1105514c9d4fa38bc16b4/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-gass:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-gass-10.2.6.aar/f9c0e34cf8a1105514c9d4fa38bc16b4/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.6.aar/7227cef2961eb0a540c7dac2a7519666/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.6.aar/7227cef2961eb0a540c7dac2a7519666/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:transition:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/transition-26.0.0.aar/6d475527c04083855fe5d058e92ad011/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/transition-26.0.0.aar/6d475527c04083855fe5d058e92ad011/AndroidManifest.xml:20:5-44
+MERGED from [com.twitter.sdk.android:twitter:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-2.3.0.aar/c344098d5dee5adfd54957b443e4fc4e/AndroidManifest.xml:23:5-44
+MERGED from [com.twitter.sdk.android:twitter:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-2.3.0.aar/c344098d5dee5adfd54957b443e4fc4e/AndroidManifest.xml:23:5-44
+MERGED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:23:5-44
+MERGED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:23:5-44
+MERGED from [com.android.support:support-v4:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/d4f728e23104067ca92110efa2e4fb8a/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/d4f728e23104067ca92110efa2e4fb8a/AndroidManifest.xml:21:5-23:54
+MERGED from [com.yinglan.keyboard:hidekeyboard:1.1.3] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/hidekeyboard-1.1.3.aar/83ad423cbca08927a691b8eb2abd292b/AndroidManifest.xml:7:5-9:41
+MERGED from [com.yinglan.keyboard:hidekeyboard:1.1.3] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/hidekeyboard-1.1.3.aar/83ad423cbca08927a691b8eb2abd292b/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0.aar/551c969c1d95bbe9ceeefc143d8a2580/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0.aar/551c969c1d95bbe9ceeefc143d8a2580/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/66b444f8c13abb9cf777e5e03e776c55/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/66b444f8c13abb9cf777e5e03e776c55/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:cardview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0.aar/422266af8b0274e1c75984f65d8c0f23/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0.aar/422266af8b0274e1c75984f65d8c0f23/AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/e8f801d63e149741e09f7c6841027c68/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/e8f801d63e149741e09f7c6841027c68/AndroidManifest.xml:5:5-43
+MERGED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:23:5-44
+MERGED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:23:5-44
+MERGED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:23:5-44
+MERGED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:23:5-44
+MERGED from [de.hdodenhof:circleimageview:1.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/circleimageview-1.3.0.aar/ac5f837ba5ded47cf4a85bb69bf2a046/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:1.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/circleimageview-1.3.0.aar/ac5f837ba5ded47cf4a85bb69bf2a046/AndroidManifest.xml:5:5-7:41
+MERGED from [info.hoang8f:android-segmented:1.0.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-segmented-1.0.6.aar/ec60a756c4abe9ca67c3ff0eb9abed4b/AndroidManifest.xml:7:5-9:41
+MERGED from [info.hoang8f:android-segmented:1.0.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-segmented-1.0.6.aar/ec60a756c4abe9ca67c3ff0eb9abed4b/AndroidManifest.xml:7:5-9:41
+MERGED from [com.crashlytics.sdk.android:beta:1.2.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/beta-1.2.2.aar/6cedadfce86f19c7a0fea964d22c8e60/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:beta:1.2.2] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/beta-1.2.2.aar/6cedadfce86f19c7a0fea964d22c8e60/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.3.14.aar/7696029ca8ab7712cd2165ec1e566fcf/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:crashlytics-core:2.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/crashlytics-core-2.3.14.aar/7696029ca8ab7712cd2165ec1e566fcf/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:answers:1.3.10] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/answers-1.3.10.aar/ffb53c9f7472a403d0054de10dcd5946/AndroidManifest.xml:7:5-43
+MERGED from [com.crashlytics.sdk.android:answers:1.3.10] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/answers-1.3.10.aar/ffb53c9f7472a403d0054de10dcd5946/AndroidManifest.xml:7:5-43
+MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/fabric-1.3.14.aar/0ca0beaae7a89903c18ecdc1eccf3459/AndroidManifest.xml:23:5-43
+MERGED from [io.fabric.sdk.android:fabric:1.3.14] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/fabric-1.3.14.aar/0ca0beaae7a89903c18ecdc1eccf3459/AndroidManifest.xml:23:5-43
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/4f0b3546cbc8d8502cee092bc2dc311c/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/4f0b3546cbc8d8502cee092bc2dc311c/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/c664d2925026d950295d8172114209f1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/c664d2925026d950295d8172114209f1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:palette-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/palette-v7-26.0.0.aar/6baf01d123113e52b7265e97ee29626e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/palette-v7-26.0.0.aar/6baf01d123113e52b7265e97ee29626e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/41d93c5eae88ca5d096aa0ad6d5d8d6a/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/41d93c5eae88ca5d096aa0ad6d5d8d6a/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/94f1b94f61e421346fc7099f2fe0084f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/94f1b94f61e421346fc7099f2fe0084f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/790b368a7386a3a86b3e87a22810863b/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/790b368a7386a3a86b3e87a22810863b/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2f9f97a6b1d03d2018aa82fe37bdfdd1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2f9f97a6b1d03d2018aa82fe37bdfdd1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/customtabs-26.0.0.aar/eb0f482ed3e6f668be6fd94c8d92176e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/customtabs-26.0.0.aar/eb0f482ed3e6f668be6fd94c8d92176e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/f45f4630d26428584ae327193f122288/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/f45f4630d26428584ae327193f122288/AndroidManifest.xml:21:5-23:58
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:7:5-9:41
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:7:5-9:41
+INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/design-26.0.0.aar/b00fa2a6bde9de33f99fc031fe2e69aa/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/AndroidManifest.xml
+meta-data#com.google.android.gms.version
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:15:9-17:69
+MERGED from [com.firebaseui:firebase-ui-database:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.2.0.aar/7571e8fc43031c96b119d14a374b245d/AndroidManifest.xml:14:9-16:69
+MERGED from [com.firebaseui:firebase-ui-database:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-database-1.2.0.aar/7571e8fc43031c96b119d14a374b245d/AndroidManifest.xml:14:9-16:69
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.6.aar/7227cef2961eb0a540c7dac2a7519666/AndroidManifest.xml:20:9-121
+MERGED from [com.google.android.gms:play-services-basement:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-basement-10.2.6.aar/7227cef2961eb0a540c7dac2a7519666/AndroidManifest.xml:20:9-121
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/e8f801d63e149741e09f7c6841027c68/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.4.4.aar/e8f801d63e149741e09f7c6841027c68/AndroidManifest.xml:8:9-10:69
+	android:value
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:17:13-66
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:16:13-58
+meta-data#io.fabric.ApiKey
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:18:9-20:63
+	android:value
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:20:13-60
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:19:13-44
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:21:9-23:63
+	android:value
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:23:13-60
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:22:13-58
+meta-data#com.facebook.sdk.AutoLogAppEventsEnabled
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:24:9-26:36
+	android:value
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:26:13-33
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:25:13-68
+activity#com.firebase.ui.auth.KickoffActivity
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:28:9-32:61
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:31:13-29
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:30:13-37
+	android:theme
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:32:13-58
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:29:13-64
+activity#com.firebase.ui.auth.ui.email.RecoverPasswordActivity
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:33:9-36:71
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:36:13-68
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:34:13-81
+activity#com.firebase.ui.auth.ui.email.RegisterEmailActivity
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:37:9-40:55
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:40:13-52
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:39:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:38:13-79
+activity#com.firebase.ui.auth.ui.accountlink.WelcomeBackIdpPrompt
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:41:9-44:69
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:44:13-66
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:43:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:42:13-84
+activity#com.firebase.ui.auth.ui.accountlink.WelcomeBackPasswordPrompt
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:45:9-48:74
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:48:13-71
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:46:13-89
+activity#com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:49:9-52:61
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:52:13-58
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:51:13-37
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:50:13-80
+activity#com.facebook.FacebookActivity
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:53:9-56:48
+MERGED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:29:9-32:66
+MERGED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:29:9-32:66
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:56:13-45
+	android:configChanges
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:55:13-96
+	android:theme
+		ADDED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:32:13-63
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:54:13-57
+activity#com.facebook.CustomTabActivity
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:57:9-68:20
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:59:13-36
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:58:13-58
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:60:13-67:29
+action#android.intent.action.VIEW
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:61:17-69
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:61:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:63:17-76
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:63:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:64:17-78
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:64:27-75
+data
+ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:66:17-81
+	android:scheme
+		ADDED from [com.firebaseui:firebase-ui-auth:1.2.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-1.2.0.aar/9fbff2952bcdc61ba7315b929becc1b5/AndroidManifest.xml:66:23-78
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/design-26.0.0.aar/b00fa2a6bde9de33f99fc031fe2e69aa/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:mediarouter-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.0.0.aar/97f05ebb60cd6978498106e215a14e75/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:mediarouter-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.0.0.aar/97f05ebb60cd6978498106e215a14e75/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/45577aced078d40ef2c59d24d3e2387a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/45577aced078d40ef2c59d24d3e2387a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/transition-26.0.0.aar/6d475527c04083855fe5d058e92ad011/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/transition-26.0.0.aar/6d475527c04083855fe5d058e92ad011/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/d4f728e23104067ca92110efa2e4fb8a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-v4-26.0.0.aar/d4f728e23104067ca92110efa2e4fb8a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0.aar/551c969c1d95bbe9ceeefc143d8a2580/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0.aar/551c969c1d95bbe9ceeefc143d8a2580/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0.aar/422266af8b0274e1c75984f65d8c0f23/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/cardview-v7-26.0.0.aar/422266af8b0274e1c75984f65d8c0f23/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/4f0b3546cbc8d8502cee092bc2dc311c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.0.0.aar/4f0b3546cbc8d8502cee092bc2dc311c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/c664d2925026d950295d8172114209f1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-fragment-26.0.0.aar/c664d2925026d950295d8172114209f1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:palette-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/palette-v7-26.0.0.aar/6baf01d123113e52b7265e97ee29626e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:palette-v7:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/palette-v7-26.0.0.aar/6baf01d123113e52b7265e97ee29626e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/41d93c5eae88ca5d096aa0ad6d5d8d6a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.0.0.aar/41d93c5eae88ca5d096aa0ad6d5d8d6a/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/94f1b94f61e421346fc7099f2fe0084f/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.0.0.aar/94f1b94f61e421346fc7099f2fe0084f/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/790b368a7386a3a86b3e87a22810863b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.0.0.aar/790b368a7386a3a86b3e87a22810863b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2f9f97a6b1d03d2018aa82fe37bdfdd1/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.0.0.aar/2f9f97a6b1d03d2018aa82fe37bdfdd1/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:customtabs:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/customtabs-26.0.0.aar/eb0f482ed3e6f668be6fd94c8d92176e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:customtabs:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/customtabs-26.0.0.aar/eb0f482ed3e6f668be6fd94c8d92176e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/f45f4630d26428584ae327193f122288/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/f45f4630d26428584ae327193f122288/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/design-26.0.0.aar/b00fa2a6bde9de33f99fc031fe2e69aa/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.0.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/design-26.0.0.aar/b00fa2a6bde9de33f99fc031fe2e69aa/AndroidManifest.xml:27:13-51
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:14:5-76
+	android:name
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:14:22-73
+uses-feature#android.hardware.camera
+ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:26:5-28:36
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:14:5-16:36
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:14:5-16:36
+	android:required
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:28:9-33
+	android:name
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:27:9-47
+uses-feature#android.hardware.camera.autofocus
+ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:29:5-31:36
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:17:5-19:36
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:17:5-19:36
+	android:required
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:31:9-33
+	android:name
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:30:9-57
+uses-feature#android.hardware.camera.flash
+ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:32:5-34:36
+	android:required
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:34:9-33
+	android:name
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:33:9-53
+activity#com.paymentez.androidsdk.ActivityWebView
+ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:41:9-77
+	android:name
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:41:19-74
+activity#io.card.payment.CardIOActivity
+ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:42:9-44:66
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:22:9-24:66
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:22:9-24:66
+	android:configChanges
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:44:13-63
+	android:name
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:43:13-58
+activity#io.card.payment.DataEntryActivity
+ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:45:9-70
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:25:9-70
+MERGED from [io.card:android-sdk:5.3.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/android-sdk-5.3.4.aar/3842794a4ee0d2fe015618683bb5d1c6/AndroidManifest.xml:25:9-70
+	android:name
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:45:19-67
+activity#com.paymentez.androidsdk.ScanCardActivity
+ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:46:9-78
+	android:name
+		ADDED from [com.paymentez.paymentezsdk:paymentezsdk:1.0.4] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/paymentezsdk-1.0.4.aar/208917264726ddab18d05721c717567a/AndroidManifest.xml:46:19-75
+activity#com.facebook.CustomTabMainActivity
+ADDED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:33:9-71
+	android:name
+		ADDED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:33:19-68
+provider#com.facebook.internal.FacebookInitProvider
+ADDED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:44:9-47:40
+	android:authorities
+		ADDED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:46:13-72
+	android:exported
+		ADDED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-android-sdk:4.19.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.19.0.aar/7e82d0f888fb733399cb09e0a5b4ab4e/AndroidManifest.xml:45:13-70
+receiver#com.google.android.gms.cast.framework.media.MediaIntentReceiver
+ADDED from [com.google.android.gms:play-services-cast-framework:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/AndroidManifest.xml:5:9-99
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/AndroidManifest.xml:5:19-97
+service#com.google.android.gms.cast.framework.media.MediaNotificationService
+ADDED from [com.google.android.gms:play-services-cast-framework:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/AndroidManifest.xml:6:9-103
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/AndroidManifest.xml:6:18-101
+service#com.google.android.gms.cast.framework.ReconnectionService
+ADDED from [com.google.android.gms:play-services-cast-framework:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/AndroidManifest.xml:7:9-92
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/AndroidManifest.xml:7:18-90
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-maps-10.2.6.aar/b4e381d16ef2a11df009995d8433694d/AndroidManifest.xml:21:52-75
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/7efb0815702a3de3a453f680f525bd9f/AndroidManifest.xml:23:9-27:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/7efb0815702a3de3a453f680f525bd9f/AndroidManifest.xml:23:88-111
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/7efb0815702a3de3a453f680f525bd9f/AndroidManifest.xml:23:18-87
+activity#com.google.android.gms.appinvite.PreviewActivity
+ADDED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:20:9-25:20
+	android:exported
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:20:51-74
+	android:theme
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:20:75-121
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:20:19-50
+intent-filter#android.intent.category.DEFAULT+com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:21:13-24:29
+action#com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:22:17-89
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-appinvite-10.2.6.aar/e00659a1d94ef94e9ec8887fd1dfee81/AndroidManifest.xml:22:25-87
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:20:9-189
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:20:129-162
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:20:163-187
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:20:69-128
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:20:19-68
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:24:9-184
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:24:64-87
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:24:88-182
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/5334b9dca4aedc70a4f6bf924860c5d9/AndroidManifest.xml:24:18-63
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.6.aar/2a619918426ac4d5e2c03ec2d2a84415/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.6.aar/2a619918426ac4d5e2c03ec2d2a84415/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.6.aar/2a619918426ac4d5e2c03ec2d2a84415/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.6.aar/2a619918426ac4d5e2c03ec2d2a84415/AndroidManifest.xml:19:19-85
+service#com.google.android.gms.tagmanager.TagManagerService
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:24:9-134
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:24:110-132
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:24:85-109
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:24:18-84
+activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
+ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:25:9-32:20
+	android:noHistory
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:25:94-118
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-tagmanager-api-10.2.6.aar/dbc44861f1031cb3a1499fcf870c00f6/AndroidManifest.xml:25:19-93
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:27:162-184
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-10.2.6.aar/95792ed8c024e5a3e504d48fda346826/AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-analytics-10.2.6.aar/d223ab30ccb24a59c87d554ed8ae00b5/AndroidManifest.xml:32:16-87
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:24:17-71
+permission#co.taxisya.conductor.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:24:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:26:22-76
+uses-permission#co.taxisya.conductor.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:30:9-35:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:30:19-84
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:31:13-34:29
+intent-filter#co.taxisya.conductor+com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:31:13-34:29
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:33:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:33:27-58
+category#co.taxisya.conductor
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:33:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:33:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:39:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:39:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:39:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:43:9-47:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:43:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-iid-10.2.6.aar/a47de3e027367dd1a5007286ab89e390/AndroidManifest.xml:43:18-82
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.6.aar/746a907872e3e9ec72ec503e5ebadf5f/AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.6.aar/746a907872e3e9ec72ec503e5ebadf5f/AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.6.aar/746a907872e3e9ec72ec503e5ebadf5f/AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.6.aar/746a907872e3e9ec72ec503e5ebadf5f/AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/firebase-common-10.2.6.aar/746a907872e3e9ec72ec503e5ebadf5f/AndroidManifest.xml:6:79-143
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:25:9-232
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:25:72-181
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:25:182-230
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:25:19-71
+activity#com.google.android.gms.ads.purchase.InAppPurchaseActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:26:9-131
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:26:92-129
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:10.2.6] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-ads-lite-10.2.6.aar/cead9f3219aecc253704c51026bbe963/AndroidManifest.xml:26:19-91
+activity#com.twitter.sdk.android.tweetui.PlayerActivity
+ADDED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:28:9-31:49
+	android:configChanges
+		ADDED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:30:13-74
+	android:theme
+		ADDED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:31:13-46
+	android:name
+		ADDED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:29:13-74
+activity#com.twitter.sdk.android.tweetui.GalleryActivity
+ADDED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:32:9-34:49
+	android:theme
+		ADDED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:34:13-46
+	android:name
+		ADDED from [com.twitter.sdk.android:tweet-ui:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-ui-2.3.0.aar/20e4b869282a25140aa68aa2bc6a235f/AndroidManifest.xml:33:13-75
+activity#com.twitter.sdk.android.tweetcomposer.ComposerActivity
+ADDED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:28:9-31:71
+	android:windowSoftInputMode
+		ADDED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:31:13-68
+	android:exported
+		ADDED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:29:13-82
+service#com.twitter.sdk.android.tweetcomposer.TweetUploadService
+ADDED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:33:9-36:40
+	android:enabled
+		ADDED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:35:13-35
+	android:exported
+		ADDED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:36:13-37
+	android:name
+		ADDED from [com.twitter.sdk.android:tweet-composer:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/tweet-composer-2.3.0.aar/29827495e14aed8d204af3cb138695db/AndroidManifest.xml:34:13-84
+activity#com.twitter.sdk.android.core.identity.OAuthActivity
+ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:28:9-32:40
+	android:excludeFromRecents
+		ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:31:13-46
+	android:exported
+		ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:32:13-37
+	android:configChanges
+		ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:30:13-59
+	android:name
+		ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:29:13-79
+activity#com.twitter.sdk.android.core.identity.ShareEmailActivity
+ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:33:9-39:48
+	android:label
+		ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:39:13-45
+	android:excludeFromRecents
+		ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:36:13-46
+	android:exported
+		ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:37:13-37
+	android:configChanges
+		ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:35:13-59
+	android:icon
+		ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:38:13-53
+	android:name
+		ADDED from [com.twitter.sdk.android:twitter-core:2.3.0] /Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/AndroidManifest.xml:34:13-84

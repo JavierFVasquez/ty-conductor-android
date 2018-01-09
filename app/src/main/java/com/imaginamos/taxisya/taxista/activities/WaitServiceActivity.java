@@ -49,6 +49,7 @@ import com.imaginamos.taxisya.taxista.io.MyService;
 import com.imaginamos.taxisya.taxista.io.UpdateReceiver;
 import com.imaginamos.taxisya.taxista.model.Actions;
 import com.imaginamos.taxisya.taxista.model.Conf;
+import com.imaginamos.taxisya.taxista.model.MessageEvent;
 import com.imaginamos.taxisya.taxista.model.Preferencias;
 import com.imaginamos.taxisya.taxista.model.Servicio;
 import com.imaginamos.taxisya.taxista.utils.BDAdapter;
@@ -56,6 +57,9 @@ import com.imaginamos.taxisya.taxista.utils.Dialogos;
 import com.imaginamos.taxisya.taxista.utils.Utils;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -97,7 +101,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
     private Locale loc;
     private String name = "";
     private JSONArray services_init;
-    private BroadcastReceiver mReceiver;
+//    private BroadcastReceiver mReceiver;
     private ArrayList<ViewGroup> services;
     private List<String> mVisibleServices;
     private Conf conf;
@@ -168,11 +172,93 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 
     @Override
     protected void onStop() {
+//        unregisterReceiver(mBroadcastReceiver);
+//        EventBus.getDefault().unregister(this);
         super.onStop();
         Log.v("onStop", "WaitServiceActivity");
 
 
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MessageEvent event) {
+        String value = event.getAction();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+
+        Log.e("PUSH", "WaitServiceActivity - onReceive() value = " + value);
+        Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - onReceive() value = " + value);
+
+        if (value.equals(Actions.ACTION_NEW_SERVICES)) {
+            recibe_push = 0;
+            Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_NEW_SERVICES");
+
+            try {
+                Log.v("WaitServiceActivity", "Action NEW_SERVICES ok " + String.valueOf(new Date()));
+                Intent i = new Intent(getApplicationContext(), NotificationActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplication().startActivity(i);
+                //  setService(intent.getExtras().getString("service"), intent.getExtras().getString("user_name"));
+
+            } catch (Exception e) {
+                Log.e("ERROR", "" + e.toString());
+                Log.v("WaitServiceActivity", "Action NEW_SERVICES bad " + String.valueOf(new Date()));
+
+            }
+
+        } else if (value.equals(Actions.ACTION_SERVICE_CANCEL)) {
+            recibe_push = 0;
+
+            deleteService(event.getSerivice_id());
+            mySQLiteAdapter.updateStatusService(event.getSerivice_id(), "7");
+
+
+        } else if (value.equals(Actions.NO_NET)) {
+            //Log.v("WaitServiceActivity", "Action NO NET " + String.valueOf(new Date()));
+            //Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_NO_NET");
+            Toast.makeText(getApplicationContext(), R.string.waitservice_errot_conexion, Toast.LENGTH_LONG).show();
+
+            Intent intent = new Intent(getApplicationContext(), InicialActivityLogin.class);
+            startActivity(intent);
+
+        } else if (value.equals(Actions.YES_NET)) {
+            Log.v("WaitServiceActivity", "Action YES NET " + String.valueOf(new Date()));
+
+        } else if (value.equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
+            Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_DRIVER_CLOSE_SESSION");
+
+            Log.v("DRIVER_CLOSE_SESSION", "close ");
+            Log.v("WaitServiceActivity", "Action DRIVER_CLOSE_SESSION " + String.valueOf(new Date()));
+
+            Toast.makeText(getApplicationContext(), R.string.waitservice_se_deshabilito_otro_dispositivo, Toast.LENGTH_LONG).show();
+            Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+
+            conf.setPass(null);
+            conf.setUser(null);
+
+            startActivity(i);
+            Log.v("finish", "WaitServiceActivity onCreate");
+            finish();
+
+        } else if (value.equals(Actions.ACTION_MESSAGE_MASSIVE)) {
+            Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_MESSAGE_MASSIVE");
+            Log.v("WaitServiceActivity", "Action MESSAGE_MASSIVE " + String.valueOf(new Date()));
+
+            Log.v("MESSAGE_MASSIVE", "mensaje global recibido");
+            String message = event.getMessage();
+            mostrarMensaje(message);
+
+        }
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -200,100 +286,6 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         } catch (Exception e) {
         }
 
-        IntentFilter intentFilter = new IntentFilter();
-
-// test servicio alternativo
-
-        intentFilter.addAction(Actions.ACTION_NEW_SERVICES);
-        intentFilter.addAction(Actions.ACTION_SERVICE_CANCEL);
-        intentFilter.addAction(Actions.NO_NET);
-        intentFilter.addAction(Actions.YES_NET);
-        intentFilter.addAction(Actions.ACTION_DRIVER_CLOSE_SESSION);
-        intentFilter.addAction(Actions.ACTION_MESSAGE_MASSIVE);
-
-        mReceiver = new BroadcastReceiver() {
-
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                String value = intent.getAction();
-
-                getWindow().addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
-
-                Log.e("PUSH", "WaitServiceActivity - onReceive() value = " + value);
-                Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - onReceive() value = " + value);
-
-                if (value.equals(Actions.ACTION_NEW_SERVICES)) {
-                    recibe_push = 0;
-                    Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_NEW_SERVICES");
-
-                    try {
-                        Log.v("WaitServiceActivity", "Action NEW_SERVICES ok " + String.valueOf(new Date()));
-                        Intent i = new Intent(getApplicationContext(), NotificationActivity.class);
-                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        getApplication().startActivity(i);
-                        //  setService(intent.getExtras().getString("service"), intent.getExtras().getString("user_name"));
-
-                    } catch (Exception e) {
-                        Log.e("ERROR", "" + e.toString());
-                        Log.v("WaitServiceActivity", "Action NEW_SERVICES bad " + String.valueOf(new Date()));
-
-                    }
-
-                } else if (value.equals(Actions.ACTION_SERVICE_CANCEL)) {
-                    recibe_push = 0;
-                    Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_SERVICE_CANCEL");
-                    Log.e("ESTEBAAN", intent.getExtras().getString("service_id"));
-                    Log.v("WaitServiceActivity", "Action SERVICE_CANCEL " + String.valueOf(new Date()));
-
-                    deleteService(intent.getExtras().getString("service_id"));
-                    mySQLiteAdapter.updateStatusService(intent.getExtras().getString("service_id"), "7");
-
-
-                } else if (value.equals(Actions.NO_NET)) {
-                    //Log.v("WaitServiceActivity", "Action NO NET " + String.valueOf(new Date()));
-                    //Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_NO_NET");
-                    Toast.makeText(getApplicationContext(), R.string.waitservice_errot_conexion, Toast.LENGTH_LONG).show();
-
-                    intent = new Intent(getApplicationContext(), InicialActivityLogin.class);
-                    startActivity(intent);
-
-                } else if (value.equals(Actions.YES_NET)) {
-                    Log.v("WaitServiceActivity", "Action YES NET " + String.valueOf(new Date()));
-
-                } else if (value.equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
-                    Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_DRIVER_CLOSE_SESSION");
-
-                    Log.v("DRIVER_CLOSE_SESSION", "close ");
-                    Log.v("WaitServiceActivity", "Action DRIVER_CLOSE_SESSION " + String.valueOf(new Date()));
-
-                    Toast.makeText(getApplicationContext(), R.string.waitservice_se_deshabilito_otro_dispositivo, Toast.LENGTH_LONG).show();
-                    Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-
-                    conf.setPass(null);
-                    conf.setUser(null);
-
-                    startActivity(i);
-                    Log.v("finish", "WaitServiceActivity onCreate");
-                    finish();
-
-                } else if (value.equals(Actions.ACTION_MESSAGE_MASSIVE)) {
-                    Log.v("TAXISTA_SRV_PUSH", "WaitServiceActivity - ACTION_MESSAGE_MASSIVE");
-                    Log.v("WaitServiceActivity", "Action MESSAGE_MASSIVE " + String.valueOf(new Date()));
-
-                    Log.v("MESSAGE_MASSIVE", "mensaje global recibido");
-                    String message = intent.getExtras().getString("message");
-                    mostrarMensaje(message);
-
-                }
-            }
-
-        };
-
-        try {
-            registerReceiver(mReceiver, intentFilter);
-        } catch (Exception e) {
-            Log.e("ERROR", "" + e.toString());
-        }
 
         conf = new Conf(this);
 
@@ -324,7 +316,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 
         services = new ArrayList<ViewGroup>();
 
-        if (getIntent().getExtras().containsKey("name")) {
+        if (getIntent().getExtras().getString("name","").length() > 0) {
             name = getIntent().getExtras().getString("name");
         }
 
@@ -374,27 +366,24 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 String response = new String(responseBody);
 
+
                 try {
-
+                    Log.w("Service Response" , response);
                     JSONObject responsejson = new JSONObject(response);
-                    JSONArray services = responsejson.getJSONArray("services");
 
-                    // looping through All Services
-                    for (int i = 0; i < services.length(); i++) {
-                        JSONObject c = services.getJSONObject(i);
 
-                        String service_id = c.getString("id");
-                        String user_id = c.getString("user_id");
-                        String driver_id = c.getString("driver_id");
-                        String status_id = c.getString("status_id");
-                        String address = c.getString("address");
-                        String from_lat = c.getString("from_lat");
-                        String from_lng = c.getString("from_lng");
-                        String pay_type = c.getString("pay_type");
-                        String pay_reference = c.getString("pay_reference");
-                        String qualification = c.getString("qualification");
-                        String barrio = c.getString("barrio");
-                        String rCode = c.getString("code");
+                        String service_id = responsejson.getString("id");
+                        String user_id = responsejson.getString("user_id");
+                        String driver_id = responsejson.getString("driver_id");
+                        String status_id = responsejson.getString("status_id");
+                        String address = responsejson.getString("address");
+                        String from_lat = responsejson.getString("from_lat");
+                        String from_lng = responsejson.getString("from_lng");
+                        String pay_type = responsejson.getString("pay_type");
+                        String pay_reference = responsejson.getString("pay_reference");
+                        String qualification = responsejson.getString("qualification");
+                        String barrio = responsejson.getString("barrio");
+                        String rCode = responsejson.getString("code");
 
                         if(id_driver == null){
 
@@ -422,7 +411,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                         else if (status_id.equals("5") && qualification.equals(null)) {
                             Toast.makeText(getApplicationContext(), "El usuario no ha calificado el servicio.", Toast.LENGTH_SHORT).show();
                         }
-                    }
+
 
                     return;
 
@@ -602,96 +591,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         }
     }
 
-    /*private void setService(String service_json, String username) {
 
-        try {
-            JSONObject service = new JSONObject(service_json);
-            Integer agendamiento = 0;
-            String destino = "";
-            String hora = "";
-
-            // !service.getString("schedule_type").isEmpty()
-            if (service.getString("schedule_type") != null
-                    && !TextUtils.isEmpty(service.getString("schedule_type"))) {
-                agendamiento = Integer.parseInt(service
-                        .getString("schedule_type"));
-            }
-            // Integer.parseInt(service.getString("schedule_type")),
-            if ((agendamiento == 2) || (agendamiento == 3)) {
-                if (service.getString("destination") != null
-                        && !TextUtils.isEmpty(service.getString("destination"))) {
-                    destino = "Destino: " + service.getString("destination");
-                }
-            }
-            if (service.getString("service_date_time") != null
-                    && !TextUtils.isEmpty(service
-                    .getString("service_date_time"))) {
-                hora = service.getString("service_date_time");
-            }
-
-            int kindId = Integer.parseInt(service.getString("kind_id"));
-            if (kindId == 2 || kindId == 3) {
-                if (getDistance(Double.parseDouble(service.getString("lat")),
-                        Double.parseDouble(service.getString("lng")),
-                        MyService.latitud,
-                        MyService.longitud) <= MyService.getMeters()) {
-                    addNewService(new Servicio(
-                            service.getString("service_id"), service.getString("index_id"),
-                            service.getString("comp1"), service.getString("comp2"),
-                            service.getString("no"), service.getString("barrio"),
-                            service.getString("obs"), service.getString("lat"),
-                            service.getString("lng"), agendamiento, username,
-                            Integer.parseInt(service.getString("kind_id")), destino,
-                            hora, service.getString("address"),
-                            service.getString("pay_type"),
-                            service.getString("pay_reference"),
-                            service.getString("user_id"),
-                            service.getString("user_email"),
-                            service.getString("user_card_reference"),
-                            service.getString("units"),
-                            service.getString("charge1"),
-                            service.getString("charge2"),
-                            service.getString("charge3"),
-                            service.getString("charge4"),
-                            service.getString("value"),
-                            service.getString("code")
-
-                    ));
-                }
-            } else {
-                if (getDistance(Double.parseDouble(service.getString("lat")),
-                        Double.parseDouble(service.getString("lng")),
-                        MyService.latitud,
-                        MyService.longitud) <= MyService.getMeters()) {
-                    addNewService(new Servicio(
-                            service.getString("service_id"), service.getString("index_id"),
-                            service.getString("comp1"), service.getString("comp2"),
-                            service.getString("no"), service.getString("barrio"),
-                            service.getString("obs"), service.getString("lat"),
-                            service.getString("lng"), agendamiento, username,
-                            Integer.parseInt(service.getString("kind_id")), destino,
-                            hora, service.getString("address"),
-                            service.getString("pay_type"),
-                            service.getString("pay_reference"),
-                            service.getString("user_id"),
-                            service.getString("user_email"),
-                            service.getString("user_card_reference"),
-                            service.getString("units"),
-                            service.getString("charge1"),
-                            service.getString("charge2"),
-                            service.getString("charge3"),
-                            service.getString("charge4"),
-                            service.getString("value"),
-                            service.getString("code")
-                    ));
-                }
-            }
-            // }
-        } catch (Exception e) {
-            Log.e("ERROR", "error con el servicio" + e.toString());
-        }
-
-    }*/
 
     private float getDistance(double latA, double lngA, double latB, double lngB) {
         // Log.e(TAG, "getDistance:" + latA + "," + lngA + " <->" + latB + "," + lngB);
@@ -854,9 +754,8 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         mAlarmManager.cancel(mPendingIntent);
 
         //if (mReceiver != null) {
-        unregisterReceiver(mReceiver);
+//        unregisterReceiver(mReceiver);
         //}
-        unregisterReceiver(mBroadcastReceiver);
 
         if (mVisibleServices != null) {
             mVisibleServices = null;
@@ -984,6 +883,11 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 
         List<String> output = new ArrayList<String>();
 
+        address = address.replace("cl. ", " calle " );
+        address = address.replace("ac. ", " avenida calle " );
+        address = address.replace("ak. ", " avenida carrera " );
+        address = address.replace("av. ", " avenida " );
+        address = address.replace("cra. ", " carrera ");
         address = address.replace("bis", " bis ");
 
         address = address.replace("-", " ");

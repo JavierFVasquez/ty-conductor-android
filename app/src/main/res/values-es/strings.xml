@@ -67,7 +67,7 @@
     <string name="no_gps">¡Hay problemas con el gps!</string>
     <string name="enable_gps">Por favor habilita tu GPS</string>
     <string name="oper_cancel">¡La operadora ha cancelado el servicio!</string>
-    <string name="ready_enable">%1$s te encuentras habilitado.</string>
+    <string name="ready_enable">Te encuentras habilitado %1$s</string>
     <string name="saliendo_aplicacion">Saliendo de la aplicación...</string>
     <string name="servicio_finalizado">El servicio se finalizó exitosamente.</string>
     <string name="the_user_arrived">El Cliente ha recibido la informacion.</string>
@@ -107,7 +107,7 @@
     <string name="waitservice_titulo_deshabilitando">Deshabilitando...</string>
     <string name="waitservice_titulo_dialogo">Información importante</string>
     <string name="waitservice_titulo_envio_confirmacion">Enviando Confirmacion...</string>
-    <string name="welcome">Bienvenido   %1$s   a taxisya</string>
+    <string name="welcome">Bienvenido   %1$s   a taxis ya</string>
     <string name="yourpassword">Contraseña</string>
     <string name="app_versions">app/versions</string>
     <string name="arrived_serivce">v2/driver/%1$s/arrive</string>
@@ -186,4 +186,12 @@
     <string name="btn_confirm_code">Confirma código</string>
     <string name="title_confirm_code">Ingrese código de autorización</string>
     <string name="title_activity_recovery_map">RecoveryMapActivity</string>
+    <string name="valid_code">Codigo valido</string>
+    <string name="hide">OCULTAR</string>
+    <string name="show">MOSTRAR</string>
+    <string name="invalid_code">Codigo invalido</string>
+    <string name="send">Enviar</string>
+    <string name="type_your_message_here">Escribe tu mensaje aquí ...</string>
+    <string name="chat">Chat</string>
+    <string name="new_message">Nuevo mensaje</string>
 </resources>

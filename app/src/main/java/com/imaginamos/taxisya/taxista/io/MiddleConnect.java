@@ -144,6 +144,8 @@ public class MiddleConnect {
 
     public static void finishService(Context context, String driver_id, String service_id, double lat, double lng, String units, String charge1,String charge2, String charge3, String charge4, String value, String ref, AsyncHttpResponseHandler responseHandler) {
 
+        Log.e("FINISH SERVICE",  driver_id + " | " +  service_id + " | " +  lat + " | " +  lng + " | " +  units + " | " +  charge1 + " | " + charge2 + " | " +  charge3 + " | " +  charge4 + " | " +  value + " | " +  ref);
+
         Log.v("DRIVER_SERVICE", "finishService: ");
         RequestParams params = new RequestParams();
         params.put("driver_id", driver_id);
@@ -192,7 +194,7 @@ public class MiddleConnect {
 
         if (service_id != null ) {
 
-            params.put("id_driver", id_driver);
+            params.put("driver_id", id_driver);
             params.put("service_id", service_id);
             Log.v("DRIVER_SERVICE", "checkStatusService: ");
 
@@ -201,7 +203,7 @@ public class MiddleConnect {
         } else {
 
             JSONObject user = new JSONObject();
-            user.put("id_driver", id_driver);
+            user.put("driver_id", id_driver);
 
             Log.e("DRIVER_ID", user.toString());
             Log.v("USER_SERVICE", "checkStatusService: service_id = null");

@@ -207,4 +207,13 @@
     <string name="btn_confirm_code">Confirm code</string>
     <string name="title_confirm_code">Enter authorization code</string>
     <string name="title_activity_recovery_map">RecoveryMapActivity</string>
+    <string name="valid_code">Valid code</string>
+    <string name="hide">HIDE</string>
+    <string name="show">SHOW</string>
+    <string name="invalid_code">Invalid Code</string>
+    <string name="send">Send</string>
+    <string name="type_your_message_here">Type your message here...></string>
+    <string name="chat">Chat</string>
+    <string name="new_message">New message</string>
+
 </resources>

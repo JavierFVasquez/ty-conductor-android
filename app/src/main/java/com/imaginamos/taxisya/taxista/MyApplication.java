@@ -1,6 +1,9 @@
 package com.imaginamos.taxisya.taxista;
 
 import android.app.Application;
+import android.content.Context;
+import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -47,5 +50,10 @@ public class MyApplication extends Application {
         // to every activity. Everything is contained in MyLifecycleHandler
         // with just a few lines of code. Now *that's* nice.
         registerActivityLifecycleCallbacks(new MyLifecycleHandler());
+    }
+
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 }

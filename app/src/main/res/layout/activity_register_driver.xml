@@ -125,7 +125,7 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:hint="@string/register_driver_name"
-            android:inputType="number"
+            android:inputType="text"
             android:paddingLeft="10sp"
             android:textColor="@android:color/black"
             android:textColorHint="#f57e5b"
@@ -148,6 +148,7 @@
             android:paddingLeft="10sp"
             android:textColor="@android:color/black"
             android:textColorHint="#f57e5b"
+            android:inputType="number"
             android:theme="@style/Theme.Default">
 
         </EditText>
@@ -165,6 +166,7 @@
             android:focusableInTouchMode="true"
             android:hint="@string/register_driver_license"
             android:paddingLeft="10sp"
+            android:inputType="text"
             android:textColor="@android:color/black"
             android:textColorHint="#f57e5b"
             android:theme="@style/Theme.Default">

@@ -1,0 +1,3 @@
+# Referenced at /Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/manifests/full/release/AndroidManifest.xml:61
+-keep class com.imaginamos.taxisya.taxista.MyApplication { <init>(...); }
+

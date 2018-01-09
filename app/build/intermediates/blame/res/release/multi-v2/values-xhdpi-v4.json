@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-xhdpi-v4/values-xhdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/res/values-xhdpi/dimen.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "41",
+                        "endOffsets": "92"
+                    }
+                },
+                {
+                    "source": "/Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/twitter-core-2.3.0.aar/60d039d3c1ba86528cf8b33cf5f0679c/res/values-xhdpi-v4/values-xhdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "97",
+                        "endColumns": "54",
+                        "endOffsets": "147"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -34,22 +34,10 @@
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true">
 
-        <ImageView
-            android:id="@+id/imaginamos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:adjustViewBounds="true"
-            android:background="@android:color/white"
-            android:contentDescription="@string/aceptar"
-            android:paddingBottom="8dp"
-            android:paddingLeft="7dp"
-            android:paddingRight="9dp"
-            android:src="@drawable/imaginamos"
-            android:visibility="invisible" />
 
         <RelativeLayout
             android:id="@+id/relativeLayout2"
@@ -65,15 +53,18 @@
             android:id="@+id/fondo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/imaginamos"
+
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100sp"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
             android:contentDescription="@string/aceptar"
             android:src="@drawable/fondouno" />
 
-        <!--ImageView
+        <ImageView
             android:id="@+id/nombre_head"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,23 +73,49 @@
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:src="@drawable/logo"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="100dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" /-->
+            android:layout_centerHorizontal="true" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <ImageView
+
+                android:id="@+id/IV_Enable"
+                android:layout_width="120sp"
+                android:layout_height="120sp"
+                android:src="@drawable/habilitarme_over"/>
+            <ImageView
+
+                android:id="@+id/IV_History"
+                android:layout_width="120sp"
+                android:layout_height="120sp"
+                android:src="@drawable/historial_over"/>
+            <ImageView
+                android:id="@+id/IV_Cerrar_Sesion"
+                android:layout_width="120sp"
+                android:layout_height="120sp"
+                android:src="@drawable/cerrar_over"/>
+        </LinearLayout>
     </RelativeLayout>
 
-    <com.carouseldemo.controls.Carousel
-        android:id="@+id/carouseles"
+    <!--<com.carouseldemo.controls.Carousel-->
+        <!--android:id="@+id/carouseles"-->
 
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:animationDuration="300"
-        android:gravity="center"
-        pj:Items="@array/entries"
-        pj:Names="@array/names"
-        pj:SelectedItem="1"
-        pj:UseReflection="false"
-        android:visibility="visible" >
-    </com.carouseldemo.controls.Carousel>
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:animationDuration="300"-->
+        <!--android:gravity="center"-->
+        <!--pj:Items="@array/entries"-->
+        <!--pj:Names="@array/names"-->
+        <!--pj:SelectedItem="1"-->
+        <!--pj:UseReflection="false"-->
+        <!--android:visibility="visible" >-->
+    <!--</com.carouseldemo.controls.Carousel>-->
+
+
 
 </RelativeLayout>

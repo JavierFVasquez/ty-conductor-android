@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="answers-1.3.10">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/21434de169124799799b02c2dadf9ace76f9732a/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/21434de169124799799b02c2dadf9ace76f9732a/output/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/answers-1.3.10.aar/ffb53c9f7472a403d0054de10dcd5946/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/answers-1.3.10.aar/ffb53c9f7472a403d0054de10dcd5946/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.crashlytics.sdk.android/answers/1.3.10/6a373fe9a8bc9f5810e28701558d6d9c6cf2b0b6/answers-1.3.10-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES />
   </library>
 </component>

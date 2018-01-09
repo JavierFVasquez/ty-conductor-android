@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/45577aced078d40ef2c59d24d3e2387a/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,735,839",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,834,950"
+                    }
+                },
+                {
+                    "source": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/res/values-large/dimens.xml",
+                    "from": {
+                        "startLines": "3,4,6,5",
+                        "startColumns": "4,4,1,1",
+                        "startOffsets": "92,151,245,205",
+                        "endColumns": "57,55,43,38",
+                        "endOffsets": "145,202,287,242"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "532,590,646,693",
+                        "endColumns": "57,55,46,41",
+                        "endOffsets": "585,641,688,730"
+                    }
+                }
+            ]
+        }
+    ]
+}

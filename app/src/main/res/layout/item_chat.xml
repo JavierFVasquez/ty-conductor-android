@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/RL_Message_Container_Taxi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:layout_marginRight="80sp"
+        android:background="@drawable/orange_border"
+        android:padding="10sp">
+        <TextView
+            android:id="@+id/TV_Message_Text_Taxi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_orange"
+            android:textSize="17sp"
+            android:text="Aqui va el texto ..."/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_Message_Container_User"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10sp"
+        android:layout_marginRight="10sp"
+        android:background="@drawable/gray_border"
+        android:padding="10sp">
+        <TextView
+            android:id="@+id/TV_Message_Text_User"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_gray"
+            android:textSize="17sp"
+            android:text="Aqui va el texto ..."/>
+    </RelativeLayout>
+
+
+</LinearLayout>

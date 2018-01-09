@@ -2,6 +2,7 @@ package com.imaginamos.taxisya.taxista.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.NotificationManager;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -19,6 +20,8 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
+import android.support.design.widget.Snackbar;
+import android.support.v4.content.res.ResourcesCompat;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -47,6 +50,13 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.imaginamos.taxisya.taxista.R;
 import com.imaginamos.taxisya.taxista.io.ApiConstants;
 import com.imaginamos.taxisya.taxista.io.Connectivity;
@@ -55,6 +65,7 @@ import com.imaginamos.taxisya.taxista.io.MyService;
 import com.imaginamos.taxisya.taxista.io.UpdateReceiver;
 import com.imaginamos.taxisya.taxista.model.Actions;
 import com.imaginamos.taxisya.taxista.model.Conf;
+import com.imaginamos.taxisya.taxista.model.MessageEvent;
 import com.imaginamos.taxisya.taxista.utils.BDAdapter;
 import com.imaginamos.taxisya.taxista.utils.Dialogos;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -63,6 +74,9 @@ import com.paymentez.androidsdk.models.DebitCardResponseHandler;
 import com.paymentez.androidsdk.models.PaymentezDebitParameters;
 import com.paymentez.androidsdk.models.PaymentezResponseDebitCard;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -78,7 +92,7 @@ import java.util.TimerTask;
 import cz.msebera.android.httpclient.Header;
 
 //public class MapActivity extends FragmentActivity implements OnClickListener, LocationListener {
-public class MapActivity extends Activity implements OnClickListener, LocationListener, UpdateReceiver.UpdateReceiverListener, Connectivity.ConnectivityQualityCheckListener, OnMapReadyCallback {
+public class MapActivity extends Activity implements  LocationListener, UpdateReceiver.UpdateReceiverListener, Connectivity.ConnectivityQualityCheckListener, OnMapReadyCallback {
 
     PaymentezSDKClient paymentezsdk;
     private TextView view_direccion, nombre;
@@ -109,8 +123,8 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
     private String mTotService = "0";
     private String mTransactionId = "";
     private String mUserPhone = "";
-    private BroadcastReceiver mReceiver;
-    private UpdateReceiver mNetworkMonitor;
+//    private BroadcastReceiver mReceiver;
+//    private UpdateReceiver mNetworkMonitor;
     private ImageView mConnectivityLoaderImage;
     private RelativeLayout mNoConnectivityPanel;
     private Connectivity connectivityChecker = new Connectivity(this);
@@ -133,14 +147,51 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
     private String mUserEmail;
     private LinearLayout mLinear1;
     private LinearLayout mLinear2;
+    private OnClickListener onClickParent;
+
+    private LinearLayout LL_Content;
+    private Button BT_Hide_Panel;
+    private boolean isPanelHidden= false;
 
     private long mTotalTrip = 0;
+
+    private Button BT_Chat;
+    private boolean first_time =  false;
 
     @Override
     public void onRestart() {
         super.onRestart();
         overridePendingTransition(R.anim.hold, R.anim.pull_out_to_right);
     }
+
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(MessageEvent event) {
+
+
+        if (event.getAction().equals(Actions.ACTION_USER_CANCELED_SERVICE)) {
+            Toast.makeText(getApplicationContext(), getString(R.string.error2), Toast.LENGTH_LONG).show();
+            toFinish();
+
+        } else if (event.getAction().equals(Actions.ACTION_OPE_CANCELED_SERVICER)) {
+            Toast.makeText(getApplicationContext(), getString(R.string.oper_cancel), Toast.LENGTH_LONG).show();
+            toFinish();
+
+        } else if (event.getAction().equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
+            Log.v("DRIVER_CLOSE_SESSION", "in MapActivity");
+            Toast.makeText(getApplicationContext(), R.string.login_deshabilito_login_otro_dispositivo, Toast.LENGTH_LONG).show();
+
+            loggedInOtherDevie();
+
+        } else if (event.getAction().equals(Actions.ACTION_MESSAGE_MASSIVE)) {
+
+            Log.v("MESSAGE_MASSIVE", "mensaje global recibido");
+            String message = event.getMessage();
+            mostrarMensaje(message);
+
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,6 +202,90 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         //Desarrollo true
         //Producción false
         paymentezsdk = new PaymentezSDKClient(this, ApiConstants.api_env, ApiConstants.app_code, ApiConstants.app_secret_key);
+
+        LL_Content =  (LinearLayout) findViewById(R.id.LL_Content);
+        BT_Hide_Panel = (Button) findViewById(R.id.BT_Hide_Panel);
+
+        BT_Hide_Panel.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!isPanelHidden) {
+                    Log.e("HIDE=====","PANEL IS HIDDEN");
+                    LL_Content.setVisibility(View.GONE);
+                    isPanelHidden=true;
+                    BT_Hide_Panel.setText(R.string.show);
+                }else{
+                    Log.e("SHOW=====","PANEL IS SHOWING");
+                    LL_Content.setVisibility(View.VISIBLE);
+                    isPanelHidden=false;
+                    BT_Hide_Panel.setText(R.string.hide);
+                }
+            }
+        });
+
+        onClickParent = new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()) {
+
+                    case R.id.btnLlegada:
+                        Log.v("BTN1", "solictaxi");
+                        arrivedService(1);
+                        break;
+
+                    case R.id.btnConfirmCode:
+                        Log.v("BTN1", "btn_confirm_code");
+                        // TODO:  aplicar mascara de XX
+                        if (confirmCodeAuthorization()) {
+                            mLinear2.setVisibility(View.GONE);
+                            btnCancelar.setVisibility(View.VISIBLE);
+                            btnConfirmCode.setVisibility(View.GONE);
+                            btnFinalizar.setVisibility(View.VISIBLE);
+                        }
+                        break;
+
+                    case R.id.btnCancelar:
+                        Log.v("BTN1", "btn_volver");
+                        setModalCancelSerivce();
+                        final CharSequence[] items = {"Trafico pesado", "Varado", "Dirección Errada"};
+
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MapActivity.this);
+                        builder.setTitle("Razón cancelar servicio");
+                        builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int item) {
+                                Toast toast = Toast.makeText(getApplicationContext(), "Haz elegido la opcion: " + items[item], Toast.LENGTH_SHORT);
+                                toast.show();
+                                dialog.cancel();
+                            }
+                        });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                        break;
+
+                    case R.id.btnFinalizar:
+                        Log.v("BTN1", "finalizar_action");
+                        Log.v("FINISH2", "call finishService()");
+                        if ((mPayType == 0) || (mPayType == 1) || (mPayType == 2) || (mPayType == 3) || (type_agend == 1) || (type_agend == 2) || (type_agend == 3) || (type_agend == 4)) {
+                            mLinear1.setVisibility(View.VISIBLE);
+                            btnFinalizar.setVisibility(View.GONE);
+                            btn_pay.setVisibility(View.VISIBLE);
+                        }
+                        else {
+                            finishService();
+                            //toFinish();
+                        }
+                        break;
+
+                    case R.id.btn_pay:
+                        String sUnits = mUnits.getText().toString();
+                        if(sUnits.equals("")|| sUnits.equals("0") || sUnits.equals("00") || sUnits.equals("1")|| sUnits.equals("2") || sUnits.equals("3") || sUnits.equals("4") || sUnits.equals("5") || sUnits.equals("6") || sUnits.equals("7") || sUnits.equals("8") || sUnits.equals("9") || sUnits.equals("10") || sUnits.equals("11") || sUnits.equals("12") || sUnits.equals("13") || sUnits.equals("14") || sUnits.equals("15") || sUnits.equals("16") || sUnits.equals("17") || sUnits.equals("18") || sUnits.equals("19") || sUnits.equals("20") || sUnits.equals("21") || sUnits.equals("22") || sUnits.equals("23") || sUnits.equals("24") || sUnits.equals("25") || sUnits.equals("26") || sUnits.equals("27")) {
+                            Toast.makeText(getApplicationContext(), "Las unidades no pueden estar vacias ni ser menores a 28", Toast.LENGTH_LONG).show();
+                        } else {
+                            prepareReceipt(String.valueOf(mTotalTrip));
+                        }
+                }
+            }
+        };
 
         try {
             overridePendingTransition(R.anim.pull_in_from_right, R.anim.hold);
@@ -182,15 +317,15 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         mTotValue = (TextView) findViewById(R.id.totViaje);
         mNoConnectivityPanel = (RelativeLayout) findViewById(R.id.layout_no_connectivity);
         mConnectivityLoaderImage = (ImageView) findViewById(R.id.loader_icon);
-        btnLlegada.setOnClickListener(this);
-        btnCancelar.setOnClickListener(this);
-        btnFinalizar.setOnClickListener(this);
-        btn_pay.setOnClickListener(this);
-        btnConfirmCode.setOnClickListener(this);
+        btnLlegada.setOnClickListener(onClickParent);
+        btnCancelar.setOnClickListener(onClickParent);
+        btnFinalizar.setOnClickListener(onClickParent);
+        btn_pay.setOnClickListener(onClickParent);
+        btnConfirmCode.setOnClickListener(onClickParent);
         mLinear1 = (LinearLayout) findViewById(R.id.layout_pay);
         mLinear2 = (LinearLayout) findViewById(R.id.layout_code_authorization);
         icon_radio_ope = (ImageView) findViewById(R.id.icon_radio_ope);
-        view_direccion = (TextView) findViewById(R.id.direccion_cliente);
+        view_direccion = (TextView) findViewById(R.id.address);
         nombre = (TextView) findViewById(R.id.nombre_cliente);
         markerPoints = new ArrayList<LatLng>();
 
@@ -198,6 +333,53 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         latitud = reicieveParams.getDouble("lat");
         longitud = reicieveParams.getDouble("lng");
         service_id = reicieveParams.getString("id_servicio");
+
+        FirebaseOptions options = new FirebaseOptions.Builder()
+                .setApplicationId("1:254682418821:android:a62d955d84b45b78") // Required for Analytics.
+                .setApiKey("AIzaSyDUvcRAQqBsyMlmJ-kZ_nGaqCwMNSNxKfI") // Required for Auth.
+                .setDatabaseUrl("https://taxis-ya-usuario-android.firebaseio.com/") // Required for RTDB.
+                .build();
+
+
+        FirebaseApp.initializeApp(this /* Context */, options, "secondary");
+
+
+        BT_Chat = (Button) findViewById(R.id.BT_Chat);
+
+        FirebaseApp secondary = FirebaseApp.getInstance("secondary");
+        FirebaseDatabase database = FirebaseDatabase.getInstance(secondary);
+        DatabaseReference chat_ref = database.getReference("chat/taxi_user/"+service_id);
+
+//        chat_ref.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                if(first_time) {
+//                    BT_Chat.setBackgroundResource(R.drawable.orange_border);
+//                    BT_Chat.setTextColor(ResourcesCompat.getColor(getResources(), R.color.text_orange, null));
+//                    Log.i("Chat", "New Message");
+//                    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+//                    vibrator.vibrate(500);
+//                    Toast.makeText(MapActivity.this, R.string.new_message, Toast.LENGTH_SHORT).show();
+//                }
+//                first_time = true;
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//                Log.e("The read failed: " , String.valueOf(databaseError.getCode()));
+//            }
+//        });
+
+        BT_Chat.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MapActivity.this,ChatActivity.class);
+                Bundle b = new Bundle();
+                b.putString("service_id", service_id);
+                i.putExtras(b);
+                startActivity(i);
+            }
+        });
 
         if (latitud == 0 || longitud == 0) {
             latitud = 4.283435;
@@ -234,7 +416,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
         if (status_service == 4) {
             btnLlegada.setVisibility(View.GONE);
-            btnCancelar.setVisibility(View.GONE);
+            btnCancelar.setVisibility(View.VISIBLE);
             btnFinalizar.setVisibility(View.VISIBLE);
         }
 
@@ -252,43 +434,43 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 200, 0, (LocationListener) this);
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 200, 0, (LocationListener) this);
 
-        IntentFilter intentfilter = new IntentFilter();
-        intentfilter.addAction(Actions.ACTION_USER_CANCELED_SERVICE);
-        intentfilter.addAction(Actions.ACTION_OPE_CANCELED_SERVICER);
-        intentfilter.addAction(Actions.ACTION_DRIVER_CLOSE_SESSION);
-        intentfilter.addAction(Actions.ACTION_MESSAGE_MASSIVE);
+//        IntentFilter intentfilter = new IntentFilter();
+//        intentfilter.addAction(Actions.ACTION_USER_CANCELED_SERVICE);
+//        intentfilter.addAction(Actions.ACTION_OPE_CANCELED_SERVICER);
+//        intentfilter.addAction(Actions.ACTION_DRIVER_CLOSE_SESSION);
+//        intentfilter.addAction(Actions.ACTION_MESSAGE_MASSIVE);
 
-        mReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-
-                if (intent.getAction().equals(Actions.ACTION_USER_CANCELED_SERVICE)) {
-                    Toast.makeText(getApplicationContext(), getString(R.string.error2), Toast.LENGTH_LONG).show();
-                    toFinish();
-
-                } else if (intent.getAction().equals(Actions.ACTION_OPE_CANCELED_SERVICER)) {
-                    Toast.makeText(getApplicationContext(), getString(R.string.oper_cancel), Toast.LENGTH_LONG).show();
-                    toFinish();
-
-                } else if (intent.getAction().equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
-                    Log.v("DRIVER_CLOSE_SESSION", "in MapActivity");
-                    Toast.makeText(getApplicationContext(), R.string.login_deshabilito_login_otro_dispositivo, Toast.LENGTH_LONG).show();
-
-                    loggedInOtherDevie();
-
-                } else if (intent.getAction().equals(Actions.ACTION_MESSAGE_MASSIVE)) {
-
-                    Log.v("MESSAGE_MASSIVE", "mensaje global recibido");
-                    String message = intent.getExtras().getString("message");
-                    mostrarMensaje(message);
-
-                }
-
-            }
-
-        };
-
-        registerReceiver(mReceiver, intentfilter);
+//        mReceiver = new BroadcastReceiver() {
+//            @Override
+//            public void onReceive(Context context, Intent intent) {
+//
+//                if (intent.getAction().equals(Actions.ACTION_USER_CANCELED_SERVICE)) {
+//                    Toast.makeText(getApplicationContext(), getString(R.string.error2), Toast.LENGTH_LONG).show();
+//                    toFinish();
+//
+//                } else if (intent.getAction().equals(Actions.ACTION_OPE_CANCELED_SERVICER)) {
+//                    Toast.makeText(getApplicationContext(), getString(R.string.oper_cancel), Toast.LENGTH_LONG).show();
+//                    toFinish();
+//
+//                } else if (intent.getAction().equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
+//                    Log.v("DRIVER_CLOSE_SESSION", "in MapActivity");
+//                    Toast.makeText(getApplicationContext(), R.string.login_deshabilito_login_otro_dispositivo, Toast.LENGTH_LONG).show();
+//
+//                    loggedInOtherDevie();
+//
+//                } else if (intent.getAction().equals(Actions.ACTION_MESSAGE_MASSIVE)) {
+//
+//                    Log.v("MESSAGE_MASSIVE", "mensaje global recibido");
+//                    String message = intent.getExtras().getString("message");
+//                    mostrarMensaje(message);
+//
+//                }
+//
+//            }
+//
+//        };
+//
+//        registerReceiver(mReceiver, intentfilter);
         validateService();
 
         TextWatcher textWatcher = new TextWatcher() {
@@ -341,7 +523,11 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         map.moveCamera(camUpdate);
 
     }
-
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
     @Override
     protected void onResume() {
 
@@ -371,8 +557,8 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
         displayConnectivityPanel(!Connectivity.isConnected(this) && !connectivityChecker.getConnectivityCheckResult());
         connectivityChecker.startConnectivityMonitor();
-        mNetworkMonitor = new UpdateReceiver(this);
-        registerReceiver(mNetworkMonitor, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+//        mNetworkMonitor = new UpdateReceiver(this);
+//        registerReceiver(mNetworkMonitor, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
 
         Log.v("TAXISTA_SRVCONF1", "end");
 
@@ -430,28 +616,17 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
                     final boolean[] connected = {false};
                     ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-                    if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
-                            connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
-                        //we are connected to a network
+
+                    boolean check;
+                    try {
+                        check = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
+                                connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED;
+                    } catch (Exception e) {
+                        check  = true;
+                    }
+                    if(check) {
                         connected[0] = true;
                         checkService();
-                    }
-                    else {
-                        Thread timerThread = new Thread(){
-                            public void run(){
-                                try{
-                                    sleep(12000);
-                                }catch(InterruptedException e){
-                                    e.printStackTrace();
-                                }finally{
-                                    Toast.makeText(getApplicationContext(), "Prueba", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(MapActivity.this,MainActivity.class);
-                                    startActivity(intent);
-                                    connected[0] = false;
-                                }
-                            }
-                        };
-                        timerThread.start();
                     }
 
                 } catch (JSONException je) {
@@ -490,7 +665,7 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
 
                 String response = new String(responseBody);
-                Log.e("TIMER_EJECUTANDO1", "checkService() response " + response);
+                Log.w("Service Response" , response);
 
                 try {
                     //Log.v("checkService", "SUCCES: "+response);
@@ -637,19 +812,19 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
                                 } else {
                                     btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.GONE);
+                                    btnCancelar.setVisibility(View.VISIBLE);
                                     btnFinalizar.setVisibility(View.GONE);
                                 }
 
                                 if (mPayType == 3) {
                                     mLinear2.setVisibility(View.VISIBLE);
                                     btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.GONE);
+                                    btnCancelar.setVisibility(View.VISIBLE);
                                     btnConfirmCode.setVisibility(View.VISIBLE);
 
                                 } else {
                                     btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.GONE);
+                                    btnCancelar.setVisibility(View.VISIBLE);
                                     btnFinalizar.setVisibility(View.GONE);
                                 }
                             }
@@ -787,78 +962,20 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
         vibrator.vibrate(200);
         Toast.makeText(getApplicationContext(), getString(R.string.error_arrived), Toast.LENGTH_SHORT).show();
     }
-    // finish service -
 
-    @Override
-    public void onClick(View v) {
-
-        switch (v.getId()) {
-
-            case R.id.btnLlegada:
-                Log.v("BTN1", "solictaxi");
-                arrivedService(1);
-                break;
-
-            case R.id.btnConfirmCode:
-                Log.v("BTN1", "btn_confirm_code");
-                // TODO:  aplicar mascara de XX
-                if (confirmCodeAuthorization()) {
-                    mLinear2.setVisibility(View.GONE);
-                    btnCancelar.setVisibility(View.GONE);
-                    btnConfirmCode.setVisibility(View.GONE);
-                    btnFinalizar.setVisibility(View.VISIBLE);
-                }
-                break;
-
-            case R.id.btnCancelar:
-                Log.v("BTN1", "btn_volver");
-                setModalCancelSerivce();
-                final CharSequence[] items = {"Trafico pesado", "Varado", "Dirección Errada"};
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Razón cancelar servicio");
-                builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int item) {
-                        Toast toast = Toast.makeText(getApplicationContext(), "Haz elegido la opcion: " + items[item], Toast.LENGTH_SHORT);
-                        toast.show();
-                        dialog.cancel();
-                    }
-                });
-                AlertDialog alert = builder.create();
-                alert.show();
-                break;
-
-            case R.id.btnFinalizar:
-                Log.v("BTN1", "finalizar_action");
-                Log.v("FINISH2", "call finishService()");
-                if ((mPayType == 0) || (mPayType == 1) || (mPayType == 2) || (mPayType == 3) || (type_agend == 1) || (type_agend == 2) || (type_agend == 3) || (type_agend == 4)) {
-                    mLinear1.setVisibility(View.VISIBLE);
-                    btnFinalizar.setVisibility(View.GONE);
-                    btn_pay.setVisibility(View.VISIBLE);
-                }
-                else {
-                    finishService();
-                    //toFinish();
-                }
-                break;
-
-            case R.id.btn_pay:
-                String sUnits = mUnits.getText().toString();
-                if(sUnits.equals("")|| sUnits.equals("0") || sUnits.equals("00") || sUnits.equals("1")|| sUnits.equals("2") || sUnits.equals("3") || sUnits.equals("4") || sUnits.equals("5") || sUnits.equals("6") || sUnits.equals("7") || sUnits.equals("8") || sUnits.equals("9") || sUnits.equals("10") || sUnits.equals("11") || sUnits.equals("12") || sUnits.equals("13") || sUnits.equals("14") || sUnits.equals("15") || sUnits.equals("16") || sUnits.equals("17") || sUnits.equals("18") || sUnits.equals("19") || sUnits.equals("20") || sUnits.equals("21") || sUnits.equals("22") || sUnits.equals("23") || sUnits.equals("24") || sUnits.equals("25") || sUnits.equals("26") || sUnits.equals("27")) {
-                    Toast.makeText(getApplicationContext(), "Las unidades no pueden estar vacias ni ser menores a 28", Toast.LENGTH_LONG).show();
-                } else {
-                    prepareReceipt(String.valueOf(mTotalTrip));
-                }
-        }
-
-    }
 
     public boolean confirmCodeAuthorization() {
         Log.v("BTN1", "confirmCodeAuthorization +");
 
         String strCode = mCode.getText().toString();
         if (strCode != null) {
-            if (strCode.equals(mUserPhone)) return true;
+            if (strCode.equals(mUserPhone)){
+                Toast.makeText(MapActivity.this, R.string.valid_code,Toast.LENGTH_SHORT).show();
+                return true;
+            }else{
+                Toast.makeText(MapActivity.this, R.string.invalid_code,Toast.LENGTH_SHORT).show();
+                return false;
+            }
         }
 
         return false;
@@ -1051,9 +1168,11 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
     private void toFinish() {
         Log.v("FINISH2", "finishService() toFinish()");
 
-        if (mReceiver != null) {
-            unregisterReceiver(mReceiver);
-        }
+//        if (mReceiver != null) {
+////            unregisterReceiver(mReceiver);
+//        }
+        EventBus.getDefault().unregister(this);
+
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString("service", "ended");
@@ -1066,9 +1185,10 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
     }
 
     private void loggedInOtherDevie() {
-        if (mReceiver != null) {
-            unregisterReceiver(mReceiver);
-        }
+//        if (mReceiver != null) {
+//            unregisterReceiver(mReceiver);
+//        }
+        EventBus.getDefault().unregister(this);
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString("service", "ended");
@@ -1079,9 +1199,20 @@ public class MapActivity extends Activity implements OnClickListener, LocationLi
 
     @Override
     protected void onPause() {
+        EventBus.getDefault().unregister(this);
+//        unregisterReceiver(mReceiver);
+//        unregisterReceiver(mNetworkMonitor);
         super.onPause();
         connectivityChecker.stopConnectivityMonitor();
-        unregisterReceiver(mNetworkMonitor);
+    }
+
+    @Override
+    protected void onStop() {
+        EventBus.getDefault().unregister(this);
+//        unregisterReceiver(mReceiver);
+//        unregisterReceiver(mNetworkMonitor);
+        super.onStop();
+        connectivityChecker.stopConnectivityMonitor();
     }
 
     @Override

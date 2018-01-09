@@ -1,0 +1,4 @@
+#Sat Dec 23 18:53:29 COT 2017
+base.0=/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/transforms/dexMerger/debug/5
+path.0=classes.dex
+renamed.0=classes.dex
