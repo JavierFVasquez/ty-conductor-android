@@ -194,4 +194,9 @@
     <string name="type_your_message_here">Escribe tu mensaje aquí ...</string>
     <string name="chat">Chat</string>
     <string name="new_message">Nuevo mensaje</string>
+    <string name="movil">Movil (Opcional)</string>
+    <string name="control_card">Tarjeta de control</string>
+    <string name="register_driver_lastname">Apellido</string>
+    <string name="error_interrupt">El servicio fue cancelado por el usuario</string>
+    <string name="loading">Cargando...</string>
 </resources>

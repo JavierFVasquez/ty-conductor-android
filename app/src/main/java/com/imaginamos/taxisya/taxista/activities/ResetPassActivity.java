@@ -44,7 +44,7 @@ public class ResetPassActivity extends Activity implements View.OnClickListener 
     private Handler hand = new Handler() {
         @Override
         public void dispatchMessage(Message msg) {
-            // TODO Auto-generated method stub
+
             super.dispatchMessage(msg);
 
             switch (msg.what) {
@@ -156,7 +156,7 @@ public class ResetPassActivity extends Activity implements View.OnClickListener 
 
                             @Override
                             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                                // TODO Auto-generated method stub
+
                                 //super.onFailure(arg0, arg1);
                                 Toast.makeText(getApplicationContext(),
                                         R.string.error_net, Toast.LENGTH_LONG).show();
@@ -164,7 +164,7 @@ public class ResetPassActivity extends Activity implements View.OnClickListener 
 
                             @Override
                             public void onFinish() {
-                                // TODO Auto-generated method stub
+
                                 super.onFinish();
 
                                 hand.sendEmptyMessage(2);
@@ -189,18 +189,17 @@ public class ResetPassActivity extends Activity implements View.OnClickListener 
                     .getText().toString(), code.getText().toString(), passmd5, new AsyncHttpResponseHandler() {
                 @Override
                 public void onStart() {
-                    // TODO Auto-generated method stub
+
                     super.onStart();
                     try {
                         hand.sendEmptyMessage(1);
                     } catch (Exception e) {
-                        // TODO: handle exception
                     }
                 }
 
                 @Override
                 public void onFinish() {
-                    // TODO Auto-generated method stub
+
                     super.onFinish();
                     hand.sendEmptyMessage(2);
                 }
@@ -215,7 +214,7 @@ public class ResetPassActivity extends Activity implements View.OnClickListener 
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     String arg1 = new String(responseBody);
-                    // TODO Auto-generated method stub
+
                     //super.onSuccess(arg0, arg1);
                     Log.e("response", arg1);
                     try {

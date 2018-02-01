@@ -173,18 +173,18 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
 
 				@Override
 				public void onStatusChanged(String provider, int status, Bundle extras) {
-					// TODO Auto-generated method stub
+
 				}
 
 				@Override
 				public void onProviderEnabled(String provider) {
-					// TODO Auto-generated method stub
+
 
 				}
 
 				@Override
 				public void onProviderDisabled(String provider) {
-					// TODO Auto-generated method stub
+
 
 				}
 
@@ -315,13 +315,13 @@ public class MyService extends Service implements GoogleApiClient.ConnectionCall
             MiddleConnect.sendMyPosition(this, driver_id, String.valueOf(latitud), String.valueOf(longitud), new AsyncHttpResponseHandler() {
                 @Override
                 public void onStart() {
-                    Log.e(TAG, "onStart === >" + driver_id);
+                    Log.i(TAG, "onStart === >" + driver_id);
                 }
 
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                     String response = new String(responseBody);
-                    Log.e(TAG, "onSuccess" + response);
+                    Log.i(TAG, "sendMyPosition onSuccess" + response);
 
                     gcmKeepAlive.broadcastIntents();
 

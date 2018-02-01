@@ -35,7 +35,7 @@ public class MiddleConnect {
 
         params.put("lat", lat);
         params.put("lng", lon);
-        Log.e("POSITOEN SEND", "lat = " + lat + " lng = " + lon + " " + context.getResources().getString(R.string.sendmyposition, id_driver) + " " + id_driver);
+        Log.i("POSITION SEND", params.toString() + " - "+ context.getResources().getString(R.string.sendmyposition, id_driver));
         Connect.post(context.getResources().getString(R.string.sendmyposition, id_driver), params, responseHandler);
     }
 

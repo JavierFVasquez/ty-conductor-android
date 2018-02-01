@@ -215,5 +215,10 @@
     <string name="type_your_message_here">Type your message here...></string>
     <string name="chat">Chat</string>
     <string name="new_message">New message</string>
+    <string name="movil">Movil (Optional)</string>
+    <string name="control_card">Control Card</string>
+    <string name="register_driver_lastname">Lastname</string>
+    <string name="error_interrupt">This service was canceled by the user</string>
+    <string name="loading">Loading...</string>
 
 </resources>

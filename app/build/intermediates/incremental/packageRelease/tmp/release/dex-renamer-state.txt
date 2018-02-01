@@ -1,4 +1,4 @@
-#Tue Dec 26 10:39:11 COT 2017
+#Thu Feb 01 13:28:58 COT 2018
 base.0=/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/transforms/dexMerger/release/0
 path.1=classes2.dex
 renamed.1=classes2.dex

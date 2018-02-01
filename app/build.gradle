@@ -22,8 +22,8 @@ android {
         applicationId "co.taxisya.conductor"
         minSdkVersion 16
         targetSdkVersion 27
-        versionCode 57
-        versionName "1.7.14"
+        versionCode 60
+        versionName "1.7.17"
     }
     dexOptions {
         javaMaxHeapSize "4g"

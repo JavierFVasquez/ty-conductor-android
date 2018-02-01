@@ -2244,6 +2244,10 @@
         "source": "/Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/res/drawable-xxxhdpi-v4/cast_ic_stop_circle_filled_grey600.png"
     },
     {
+        "merged": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/res/merged/release/layout_activity_summary.xml.flat",
+        "source": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/res/layout/activity_summary.xml"
+    },
+    {
         "merged": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_quantum_ic_art_track_grey600_48.png.flat",
         "source": "/Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-10.2.6.aar/236a35b5a55feb736d4a4b8c599fb8dd/res/drawable-xxhdpi-v4/quantum_ic_art_track_grey600_48.png"
     },
@@ -2330,6 +2334,10 @@
     {
         "merged": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/res/merged/release/layout_mr_playback_control.xml.flat",
         "source": "/Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.0.0.aar/97f05ebb60cd6978498106e215a14e75/res/layout/mr_playback_control.xml"
+    },
+    {
+        "merged": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/res/merged/release/drawable_waze_button.png.flat",
+        "source": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/res/drawable/waze_button.png"
     },
     {
         "merged": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -2878,6 +2886,10 @@
     {
         "merged": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "/Users/javiervasquez/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/45577aced078d40ef2c59d24d3e2387a/res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/res/merged/release/xml_provider_paths.xml.flat",
+        "source": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/src/main/res/xml/provider_paths.xml"
     },
     {
         "merged": "/Users/javiervasquez/StudioProjects/ty-conductor-android/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_ic_twitter_bird_white_24dp.png.flat",

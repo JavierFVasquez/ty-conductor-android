@@ -254,7 +254,6 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
             @Override
             public void onClick(View arg0) {
-                // TODO Auto-generated method stub
                 alertDialog.dismiss();
 
                 // llamar update
@@ -317,7 +316,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         @Override
         public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
                                    long arg3) {
-            // TODO Auto-generated method stub
+
             Log.v("CARS", "seleccionada " + String.valueOf(arg2));
 
             gIndice_seleccionado = arg2;
@@ -326,7 +325,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         @Override
         public void onNothingSelected(AdapterView<?> arg0) {
-            // TODO Auto-generated method stub
+
 
         }
     }

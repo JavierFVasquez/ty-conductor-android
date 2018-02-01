@@ -14,6 +14,9 @@ import com.google.firebase.messaging.RemoteMessage;
 import com.imaginamos.taxisya.taxista.R;
 import com.imaginamos.taxisya.taxista.activities.LoginActivity;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Created by TaxisYa on 8/09/16.
  */
@@ -46,6 +49,15 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         // Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
             Log.d(TAG, "Message data payload: " + remoteMessage.getData());
+
+
+            try {
+                JSONObject data = new JSONObject(remoteMessage.getData());
+                String messageBody = data.getString("message");
+//                sendNotification(messageBody);
+            } catch (Exception e) {
+
+            }
         }
 
         // Check if message contains a notification payload.
@@ -53,7 +65,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
         }
 
-        // Also if you intend on generating your own notifications as a result of a received FCM
+        // Also if you intend onbtnCalificar generating your own notifications as a result of a received FCM
         // message, here is where that should be initiated. See sendNotification method below.
     }
     // [END receive_message]
@@ -72,7 +84,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.ic_launcher)
-                .setContentTitle("FCM Message")
+                .setContentTitle("TaxisYa")
                 .setContentText(messageBody)
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)

@@ -4,19 +4,30 @@ import com.google.gson.JsonElement;
 import com.imaginamos.taxisya.taxista.activities.AppResponse;
 import com.imaginamos.taxisya.taxista.activities.RegisterResponse;
 import com.imaginamos.taxisya.taxista.activities.UploadResponse;
+import com.imaginamos.taxisya.taxista.model.BandListResponse;
+import com.imaginamos.taxisya.taxista.model.CompaniesListResponse;
+import com.imaginamos.taxisya.taxista.model.DirectionsResponse;
+import com.imaginamos.taxisya.taxista.model.FinishServiceResponse;
+import com.imaginamos.taxisya.taxista.model.LineListResponse;
+import com.imaginamos.taxisya.taxista.model.RegisterDriverResponse;
+import com.imaginamos.taxisya.taxista.model.ServiceStatusResponse;
+import com.imaginamos.taxisya.taxista.model.SimpleResponse;
 import com.squareup.okhttp.RequestBody;
 
 import java.util.Map;
 
 import retrofit.Callback;
-import retrofit.http.Field;
-import retrofit.http.FormUrlEncoded;
-import retrofit.http.Multipart;
-import retrofit.http.POST;
-import retrofit.http.Part;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.Multipart;
+import retrofit2.http.POST;
+import retrofit2.http.Part;
 import retrofit.http.Path;
-import retrofit.http.QueryMap;
+import retrofit2.http.Query;
+import retrofit2.http.QueryMap;
 import retrofit.mime.TypedFile;
+import retrofit2.Call;
+import retrofit2.http.GET;
 
 /**
  * Created by leo on 11/15/15.
@@ -32,43 +43,52 @@ public interface ApiService {
                @Field("uuid") String uuid,
                Callback<RegisterResponse> callback);
 
+    @GET(ApiConstants.BRAND_LIST)
+    Call<BandListResponse> brandList();
+
     @FormUrlEncoded
-    @POST(ApiConstants.DRIVER_REGISTER)
-    void register(@Field("type") String type,
-                  @Field("name") String name,
-                  @Field("lastname") String lastname,
-                  @Field("email") String email,
-                  @Field("login") String login,
-                  @Field("pwd") String pwd,
-                  @Field("token") String token,
-                  @Field("cellphone") String cellphone,
-                  @Field("uuid") String uuid, Callback<RegisterResponse> callback);
+    @POST(ApiConstants.LINE_LIST)
+    Call<LineListResponse> lineList(@Field("id_marca") String id_marca);
+
+    @GET(ApiConstants.COMPANIES_LIST)
+    Call<CompaniesListResponse> companiesList();
+
+    @GET(ApiConstants.SERVICE_CHAT)
+    Call<SimpleResponse> sendNotification(@Query("id_usuario") String id_usuario);
+
+    @GET(ApiConstants.DIRECTIONS_GOOGLE)
+    Call<DirectionsResponse> directions(@Query("origin") String Origin, @Query("destination") String Destination);
 
     @FormUrlEncoded
     @POST(ApiConstants.DRIVER_REGISTER)
-    void registerDriver(@Field("name") String name,
-                        @Field("lastname") String lastname,
-                        @Field("login") String login,
-                        @Field("pwd") String pwd,
-                        @Field("telephone") String telephone,
-                        @Field("cellphone") String cellphone,
-                        @Field("cedula") String cedula,
-                        @Field("license") String license,
-                        @Field("dir") String dir,
-                        @Field("movil") String movil,
-                        @Field("city_id") int city,
-                        @Field("car_tag") String carPlate,
-                        @Field("car_brand") String carBrand,
-                        @Field("car_line") String carLine,
-                        @Field("car_movil") String carMovil,
-                        @Field("car_year") String carYear,
-                        @Field("car_company") String carCompany,
-                        @Field("image") String image,
-                        @Field("document") String document,
-                        @Field("document2") String document2,
-                        @Field("document3") String document3,
-                        @Field("document4") String document4,
-                        Callback<RegisterResponse> callback);
+    Call<RegisterDriverResponse> registerDriver(@Field("nombre") String nombre,
+                                                @Field("apellido") String apellido,
+                                                @Field("email") String email,
+                                                @Field("password") String password,
+                                                @Field("celular") String celular,
+                                                @Field("telefono") String telefono,
+                                                @Field("cedula") String cedula,
+                                                @Field("direccion") String direccion,
+                                                @Field("tc") String tc,
+                                                @Field("placa") String placa,
+                                                @Field("movil") String movil,
+                                                @Field("marca") String marca,
+                                                @Field("linea") String linea,
+                                                @Field("modelo") String modelo,
+                                                @Field("empresa") int empresa,
+                                                @Field("foto_conductor") String foto_conductor,
+                                                @Field("foto_documento") String foto_documento,
+                                                @Field("foto_licencia") String foto_licencia,
+                                                @Field("foto_propiedad") String foto_propiedad,
+                                                @Field("foto_operacion") String foto_operacion);
+@FormUrlEncoded
+    @POST(ApiConstants.FINISH_SERVICE)
+    Call<FinishServiceResponse> finishService(@Field("id_servicio") int id_servicio,
+                                              @Field("id_conductor") int id_conductor,
+                                              @Field("unidades") int unidades,
+                                              @Field("valor") double valor,
+                                              @Field("pasajero") int pasajero);
+
 
     @FormUrlEncoded
     @POST(ApiConstants.DRIVER_UPLOAD)
@@ -81,6 +101,16 @@ public interface ApiService {
                 @Field("token") String token,
                 @Field("cellphone") String cellphone,
                 @Field("uuid") String uuid, Callback<UploadResponse> callback);
+    @FormUrlEncoded
+    @POST(ApiConstants.SERVICE_STATUS)
+    Call<ServiceStatusResponse> serviceStatus(
+            @Field("driver_id") String driver_id,
+            @Field("service_id") String service_id);
+
+    @FormUrlEncoded
+    @POST(ApiConstants.SERVICE_STATUS)
+    Call<ServiceStatusResponse> serviceStatus(
+            @Field("driver_id") String driver_id);
 
     @Multipart
     @POST("/upload/login.php")

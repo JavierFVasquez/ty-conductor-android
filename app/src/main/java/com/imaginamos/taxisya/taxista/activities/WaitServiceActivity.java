@@ -42,6 +42,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.imaginamos.taxisya.taxista.R;
+import com.imaginamos.taxisya.taxista.io.ApiService;
+import com.imaginamos.taxisya.taxista.io.Connect;
 import com.imaginamos.taxisya.taxista.io.Connectivity;
 import com.imaginamos.taxisya.taxista.io.GPSTracker;
 import com.imaginamos.taxisya.taxista.io.MiddleConnect;
@@ -51,6 +53,7 @@ import com.imaginamos.taxisya.taxista.model.Actions;
 import com.imaginamos.taxisya.taxista.model.Conf;
 import com.imaginamos.taxisya.taxista.model.MessageEvent;
 import com.imaginamos.taxisya.taxista.model.Preferencias;
+import com.imaginamos.taxisya.taxista.model.ServiceStatusResponse;
 import com.imaginamos.taxisya.taxista.model.Servicio;
 import com.imaginamos.taxisya.taxista.utils.BDAdapter;
 import com.imaginamos.taxisya.taxista.utils.Dialogos;
@@ -80,6 +83,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import cz.msebera.android.httpclient.Header;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class WaitServiceActivity extends Activity implements OnClickListener, UpdateReceiver.UpdateReceiverListener, Connectivity.ConnectivityQualityCheckListener, TextToSpeech.OnInitListener {
 
@@ -205,6 +212,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                 Intent i = new Intent(getApplicationContext(), NotificationActivity.class);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getApplication().startActivity(i);
+
                 //  setService(intent.getExtras().getString("service"), intent.getExtras().getString("user_name"));
 
             } catch (Exception e) {
@@ -355,84 +363,86 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
         Log.v("checkService", "ini");
         Log.v("checkService", "id_driver=" + driver_id + " service_id=" + service_id);
 
-        MiddleConnect.checkStatusService(this, driver_id, service_id, "uuid", new AsyncHttpResponseHandler() {
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        okhttp3.OkHttpClient.Builder httpClient = new okhttp3.OkHttpClient.Builder();
+        httpClient.addInterceptor(logging);
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Connect.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
+
+        ApiService service = retrofit.create(ApiService.class);
+        Call<ServiceStatusResponse> call_profile;
+
+        if(service_id == null){
+            Log.i("DRIVER ID",driver_id);
+            call_profile = service.serviceStatus(driver_id);
+        }else{
+            call_profile = service.serviceStatus(driver_id, service_id);
+        }
+        call_profile.enqueue(new retrofit2.Callback<ServiceStatusResponse>() {
             @Override
-            public void onStart() {
-                Log.v("checkService", "onStart");
-            }
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                String response = new String(responseBody);
-
+            public void onResponse(Call<ServiceStatusResponse> call, retrofit2.Response<ServiceStatusResponse> response) {
 
                 try {
-                    Log.w("Service Response" , response);
-                    JSONObject responsejson = new JSONObject(response);
+
+                    int status_service = Integer.parseInt(response.body().getStatus_id());
+                    // si hay un servicio asignado lo recupera
+                    if ((status_service == 2) || (status_service == 4)) {
+
+                        Intent intent = new Intent(WaitServiceActivity.this, MapActivity.class);
+                        intent.putExtra("lat", Double.parseDouble(response.body().getFrom_lat()));
+                        intent.putExtra("lng", Double.parseDouble(response.body().getFrom_lng()));
+                        intent.putExtra("to_lat", Double.parseDouble(response.body().getTo_lat()));
+                        intent.putExtra("to_lng", Double.parseDouble(response.body().getTo_lng()));
+                        intent.putExtra("charge1", !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge1()) : 0);
+                        intent.putExtra("charge2",  !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge2()) : 0);
+                        intent.putExtra("charge3",  !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge3()) : 0);
+                        intent.putExtra("charge4",  !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge4()) : 0);
+                        intent.putExtra("valor_app", Double.parseDouble(response.body().getValor_app()));
+                        intent.putExtra("destination", Double.parseDouble(response.body().getDestination()));
 
 
-                        String service_id = responsejson.getString("id");
-                        String user_id = responsejson.getString("user_id");
-                        String driver_id = responsejson.getString("driver_id");
-                        String status_id = responsejson.getString("status_id");
-                        String address = responsejson.getString("address");
-                        String from_lat = responsejson.getString("from_lat");
-                        String from_lng = responsejson.getString("from_lng");
-                        String pay_type = responsejson.getString("pay_type");
-                        String pay_reference = responsejson.getString("pay_reference");
-                        String qualification = responsejson.getString("qualification");
-                        String barrio = responsejson.getString("barrio");
-                        String rCode = responsejson.getString("code");
+                        intent.putExtra("id_servicio", response.body().getId());
 
-                        if(id_driver == null){
+                        String type = String.valueOf(response.body().getSchedule_type());
+                        String direccion = response.body().getAddress();
 
+                        intent.putExtra("direccion", direccion);
+                        intent.putExtra("status_service", status_service);
+                        intent.putExtra("kind_id", response.body().getSchedule_id());
+                        intent.putExtra("schedule_type", response.body().getSchedule_type());
+                        intent.putExtra("name", response.body().getIndex_id());
+                        intent.putExtra("pay_type", response.body().getPay_type());
+                        intent.putExtra("card_reference", response.body().getUser_card_reference());
+                        intent.putExtra("code", response.body().getCode());
+
+                        startActivity(intent);
+                        //finish();
+
+                    } else if (status_service == 5) {
+                        if (response.body().getQualification() != null) {
+                            Log.v("MainActivity", "checkService() servicio asignado recuperado sin calificar");
                         }
+                    } else {
+                        Log.v("MainActivity", "checkService() servicio asignado no tenia");
+                        Log.v("MainActivity", "responsejson = " + response.body().getDriver().toString());
 
-                        else if (id_driver.equals(driver_id)) {
-
-                            if (status_id.equals("2") || status_id.equals("4")) {
-
-                                Intent intent = new Intent(WaitServiceActivity.this, RecoveryMapActivity.class);
-                                intent.putExtra("address",address);
-                                intent.putExtra("from_lat",from_lat);
-                                intent.putExtra("from_lng",from_lng);
-                                intent.putExtra("pay_type",pay_type);
-                                intent.putExtra("user_id",user_id);
-                                intent.putExtra("pay_reference",pay_reference);
-                                intent.putExtra("status_id",status_id);
-                                intent.putExtra("barrio",barrio);
-                                intent.putExtra("service_recoverid",service_id);
-                                intent.putExtra("rCode",rCode);
-                                startActivity(intent);
-                                Toast.makeText(getApplicationContext(), "Servicio recuperado", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                        else if (status_id.equals("5") && qualification.equals(null)) {
-                            Toast.makeText(getApplicationContext(), "El usuario no ha calificado el servicio.", Toast.LENGTH_SHORT).show();
-                        }
-
-
-                    return;
-
-                } catch (JSONException e1) {
-                    e1.printStackTrace();
+                    }
+                }catch (Exception e){
+                    Log.w("-----Error-----", e.toString());
                 }
 
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                //  String response = new String(responseBody);
-                // Log.v("checkService", "onFailure = " + response);
 
             }
 
             @Override
-            public void onFinish() {
-                Log.v("checkService", "onFinish");
+            public void onFailure(Call<ServiceStatusResponse> call, Throwable t) {
+                Log.w("-----Error-----", t.toString());
             }
-
         });
         return true;
     }
@@ -476,7 +486,11 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 
             }
         };
-        registerReceiver(mBroadcastReceiver, new IntentFilter("com.imaginamos.taxisya.taxista"));
+        try {
+            registerReceiver(mBroadcastReceiver, new IntentFilter("com.imaginamos.taxisya.taxista"));
+        }catch (Exception e ){
+
+        }
         mPendingIntent = PendingIntent.getBroadcast(this, 0, new Intent("com.imaginamos.taxisya.taxista"), 0);
         mAlarmManager = (AlarmManager) (this.getSystemService(Context.ALARM_SERVICE));
     }
@@ -1141,12 +1155,12 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                                         if ((status_id == 2) || (status_id == 4)) {
                                             savePreferencias("servicieTomado", "true");
 
-                                            Intent intent = new Intent(WaitServiceActivity.this, MapActivity.class);
-
-                                            intent.putExtra("lng", Double.parseDouble(serviceJson.getString("from_lat")));
-                                            intent.putExtra("lat", Double.parseDouble(serviceJson.getString("from_lng")));
-
-                                            intent.putExtra("id_servicio", serviceJson.getString("service_id"));
+//                                            Intent intent = new Intent(WaitServiceActivity.this, MapActivity.class);
+//
+//                                            intent.putExtra("lng", Double.parseDouble(serviceJson.getString("from_lat")));
+//                                            intent.putExtra("lat", Double.parseDouble(serviceJson.getString("from_lng")));
+//
+//                                            intent.putExtra("id_servicio", serviceJson.getString("service_id"));
 
                                             conf.setServiceId(serviceJson.getString("service_id"));
 
@@ -1193,17 +1207,17 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                                                             + serviceJson.getString("barrio");
                                                 }
                                             }
-                                            intent.putExtra("direccion", direccion);
-                                            intent.putExtra("kind_id", serviceJson.getInt("kind_id"));
-                                            intent.putExtra("schedule_type", serviceJson.getInt("schedule_type"));
-                                            intent.putExtra("name", serviceJson.getString("index_id"));
-
-                                            intent.putExtra("pay_type", serviceJson.getString("pay_type"));
-                                            intent.putExtra("user_id", serviceJson.getString("user_id"));
-                                            intent.putExtra("user_card_reference", serviceJson.getString("user_card_reference"));
-                                            intent.putExtra("user_email", serviceJson.getString("user_email"));
-                                            intent.putExtra("code", serviceJson.getString("code"));
-
+//                                            intent.putExtra("direccion", direccion);
+//                                            intent.putExtra("kind_id", serviceJson.getInt("kind_id"));
+//                                            intent.putExtra("schedule_type", serviceJson.getInt("schedule_type"));
+//                                            intent.putExtra("name", serviceJson.getString("index_id"));
+//
+//                                            intent.putExtra("pay_type", serviceJson.getString("pay_type"));
+//                                            intent.putExtra("user_id", serviceJson.getString("user_id"));
+//                                            intent.putExtra("user_card_reference", serviceJson.getString("user_card_reference"));
+//                                            intent.putExtra("user_email", serviceJson.getString("user_email"));
+//                                            intent.putExtra("code", serviceJson.getString("code"));
+//
 
                                             // kill speak
                                             if (myTimerSpeak != null) {
@@ -1220,7 +1234,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                                                 tts = null;
                                             }
 
-                                            startActivity(intent);
+//                                            startActivity(intent);
                                             Log.v("finish", "WaitServiceActivity sendConfirmation()");
                                             finish();
                                         }
@@ -1242,9 +1256,6 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 
                     @Override
                     public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                        String response = new String(responseBody);
-                        Log.v("VALIDATE_SERVICE", "enable onFailure " + response);
-                        Log.e("WaitServiceActivity", "onFailure" + response);
                         err_enable();
                     }
 
@@ -1254,8 +1265,6 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
                             pDialog.dismiss();
                         } catch (Exception e) {
                         }
-                        Log.e("WaitServiceActivity", "onFinish() buildView");
-                        Log.v("VALIDATE_SERVICE", "enable onFinish ");
                     }
 
                 });
@@ -1313,7 +1322,6 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
             TextView nombre = (TextView) newView.findViewById(R.id.txtElement_dos);
 
             ImageView payType = (ImageView) newView.findViewById(R.id.payTypeImg);
-            // TODO:
             int pt = service.getPayType();
             if (pt == 2) { // Tarjeta
                 payType.setImageResource(R.drawable.ic_pay_tc);
@@ -1639,6 +1647,7 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 
                                     intent.putExtra("lng", Double.parseDouble(service.getLongitud()));
                                     intent.putExtra("lat", Double.parseDouble(service.getLatitud()));
+                                    //TODO Aqui se le tiene que enviar la posicion del destino
 
                                     intent.putExtra("id_servicio", service.getIdServicio());
 

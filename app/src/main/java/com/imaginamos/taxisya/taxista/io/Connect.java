@@ -19,10 +19,14 @@ import cz.msebera.android.httpclient.entity.StringEntity;
 public class Connect {
 
     public static final String BASE_URL = "http://" + BuildConfig.HOST + "/public/";
+    public static final String BASE_URL_IP = "http://" + BuildConfig.HOST;
+//    public static final String BASE_URL = "http://services.taxisya.co/" ;
+//    public static final String BASE_URL_IP = "http://18.221.21.22";
     private static final String CONNECTIVITY_QUALITY_CHECKING = "http://www.taxisya.co/dev/";
 
 
     public static final int timeout = 40;
+    public static final String BASE_GOOGLE_URL = "https://maps.googleapis.com/maps/api/";
 
     public static AsyncHttpClient syncHttpClient= new SyncHttpClient();
     public static AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
@@ -76,7 +80,7 @@ public class Connect {
     }
 
     private static String getAbsoluteUrl(String relativeUrl) {
-        Log.e("BASE_URL", BASE_URL + relativeUrl);
+        Log.i("BASE_URL", BASE_URL + relativeUrl);
         return BASE_URL + relativeUrl;
     }
 

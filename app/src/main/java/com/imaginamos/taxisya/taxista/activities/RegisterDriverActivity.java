@@ -16,6 +16,7 @@ import android.app.Activity;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.text.TextUtils;
 import android.util.Base64;
@@ -26,21 +27,40 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.gson.JsonElement;
+import com.google.maps.android.PolyUtil;
 import com.imaginamos.taxisya.taxista.R;
 import com.imaginamos.taxisya.taxista.io.ApiAdapter;
+import com.imaginamos.taxisya.taxista.io.ApiService;
+import com.imaginamos.taxisya.taxista.io.Connect;
+import com.imaginamos.taxisya.taxista.model.BandListResponse;
 import com.imaginamos.taxisya.taxista.model.City;
+import com.imaginamos.taxisya.taxista.model.CompaniesListResponse;
 import com.imaginamos.taxisya.taxista.model.Country;
 import com.imaginamos.taxisya.taxista.model.Department;
+import com.imaginamos.taxisya.taxista.model.LineListResponse;
+import com.imaginamos.taxisya.taxista.model.RegisterDriverResponse;
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
@@ -59,13 +79,20 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 import retrofit.mime.TypedByteArray;
 import retrofit.mime.TypedFile;
+import retrofit2.Call;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import static android.view.View.GONE;
 
 public class RegisterDriverActivity extends Activity implements View.OnClickListener {
 
@@ -74,19 +101,17 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
     private EditText name;
     private EditText email;
     private EditText identity;
-    private EditText license;
     private EditText address;
+    private EditText TV_Movil;
+    private EditText TV_Contol_Card;
     private EditText pass;
 
     private EditText phone;
     private EditText cellphone;
 
     private EditText carPlate;
-    private EditText carBrand;
-    private EditText carLine;
   //  private EditText carMobileId;
     private EditText carYear;
-    private EditText carCompany;
 
     private ImageView photoImageView;
     private ImageView documentImageView;
@@ -130,6 +155,20 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
     private ArrayList<Department> departmentsArray;
     private ArrayList<City> citiesArray;
     private int mCityId;
+    private List<BandListResponse.Datum> brandData;
+    private Spinner SP_Car_Brand;
+    private Spinner SP_Car_Line;
+    private List<LineListResponse.Datum> lineData;
+    private String selected_car_line = "";
+    private String selected_car_line_id = "";
+    private String selected_car_brand_id = "";
+    private String selected_car_brand = "";
+    private List<CompaniesListResponse.Datum> companiesData;
+    private int selected_company_id = -1;
+    private String selected_company = "";
+    private Spinner SP_Companies;
+    private String tc = "";
+    private String movil = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,18 +192,19 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
 
         name = (EditText) findViewById(R.id.txtName);
         identity = (EditText) findViewById(R.id.txtIdentify);
-        license = (EditText) findViewById(R.id.txtLicense);
         email = (EditText) findViewById(R.id.txtUser);
         phone = (EditText) findViewById(R.id.txtPhone);
         cellphone = (EditText) findViewById(R.id.txtCellphone);
         address = (EditText) findViewById(R.id.txtAddress);
         pass = (EditText) findViewById(R.id.txtPass);
         carPlate = (EditText) findViewById(R.id.txtCarPlate);
-        carBrand = (EditText) findViewById(R.id.txtCarBrand);
-        carLine = (EditText) findViewById(R.id.txtCarLine);
+        TV_Movil = (EditText) findViewById(R.id.TV_Movil);
+        TV_Contol_Card = (EditText) findViewById(R.id.TV_Contol_Card);
+        SP_Car_Brand = (Spinner) findViewById(R.id.SP_Car_Brand);
+        SP_Car_Line = (Spinner) findViewById(R.id.SP_Car_Line);
+        SP_Companies = (Spinner) findViewById(R.id.SP_Companies);
       //  carMobileId = (EditText) findViewById(R.id.txtCarMobileId);
         carYear = (EditText) findViewById(R.id.txtCarYear);
-        carCompany = (EditText) findViewById(R.id.txtCarCompany);
 
         btnRegister = (Button) findViewById(R.id.btnLogin);
 
@@ -185,8 +225,156 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
 
         getSpinnerData();
 
+        VehicleBrandSpinnerData();
+        CompaniesSpinnerData();
+
         storageRegister();
 
+    }
+
+    private void CompaniesSpinnerData() {
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        okhttp3.OkHttpClient.Builder httpClient = new okhttp3.OkHttpClient.Builder();
+        httpClient.addInterceptor(logging);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Connect.BASE_URL_IP)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
+
+        ApiService service = retrofit.create(ApiService.class);
+        Call<CompaniesListResponse> call_profile = service.companiesList();
+        call_profile.enqueue(new retrofit2.Callback<CompaniesListResponse>() {
+            @Override
+            public void onResponse(Call<CompaniesListResponse> call, retrofit2.Response<CompaniesListResponse> response) {
+
+                companiesData = response.body().getData();
+                List<String>companies_spinner_data = new ArrayList<>();
+                 for (int j = 0 ;  j< response.body().getData().size(); j++){
+                    companies_spinner_data.add(response.body().getData().get(j).getName_company());
+                }
+
+                ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(RegisterDriverActivity.this, android.R.layout.simple_spinner_item, companies_spinner_data);
+                spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
+                SP_Companies.setAdapter(spinnerArrayAdapter);
+                SP_Companies.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selected_company = companiesData.get(i).getName_company();
+                        selected_company_id = companiesData.get(i).getId();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+            }
+
+            @Override
+            public void onFailure(Call<CompaniesListResponse> call, Throwable t) {
+                Log.w("-----Error-----", t.toString());
+            }
+        });
+    }
+
+    private void VehicleBrandSpinnerData() {
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        okhttp3.OkHttpClient.Builder httpClient = new okhttp3.OkHttpClient.Builder();
+        httpClient.addInterceptor(logging);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Connect.BASE_URL_IP)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
+
+        ApiService service = retrofit.create(ApiService.class);
+        Call<BandListResponse> call_profile = service.brandList();
+        call_profile.enqueue(new retrofit2.Callback<BandListResponse>() {
+            @Override
+            public void onResponse(Call<BandListResponse> call, retrofit2.Response<BandListResponse> response) {
+
+                brandData = response.body().getData();
+                List<String> brand_spinner_data = new ArrayList<>();
+                for (int j = 0 ;  j< response.body().getData().size(); j++){
+                    brand_spinner_data.add(response.body().getData().get(j).getName_brands());
+                }
+
+                ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(RegisterDriverActivity.this, android.R.layout.simple_spinner_item, brand_spinner_data);
+                spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
+                SP_Car_Brand.setAdapter(spinnerArrayAdapter);
+                SP_Car_Brand.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        VehicleLineSpinnerData(brandData.get(i).getId());
+                        selected_car_brand = brandData.get(i).getName_brands();
+                        selected_car_brand_id = brandData.get(i).getId();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+            }
+
+            @Override
+            public void onFailure(Call<BandListResponse> call, Throwable t) {
+                Log.w("-----Error-----", t.toString());
+            }
+        });
+    }
+    private void VehicleLineSpinnerData(String brand_id) {
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        okhttp3.OkHttpClient.Builder httpClient = new okhttp3.OkHttpClient.Builder();
+        httpClient.addInterceptor(logging);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Connect.BASE_URL_IP)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
+
+        ApiService service = retrofit.create(ApiService.class);
+        Call<LineListResponse> call_profile = service.lineList(brand_id);
+        call_profile.enqueue(new retrofit2.Callback<LineListResponse>() {
+            @Override
+            public void onResponse(Call<LineListResponse> call, retrofit2.Response<LineListResponse> response) {
+
+                lineData = response.body().getData();
+                List<String> line_spinner_data = new ArrayList<>();
+                for (int j = 0 ;  j< response.body().getData().size(); j++){
+                    line_spinner_data.add(response.body().getData().get(j).getName_line());
+                }
+
+                ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(RegisterDriverActivity.this, android.R.layout.simple_spinner_item, line_spinner_data);
+                spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
+                SP_Car_Line.setAdapter(spinnerArrayAdapter);
+                SP_Car_Line.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        selected_car_line = lineData.get(i).getName_line();
+                        selected_car_line_id = lineData.get(i).getId();
+                        selected_car_brand_id = lineData.get(i).getId_brand();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                });
+            }
+
+            @Override
+            public void onFailure(Call<LineListResponse> call, Throwable t) {
+                Log.w("-----Error-----", t.toString());
+            }
+        });
     }
 
 
@@ -392,7 +580,6 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
         if (registerName != null && !TextUtils.isEmpty(registerName)) { name.setText(registerName); }
 
         String registerIdentity    = sharedPref.getString("register_identity", "");
-        String registerLicense     = sharedPref.getString("register_license", "");
         String registerEmail       = sharedPref.getString("register_email", "");
         String registerPhone       = sharedPref.getString("register_phone", "");
         String registerCellphone   = sharedPref.getString("register_cellphone", "");
@@ -400,7 +587,9 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
         String registerPassword    = sharedPref.getString("register_password", "");
         String registerCarPlate    = sharedPref.getString("register_car_plate", "");
         String registerCarBrand    = sharedPref.getString("register_car_brand", "");
+        String registerCarBrandId    = sharedPref.getString("register_car_brand_id", "");
         String registerCarLine     = sharedPref.getString("register_car_line", "");
+        String registerCarLineId     = sharedPref.getString("register_car_line_id", "");
         String registerCarMobileId = sharedPref.getString("register_car_mobile_id", "");
         String registerCarYear     = sharedPref.getString("register_car_year", "");
         String registerCarCompany  = sharedPref.getString("register_car_company", "");
@@ -462,18 +651,17 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
 
 
         if (registerIdentity != null && !TextUtils.isEmpty(registerIdentity)) { identity.setText(registerIdentity); }
-        if (registerLicense != null && !TextUtils.isEmpty(registerLicense)) { license.setText(registerLicense); }
         if (registerEmail != null && !TextUtils.isEmpty(registerEmail)) { email.setText(registerEmail); }
         if (registerPhone != null && !TextUtils.isEmpty(registerPhone)) { phone.setText(registerPhone); }
         if (registerCellphone != null && !TextUtils.isEmpty(registerCellphone)) { cellphone.setText(registerCellphone); }
         if (registerAddress != null && !TextUtils.isEmpty(registerAddress)) { address.setText(registerAddress); }
         if (registerPassword != null && !TextUtils.isEmpty(registerPassword)) { pass.setText(registerPassword); }
         if (registerCarPlate != null && !TextUtils.isEmpty(registerCarPlate)) { carPlate.setText(registerCarPlate); }
-        if (registerCarBrand != null && !TextUtils.isEmpty(registerCarBrand)) { carBrand.setText(registerCarBrand); }
-        if (registerCarLine != null && !TextUtils.isEmpty(registerCarLine)) { carLine.setText(registerCarLine); }
-        //if (registerCarMobileId != null && !TextUtils.isEmpty(registerCarMobileId)) { carMobileId.setText(registerCarMobileId); }
-        if (registerCarYear != null && !TextUtils.isEmpty(registerCarYear)) { carYear.setText(registerCarYear); }
-        if (registerCarCompany != null && !TextUtils.isEmpty(registerCarCompany)) { carCompany.setText(registerCarCompany); }
+//        if (registerCarBrand != null && !TextUtils.isEmpty(registerCarBrand)) { carBrand.setText(registerCarBrand); }
+//        if (registerCarLine != null && !TextUtils.isEmpty(registerCarLine)) { carLine.setText(registerCarLine); }
+//        //if (registerCarMobileId != null && !TextUtils.isEmpty(registerCarMobileId)) { carMobileId.setText(registerCarMobileId); }
+//        if (registerCarYear != null && !TextUtils.isEmpty(registerCarYear)) { carYear.setText(registerCarYear); }
+//        if (registerCarCompany != null && !TextUtils.isEmpty(registerCarCompany)) { carCompany.setText(registerCarCompany); }
 
         Log.v(TAG,"storageRegister 2");
 
@@ -521,18 +709,20 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
 
             editor.putString("register_name", name.getText().toString());
             editor.putString("register_identity", identity.getText().toString());
-            editor.putString("register_license", license.getText().toString());
             editor.putString("register_email", email.getText().toString());
             editor.putString("register_phone", phone.getText().toString());
             editor.putString("register_cellphone", cellphone.getText().toString());
             editor.putString("register_address", address.getText().toString());
             editor.putString("register_password", pass.getText().toString());
             editor.putString("register_car_plate", carPlate.getText().toString());
-            editor.putString("register_car_brand", carBrand.getText().toString());
-            editor.putString("register_car_line", carLine.getText().toString());
+            editor.putString("register_car_brand", brandData.get(SP_Car_Brand.getSelectedItemPosition()).getName_brands());
+            editor.putString("register_car_brand_id", brandData.get(SP_Car_Brand.getSelectedItemPosition()).getId());
+            editor.putString("register_car_line", lineData.get(SP_Car_Line.getSelectedItemPosition()).getName_line());
+            editor.putString("register_car_line_id", lineData.get(SP_Car_Line.getSelectedItemPosition()).getId());
             editor.putString("register_car_mobile_id", "1");
             editor.putString("register_car_year", carYear.getText().toString());
-            editor.putString("register_car_company", carCompany.getText().toString());
+            editor.putString("register_car_company", selected_company);
+            editor.putString("register_car_company_id", String.valueOf(selected_company_id));
 
             Log.v("PHOTO_STRING","save = " + imageString);
 
@@ -544,68 +734,67 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
 
             editor.commit();
 
+
+            HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+            logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+            okhttp3.OkHttpClient.Builder httpClient = new okhttp3.OkHttpClient.Builder();
+            httpClient.addInterceptor(logging);
+
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(Connect.BASE_URL_IP)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .client(httpClient.build())
+                    .build();
+
+            ApiService service = retrofit.create(ApiService.class);
+            Call<RegisterDriverResponse> call_profile = service.registerDriver(
+                    name.getText().toString().trim(),
+                    "",
+                    email.getText().toString().trim(),
+                    pass.getText().toString().trim(),
+                    cellphone.getText().toString().trim(),
+                    phone.getText().toString().trim(),
+                    identity.getText().toString().trim(),
+                    address.getText().toString().trim(),
+                    TV_Contol_Card.getText().toString().trim(),
+                    carPlate.getText().toString().trim(),
+                    TV_Movil.getText().toString().trim().length() > 0 ? TV_Movil.getText().toString().trim() : "0",
+                    selected_car_brand_id,
+                    selected_car_line_id,
+                    carYear.getText().toString().trim(),
+                    selected_company_id,
+                    imageString,
+                    documentString,
+                    document2String,
+                    document3String,
+                    document4String);
+            call_profile.enqueue(new retrofit2.Callback<RegisterDriverResponse>() {
+                @Override
+                public void onResponse(Call<RegisterDriverResponse> call, retrofit2.Response<RegisterDriverResponse> response) {
+                    registerProgressDialog.dismiss();
+
+                    if(response.body().getSuccess()) {
+                        Toast.makeText(getApplicationContext(), R.string.register_ok_message, Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(RegisterDriverActivity.this, LoginActivity.class);
+                        startActivity(i);
+                        finish();
+                    }else{
+                        Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_LONG).show();
+                    }
+
+                }
+
+
+                @Override
+                public void onFailure(Call<RegisterDriverResponse> call, Throwable t) {
+                    Log.w("-----Error-----", t.toString());
+                    registerProgressDialog.dismiss();
+                    Toast.makeText(getApplicationContext(), R.string.register_bad_message, Toast.LENGTH_LONG).show();
+
+                }
+            });
             // call register driver
-            ApiAdapter.getApiService().registerDriver(name.getText().toString(),
-                    "", email.getText().toString(),
-                    pass.getText().toString(), phone.getText().toString(),
-                    cellphone.getText().toString(), identity.getText().toString(), license.getText().toString(), address.getText().toString(), "0",
-                    mCityId, carPlate.getText().toString(), carBrand.getText().toString(), carLine.getText().toString(),
-                    "1", carYear.getText().toString(), carCompany.getText().toString(),
-                    imageString, documentString,
-                    document2String, document3String, document4String,
-                    new retrofit.Callback<RegisterResponse>() {
 
-                        @Override
-                        public void success(RegisterResponse rep, Response response) {
-                            registerProgressDialog.dismiss();
-                            int error = 0;
-
-                            Log.v("REGISTER_DRIVER","success - " + response.toString());
-                            //IntputStream in  = response.getBody().in()
-                            try {
-                                error = rep.getError();
-                            }
-                            catch (Exception e) {
-                            }
-
-                            Log.v("REGISTER_DRIVER","success2 - " + String.valueOf(rep.getError()));
-                            Log.v("REGISTER_DRIVER","success3 - " + String.valueOf(rep.getMessage()));
-
-
-                            //Log.i("SUCCESS ", "SUCCESS RETURN " + response);
-                            Log.i(">> RegisterDriverActivity >> registerService >> registerDriver()", "SUCCESS RETURN " + response);
-
-                            if (error == 5) {
-                                Toast.makeText(getApplicationContext(), rep.getMessage(), Toast.LENGTH_LONG).show();
-                            }
-                            else {
-                                Toast.makeText(getApplicationContext(), R.string.register_ok_message, Toast.LENGTH_LONG).show();
-                            }
-                            Intent i = new Intent(RegisterDriverActivity.this, LoginActivity.class);
-                            startActivity(i);
-                            finish();
-                        }
-
-                        @Override
-                        public void failure(RetrofitError error) {
-                            registerProgressDialog.dismiss();
-                            Log.v("REGISTER_DRIVER","error - " + error.toString());
-                            Log.d("FAILURE ", "FAILURE RETURN " + error);
-
-//                            RestError body = (RestError) error.getBodyAs(RestError.class);
-//                            if (body.getError() == 5) {
-//                                Log.v("REGISTER_DRIVER", "FAILURE RETURN error 5");
-//                                Toast.makeText(getApplicationContext(), R.string.register_bad_message, Toast.LENGTH_LONG).show();
-//                                Intent i = new Intent(RegisterDriverActivity.this, LoginActivity.class);
-//                                startActivity(i);
-//                                finish();
-//                            }
-//                            else {
-                                Toast.makeText(getApplicationContext(), R.string.register_bad_message, Toast.LENGTH_LONG).show();
-//                            }
-
-                        }
-                    });
 
         }
             else {
@@ -619,37 +808,26 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
     public boolean validateFields() {
 
 
-        Log.v("CADENA1","str 0 " + mPhotoString);
-        Log.v("CADENA1","str 2 " + mDocument2String);
-        Log.v("CADENA1","str 3 " + mDocument3String);
-        Log.v("CADENA1","str 4 " + mDocument4String);
-        Log.v("CADENA1","str  " + mDocumentString);
-
-
-
-
         if (
-
-                                (name.length() > 1) &&
-                                (email.length() > 1) &&
-                                (phone.length() > 1) &&
-                                (cellphone.length() > 1) &&
-                                (address.length()> 1) &&
-                                (pass.length() > 1) &&
-                                (identity.length() > 1) &&
-                                        (license.length() > 1) &&
-                                (mCityId > 0) &&
-                                        (carPlate.length() > 0) &&
-                                        (carBrand.length() > 0) &&
-                                        (carLine.length() > 0) &&
-                                      //  (carMobileId.length() > 0) &&
-                                        (carYear.length() > 0) &&
-                                        (carCompany.length() > 0)&&
-                                        (mPhotoString!= null)&&
-                                        (mDocument2String != null)&&
-                                        (mDocument3String!= null)&&
-                                        (mDocument4String!= null)&&
-                                        (mDocumentString!= null)
+            (name.getText().toString().length() > 1) &&
+            (email.getText().toString().length() > 1) &&
+            (phone.getText().toString().length() > 1) &&
+            (cellphone.getText().toString().length() > 1) &&
+            (address.getText().toString().length()> 1) &&
+            (pass.getText().toString().length() > 1) &&
+            (identity.getText().toString().length() > 1) &&
+            (carPlate.getText().toString().length() > 0) &&
+            (TV_Contol_Card.getText().toString().length() > 0) &&
+            (selected_car_brand_id.length() > 0) &&
+            (selected_car_line_id.length() > 0) &&
+          //  (carMobileId.length() > 0) &&
+            (carYear.getText().toString().length() > 0) &&
+            (selected_company_id >= 0)&
+            (mPhotoString!= null)&&
+            (mDocument2String != null)&&
+            (mDocument3String!= null)&&
+            (mDocument4String!= null)&&
+            (mDocumentString!= null)
                 ) return true;
 
         return false;
@@ -664,8 +842,9 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
                 String photoName = getString(R.string.register_driver_photo).replace(" ", "_") + "_" + getCurrentDate();
                 mPhotoFilePath = new File(photoFilesDirectory.toString(), photoName + ".jpg");
                 Intent photoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                photoIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 photoIntent.putExtra(MediaStore.EXTRA_OUTPUT,
-                        Uri.fromFile(mPhotoFilePath));
+                FileProvider.getUriForFile(RegisterDriverActivity.this, "imaginamos.taxisya.taxista.fileprovider", mPhotoFilePath));
                 startActivityForResult(photoIntent, CAMERA_PHOTO_REQUEST);
                 break;
 
@@ -675,7 +854,9 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
                 String documentName = getString(R.string.register_driver_document_photo).replace(" ", "_") + "_" + getCurrentDate();
                 mDocumentFilePath = new File(photoFilesDirectory.toString(), documentName + ".jpg");
                 Intent documentIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                documentIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mDocumentFilePath));
+                documentIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                documentIntent.putExtra(MediaStore.EXTRA_OUTPUT,
+                FileProvider.getUriForFile(RegisterDriverActivity.this, "imaginamos.taxisya.taxista.fileprovider", mDocumentFilePath));
                 startActivityForResult(documentIntent, CAMERA_DOCUMENT_REQUEST);
                 break;
 
@@ -685,8 +866,11 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
                 String document2Name = getString(R.string.register_driver_license_photo).replace(" ", "_") + "_" + getCurrentDate();
                 mDocument2FilePath = new File(photoFilesDirectory.toString(), document2Name + ".jpg");
                 Intent document2Intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                document2Intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
                 document2Intent.putExtra(MediaStore.EXTRA_OUTPUT,
-                        Uri.fromFile(mDocument2FilePath));
+                FileProvider.getUriForFile(RegisterDriverActivity.this, "imaginamos.taxisya.taxista.fileprovider", mDocument2FilePath));
+
                 startActivityForResult(document2Intent, CAMERA_DOCUMENT2_REQUEST);
                 break;
 
@@ -696,8 +880,10 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
                 String document3Name = getString(R.string.register_driver_card_property).replace(" ", "_") + "_" + getCurrentDate();
                 mDocument3FilePath = new File(photoFilesDirectory.toString(), document3Name + ".jpg");
                 Intent document3Intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                document3Intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
                 document3Intent.putExtra(MediaStore.EXTRA_OUTPUT,
-                        Uri.fromFile(mDocument3FilePath));
+                FileProvider.getUriForFile(RegisterDriverActivity.this,  "imaginamos.taxisya.taxista.fileprovider", mDocument3FilePath));
                 startActivityForResult(document3Intent, CAMERA_DOCUMENT3_REQUEST);
                 break;
 
@@ -707,8 +893,11 @@ public class RegisterDriverActivity extends Activity implements View.OnClickList
                 String document4Name = getString(R.string.register_driver_card_operation).replace(" ", "_") + "_" + getCurrentDate();
                 mDocument4FilePath = new File(photoFilesDirectory.toString(), document4Name + ".jpg");
                 Intent document4Intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                document4Intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
                 document4Intent.putExtra(MediaStore.EXTRA_OUTPUT,
-                        Uri.fromFile(mDocument4FilePath));
+                FileProvider.getUriForFile(RegisterDriverActivity.this, "imaginamos.taxisya.taxista.fileprovider", mDocument4FilePath));
+
                 startActivityForResult(document4Intent, CAMERA_DOCUMENT4_REQUEST);
                 break;
 

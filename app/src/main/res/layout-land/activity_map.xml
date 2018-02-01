@@ -14,6 +14,15 @@
             android:layout_width="0sp"
             android:layout_height="match_parent"
             android:layout_weight="0.5">
+            <Button
+                android:id="@+id/BT_Waze"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_margin="10sp"
+                android:visibility="gone"
+                android:background="@drawable/waze_button"
+                />
+
             <fragment
                 android:id="@+id/map"
                 class="com.google.android.gms.maps.MapFragment"
@@ -51,6 +60,7 @@
                 android:visibility="visible"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/logo" />
+
             <LinearLayout
                 android:id="@+id/direcciones"
                 android:layout_width="match_parent"
@@ -92,8 +102,9 @@
                         <TextView
                             android:id="@+id/address"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="#000"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/text_orange"
                             android:textSize="@dimen/fontdirmap"
                             android:textStyle="bold" />
 
@@ -191,6 +202,43 @@
 
 
                     </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/RL_Travel_Details"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:background="@android:color/white"
+                        android:layout_height="120sp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="30sp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/TV_Destination"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_orange"
+                                android:textSize="20sp"
+                                android:text="Destino"/>
+                            <TextView
+                                android:id="@+id/TV_Recargos"
+                                android:text="Recargo Nocturno"
+                                android:layout_width="match_parent"
+                                android:textColor="@color/text_gray"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/TV_Valor"
+                                android:text="Total: "
+                                android:textColor="@color/text_gray"
+                                android:layout_width="match_parent"
+                                android:textSize="20sp"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
 
                     <LinearLayout
                         android:id="@+id/layout_code_authorization"

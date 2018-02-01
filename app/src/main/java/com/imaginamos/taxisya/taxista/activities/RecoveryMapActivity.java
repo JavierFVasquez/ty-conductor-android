@@ -29,6 +29,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -59,13 +61,17 @@ import com.google.firebase.database.ValueEventListener;
 import com.imaginamos.taxisya.taxista.GcmKeepAlive;
 import com.imaginamos.taxisya.taxista.R;
 import com.imaginamos.taxisya.taxista.io.ApiConstants;
+import com.imaginamos.taxisya.taxista.io.ApiService;
+import com.imaginamos.taxisya.taxista.io.Connect;
 import com.imaginamos.taxisya.taxista.io.Connectivity;
 import com.imaginamos.taxisya.taxista.io.MiddleConnect;
 import com.imaginamos.taxisya.taxista.io.MyService;
 import com.imaginamos.taxisya.taxista.io.UpdateReceiver;
 import com.imaginamos.taxisya.taxista.model.Actions;
+import com.imaginamos.taxisya.taxista.model.CompaniesListResponse;
 import com.imaginamos.taxisya.taxista.model.Conf;
 import com.imaginamos.taxisya.taxista.model.MessageEvent;
+import com.imaginamos.taxisya.taxista.model.ServiceStatusResponse;
 import com.imaginamos.taxisya.taxista.utils.BDAdapter;
 import com.imaginamos.taxisya.taxista.utils.Dialogos;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -85,11 +91,16 @@ import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import cz.msebera.android.httpclient.Header;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 import static io.fabric.sdk.android.Fabric.TAG;
 
@@ -254,7 +265,7 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
             //String rCode = extras.getString("rCode");
 
             nombre.setText(getString(R.string.waitservice_texto_barrio2) + extras.getString("barrio"));
-            direccion.setText(getString(R.string.mapa_titulo_direccion) + extras.getString("address"));
+            direccion.setText(extras.getString("address"));
             userLat = Double.parseDouble(from_lat);
             userLng = Double.parseDouble(from_lng);
 
@@ -433,14 +444,15 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
 
     @Override
     public void onLocationChanged(Location location) {
-        // TODO Auto-generated method stub
+
         if (location != null) {
             Log.e(TAG, "LAT -> :" + location.getProvider() + "->" + location.getLatitude() + " LOG" + location.getLongitude());
             longitud = location.getLongitude();
             latitud = location.getLatitude();
 
             Log.e(TAG, "sendMyPosition");
-            MiddleConnect.sendMyPosition(this, driver_id, String.valueOf(latitud), String.valueOf(longitud), new AsyncHttpResponseHandler() {
+            MiddleConnect.sendMyPosition(this, driver_id, String.valueOf(latitud), String.valueOf(longitud), new AsyncHttpResponseHandler()
+            {
                 @Override
                 public void onStart() {
                     //Log.e(AsyncHttpResponseHandler.TAG, "onStart");
@@ -602,26 +614,26 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
             Log.v("checkService", "driver_id=" + driver_id + " service_id=" + "NULO");
         }
 
-        MiddleConnect.checkStatusService(this, driver_id, service_id, "uuid", new AsyncHttpResponseHandler() {
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        okhttp3.OkHttpClient.Builder httpClient = new okhttp3.OkHttpClient.Builder();
+        httpClient.addInterceptor(logging);
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Connect.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
+
+        ApiService service = retrofit.create(ApiService.class);
+        Call<ServiceStatusResponse> call_profile = service.serviceStatus(driver_id, service_id);
+        call_profile.enqueue(new retrofit2.Callback<ServiceStatusResponse>() {
             @Override
-            public void onStart() {
-                Log.v("checkService", "onStart");
-                Log.e("TIMER_EJECUTANDO1", "checkService() onStart ");
-            }
+            public void onResponse(Call<ServiceStatusResponse> call, retrofit2.Response<ServiceStatusResponse> response) {
 
-            @Override
-            //public void onSuccess(String response) {
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-
-                String response = new String(responseBody);
-                Log.w("Service Response" , response);
                 try {
-                    //Log.v("checkService", "SUCCES: "+response);
-                    JSONObject responsejson = new JSONObject(response);
-                    //if (responsejson.getInt("status_id"))
-                    //{
-                    int status_service = responsejson.getInt("status_id");
+
+                    int status_service = Integer.parseInt(response.body().getStatus_id());
                     Log.v("checkService", "status_id: " + String.valueOf(status_service));
                     Log.e("TIMER_EJECUTANDO1", "checkService() status " + String.valueOf(status_service));
 
@@ -638,8 +650,7 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
                 }
 
                 try {
-                    JSONObject rj = new JSONObject(response);
-                    int error = rj.getInt("error");
+                    int error = response.body().getError();
                     Log.e("TIMER_EJECUTANDO1", "checkService() rj error 1");
 
                     if (error == 1) {
@@ -649,26 +660,15 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
                 } catch (Exception e2) {
 
                 }
-            }
-
-            @Override
-            //public void onFailure(Throwable e, String response) {
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-
-                String response = new String(responseBody);
-                Log.e("TIMER_EJECUTANDO1", "checkService() onFailure response " + response);
-                Log.v("checkService", "onFailure");
 
             }
 
             @Override
-            public void onFinish() {
-                Log.e("TIMER_EJECUTANDO1", "onFinish() ");
-                Log.v("checkService", "onFinish");
-
+            public void onFailure(Call<ServiceStatusResponse> call, Throwable t) {
+                Log.w("-----Error-----", t.toString());
             }
-
         });
+
         return true;
 
     }
@@ -903,7 +903,6 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
 
             case R.id.btnConfirmCode:
                 Log.v("BTN1", "btn_confirm_code");
-                // TODO:  aplicar mascara de XX
                 if (confirmCodeAuthorization()) {
                     mLinear2.setVisibility(View.VISIBLE);
                     btnCancelar.setVisibility(View.GONE);
@@ -1215,19 +1214,19 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
 
     @Override
     public void onProviderDisabled(String arg0) {
-        // TODO Auto-generated method stub
+
 
     }
 
     @Override
     public void onProviderEnabled(String arg0) {
-        // TODO Auto-generated method stub
+
 
     }
 
     @Override
     public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
-        // TODO Auto-generated method stub
+
 
     }
 
@@ -1255,7 +1254,6 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
     }
 
     public boolean typePayment() {
-        // TODO: Ver type pago
         if (mPayType == 2) return true;
         return false;
 
@@ -1418,7 +1416,6 @@ public class RecoveryMapActivity extends Activity implements OnClickListener, Lo
             number = numberFormat.parse(amount);
 
         } catch (ParseException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

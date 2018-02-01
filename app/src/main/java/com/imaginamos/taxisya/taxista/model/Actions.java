@@ -5,6 +5,7 @@ public class Actions {
     public final static String ACTION_NEW_SERVICES = "ACTION_NEW_SERVICES";
     public final static String ACTION_SERVICE_CANCEL = "ACTION_SERVICE_CANCEL";
     public final static String ACTION_USER_CANCELED_SERVICE = "ACTION_USER_CANCELED_SERVICE";
+    public final static String ACTION_USER_SERVICE_INTERRUPT = "ACTION_USER_SERVICE_INTERRUPT";
     public final static String ACTION_OPE_CANCELED_SERVICER = "ACTION_OPE_CANCELED_SERVICER";
     public final static String ACTION_CANCEL_SYSTEM_SERVICE = "ACTION_CANCEL_SYSTEM_SERVICE";
     public final static String ACTION_DRIVER_CLOSE_SESSION = "ACTION_DRIVER_CLOSE_SESSION";
@@ -14,6 +15,7 @@ public class Actions {
 
     public final static int TYPE_NEW_SERVICES = 1;
     public final static int SERVICE_CANCEL = 2;
+    public final static int SERVICE_INTERRUPT = 48;
     public final static int USER_CANCELED_SERVICE = 30;
     public final static int CANCEL_FOR_O = 33;
     public final static int SYSTEM_CANCEL_SERVICE = 34;

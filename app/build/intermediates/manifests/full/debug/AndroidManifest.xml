@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="co.taxisya.conductor"
-    android:versionCode="57"
-    android:versionName="1.7.14" >
+    android:versionCode="60"
+    android:versionName="1.7.17" >
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -32,6 +32,7 @@
     <uses-permission android:name="android.permission.READ_OWNER_DATA" />
     <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <!-- This is will enhance the device ID -->
@@ -68,8 +69,17 @@
         android:largeHeap="true"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <provider
+            android:name="com.imaginamos.taxisya.taxista.utils.GenericFileProvider"
+            android:authorities="imaginamos.taxisya.taxista.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyD5tTHBMRm1I1xUMexNJ-G9DVR3x6La2J8" />
@@ -116,7 +126,7 @@
             android:hardwareAccelerated="true" />
         <activity
             android:name="com.imaginamos.taxisya.taxista.activities.MapActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:configChanges="keyboardHidden|screenSize"
             android:hardwareAccelerated="true" />
         <activity
             android:name="com.imaginamos.taxisya.taxista.activities.LoginActivity"
@@ -159,6 +169,7 @@
             android:label="@string/title_activity_recovery_map"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.imaginamos.taxisya.taxista.activities.ChatActivity" />
+        <activity android:name="com.imaginamos.taxisya.taxista.activities.SummaryActivity" />
 
         <meta-data
             android:name="com.google.android.gms.version"

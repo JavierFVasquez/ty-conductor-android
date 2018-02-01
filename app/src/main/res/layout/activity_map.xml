@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
     <LinearLayout
         android:id="@+id/LL_Content"
         android:layout_width="match_parent"
@@ -58,20 +60,21 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5sp"
                     android:contentDescription="@string/app_name"
-                    android:visibility="visible" />
+                    android:visibility="gone" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="75sp"
-                    android:layout_marginRight="105sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
                     android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/address"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="#000"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/text_orange"
+                        android:gravity="center"
                         android:textSize="@dimen/fontdirmap"
                         android:textStyle="bold" />
 
@@ -84,26 +87,28 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/BT_Chat"
-                    android:layout_width="90sp"
-                    android:layout_alignParentRight="true"
-                    android:text="@string/chat"
-                    android:layout_margin="5sp"
-                    android:background="@drawable/gray_border"
-                    android:textColor="@color/text_gray"
-                    android:layout_height="match_parent" />
-
             </RelativeLayout>
         </LinearLayout>
-
-        <fragment
-            android:id="@+id/map"
-            class="com.google.android.gms.maps.MapFragment"
+        <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="0sp"
-            android:layout_weight="0.62"
-            android:clickable="true" />
+            android:layout_weight="0.62">
+            <Button
+                android:id="@+id/BT_Waze"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:layout_margin="10sp"
+                android:visibility="gone"
+                android:background="@drawable/waze_button"
+                />
+            <fragment
+                android:id="@+id/map"
+                class="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true" />
+
+        </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -189,6 +194,43 @@
 
                     </LinearLayout>
                 </ScrollView>
+                <RelativeLayout
+                    android:id="@+id/RL_Travel_Details"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="@android:color/white"
+                    android:layout_height="120sp">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:layout_marginLeft="30sp"
+                       android:orientation="vertical">
+                       <TextView
+                           android:id="@+id/TV_Destination"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:textColor="@color/text_orange"
+                           android:textSize="20sp"
+                           android:text="Destino"/>
+                       <TextView
+                           android:id="@+id/TV_Recargos"
+                           android:text="Recargo Nocturno"
+                           android:layout_width="match_parent"
+                           android:textColor="@color/text_gray"
+                           android:layout_height="wrap_content" />
+                       <TextView
+                           android:id="@+id/TV_Valor"
+                           android:text="Total: "
+                           android:textColor="@color/text_gray"
+                           android:layout_width="match_parent"
+                           android:textSize="20sp"
+                           android:layout_height="wrap_content" />
+                   </LinearLayout>
+
+                </RelativeLayout>
 
 
 
@@ -198,19 +240,18 @@
                     android:layout_height="wrap_content"
                     android:visibility="gone" >
 
-                    <TextView
-                        android:id="@+id/txtTitleCode"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="@android:color/black"
-                        android:text="@string/title_confirm_code" />
-
                     <EditText
                         android:id="@+id/etCodeAuthorization"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint=""
+                        android:layout_height="60sp"
+                        android:gravity="center"
+                        android:text=""
+                        android:layout_marginLeft="30sp"
+                        android:layout_marginRight="30sp"
+                        android:textColor="@color/text_orange"
+                        android:textSize="20sp"
+                        android:backgroundTint="@color/text_orange"
+                        android:hint="@string/title_confirm_code"
                         android:inputType="number" />
 
                 </LinearLayout>
@@ -221,31 +262,39 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="center"
+                    android:padding="7sp"
                     android:gravity="center">
 
                     <Button
                         android:id="@+id/btn_pay"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight=".5"
                         android:background="@drawable/btn_green"
                         android:paddingBottom="2dp"
                         android:text="@string/aceptar"
                         android:textColor="@android:color/white"
-                        android:visibility="invisible" />
+                        android:visibility="gone" />
+                    <Button
+                        android:id="@+id/BT_Chat"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight=".5"
+                        android:text="@string/chat"
+                        android:background="@drawable/orange_border"
+                        android:textColor="@color/text_orange"
+                     />
 
                     <Button
                         android:id="@+id/btnLlegada"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
                         android:layout_weight=".5"
                         android:background="@drawable/btn_green"
                         android:paddingBottom="2dp"
@@ -257,10 +306,8 @@
                         android:id="@+id/btnConfirmCode"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
                         android:layout_weight=".5"
                         android:background="@drawable/btn_green"
                         android:paddingBottom="2dp"
@@ -273,10 +320,8 @@
                         android:id="@+id/btnCancelar"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
                         android:layout_weight=".5"
                         android:background="@drawable/btn_request"
                         android:paddingBottom="2dp"
@@ -288,11 +333,9 @@
                         android:id="@+id/btnFinalizar"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight=".5"
                         android:background="@drawable/btn_request"
                         android:paddingBottom="2dp"
                         android:text="@string/map_button_finalizar"
@@ -303,11 +346,9 @@
                         android:id="@+id/btnPay"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
-                        android:layout_marginBottom="2dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="2dp"
-                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight=".5"
                         android:background="@drawable/btn_green"
                         android:paddingBottom="2dp"
                         android:text="Confirmar pago y finalizar"

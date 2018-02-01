@@ -1,6 +1,7 @@
 package com.imaginamos.taxisya.taxista.activities;
 
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
@@ -9,9 +10,12 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.speech.tts.TextToSpeech;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View.OnClickListener;
 import android.content.Intent;
@@ -22,13 +26,17 @@ import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.imaginamos.taxisya.taxista.R;
 import com.crashlytics.android.Crashlytics;
 import com.imaginamos.taxisya.taxista.BuildConfig;
+import com.imaginamos.taxisya.taxista.io.ApiService;
+import com.imaginamos.taxisya.taxista.io.Connect;
 import com.imaginamos.taxisya.taxista.io.MiddleConnect;
 import com.imaginamos.taxisya.taxista.io.MyService;
 import com.imaginamos.taxisya.taxista.model.Conf;
 import com.imaginamos.taxisya.taxista.model.Preferencias;
+import com.imaginamos.taxisya.taxista.model.ServiceStatusResponse;
 import com.imaginamos.taxisya.taxista.utils.BDAdapter;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
@@ -41,6 +49,10 @@ import java.util.HashMap;
 
 import cz.msebera.android.httpclient.Header;
 import io.fabric.sdk.android.Fabric;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 import static android.R.attr.value;
 
@@ -68,13 +80,41 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
 
     ArrayList<HashMap<String, String>> contactList;
 
+    public void requestPermissions (){
+        int PERMISSION_ALL = 1;
+        String[] PERMISSIONS = {
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.CALL_PHONE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.ACCESS_WIFI_STATE,
+                Manifest.permission.CAMERA
+
+        };
+
+        if(!hasPermissions(this, PERMISSIONS)){
+            ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
+        }
+    }
+
+    public static boolean hasPermissions(Context context, String... permissions) {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
+            for (String permission : permissions) {
+                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.v("onCreate", "InicialActivityLogin");
         super.onCreate(savedInstanceState);
 
 
-
+        requestPermissions ();
 
 
 
@@ -83,6 +123,7 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
         conf = new Conf(this);
         login = conf.getUser();
         id_driver = conf.getIdUser();
+        driver_id = conf.getIdUser();
         uuid = conf.getUuid();
 
         btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -99,7 +140,7 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
      //   clearServices();
 //        MiddleConnect.enableDrive(this, lat, lng, driver_id, id, new AsyncHttpResponseHandler() {
 
-        MiddleConnect.enableDrive(this, lat, lng, driver_id, id, new AsyncHttpResponseHandler() {
+        MiddleConnect.enableDrive(this, lat, lng, driver_id, uuid, new AsyncHttpResponseHandler() {
 
             @Override
             public void onStart() {
@@ -129,22 +170,8 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
                         if (repsonsejson.getBoolean("success")) {
                             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
 
-                            savePreferencias("servicieTomado", "false");
-
-                            Intent i = new Intent(InicialActivityLogin.this, WaitServiceActivity.class);
-
-                            if (name != null && name != "") {
-                                i.putExtra("name", name);
-                            }
-
-                            if (repsonsejson.has("services")) {
-                                i.putExtra("services", repsonsejson.getString("services"));
-                            }
-
-                            //startActivity(i);
-                            startActivityForResult(i, 1000);
-
-                            shutDown();
+                            Intent i = new Intent(InicialActivityLogin.this, LoginActivity.class);
+                            startActivity(i);
 
                         } else {
                             //err_enable();
@@ -283,94 +310,97 @@ public class InicialActivityLogin extends Activity implements OnClickListener  {
 
     public boolean checkService() throws JSONException {
 
-        //service_id = conf.getServiceId();
         id_driver = conf.getIdUser();
         service_id = "";
         Log.v("checkService", "ini");
-        //Log.v("checkService", "id_driver=" + driver_id + " service_id=" + service_id);
 
-        MiddleConnect.checkStatusService(this, driver_id, service_id, uuid, new AsyncHttpResponseHandler() {
 
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        okhttp3.OkHttpClient.Builder httpClient = new okhttp3.OkHttpClient.Builder();
+        httpClient.addInterceptor(logging);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Connect.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
+
+        ApiService service = retrofit.create(ApiService.class);
+        Call<ServiceStatusResponse> call_profile;
+
+        if(service_id == null){
+            Log.i("DRIVER ID",driver_id);
+            call_profile = service.serviceStatus(driver_id);
+        }else{
+            call_profile = service.serviceStatus(driver_id, service_id);
+        }
+        call_profile.enqueue(new retrofit2.Callback<ServiceStatusResponse>() {
             @Override
-            public void onStart() {
-                Log.v("checkService", "onStart");
-            }
-
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                String response = new String(responseBody);
+            public void onResponse(Call<ServiceStatusResponse> call, retrofit2.Response<ServiceStatusResponse> response) {
 
                 try {
-                    Log.w("Service Response" , response);
-                    JSONObject responsejson = new JSONObject(response);
-                    JSONArray services = responsejson.getJSONArray("services");
 
-                    // looping through All Services
-                    for (int i = 0; i < services.length(); i++) {
-                        JSONObject c = services.getJSONObject(i);
+                    int status_service = Integer.parseInt(response.body().getStatus_id());
+                    // si hay un servicio asignado lo recupera
+                    if ((status_service == 2) || (status_service == 4)) {
+                        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+                        Log.d("LoginActivity", "Refreshed token: " + refreshedToken);
+                        uuid = refreshedToken;
+                        conf.setUuid(uuid);
 
-                        String service_id = c.getString("id");
-                        String user_id = c.getString("user_id");
-                        String driver_id = c.getString("driver_id");
-                        String status_id = c.getString("status_id");
-                        String address = c.getString("address");
-                        String from_lat = c.getString("from_lat");
-                        String from_lng = c.getString("from_lng");
-                        String pay_type = c.getString("pay_type");
-                        String pay_reference = c.getString("pay_reference");
-                        String qualification = c.getString("qualification");
-                        String barrio = c.getString("barrio");
-                        String rCode = c.getString("code");
+                        Intent intent = new Intent(InicialActivityLogin.this, MapActivity.class);
+                        intent.putExtra("lat", Double.parseDouble(response.body().getFrom_lat()));
+                        intent.putExtra("lng", Double.parseDouble(response.body().getFrom_lng()));
+                        intent.putExtra("to_lat", Double.parseDouble(response.body().getTo_lat()));
+                        intent.putExtra("to_lng", Double.parseDouble(response.body().getTo_lng()));
+                        intent.putExtra("charge1", !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge1()) : 0);
+                        intent.putExtra("charge2",  !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge2()) : 0);
+                        intent.putExtra("charge3",  !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge3()) : 0);
+                        intent.putExtra("charge4",  !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge4()) : 0);
+                        intent.putExtra("valor_app", Integer.parseInt(response.body().getValor_app()));
+                        intent.putExtra("destination", response.body().getDestination());
 
-                        if(id_driver == null){
+                        intent.putExtra("id_servicio", response.body().getId());
 
+                        String type = String.valueOf(response.body().getSchedule_type());
+                        String direccion = response.body().getAddress();
+
+                        intent.putExtra("direccion", direccion);
+                        intent.putExtra("status_service", status_service);
+                        intent.putExtra("kind_id", response.body().getSchedule_id());
+                        intent.putExtra("schedule_type", response.body().getSchedule_type());
+                        intent.putExtra("name", response.body().getIndex_id());
+                        intent.putExtra("pay_type", response.body().getPay_type());
+                        intent.putExtra("card_reference", response.body().getUser_card_reference());
+                        intent.putExtra("code", response.body().getCode());
+
+                        startActivity(intent);
+                        //finish();
+
+                    } else if (status_service == 5) {
+                        if (response.body().getQualification() != null) {
+                            Log.v("MainActivity", "checkService() servicio asignado recuperado sin calificar");
+                            conf.deleteServiceId();
                         }
+                    } else {
+                       conf.deleteServiceId();
 
-                        else if (id_driver.equals(driver_id)) {
-
-                            if (status_id.equals("2") || status_id.equals("4")) {
-
-                                Intent intent = new Intent(InicialActivityLogin.this, RecoveryMapActivity.class);
-                                intent.putExtra("address",address);
-                                intent.putExtra("from_lat",from_lat);
-                                intent.putExtra("from_lng",from_lng);
-                                intent.putExtra("pay_type",pay_type);
-                                intent.putExtra("user_id",user_id);
-                                intent.putExtra("pay_reference",pay_reference);
-                                intent.putExtra("status_id",status_id);
-                                intent.putExtra("barrio",barrio);
-                                intent.putExtra("service_recoverid",service_id);
-                                intent.putExtra("rCode",rCode);
-                                startActivity(intent);
-                                Toast.makeText(getApplicationContext(), "Servicio recuperado", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                        else if (status_id.equals("5") && qualification.equals(null)) {
-                            Toast.makeText(getApplicationContext(), "El usuario no ha calificado el servicio.", Toast.LENGTH_SHORT).show();
-                        }
                     }
-
-                    return;
-
-                } catch (JSONException e1) {
-                    e1.printStackTrace();
+                }catch (Exception e){
+                    e.printStackTrace();
+                    Log.w("-----Error-----", e.toString());
                 }
 
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                //  String response = new String(responseBody);
-                // Log.v("checkService", "onFailure = " + response);
 
             }
 
             @Override
-            public void onFinish() {
-                Log.v("checkService", "onFinish");
+            public void onFailure(Call<ServiceStatusResponse> call, Throwable t) {
+                Log.w("-----Error-----", t.toString());
             }
-
         });
+
         return true;
     }
 }

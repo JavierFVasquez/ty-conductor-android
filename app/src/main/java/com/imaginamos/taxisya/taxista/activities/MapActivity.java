@@ -1,9 +1,11 @@
 package com.imaginamos.taxisya.taxista.activities;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.NotificationManager;
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,12 +13,15 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.preference.PreferenceManager;
@@ -26,6 +31,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -49,7 +55,10 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.database.DataSnapshot;
@@ -57,15 +66,21 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.maps.android.PolyUtil;
 import com.imaginamos.taxisya.taxista.R;
 import com.imaginamos.taxisya.taxista.io.ApiConstants;
+import com.imaginamos.taxisya.taxista.io.ApiService;
+import com.imaginamos.taxisya.taxista.io.Connect;
 import com.imaginamos.taxisya.taxista.io.Connectivity;
 import com.imaginamos.taxisya.taxista.io.MiddleConnect;
 import com.imaginamos.taxisya.taxista.io.MyService;
 import com.imaginamos.taxisya.taxista.io.UpdateReceiver;
 import com.imaginamos.taxisya.taxista.model.Actions;
 import com.imaginamos.taxisya.taxista.model.Conf;
+import com.imaginamos.taxisya.taxista.model.DirectionsResponse;
+import com.imaginamos.taxisya.taxista.model.FinishServiceResponse;
 import com.imaginamos.taxisya.taxista.model.MessageEvent;
+import com.imaginamos.taxisya.taxista.model.ServiceStatusResponse;
 import com.imaginamos.taxisya.taxista.utils.BDAdapter;
 import com.imaginamos.taxisya.taxista.utils.Dialogos;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -85,11 +100,22 @@ import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import cz.msebera.android.httpclient.Header;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import static android.view.View.GONE;
+import static io.fabric.sdk.android.Fabric.TAG;
 
 //public class MapActivity extends FragmentActivity implements OnClickListener, LocationListener {
 public class MapActivity extends Activity implements  LocationListener, UpdateReceiver.UpdateReceiverListener, Connectivity.ConnectivityQualityCheckListener, OnMapReadyCallback {
@@ -123,6 +149,12 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
     private String mTotService = "0";
     private String mTransactionId = "";
     private String mUserPhone = "";
+    private int charge1  = 0;
+    private int charge2  = 0;
+    private int charge3  = 0;
+    private int charge4  = 0;
+    private int valor_app  = 0;
+    private String destination  = "";
 //    private BroadcastReceiver mReceiver;
 //    private UpdateReceiver mNetworkMonitor;
     private ImageView mConnectivityLoaderImage;
@@ -157,6 +189,19 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
 
     private Button BT_Chat;
     private boolean first_time =  false;
+    private double to_latitud;
+    private double to_longitud;
+    private boolean follow = true;
+    private RelativeLayout RL_Travel_Details;
+    private TextView TV_Destination;
+    private TextView TV_Recargos;
+    private TextView TV_Valor;
+    private Button BT_Waze;
+    private String estimated_time;
+    private String estimated_distance;
+    private String user_name;
+    private Intent intent_service;
+    private String user_id;
 
     @Override
     public void onRestart() {
@@ -171,6 +216,19 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
 
         if (event.getAction().equals(Actions.ACTION_USER_CANCELED_SERVICE)) {
             Toast.makeText(getApplicationContext(), getString(R.string.error2), Toast.LENGTH_LONG).show();
+            toFinish();
+
+        }else if (event.getAction().equals(Actions.ACTION_USER_SERVICE_INTERRUPT)) {
+
+
+            Toast.makeText(getApplicationContext(), getString(R.string.error_interrupt), Toast.LENGTH_LONG).show();
+            Intent i = new Intent(getApplicationContext(), SummaryActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            Bundle b = new Bundle();
+            b.putString("service_id",service_id);
+            b.putString("driver_id",driver_id);
+            i.putExtras(b);
+            getApplication().startActivity(i);
             toFinish();
 
         } else if (event.getAction().equals(Actions.ACTION_OPE_CANCELED_SERVICER)) {
@@ -192,19 +250,67 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
         }
     }
 
+    private boolean isMyServiceRunning() {
+        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
 
+        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+            if (MyService.class.getName().equals(service.service.getClassName())) {
+                return true;
+            }
+        }
+        return false;
+    }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         Log.v("onCreate", "MapActivity");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
         //Desarrollo true
         //Producción false
+
+        conf = new Conf(this);
         paymentezsdk = new PaymentezSDKClient(this, ApiConstants.api_env, ApiConstants.app_code, ApiConstants.app_secret_key);
 
         LL_Content =  (LinearLayout) findViewById(R.id.LL_Content);
+        RL_Travel_Details =  (RelativeLayout) findViewById(R.id.RL_Travel_Details);
         BT_Hide_Panel = (Button) findViewById(R.id.BT_Hide_Panel);
+        BT_Waze = (Button) findViewById(R.id.BT_Waze);
+
+
+        if (intent_service != null) {
+            stopService(intent_service);
+
+            intent_service = null;
+
+        } else if (intent_service == null && !isMyServiceRunning()) {
+            intent_service = new Intent(this, MyService.class);
+            intent_service.putExtra("driver_id", driver_id);
+            intent_service.putExtra("uuid", conf.getUuid());
+
+            startService(intent_service);
+        }
+
+        BT_Waze.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (to_latitud != 0.0) {
+                    try {
+                        String url = "https://waze.com/ul?ll=" + to_latitud + "," + to_longitud;
+                        Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( url ) );
+                        startActivity( intent );
+                    }
+                    catch ( ActivityNotFoundException ex  ) {
+                        Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "market://details?id=com.waze" ) );
+                        startActivity(intent);
+                    }
+
+                }else{
+                    Toast.makeText(MapActivity.this,"Intente mas tarde",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         BT_Hide_Panel.setOnClickListener(new OnClickListener() {
             @Override
@@ -234,14 +340,7 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
                         break;
 
                     case R.id.btnConfirmCode:
-                        Log.v("BTN1", "btn_confirm_code");
-                        // TODO:  aplicar mascara de XX
-                        if (confirmCodeAuthorization()) {
-                            mLinear2.setVisibility(View.GONE);
-                            btnCancelar.setVisibility(View.VISIBLE);
-                            btnConfirmCode.setVisibility(View.GONE);
-                            btnFinalizar.setVisibility(View.VISIBLE);
-                        }
+                        confirmCodeAuthorization(mCode.getText().toString());
                         break;
 
                     case R.id.btnCancelar:
@@ -263,25 +362,24 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
                         break;
 
                     case R.id.btnFinalizar:
-                        Log.v("BTN1", "finalizar_action");
-                        Log.v("FINISH2", "call finishService()");
-                        if ((mPayType == 0) || (mPayType == 1) || (mPayType == 2) || (mPayType == 3) || (type_agend == 1) || (type_agend == 2) || (type_agend == 3) || (type_agend == 4)) {
+
+                        if ( (mPayType == 3) ) {
                             mLinear1.setVisibility(View.VISIBLE);
-                            btnFinalizar.setVisibility(View.GONE);
-                            btn_pay.setVisibility(View.VISIBLE);
-                        }
-                        else {
+                        } else {
                             finishService();
-                            //toFinish();
                         }
                         break;
 
                     case R.id.btn_pay:
-                        String sUnits = mUnits.getText().toString();
-                        if(sUnits.equals("")|| sUnits.equals("0") || sUnits.equals("00") || sUnits.equals("1")|| sUnits.equals("2") || sUnits.equals("3") || sUnits.equals("4") || sUnits.equals("5") || sUnits.equals("6") || sUnits.equals("7") || sUnits.equals("8") || sUnits.equals("9") || sUnits.equals("10") || sUnits.equals("11") || sUnits.equals("12") || sUnits.equals("13") || sUnits.equals("14") || sUnits.equals("15") || sUnits.equals("16") || sUnits.equals("17") || sUnits.equals("18") || sUnits.equals("19") || sUnits.equals("20") || sUnits.equals("21") || sUnits.equals("22") || sUnits.equals("23") || sUnits.equals("24") || sUnits.equals("25") || sUnits.equals("26") || sUnits.equals("27")) {
-                            Toast.makeText(getApplicationContext(), "Las unidades no pueden estar vacias ni ser menores a 28", Toast.LENGTH_LONG).show();
-                        } else {
-                            prepareReceipt(String.valueOf(mTotalTrip));
+                        if(mPayType==3) {
+                            String sUnits = mUnits.getText().toString();
+                            if (sUnits.equals("") || sUnits.equals("0") || sUnits.equals("00") || sUnits.equals("1") || sUnits.equals("2") || sUnits.equals("3") || sUnits.equals("4") || sUnits.equals("5") || sUnits.equals("6") || sUnits.equals("7") || sUnits.equals("8") || sUnits.equals("9") || sUnits.equals("10") || sUnits.equals("11") || sUnits.equals("12") || sUnits.equals("13") || sUnits.equals("14") || sUnits.equals("15") || sUnits.equals("16") || sUnits.equals("17") || sUnits.equals("18") || sUnits.equals("19") || sUnits.equals("20") || sUnits.equals("21") || sUnits.equals("22") || sUnits.equals("23") || sUnits.equals("24") || sUnits.equals("25") || sUnits.equals("26") || sUnits.equals("27")) {
+                                Toast.makeText(getApplicationContext(), "Las unidades no pueden estar vacias ni ser menores a 28", Toast.LENGTH_LONG).show();
+                            } else {
+                                prepareReceipt(String.valueOf(mTotalTrip));
+                            }
+                        }else{
+                            prepareReceipt("");
                         }
                 }
             }
@@ -294,7 +392,7 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
         } catch (Exception e) {
         }
 
-        conf = new Conf(this);
+
 
         mySQLiteAdapter = new BDAdapter(this);
         mySQLiteAdapter.openToWrite();
@@ -332,7 +430,15 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
         Bundle reicieveParams = getIntent().getExtras();
         latitud = reicieveParams.getDouble("lat");
         longitud = reicieveParams.getDouble("lng");
+        to_latitud = reicieveParams.getDouble("to_lat");
+        to_longitud = reicieveParams.getDouble("to_lng");
         service_id = reicieveParams.getString("id_servicio");
+        charge1 = reicieveParams.getInt("charge1");
+        charge2 = reicieveParams.getInt("charge2");
+        charge3 = reicieveParams.getInt("charge3");
+        charge4 = reicieveParams.getInt("charge4");
+        valor_app = reicieveParams.getInt("valor_app");
+        destination = reicieveParams.getString("destination");
 
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setApplicationId("1:254682418821:android:a62d955d84b45b78") // Required for Analytics.
@@ -340,9 +446,16 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
                 .setDatabaseUrl("https://taxis-ya-usuario-android.firebaseio.com/") // Required for RTDB.
                 .build();
 
+        try {
+            FirebaseApp.initializeApp(this /* Context */, options, "secondary");
+        }catch (Exception e){
 
-        FirebaseApp.initializeApp(this /* Context */, options, "secondary");
-
+        }
+        try {
+            checkService();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         BT_Chat = (Button) findViewById(R.id.BT_Chat);
 
@@ -350,25 +463,6 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
         FirebaseDatabase database = FirebaseDatabase.getInstance(secondary);
         DatabaseReference chat_ref = database.getReference("chat/taxi_user/"+service_id);
 
-//        chat_ref.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                if(first_time) {
-//                    BT_Chat.setBackgroundResource(R.drawable.orange_border);
-//                    BT_Chat.setTextColor(ResourcesCompat.getColor(getResources(), R.color.text_orange, null));
-//                    Log.i("Chat", "New Message");
-//                    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-//                    vibrator.vibrate(500);
-//                    Toast.makeText(MapActivity.this, R.string.new_message, Toast.LENGTH_SHORT).show();
-//                }
-//                first_time = true;
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                Log.e("The read failed: " , String.valueOf(databaseError.getCode()));
-//            }
-//        });
 
         BT_Chat.setOnClickListener(new OnClickListener() {
             @Override
@@ -376,6 +470,7 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
                 Intent i = new Intent(MapActivity.this,ChatActivity.class);
                 Bundle b = new Bundle();
                 b.putString("service_id", service_id);
+                b.putString("user_id", user_id);
                 i.putExtras(b);
                 startActivity(i);
             }
@@ -389,7 +484,7 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
         //Log.v("MapActivity", "latitud = " + String.valueOf(latitud) + " longitud = " + String.valueOf(longitud));
 
         direccion = reicieveParams.getString("direccion");
-        view_direccion.setText(getString(R.string.mapa_titulo_direccion) + direccion);
+        view_direccion.setText(direccion);
         rand_id = reicieveParams.getInt("kind_id");
         type_agend = reicieveParams.getInt("schedule_type");
         status_service = reicieveParams.getInt("status_service");
@@ -414,11 +509,7 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
             icon_radio_ope.setVisibility(View.VISIBLE);
         }
 
-        if (status_service == 4) {
-            btnLlegada.setVisibility(View.GONE);
-            btnCancelar.setVisibility(View.VISIBLE);
-            btnFinalizar.setVisibility(View.VISIBLE);
-        }
+
 
         nombre.setText(reicieveParams.getString("name"));
 
@@ -434,43 +525,7 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 200, 0, (LocationListener) this);
         locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 200, 0, (LocationListener) this);
 
-//        IntentFilter intentfilter = new IntentFilter();
-//        intentfilter.addAction(Actions.ACTION_USER_CANCELED_SERVICE);
-//        intentfilter.addAction(Actions.ACTION_OPE_CANCELED_SERVICER);
-//        intentfilter.addAction(Actions.ACTION_DRIVER_CLOSE_SESSION);
-//        intentfilter.addAction(Actions.ACTION_MESSAGE_MASSIVE);
 
-//        mReceiver = new BroadcastReceiver() {
-//            @Override
-//            public void onReceive(Context context, Intent intent) {
-//
-//                if (intent.getAction().equals(Actions.ACTION_USER_CANCELED_SERVICE)) {
-//                    Toast.makeText(getApplicationContext(), getString(R.string.error2), Toast.LENGTH_LONG).show();
-//                    toFinish();
-//
-//                } else if (intent.getAction().equals(Actions.ACTION_OPE_CANCELED_SERVICER)) {
-//                    Toast.makeText(getApplicationContext(), getString(R.string.oper_cancel), Toast.LENGTH_LONG).show();
-//                    toFinish();
-//
-//                } else if (intent.getAction().equals(Actions.ACTION_DRIVER_CLOSE_SESSION)) {
-//                    Log.v("DRIVER_CLOSE_SESSION", "in MapActivity");
-//                    Toast.makeText(getApplicationContext(), R.string.login_deshabilito_login_otro_dispositivo, Toast.LENGTH_LONG).show();
-//
-//                    loggedInOtherDevie();
-//
-//                } else if (intent.getAction().equals(Actions.ACTION_MESSAGE_MASSIVE)) {
-//
-//                    Log.v("MESSAGE_MASSIVE", "mensaje global recibido");
-//                    String message = intent.getExtras().getString("message");
-//                    mostrarMensaje(message);
-//
-//                }
-//
-//            }
-//
-//        };
-//
-//        registerReceiver(mReceiver, intentfilter);
         validateService();
 
         TextWatcher textWatcher = new TextWatcher() {
@@ -496,18 +551,116 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
 
     }
 
+    private void showDestinyAndRoute() {
+
+        follow = false;
+
+        RL_Travel_Details.setVisibility(View.VISIBLE);
+        BT_Waze.setVisibility(View.VISIBLE);
+        btnCancelar.setVisibility(View.GONE);
+        BT_Chat.setVisibility(View.GONE);
+
+        TV_Destination = (TextView) findViewById(R.id.TV_Destination);
+        TV_Destination.setText(destination);
+        TV_Recargos = (TextView) findViewById(R.id.TV_Recargos);
+
+        TV_Recargos.setText(
+                "Tiempo Estimado : " + estimated_time + " mins"
+                +"\nDistancia Estimada : " + estimated_distance + " Kms"
+        );
+        TV_Valor = (TextView) findViewById(R.id.TV_Valor);
+        TV_Valor.setText(user_name);
+
+
+
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        httpClient.addInterceptor(logging);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Connect.BASE_GOOGLE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
+        ApiService service = retrofit.create(ApiService.class);
+        Call<DirectionsResponse> call_directions=service.directions(latitud + "," + longitud,to_latitud + "," + to_longitud);
+        call_directions.enqueue(new Callback<DirectionsResponse>() {
+            @Override
+            public void onResponse(Call<DirectionsResponse> call, Response<DirectionsResponse> response) {
+
+                if (response.body().getRoutes().size() > 0) {
+                    String poly_encode = response.body().getRoutes().get(0).getOverview_polyline().getPoints();
+                    List<LatLng> points = PolyUtil.decode(poly_encode);
+
+                    PolylineOptions rectOptions = new PolylineOptions().width(10).color(getResources().getColor(R.color.text_orange));
+
+                    for (LatLng l : points) {
+                        rectOptions.add(l);
+                    }
+
+                    int height = convertSpToPixels(80, MapActivity.this);
+                    int width = convertSpToPixels(40, MapActivity.this);
+                    ;
+                    BitmapDrawable bitmapdraw = (BitmapDrawable) getResources().getDrawable(R.drawable.us_uno);
+                    Bitmap b = bitmapdraw.getBitmap();
+                    Bitmap smallMarker_1 = Bitmap.createScaledBitmap(b, width, height, false);
+                    BitmapDrawable bitmapdraw_2 = (BitmapDrawable) getResources().getDrawable(R.drawable.us_uno);
+                    b = bitmapdraw_2.getBitmap();
+                    Bitmap smallMarker_2 = Bitmap.createScaledBitmap(b, width, height, false);
+
+                    map.clear();
+                    map.addMarker(new MarkerOptions()
+                            .position(new LatLng(response.body().getRoutes().get(0).getLegs().get(0).getStart_location().getLat(), response.body().getRoutes().get(0).getLegs().get(0).getStart_location().getLng()))
+                            .title(""))
+                            .setIcon(BitmapDescriptorFactory.fromBitmap(smallMarker_1));
+                    map.addMarker(new MarkerOptions()
+                            .position(new LatLng(response.body().getRoutes().get(0).getLegs().get(0).getEnd_location().getLat(), response.body().getRoutes().get(0).getLegs().get(0).getEnd_location().getLng()))
+                            .title(""))
+                            .setIcon(BitmapDescriptorFactory.fromBitmap(smallMarker_2));
+
+                    Polyline polyline = map.addPolyline(rectOptions);
+
+                    LatLngBounds.Builder builder = new LatLngBounds.Builder();
+
+
+                    builder.include(new LatLng(response.body().getRoutes().get(0).getBounds().getNortheast().getLat(), response.body().getRoutes().get(0).getBounds().getNortheast().getLng()));
+                    builder.include(new LatLng(response.body().getRoutes().get(0).getBounds().getSouthwest().getLat(), response.body().getRoutes().get(0).getBounds().getSouthwest().getLng()));
+
+                    LatLngBounds bounds = builder.build();
+
+                    int padding = convertSpToPixels(40, MapActivity.this); // offset from edges of the map in pixels
+                    CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
+                    map.setPadding(convertSpToPixels(40, MapActivity.this), convertSpToPixels(20, MapActivity.this), convertSpToPixels(20, MapActivity.this), convertSpToPixels(20, MapActivity.this));
+                    map.animateCamera(cu);
+                } else {
+                    Log.w("-----Error-----","No hay ninguna ruta disponible");
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<DirectionsResponse> call, Throwable t) {
+                Log.w("-----Error-----",t.toString());
+            }
+        });
+    }
+
+    public static int convertSpToPixels(float sp, Context context) {
+        int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, context.getResources().getDisplayMetrics());
+        return px;
+    }
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
         map = googleMap;
+
         mCliente = new LatLng(latitud, longitud);
         map.setMyLocationEnabled(true);
         markerPoints.add(mCliente);
 
         MarkerOptions options = new MarkerOptions();
-        Log.v("MapActivity", "driver_id = " + String.valueOf(driver_id) + " cliente =" + mCliente.toString());
-        Log.v("MapActivity", "option.position(cliente) = " + String.valueOf(latitud) + " , " + String.valueOf(longitud));
-        Log.v("MapActivity", "MyService = " + String.valueOf(MyService.latitud) + " , " + String.valueOf(MyService.longitud));
 
         options.position(mCliente);
         options.icon(BitmapDescriptorFactory.fromResource(R.drawable.us_uno));
@@ -651,99 +804,120 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
             Log.v("checkService", "driver_id=" + driver_id + " service_id=" + "NULO");
         }
 
-        MiddleConnect.checkStatusService(this, driver_id, service_id, "uuid", new AsyncHttpResponseHandler() {
 
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        okhttp3.OkHttpClient.Builder httpClient = new okhttp3.OkHttpClient.Builder();
+        httpClient.addInterceptor(logging);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Connect.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
+
+        ApiService service = retrofit.create(ApiService.class);
+        Call<ServiceStatusResponse> call_profile = service.serviceStatus(driver_id, service_id);
+        call_profile.enqueue(new retrofit2.Callback<ServiceStatusResponse>() {
             @Override
-            public void onStart() {
-                Log.v("checkService", "onStart");
-                Log.e("TIMER_EJECUTANDO1", "checkService() onStart ");
-            }
+            public void onResponse(Call<ServiceStatusResponse> call, retrofit2.Response<ServiceStatusResponse> response) {
 
+                status_service = Integer.parseInt(response.body().getStatus_id());
 
-            @Override
-            //public void onSuccess(String response) {
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                estimated_time = response.body().getTiempo_recorido();
+                estimated_distance = response.body().getKm_recorrido();
+                user_name = response.body().getUser_name();
+                to_latitud = Double.parseDouble(response.body().getTo_lat());
+                to_longitud = Double.parseDouble(response.body().getTo_lng());
+                destination = response.body().getDestination();
+                user_id = response.body().getUser_id();
 
-                String response = new String(responseBody);
-                Log.w("Service Response" , response);
-
-                try {
-                    //Log.v("checkService", "SUCCES: "+response);
-                    JSONObject responsejson = new JSONObject(response);
-                    //if (responsejson.getInt("status_id"))
-                    //{
-                    int status_service = responsejson.getInt("status_id");
-                    Log.v("checkService", "status_id: " + String.valueOf(status_service));
-                    Log.e("TIMER_EJECUTANDO1", "checkService() status " + String.valueOf(status_service));
-
-                    // si hay un servicio asignado lo recupera
-                    if (status_service >= 6) {
-                        myTimer.cancel();
-                        //finish();
-                        toFinish();
-                    }
-
-                } catch (Exception e) {
-                    Log.e("TIMER_EJECUTANDO1", "checkService() response catch 1 ");
-                    Log.v("checkService", "Problema json" + e.toString());
+                if (status_service < 4) {
+                    btnLlegada.setVisibility(View.VISIBLE);
                 }
 
-                try {
-                    JSONObject rj = new JSONObject(response);
-                    int error = rj.getInt("error");
-                    Log.e("TIMER_EJECUTANDO1", "checkService() rj error 1");
-
-                    if (error == 1) {
-                        Log.e("TIMER_EJECUTANDO1", "checkService() rj error 2");
-
-                        mostrarAviso(getString(R.string.mapview_servicio_cancelado));
-
+                if (status_service == 4) {
+                    btnLlegada.setVisibility(View.GONE);
+                    btnCancelar.setVisibility(View.VISIBLE);
+                    if(conf.getAuthCode().trim().length()>0) {
+                        showDestinyAndRoute();
+                        BT_Chat.setVisibility(View.GONE);
+                        btnFinalizar.setVisibility(View.VISIBLE);
+                    }else{
+                        mLinear2.setVisibility(View.VISIBLE);
+                        btnLlegada.setVisibility(View.GONE);
+                        btnConfirmCode.setVisibility(View.VISIBLE);
                     }
-                } catch (Exception e2) {
-
                 }
+
+                // si hay un servicio asignado lo recupera
+                if (status_service >= 6) {
+                    myTimer.cancel();
+                    //finish();
+                    toFinish();
+                }
+
+                int error = response.body().getError();
+                if (error == 1) {
+                    mostrarAviso(getString(R.string.mapview_servicio_cancelado));
+                }
+
             }
 
             @Override
-            //public void onFailure(Throwable e, String response) {
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-
-                String response = new String(responseBody);
-                Log.e("TIMER_EJECUTANDO1", "checkService() onFailure response " + response);
-                Log.v("checkService", "onFailure");
-
+            public void onFailure(Call<ServiceStatusResponse> call, Throwable t) {
+                Log.w("-----Error-----", t.toString());
             }
-
-            @Override
-            public void onFinish() {
-                Log.e("TIMER_EJECUTANDO1", "onFinish() ");
-                Log.v("checkService", "onFinish");
-
-            }
-
         });
+
+
         return true;
 
     }
 
     @Override
     public void onLocationChanged(Location location) {
-        // TODO Auto-generated method stub
-        Log.v("onLocationChanged", "posicion");
-        LatLng latlng = new LatLng(MyService.latitud, MyService.longitud);
-        map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
-        CameraPosition cameraPosition = CameraPosition.builder()
-                .target(latlng)
-//                  .zoom(19)
-                .zoom(map.getCameraPosition().zoom)
-                .bearing(0)
-                .build();
-        map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+        if(follow) {
+            LatLng latlng = new LatLng(MyService.latitud, MyService.longitud);
+            map.moveCamera(CameraUpdateFactory.newLatLng(latlng));
+            CameraPosition cameraPosition = CameraPosition.builder()
+                    .target(latlng)
+                    .zoom(map.getCameraPosition().zoom)
+                    .bearing(0)
+                    .build();
+            map.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+        }
+        Log.e(TAG, "sendMyPosition");
+        MiddleConnect.sendMyPosition(this, driver_id, String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()), new AsyncHttpResponseHandler()
+        {
+            @Override
+            public void onStart() {
+                //Log.e(AsyncHttpResponseHandler.TAG, "onStart");
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                String response = new String(responseBody);
+                Log.e("POSITION", "onSuccess" + response);
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                // String response = new String(responseBody);
+                //Log.e(AsyncHttpResponseHandler.TAG, "onFailure" );
+            }
+
+            @Override
+            public void onFinish() {
+                //Log.e(AsyncHttpResponseHandler.TAG, "onFinish");
+            }
+        });
     }
 
     private void arrivedService(final int action) {
         Log.v("arrivedService", " a params: " + driver_id + " " + service_id);
-        if (service_id == null && service_id.isEmpty()) {
+        if (service_id == null) {
             service_id = conf.getServiceId();
         }
         Log.v("arrivedService", " b params: " + driver_id + " " + service_id);
@@ -777,10 +951,6 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
                     if (responsejson != null && responsejson.length() > 0) {
 
                         if (responsejson.getBoolean("success")) {
-                            Log.v("SERVICE_CMS", "    MAP ARRIVED ok service_id= " + service_id);
-
-                            // actualizar estado del servicio
-                            Log.v("VALIDATE_SERVICE", "arrived service_id " + service_id);
 
                             mySQLiteAdapter.updateStatusService(service_id, "4");
 
@@ -789,44 +959,10 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
                             if (action == 2) {
                                 toFinish();
                             } else {
-
-                                if (mPayType == 0) {
-                                    mLinear2.setVisibility(View.VISIBLE);
-                                    btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.VISIBLE);
-                                    btnConfirmCode.setVisibility(View.VISIBLE);
-                                    btnFinalizar.setVisibility(View.GONE);
-
-                                } else {
-                                    btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.GONE);
-                                    btnFinalizar.setVisibility(View.GONE);
-                                }
-
-                                if (mPayType == 1) {
-                                    mLinear2.setVisibility(View.VISIBLE);
-                                    btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.VISIBLE);
-                                    btnConfirmCode.setVisibility(View.VISIBLE);
-                                    btnFinalizar.setVisibility(View.GONE);
-
-                                } else {
-                                    btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.VISIBLE);
-                                    btnFinalizar.setVisibility(View.GONE);
-                                }
-
-                                if (mPayType == 3) {
-                                    mLinear2.setVisibility(View.VISIBLE);
-                                    btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.VISIBLE);
-                                    btnConfirmCode.setVisibility(View.VISIBLE);
-
-                                } else {
-                                    btnLlegada.setVisibility(View.GONE);
-                                    btnCancelar.setVisibility(View.VISIBLE);
-                                    btnFinalizar.setVisibility(View.GONE);
-                                }
+                                mLinear2.setVisibility(View.VISIBLE);
+                                btnLlegada.setVisibility(View.GONE);
+                                btnConfirmCode.setVisibility(View.VISIBLE);
+                                confirmCodeAuthorization(conf.getAuthCode());
                             }
 
                         } else {
@@ -876,101 +1012,91 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
 
     // finish service +
     private void finishService() {
-        Log.v("FINISH2", "finishService() ini ");
-        Log.v("FINISH2", "finishService() driver_id=" + driver_id + " service_id=" + service_id);
+        try {
+            pDialog = new ProgressDialog(MapActivity.this);
+            pDialog.setMessage(getString(R.string.mapa_finalizando_servicio));
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(false);
+            pDialog.show();
+        } catch (Exception e) {
 
-        MiddleConnect.finishService(this, driver_id, service_id, MyService.latitud, MyService.longitud, mTotUnits, mTotCharge1, mTotCharge2, mTotCharge3, mTotCharge4, mTotService, mTransactionId, new AsyncHttpResponseHandler() {
+        }
 
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        okhttp3.OkHttpClient.Builder httpClient = new okhttp3.OkHttpClient.Builder();
+        httpClient.addInterceptor(logging);
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Connect.BASE_URL_IP)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
+        Log.i("PARAMS",service_id + " - " + driver_id + " - " + mTotUnits + " - " + mTotService);
+        ApiService service = retrofit.create(ApiService.class);
+        Call<FinishServiceResponse> call_profile = service.finishService(Integer.parseInt(service_id),Integer.parseInt(driver_id), Integer.parseInt(mTotUnits) , Double.parseDouble(mTotService), 1);
+        call_profile.enqueue(new retrofit2.Callback<FinishServiceResponse>() {
             @Override
-            public void onStart() {
+            public void onResponse(Call<FinishServiceResponse> call, retrofit2.Response<FinishServiceResponse> response) {
 
-                try {
-                    pDialog = new ProgressDialog(MapActivity.this);
-                    pDialog.setMessage(getString(R.string.mapa_finalizando_servicio));
-                    pDialog.setIndeterminate(false);
-                    pDialog.setCancelable(false);
-                    pDialog.show();
-                } catch (Exception e) {
-
-                }
-            }
-
-            @Override
-            //public void onSuccess(String response) {
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-
-                String response = new String(responseBody);
-                Log.v("FINISH2", "finishService() onSuccess() - " + response);
-                Log.v("SERVICE_CMS", "    MAP FINISHED success service_id= " + service_id + " response " + response);
-                Log.e("RESPOSNE", response + "");
-                try {
-                    JSONObject responsejson = new JSONObject(response);
+               if(response.body().getSuccess()){
                     savePreferencias("servicieTomado", "false");
-                    Log.v("VALIDATE_SERVICE", "finished service_id " + service_id);
-
                     mySQLiteAdapter.updateStatusService(service_id, "5");
-
-                    if (responsejson != null && responsejson.length() > 0) {
-                        String result = responsejson.getString("error");
-                        if (Integer.valueOf(result) == 0) {
-                            Toast.makeText(getApplicationContext(), getString(R.string.servicio_finalizado), Toast.LENGTH_SHORT).show();
-                        } else {
-                            err_finish_service();
-                        }
-
-                    } else {
-                        err_finish_service();
-                    }
-                } catch (Exception e) {
-                    Log.v("FINISH2", "finishService() onSuccess() exception - e" + e.toString());
-
-                    err_finish_service();
+                    Toast.makeText(getApplicationContext(), getString(R.string.servicio_finalizado), Toast.LENGTH_SHORT).show();
+                    conf.deleteAuthCode();
+                    btnFinalizar.setVisibility(View.GONE);
+                    Intent i = new Intent(getApplicationContext(), SummaryActivity.class);
+                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    Bundle b = new Bundle();
+                    b.putString("service_id",service_id);
+                    b.putString("driver_id",driver_id);
+                    i.putExtras(b);
+                    getApplication().startActivity(i);
+//                   btn_pay.setVisibility(View.VISIBLE);
+               } else {
+                    err_finish_service(response.body().getMessage());
                 }
-            }
 
-            @Override
-            //public void onFailure(Throwable e, String response) {
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                String response = new String(responseBody);
-                Log.v("FINISH2", "finishService() onFailure() - " + response);
-
-                Log.v("SERVICE_CMS", "    MAP FINISHED failure service_id= " + service_id + " response " + response);
-
-                Log.e("RESPOSNE", response + "");
-                err_finish_service();
-            }
-
-            @Override
-            public void onFinish() {
-                try {
-                    pDialog.dismiss();
-                } catch (Exception e) {
-
-                }
-                Log.v("FINISH2", "finishService() onFinish()");
+                pDialog.dismiss();
 
                 if (isFinished)
                     toFinish();
+            }
+
+            @Override
+            public void onFailure(Call<FinishServiceResponse> call, Throwable t) {
+                Log.w("-----Error-----", t.toString());
+                err_finish_service(getString(R.string.error_arrived));
             }
         });
 
     }
 
-    private void err_finish_service() {
+    private void err_finish_service(String s) {
         isFinished = false;
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         vibrator.vibrate(200);
-        Toast.makeText(getApplicationContext(), getString(R.string.error_arrived), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), s , Toast.LENGTH_SHORT).show();
     }
 
 
-    public boolean confirmCodeAuthorization() {
+    public boolean confirmCodeAuthorization(String strCode) {
         Log.v("BTN1", "confirmCodeAuthorization +");
 
-        String strCode = mCode.getText().toString();
         if (strCode != null) {
             if (strCode.equals(mUserPhone)){
+                conf.setAuthCode(mUserPhone);
                 Toast.makeText(MapActivity.this, R.string.valid_code,Toast.LENGTH_SHORT).show();
+                mLinear2.setVisibility(View.GONE);
+                btnCancelar.setVisibility(View.GONE);
+                btnConfirmCode.setVisibility(View.GONE);
+                btnFinalizar.setVisibility(View.VISIBLE);
+                try {
+                    checkService();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                showDestinyAndRoute();
                 return true;
             }else{
                 Toast.makeText(MapActivity.this, R.string.invalid_code,Toast.LENGTH_SHORT).show();
@@ -1217,19 +1343,19 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
 
     @Override
     public void onProviderDisabled(String arg0) {
-        // TODO Auto-generated method stub
+
 
     }
 
     @Override
     public void onProviderEnabled(String arg0) {
-        // TODO Auto-generated method stub
+
 
     }
 
     @Override
     public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
-        // TODO Auto-generated method stub
+
 
     }
 
@@ -1257,7 +1383,6 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
     }
 
     public boolean typePayment() {
-        // TODO: Ver type pago
         if (mPayType == 2) return true;
         return false;
 
@@ -1428,7 +1553,6 @@ public class MapActivity extends Activity implements  LocationListener, UpdateRe
             number = numberFormat.parse(amount);
 
         } catch (ParseException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

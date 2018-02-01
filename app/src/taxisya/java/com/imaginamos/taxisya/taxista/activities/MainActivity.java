@@ -390,7 +390,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
                             if (status_id.equals("2") || status_id.equals("4")) {
 
-                                Intent intent = new Intent(MainActivity.this, RecoveryMapActivity.class);
+                                Intent intent = new Intent(MainActivity.this, MapActivity.class);
                                 intent.putExtra("address",address);
                                 intent.putExtra("from_lat",from_lat);
                                 intent.putExtra("from_lng",from_lng);

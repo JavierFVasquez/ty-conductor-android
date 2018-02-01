@@ -1,6 +1,8 @@
 package com.imaginamos.taxisya.taxista.activities;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +12,17 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.SimpleAdapter;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.database.DataSnapshot;
@@ -21,12 +32,26 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.google.firebase.database.ValueEventListener;
+import com.google.maps.android.PolyUtil;
 import com.imaginamos.taxisya.taxista.R;
 import com.imaginamos.taxisya.taxista.Holders.ChatHolder;
+import com.imaginamos.taxisya.taxista.io.ApiService;
+import com.imaginamos.taxisya.taxista.io.Connect;
 import com.imaginamos.taxisya.taxista.model.Chat;
+import com.imaginamos.taxisya.taxista.model.DirectionsResponse;
+import com.imaginamos.taxisya.taxista.model.SimpleResponse;
+
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class ChatActivity extends AppCompatActivity {
@@ -37,6 +62,7 @@ public class ChatActivity extends AppCompatActivity {
     private String service_id;
     private RecyclerView.Adapter adapter;
     private boolean first_time = false;
+    private String user_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +71,7 @@ public class ChatActivity extends AppCompatActivity {
 
 
         service_id = getIntent().getExtras().getString("service_id","0");
+        user_id = getIntent().getExtras().getString("user_id","0");
 
         RV_Chat_Content = (RecyclerView) findViewById(R.id.RV_Chat_Content);
         ET_Chat_Text = (EditText) findViewById(R.id.ET_Chat_Text);
@@ -123,6 +150,30 @@ public class ChatActivity extends AppCompatActivity {
                     chat_ref.updateChildren(childUpdates);
 
                     ET_Chat_Text.setText("");
+
+                    HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+                    logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+                    OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+                    httpClient.addInterceptor(logging);
+
+                    Retrofit retrofit = new Retrofit.Builder()
+                            .baseUrl(Connect.BASE_URL_IP)
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .client(httpClient.build())
+                            .build();
+                    ApiService service = retrofit.create(ApiService.class);
+                    Call<SimpleResponse> call_directions=service.sendNotification(user_id);
+                    call_directions.enqueue(new Callback<SimpleResponse>() {
+                        @Override
+                        public void onResponse(Call<SimpleResponse> call, Response<SimpleResponse> response) {
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<SimpleResponse> call, Throwable t) {
+                            Log.w("-----Error-----",t.toString());
+                        }
+                    });
                 }
             }
         });

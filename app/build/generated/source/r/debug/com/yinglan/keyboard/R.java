@@ -17,7 +17,7 @@ public final class R {
         public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f0700c1;
     }
     public static final class id {
-        public static final int item_touch_helper_previous_elevation = 0x7f0900f7;
+        public static final int item_touch_helper_previous_elevation = 0x7f09010c;
     }
     public static final class string {
         public static final int app_name = 0x7f100024;

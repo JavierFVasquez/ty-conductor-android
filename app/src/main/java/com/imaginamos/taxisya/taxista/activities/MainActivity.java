@@ -38,12 +38,15 @@ import android.widget.Toast;
 //import com.google.android.gcm.GCMRegistrar;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.imaginamos.taxisya.taxista.R;
+import com.imaginamos.taxisya.taxista.io.ApiService;
+import com.imaginamos.taxisya.taxista.io.Connect;
 import com.imaginamos.taxisya.taxista.io.Connectivity;
 import com.imaginamos.taxisya.taxista.io.GPSTracker;
 import com.imaginamos.taxisya.taxista.io.MiddleConnect;
 import com.imaginamos.taxisya.taxista.io.MyService;
 import com.imaginamos.taxisya.taxista.model.Actions;
 import com.imaginamos.taxisya.taxista.model.Conf;
+import com.imaginamos.taxisya.taxista.model.ServiceStatusResponse;
 import com.imaginamos.taxisya.taxista.utils.BDAdapter;
 import com.imaginamos.taxisya.taxista.utils.Dialogos;
 import com.imaginamos.taxisya.taxista.utils.Utils;
@@ -56,6 +59,10 @@ import org.json.JSONObject;
 import java.util.Locale;
 
 import cz.msebera.android.httpclient.Header;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends Activity implements TextToSpeech.OnInitListener {
 
@@ -78,7 +85,7 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
     private int currentVersionCode;
     private String currentVersionName;
     private Boolean updateAvailable = false;
-    private String service_id, driver_id;
+    private String service_id = null, driver_id;
     private int status_service = 0;
     private Intent intent_service;
 
@@ -147,6 +154,8 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
         login = conf.getUser();
         id_driver = conf.getIdUser();
+        driver_id = conf.getIdUser();
+        service_id= conf.getServiceId();
         uuid = conf.getUuid();
         fondo = (ImageView) findViewById(R.id.fondo);
         nombre = (ImageView) findViewById(R.id.nombre_head);
@@ -187,7 +196,8 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
         try {
             checkService();
-        } catch (JSONException e) {
+        } catch (Exception e) {
+            Log.e("--ERROR--", e.toString());
         }
 
 // broadcast
@@ -777,122 +787,194 @@ public class MainActivity extends Activity implements TextToSpeech.OnInitListene
 
     public boolean checkService() throws JSONException {
 
-        service_id = null; //conf.getServiceId();
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        okhttp3.OkHttpClient.Builder httpClient = new okhttp3.OkHttpClient.Builder();
+        httpClient.addInterceptor(logging);
 
-        if (service_id != null && !service_id.isEmpty()) {
-            Log.v("checkService", "driver_id=" + id_driver + " service_id=" + service_id);
-        } else {
-            Log.v("checkService", "driver_id=" + id_driver + " service_id=" + "NULO");
-        }
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Connect.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
 
-        MiddleConnect.checkStatusService(this, id_driver, service_id, "uuid", new AsyncHttpResponseHandler() {
+        ApiService service = retrofit.create(ApiService.class);
+        Call<ServiceStatusResponse> call_profile;
 
+        Log.i("DRIVER ID",driver_id);
+        call_profile = service.serviceStatus(driver_id);
+        call_profile.enqueue(new retrofit2.Callback<ServiceStatusResponse>() {
             @Override
-            public void onStart() {
-                Log.v("checkService", "onStart");
-            }
+            public void onResponse(Call<ServiceStatusResponse> call, retrofit2.Response<ServiceStatusResponse> response) {
 
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-                String response = new String(responseBody);
                 try {
-                    Log.w("Service Response" , response);
-                    //Log.v("checkService", "SUCCES: "+response);
-                    JSONObject responsejson = new JSONObject(response);
-                    //if (responsejson.getInt("status_id"))
-                    //{
-                    status_service = responsejson.getInt("status_id");
-                    Log.v("checkService", "status_id: " + String.valueOf(status_service));
 
+                    int status_service = Integer.parseInt(response.body().getStatus_id());
 
-                    // si hay un servicio asignado lo recupera
                     if ((status_service == 2) || (status_service == 4)) {
-                        Log.v("MainActivity", "checkService() servicio asignado recuperado");
-                        Log.v("MainActivity", "responsejson = " + responsejson.toString());
-                        Log.v("MainActivity", "responsejson = " + responsejson.getJSONObject("driver").toString());
-
-                        Log.v("MainActivity", "responsejson id = " + responsejson.getString("id"));
-                        Log.v("MainActivity", "responsejson lat = " + responsejson.getString("from_lat"));
 
                         Intent intent = new Intent(MainActivity.this, MapActivity.class);
-                        intent.putExtra("lat", Double.parseDouble(responsejson.getString("from_lat")));
-                        intent.putExtra("lng", Double.parseDouble(responsejson.getString("from_lng")));
+                        intent.putExtra("lat", Double.parseDouble(response.body().getFrom_lat()));
+                        intent.putExtra("lng", Double.parseDouble(response.body().getFrom_lng()));
+                        intent.putExtra("to_lat", Double.parseDouble(response.body().getTo_lat()));
+                        intent.putExtra("to_lng", Double.parseDouble(response.body().getTo_lng()));
+                        intent.putExtra("charge1", !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge1()) : 0);
+                        intent.putExtra("charge2",  !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge2()) : 0);
+                        intent.putExtra("charge3",  !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge3()) : 0);
+                        intent.putExtra("charge4",  !response.body().getCharge1().trim().equals("") ? Integer.parseInt(response.body().getCharge4()) : 0);
+                        intent.putExtra("valor_app", Integer.parseInt(response.body().getValor_app()));
+                        intent.putExtra("destination", response.body().getDestination());
 
-                        intent.putExtra("id_servicio", responsejson.getString("id"));
-                        Log.v("MainActivity", "responsejson schedule_type = " + responsejson.getString("schedule_type"));
+                        intent.putExtra("id_servicio", response.body().getId());
 
-                        String type = String.valueOf(responsejson.getString("schedule_type"));
-                        String direccion = "";
-                        if ((type.equals("2")) || (type.equals("3"))) {
-                            String serviceDateTime = responsejson.getString("service_date_time");
-                            String substr = serviceDateTime.substring(11, 16);
-
-                            direccion = responsejson.getString("index_id") + " - " +
-                                    responsejson.getString("comp1") + " # " +
-                                    responsejson.getString("comp2") + " - " +
-                                    responsejson.getString("no") + " " +
-                                    responsejson.getString("obs") + " Barrio: " + responsejson.getString("barrio") +
-                                    "\n" +
-                                    responsejson.getString("destination") +
-                                    " Hora: " + substr;
-                        } else {
-                            // determina nuevo formato
-                            String cad = responsejson.getString("index_id");
-                            //if (cad != null && cad != "") {
-                            if (cad.length() > 0) {
-                                direccion = responsejson.getString("index_id") + " - " + responsejson.getString("comp1") + " # " + responsejson.getString("comp2") + " - " + responsejson.getString("no") + " " + responsejson.getString("obs") + " Barrio: " + responsejson.getString("barrio");
-                            } else {
-                                //direccion = responsejson.getString("no");
-                                direccion = responsejson.getString("no") + " Barrio: " + responsejson.getString("barrio");
-                            }
-                        }
+                        String type = String.valueOf(response.body().getSchedule_type());
+                        String direccion = response.body().getAddress();
 
                         enable_position_service();
-
-
                         intent.putExtra("direccion", direccion);
-                        intent.putExtra("status_service",status_service);
-                        intent.putExtra("kind_id", responsejson.getInt("schedule_id"));
-                        intent.putExtra("schedule_type", responsejson.getInt("schedule_type"));
-                        intent.putExtra("name", responsejson.getString("index_id"));
-                        intent.putExtra("pay_type", responsejson.getString("pay_type"));
-                        intent.putExtra("card_reference", responsejson.getString("card_reference"));
-                        intent.putExtra("code", responsejson.getString("code"));
+                        intent.putExtra("status_service", status_service);
+                        intent.putExtra("kind_id", response.body().getSchedule_id());
+                        intent.putExtra("schedule_type", response.body().getSchedule_type());
+                        intent.putExtra("name", response.body().getIndex_id());
+                        intent.putExtra("pay_type", response.body().getPay_type());
+                        intent.putExtra("card_reference", response.body().getUser_card_reference());
+                        intent.putExtra("code", response.body().getCode());
 
                         startActivity(intent);
                         //finish();
 
                     } else if (status_service == 5) {
-                        if (responsejson.isNull("qualification")) {
+                        if (response.body().getQualification() != null) {
                             Log.v("MainActivity", "checkService() servicio asignado recuperado sin calificar");
                         }
                     } else {
                         Log.v("MainActivity", "checkService() servicio asignado no tenia");
-                        Log.v("MainActivity", "responsejson = " + responsejson.getJSONObject("driver").toString());
+                        Log.v("MainActivity", "responsejson = " + response.body().getDriver().toString());
 
                     }
-
-
-                } catch (Exception e) {
-                    Log.v("checkService", "Problema json" + e.toString());
+                }catch (Exception e){
+                    e.printStackTrace();
+                    Log.w("-----Error-----", e.toString());
                 }
-            }
 
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                String response = new String(responseBody);
-                Log.v("checkService", "onFailure");
 
             }
 
             @Override
-            public void onFinish() {
-
-                Log.v("checkService", "onFinish");
-
+            public void onFailure(Call<ServiceStatusResponse> call, Throwable t) {
+                Log.w("-----Error-----", t.toString());
             }
-
         });
+//        MiddleConnect.checkStatusService(this, id_driver, service_id, "uuid", new AsyncHttpResponseHandler() {
+//
+//            @Override
+//            public void onStart() {
+//                Log.v("checkService", "onStart");
+//            }
+//
+//            @Override
+//            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+//                String response = new String(responseBody);
+//                try {
+//                    Log.w("Service Response" , response);
+//                    //Log.v("checkService", "SUCCES: "+response);
+//                    JSONObject responsejson = new JSONObject(response);
+//                    //if (responsejson.getInt("status_id"))
+//                    //{
+//                    status_service = responsejson.getInt("status_id");
+//                    Log.v("checkService", "status_id: " + String.valueOf(status_service));
+//
+//
+//                    // si hay un servicio asignado lo recupera
+//                    if ((status_service == 2) || (status_service == 4)) {
+//                        Log.v("MainActivity", "checkService() servicio asignado recuperado");
+//                        Log.v("MainActivity", "responsejson = " + responsejson.toString());
+//                        Log.v("MainActivity", "responsejson = " + responsejson.getJSONObject("driver").toString());
+//
+//                        Log.v("MainActivity", "responsejson id = " + responsejson.getString("id"));
+//                        Log.v("MainActivity", "responsejson lat = " + responsejson.getString("from_lat"));
+//
+//                        Intent intent = new Intent(MainActivity.this, MapActivity.class);
+//                        intent.putExtra("lat", Double.parseDouble(responsejson.getString("from_lat")));
+//                        intent.putExtra("lng", Double.parseDouble(responsejson.getString("from_lng")));
+//
+//                        intent.putExtra("id_servicio", responsejson.getString("id"));
+//                        Log.v("MainActivity", "responsejson schedule_type = " + responsejson.getString("schedule_type"));
+//
+//                        String type = String.valueOf(responsejson.getString("schedule_type"));
+//                        String direccion = "";
+//                        if ((type.equals("2")) || (type.equals("3"))) {
+//                            String serviceDateTime = responsejson.getString("service_date_time");
+//                            String substr = serviceDateTime.substring(11, 16);
+//
+//                            direccion = responsejson.getString("index_id") + " - " +
+//                                    responsejson.getString("comp1") + " # " +
+//                                    responsejson.getString("comp2") + " - " +
+//                                    responsejson.getString("no") + " " +
+//                                    responsejson.getString("obs") + " Barrio: " + responsejson.getString("barrio") +
+//                                    "\n" +
+//                                    responsejson.getString("destination") +
+//                                    " Hora: " + substr;
+//                        } else {
+//                            // determina nuevo formato
+//                            String cad = responsejson.getString("index_id");
+//                            //if (cad != null && cad != "") {
+//                            if (cad.length() > 0) {
+//                                direccion = responsejson.getString("index_id") + " - " + responsejson.getString("comp1") + " # " + responsejson.getString("comp2") + " - " + responsejson.getString("no") + " " + responsejson.getString("obs") + " Barrio: " + responsejson.getString("barrio");
+//                            } else {
+//                                //direccion = responsejson.getString("no");
+//                                direccion = responsejson.getString("no") + " Barrio: " + responsejson.getString("barrio");
+//                            }
+//                        }
+//
+//                        enable_position_service();
+//
+//
+//                        intent.putExtra("direccion", direccion);
+//                        intent.putExtra("status_service",status_service);
+//                        intent.putExtra("kind_id", responsejson.getInt("schedule_id"));
+//                        intent.putExtra("schedule_type", responsejson.getInt("schedule_type"));
+//                        intent.putExtra("name", responsejson.getString("index_id"));
+//                        intent.putExtra("pay_type", responsejson.getString("pay_type"));
+//                        intent.putExtra("card_reference", responsejson.getString("card_reference"));
+//                        intent.putExtra("code", responsejson.getString("code"));
+//
+//                        startActivity(intent);
+//                        //finish();
+//
+//                    } else if (status_service == 5) {
+//                        if (responsejson.isNull("qualification")) {
+//                            Log.v("MainActivity", "checkService() servicio asignado recuperado sin calificar");
+//                        }
+//                    } else {
+//                        Log.v("MainActivity", "checkService() servicio asignado no tenia");
+//                        Log.v("MainActivity", "responsejson = " + responsejson.getJSONObject("driver").toString());
+//
+//                    }
+//
+//
+//                } catch (Exception e) {
+//                    Log.v("checkService", "Problema json" + e.toString());
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+//                String response = new String(responseBody);
+//                Log.v("checkService", "onFailure");
+//
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//
+//                Log.v("checkService", "onFinish");
+//
+//            }
+//
+//        });
+
+
         if (status_service == 2)
             return true;
         else

@@ -5,8 +5,11 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.util.Log;
 
+import com.google.firebase.iid.FirebaseInstanceId;
+
 public class Conf {
 
+    private static final String AUTH_CODE = "authCode";
     public final String tag_shared = "taxista";
     private SharedPreferences prefs;
     private String ISLOGIN = "ISLOGIN";
@@ -65,7 +68,7 @@ public class Conf {
     }
 
     public String getUuid() {
-        return prefs.getString(UUID, null);
+        return prefs.getString(UUID, FirebaseInstanceId.getInstance().getToken());
     }
 
     public void setIdUser(String iduser) {
@@ -96,6 +99,11 @@ public class Conf {
     public String getServiceId() {
         return prefs.getString(IDSERVICE, null);
     }
+    public void deleteServiceId() {
+        Editor editor = prefs.edit();
+        editor.remove(IDSERVICE);
+        editor.commit();
+    }
 
     public void setServiceId(String idservice) {
         Editor editor = prefs.edit();
@@ -125,4 +133,23 @@ public class Conf {
             setLogin(true);
         }
     }
+
+    public void setAuthCode(String authCode) {
+        Editor editor = prefs.edit();
+        editor.putString(AUTH_CODE, authCode);
+        editor.commit();
+    }
+
+    public String getAuthCode() {
+        return prefs.getString(AUTH_CODE, "");
+    }
+
+    public void deleteAuthCode() {
+        Editor editor = prefs.edit();
+        editor.remove(AUTH_CODE);
+        editor.commit();
+    }
+
+
+
 }

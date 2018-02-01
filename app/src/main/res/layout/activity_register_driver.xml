@@ -80,7 +80,8 @@
             android:layout_width="fill_parent"
             android:layout_height="42dp"
             android:gravity="center_horizontal|bottom"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
             <Spinner
                 android:id="@+id/spinner_country"
                 android:layout_width="match_parent"
@@ -92,7 +93,8 @@
             android:layout_width="fill_parent"
             android:layout_height="42dp"
             android:gravity="center_horizontal|bottom"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
             <Spinner
                 android:id="@+id/spinner_department"
                 android:layout_width="match_parent"
@@ -104,7 +106,8 @@
             android:layout_width="fill_parent"
             android:layout_height="42dp"
             android:gravity="center_horizontal|bottom"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
             <Spinner
                 android:id="@+id/spinner_city"
                 android:layout_width="match_parent"
@@ -125,6 +128,22 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:hint="@string/register_driver_name"
+            android:inputType="text"
+            android:paddingLeft="10sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#f57e5b"
+            android:theme="@style/Theme.Default"></EditText>
+        <EditText
+            android:id="@+id/txtApellido"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/textfield_registro"
+            android:cursorVisible="true"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="@string/register_driver_lastname"
             android:inputType="text"
             android:paddingLeft="10sp"
             android:textColor="@android:color/black"
@@ -153,25 +172,6 @@
 
         </EditText>
 
-        <!-- License -->
-        <EditText
-            android:id="@+id/txtLicense"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/textfield_registro"
-            android:cursorVisible="true"
-            android:ems="10"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:hint="@string/register_driver_license"
-            android:paddingLeft="10sp"
-            android:inputType="text"
-            android:textColor="@android:color/black"
-            android:textColorHint="#f57e5b"
-            android:theme="@style/Theme.Default">
-
-        </EditText>
 
         <!-- phone -->
         <EditText
@@ -275,30 +275,67 @@
             android:paddingLeft="10sp"
             android:textColor="@android:color/black"
             android:textColorHint="#f57e5b" />
-
         <EditText
-            android:id="@+id/txtCarBrand"
+            android:id="@+id/TV_Movil"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/textfield_registro"
             android:ems="10"
-            android:hint="@string/register_driver_car_brand"
+            android:hint="@string/movil"
             android:paddingLeft="10sp"
+            android:inputType="number"
             android:textColor="@android:color/black"
             android:textColorHint="#f57e5b" />
-
         <EditText
-            android:id="@+id/txtCarLine"
+            android:id="@+id/TV_Contol_Card"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/textfield_registro"
             android:ems="10"
-            android:hint="@string/register_driver_car_line"
+            android:hint="@string/control_card"
             android:paddingLeft="10sp"
             android:textColor="@android:color/black"
             android:textColorHint="#f57e5b" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:gravity="center_horizontal|bottom"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_driver_car_brand"
+                android:textColor="@color/text_orange"/>
+            <Spinner
+                android:id="@+id/SP_Car_Brand"
+                android:background="@drawable/textfield_registro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:gravity="center_horizontal|bottom"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_driver_car_line"
+                android:textColor="@color/text_orange"/>
+            <Spinner
+                android:id="@+id/SP_Car_Line"
+                android:background="@drawable/textfield_registro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </Spinner>
+        </LinearLayout>
+
 
         <!-->
 
@@ -329,17 +366,24 @@
             android:textColor="@android:color/black"
             android:textColorHint="#f57e5b" />
 
-        <EditText
-            android:id="@+id/txtCarCompany"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:gravity="center_horizontal|bottom"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/textfield_registro"
-            android:ems="10"
-            android:hint="@string/register_driver_car_company"
-            android:paddingLeft="10sp"
-            android:textColor="@android:color/black"
-            android:textColorHint="#f57e5b" />
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_driver_car_company"
+                android:textColor="@color/text_orange"/>
+            <Spinner
+                android:id="@+id/SP_Companies"
+                android:background="@drawable/textfield_registro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </Spinner>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
