@@ -348,6 +348,11 @@ public class WaitServiceActivity extends Activity implements OnClickListener, Up
 
         setup();
         checkConections();
+        try {
+            checkService();
+        } catch (Exception e) {
+            Log.e("---Error---",e.toString());
+        }
         recibe_push = 0;
         // timer
         validateStatusDriver();

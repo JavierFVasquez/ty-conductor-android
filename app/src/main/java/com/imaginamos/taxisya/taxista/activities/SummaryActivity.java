@@ -82,23 +82,27 @@ public class SummaryActivity extends Activity {
             @Override
             public void onResponse(Call<ServiceStatusResponse> call, retrofit2.Response<ServiceStatusResponse> response) {
 
-                int status_service = Integer.parseInt(response.body().getStatus_id());
+                try {
+                    int status_service = Integer.parseInt(response.body().getStatus_id());
 
-                TV_Origen.setText(response.body().getAddress());
-                TV_Destino.setText(response.body().getDestination());
-                TV_Total.setText("$ " + response.body().getValor_app());
-                if(Integer.parseInt(response.body().getCharge1()) != 0) {
-                    LL_Recargo_1.setVisibility(View.VISIBLE);
+                    TV_Origen.setText(response.body().getAddress());
+                    TV_Destino.setText(response.body().getDestination());
+                    TV_Total.setText("$ " + response.body().getValor_app());
+                    if (Integer.parseInt(response.body().getCharge1()) != 0) {
+                        LL_Recargo_1.setVisibility(View.VISIBLE);
+                    }
+                    TV_Recargo_1.setText(response.body().getCharge1());
+                    if (Integer.parseInt(response.body().getCharge2()) != 0) {
+                        LL_Recargo_2.setVisibility(View.VISIBLE);
+                    }
+                    TV_Recargo_2.setText(response.body().getCharge2());
+                    if (Integer.parseInt(response.body().getCharge4()) != 0) {
+                        LL_Recargo_3.setVisibility(View.VISIBLE);
+                    }
+                    TV_Recargo_3.setText(response.body().getCharge4());
+                }catch (Exception e){
+                    Log.e("---Error---",e.toString());
                 }
-                TV_Recargo_1.setText(response.body().getCharge1());
-                if(Integer.parseInt(response.body().getCharge2()) != 0) {
-                    LL_Recargo_2.setVisibility(View.VISIBLE);
-                }
-                TV_Recargo_2.setText(response.body().getCharge2());
-                if(Integer.parseInt(response.body().getCharge4()) != 0) {
-                    LL_Recargo_3.setVisibility(View.VISIBLE);
-                }
-                TV_Recargo_3.setText(response.body().getCharge4());
             }
 
             @Override

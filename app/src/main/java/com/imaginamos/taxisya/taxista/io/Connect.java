@@ -21,7 +21,7 @@ public class Connect {
     public static final String BASE_URL = "http://" + BuildConfig.HOST + "/public/";
     public static final String BASE_URL_IP = "http://" + BuildConfig.HOST;
 //    public static final String BASE_URL = "http://services.taxisya.co/" ;
-//    public static final String BASE_URL_IP = "http://18.221.21.22";
+//    public static final String BASE_URL_IP = "http://18.221.21.22/";
     private static final String CONNECTIVITY_QUALITY_CHECKING = "http://www.taxisya.co/dev/";
 
 

@@ -8,8 +8,8 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "co.taxisya.conductor.test";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
-  public static final int VERSION_CODE = 60;
-  public static final String VERSION_NAME = "1.7.17";
+  public static final int VERSION_CODE = 61;
+  public static final String VERSION_NAME = "1.7.18";
   // Fields from build type: debug
   public static final String HOST = "www.taxisya.co";
   public static final boolean USE_CRASHLYTICS = true;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="co.taxisya.conductor"
-    android:versionCode="60"
-    android:versionName="1.7.17" >
+    android:versionCode="61"
+    android:versionName="1.7.18" >
 
     <uses-sdk
         android:minSdkVersion="16"

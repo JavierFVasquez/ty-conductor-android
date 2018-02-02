@@ -54,7 +54,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             try {
                 JSONObject data = new JSONObject(remoteMessage.getData());
                 String messageBody = data.getString("message");
-//                sendNotification(messageBody);
+                sendNotification(messageBody);
             } catch (Exception e) {
 
             }

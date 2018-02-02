@@ -65,11 +65,11 @@ public final class R {
     }
     public static final class string {
         public static final int kit_name = 0x7f1000d8;
-        public static final int tw__allow_btn_txt = 0x7f100172;
-        public static final int tw__login_btn_txt = 0x7f100179;
-        public static final int tw__not_now_btn_txt = 0x7f10017b;
-        public static final int tw__share_email_desc = 0x7f100185;
-        public static final int tw__share_email_title = 0x7f100186;
+        public static final int tw__allow_btn_txt = 0x7f100173;
+        public static final int tw__login_btn_txt = 0x7f10017a;
+        public static final int tw__not_now_btn_txt = 0x7f10017c;
+        public static final int tw__share_email_desc = 0x7f100186;
+        public static final int tw__share_email_title = 0x7f100187;
     }
     public static final class style {
         public static final int tw__Button = 0x7f1101fa;
